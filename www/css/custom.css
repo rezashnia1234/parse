@@ -1,8 +1,8 @@
 .ui-bar-a .header-image, .ui-page-theme-a .ui-bar-inherit .header-image, html .ui-bar-a .ui-bar-inherit .header-image, html .ui-body-a .ui-bar-inherit .header-image, html body .ui-group-theme-a .ui-bar-inherit  .header-image{
 	width:18px;
 	position: absolute;
-	right: 57.5px;
-	top: 9px;
+	right: 66.5px;
+	top: 12px;
 }
 .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
   background-color: #f24c6b;
@@ -13,16 +13,16 @@
   font-family:'web_Yekan';
   color:#ffffff !important;
   height:120px;
-  height:36px;
+  height:42px;
 }
 .ui-header .ui-title, .ui-footer .ui-title {
   display: block;
-  font-size: 14px;
-  margin: 0 84px;
+  font-size: 16px;
+  margin: 0 94px;
   min-height: 1.1em;
   outline: 0 none !important;
   overflow: hidden;
-  padding: 9px 0;
+  padding: 11px 0;
   text-align: right;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -38,11 +38,11 @@
   background-size: cover;
   border: 0 none !important;
   box-shadow: 0 0 0 transparent;
-  height: 35.85px;
+  height: 41.82px;
   position: absolute;
   right: 0;
   top: 0 !important;
-  width: 46.8px;
+  width: 54.6px;
 }
 .menu.ui-icon-bars:after {
   background-image: none;
