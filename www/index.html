@@ -7,6 +7,7 @@
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="stylesheet" href="css/reset.css" type="text/css" /> 
+	<link rel="stylesheet" href="css/yekan.css" type="text/css" /> 
 	
 	<title></title>
 	
@@ -45,6 +46,7 @@
 		function init() {			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
+			//onDeviceReady();
 			//document.addEventListener("DOMContentLoaded", loaded, false);
 		}
 		var register_for_notifs;// = window.localStorage.getItem('register_for_notifs');
@@ -146,7 +148,7 @@
 		function onDeviceReady() {
 			FastClick.attach(document.body);	
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start onDeviceReady');
-			scalePage_center(768,"#main",true);
+			scalePage_center(1024,"#main",true);
 			unblockui();
 			
 			if ( device.platform == 'iOS' ){//Android,iOS,win7=WinCE,win8=Win32NT
@@ -223,8 +225,10 @@ body{
 	overflow:hidden;
 }
 #main{
-	height:768px;
-	width:1024px;
+	height:1024px;
+	width:768px;
+	font-family:web_Yekan,tahoma;
+	font-size:20px;
 	background:no-repeat 0 0;
 	background-size:cover;
 	z-index:1;
@@ -248,7 +252,8 @@ body{
 
 	<div id="main">
 		salam
-	
+		<br/>
+		متن تست
 	</div>
 </body>
 </html>
