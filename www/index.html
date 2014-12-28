@@ -148,7 +148,7 @@
 		function onDeviceReady() {
 			FastClick.attach(document.body);	
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start onDeviceReady');
-			//scalePage_center(1024,"#main",true);
+			scalePage_center(1280,"#main",true);
 			unblockui();
 			
 			if ( device.platform == 'iOS' ){//Android,iOS,win7=WinCE,win8=Win32NT
@@ -225,8 +225,8 @@ body{
 	overflow:hidden;
 }
 #main{
-	height2:1024px;
-	width2:768px;
+	height:1280px;
+	width:800px;
 	font-family:web_Yekan,tahoma;
 	font-size:20px;
 	background:no-repeat 0 0;
@@ -234,6 +234,7 @@ body{
 	z-index:1;
 	position:fixed;
 	top:0;
+	background:red;
 }
 </style>
 </head>
