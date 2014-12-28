@@ -21,10 +21,12 @@
 
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
 
-    	<h1>Panel responsive</h1>
+    	<h1>Panel responsive000</h1>
 
-        <p>This is a typical page that has two buttons in the header bar that open panels. The left panel has the push display mode, the right panel reveal. To make this responsive, you can make the page re-flow at wider widths. This allows both the panel menu and page to be used together when more space is available. This behavior is controlled by CSS media queries. You can create a custom one for a specific breakpoint or use the breakpoint preset by adding the <code>class="ui-responsive-panel"</code> to the page container. We have added this class on this demo page. Note that when using the preset class, we also hide the dismiss layer on wider screens if the panel has the push display mode.</p>
-
+        <p>This is a typical page that has two buttons in the header bar that open panels. The left panel has the push display mode, the right panel reveal. To make this responsive, you can make the page re-flow at wider widths. This allows both the panel menu and page to be used together when more space is available. This behavior is controlled by CSS media queries. You can create a custom one for a specific breakpoint or use the breakpoint preset by adding the <code>class="ui-responsive-panel"</code> to the page container. We have added this class on this demo page. Note that when using the preset class, we also hide the dismiss layer on wider screens if the panel has the push display mode.
+			<a href="2.html">2.html</a>
+		</p>
+		
 		<div data-demo-html="#panel-responsive-page1"></div><!--/demo-html -->
 
         <br>
@@ -113,6 +115,32 @@
     </div><!-- /content -->
 
 </div><!-- /page -->
-
+<script>
+$( document ).on( "pageinit", "#panel-responsive-page1", function() {
+    $( document ).on( "swipeleft swiperight", "#panel-responsive-page1", function( e ) {
+        // We check if there is no open panel on the page because otherwise
+        // a swipe to close the left panel would also open the right panel (and v.v.).
+        // We do this by checking the data that the framework stores on the page element (panel: open).
+        if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swipeleft"  ) {
+                //$( "#right-panel" ).panel( "open" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#nav-panel" ).panel( "open" );
+				//alert();
+            }
+        }
+        if ( $.mobile.activePage.jqmData( "panel" ) !== "close" ) {
+            if ( e.type === "swipeleft"  ) {
+                //$( "#right-panel" ).panel( "open" );
+				$( "#nav-panel" ).panel( "close" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#nav-panel" ).panel( "open" );
+				//alert();
+            }
+        }
+		
+    });
+});
+</script>
 </body>
 </html>
