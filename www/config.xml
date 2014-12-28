@@ -83,8 +83,8 @@
 	
     <!-- Define app splash screen for each platform. -->
     <!-- Define app splash screen for each platform. -->
+	<gap:splash src="splash.jpg" />
 	<!--
-	<gap:splash src="splash.png" />
 	<gap:splash src="img/splash/splash_bkg.png" gap:platform="android" gap:qualifier="port-xxhdpi" />
 	<gap:splash src="img/splash/splash_bkg_landscape.png" gap:platform="android" gap:qualifier="land-xxhdpi" />
 	<gap:splash src="img/splash/splash_bkg.png" gap:platform="ios" width="1536" height="2048" />
