@@ -150,10 +150,20 @@
   text-align: justify;
 }
 #mapCanvas{
-  background:red url('../images/offlinemap.jpg') repeat scroll center center / cover;
+  background-color:red;
+  background-image:url('../images/offlinemap.jpg');
+  background-position:center center;
+  background-repeat:repeat;
+  background-size:cover;
+  background-attachment:scroll;
   height: 140px;
   width:calc(100% + 32px);
   margin:-16px -16px 0 -16px;
+}
+#map-canvas{
+	width:100%;
+	height:140px;
+	margin:0;
 }
 
 
