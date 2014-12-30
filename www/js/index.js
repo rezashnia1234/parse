@@ -168,6 +168,7 @@
 	});
 })( jQuery );
 
+/*
 // Turn off Ajax for local file browsing
 if ( location.protocol.substr(0,4)  === 'file' ||
      location.protocol.substr(0,11) === '*-extension' ||
@@ -214,7 +215,7 @@ if ( location.protocol.substr(0,4)  === 'file' ||
 		});
 	});
 }
-
+*/
 $( document ).on( "pagecreate", ".jqm-demos", function( event ) {
 	var search,
 		page = $( this ),
