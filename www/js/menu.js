@@ -13,7 +13,7 @@
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"><img src="images/menu/setting.png">آرشیو نشریات</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"><img src="images/menu/book.png">تنظیمات</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="contact.html" data-rel="external" data-ajax="false" ><img src="images/menu/contact.png">تماس با پارسه</a></li>';//data-rel="external" data-ajax="false"
-		panel = panel + '<li class="odd ui-li-has-thumb ui-last-child"><a href="#panel-responsive-page2" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/about.png">خروج</a></li>';
+		panel = panel + '<li class="odd ui-li-has-thumb ui-last-child"><a href="#panel-responsive-page2" onclick="exit();" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/about.png">خروج</a></li>';
 		panel = panel + '</ul></div></div>';
 	$(document).one('pagebeforecreate', function () {
 	  $.mobile.pageContainer.prepend(panel);
@@ -66,3 +66,17 @@
 			
 		});
 	});
+	
+	function exit() {
+		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Exit the app! command');
+		navigator.app.exitApp();
+	}
+	function loadURL(url){
+		//url = $(this).attr("rel");   
+		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    loadURL click : ' + url);
+		//navigator.app.loadUrl(url, { openExternal:true });
+		//window.plugins.childBrowser.showWebPage(url, { showLocationBar: false });
+		//window.open(url, '_blank', 'location=yes');
+		window.open(url, '_system', 'location=yes');
+		return false;
+	}

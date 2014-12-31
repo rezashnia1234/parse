@@ -149,6 +149,9 @@
   line-height: 180%;
   text-align: justify;
 }
+.contact{
+	margin:0px 8px;
+}
 #mapCanvas{
   background-image:url('../images/offlinemap.jpg');
   background-position:center center;
@@ -167,10 +170,51 @@
 .internet,.nointernet{
   display:none;
 }
-
-
-
-
+.ui-input-text input::-moz-placeholder, .ui-input-search input::-moz-placeholder, textarea.ui-input-text::-moz-placeholder {
+  color: #000000;
+}
+input,textarea{
+  direction: rtl !important;
+  font-family: web_Yekan !important;
+  font-size: 15px !important;
+  border-radius:10px !important;
+  background:#f5f5f5 !important;
+  color:#000000 !important;
+  padding:10px 14.5px !important;
+  border:1px solid #aeaeae !important;
+  text-shadow:0 0 0 transparent !important;
+  box-shadow:0 0px 0px transparent inset !important;
+  width:100%;
+  box-sizing:border-box;
+  height:40px;
+}
+textarea{
+	height:10px;
+}
+.submit {
+  background-color: #f24c6b !important;
+  background-image: url("../images/contact/submit.png") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  border: 1px solid #f24c6b !important;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 40px;
+  opacity: 1 !important;
+}
+#contactform .ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
+  background: none repeat scroll 0 0 transparent;
+  border: 0 solid transparent;
+  border-radius: 0;
+  height: 20px;
+  left: auto;
+  right: auto;
+  text-shadow: 0 0 0 transparent;
+  width: auto;
+  text-shadow:0 0 0 transparent !important;
+  box-shadow:0 0px 0px transparent inset !important;
+}
 
 
 
