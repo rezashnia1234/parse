@@ -24,11 +24,6 @@
 		onDeviceReady();
 	}
 	function onDeviceReady() {
-		
-		
-
-	}
-	$( document ).on( "pageinit", "#panel-responsive-main", function() {
 		var networkState = navigator.connection.type;
 		if (networkState == Connection.NONE)
 		{
@@ -75,6 +70,12 @@
 			}	
 			*/
 		}
+
+	}
+	$( document ).on( "pageinit", "#panel-responsive-main", function() {
+
+	
+	
 	});
 	</script>
 	<style>
