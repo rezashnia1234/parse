@@ -29,11 +29,13 @@
 		{
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    no internet ');
 			$('.internet').css({'display':'none'});
+			$('.nointernet').css({'display':'block'});
 		}
 		else
 		{
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    we have internet ');
 			$('.nointernet').css({'display':'none'});
+			$('.internet').css({'display':'block'});
 			
 			var defaultLatLng = new google.maps.LatLng(35.75287, 51.40860); 
 			drawMap(defaultLatLng);  // No geolocation support, show default map

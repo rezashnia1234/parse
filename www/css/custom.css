@@ -150,7 +150,6 @@
   text-align: justify;
 }
 #mapCanvas{
-  background-color:red;
   background-image:url('../images/offlinemap.jpg');
   background-position:center center;
   background-repeat:repeat;
@@ -165,6 +164,10 @@
 	height:140px;
 	margin:0;
 }
+.internet,.nointernet{
+  display:none;
+}
+
 
 
 
