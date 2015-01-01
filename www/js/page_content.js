@@ -12,7 +12,7 @@ alert("start getURL");
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
 alert("no internet");
-		var article_json = window.localStorage.getItem(md5(URL));
+		var article_json = window.localStorage.getItem($.md5(URL));
 		if(article_json)
 		{
 alert("no internet cache");
@@ -38,7 +38,7 @@ alert("no iframe");
 					{
 						$('.container').html(text);
 						if(cache == true)
-							window.localStorage.setItem(md5(URL),text);
+							window.localStorage.setItem($.md5(URL),text);
 					}
 			});
 		}
