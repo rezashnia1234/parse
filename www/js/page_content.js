@@ -7,23 +7,20 @@ function getParameterByName(name) {
 		results = regex.exec(location.search);
 	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-function getURL(URL) {
-	//var networkState = navigator.connection.type;
-	//if (networkState == Connection.NONE) {
-	/*
-		var article_json = window.localStorage.getItem('article_json_' + id);
+function getURL(URL,cache) {
+	var networkState = navigator.connection.type;
+	if (networkState == Connection.NONE) {
+		var article_json = window.localStorage.getItem(md5(URL));
 		if(article_json)
 		{
 			$('.container').html(article_json);
-			$('img').css({'display':'none'});
 		}
 		else
 		{
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("»—«Ì „‘«ÂœÂ «Ì‰ ’›ÕÂ ‰Ì«“ »Â «Ì‰ —‰  œ«—Ìœ");
 		}
-	*/
-	//} else {
+	} else {
 		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
 		$.ajax({ type: "GET",   
 				url: URL,
@@ -31,10 +28,11 @@ function getURL(URL) {
 				success : function(text)
 				{
 					$('.container').html(text);
-					window.localStorage.setItem(md5(URL),text);
+					if(cache == true)
+						window.localStorage.setItem(md5(URL),text);
 				}
 		});
-	//}
+	}
 
 
 	//return $.md5(URL);
