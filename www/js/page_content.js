@@ -22,22 +22,26 @@ function getURL(URL,cache,iframe) {
 
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
+alert("we have no internet");
 		var article_json = window.localStorage.getItem($.md5(URL));
 		if(article_json)
 		{
+alert("we have no internet - we have cache");
 			$('.container').html(article_json);
 			unblockui();
 		}
 		else
 		{
+alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("براي مشاهده اين صفحه نياز به اينترنت داريد");
 			unblockui();
 		}
 	} else {
-		
+alert("we have internet");
 		if(iframe == false)
 		{
+alert("we have internet - iframe : false");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
 			$.ajax({ type: "GET",   
 					url: URL,
@@ -65,7 +69,10 @@ function getURL(URL,cache,iframe) {
 						});
 						
 						if(cache == true)
+						{
 							window.localStorage.setItem($.md5(URL),text);
+							alert("we have internet - cached" + $.md5(URL));
+						}
 					}
 			});
 		}
