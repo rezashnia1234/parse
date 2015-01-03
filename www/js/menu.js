@@ -98,6 +98,7 @@
 		});
 	}
 	function unblockui(next) {
-		$.unblockUI();
+		$(".blockUI" ).css("display","none");
+		//$.unblockUI();
 		//next();
 	}
