@@ -28,6 +28,7 @@ function getURL(URL,cache,iframe) {
 		{
 //alert("we have no internet - we have cache");
 			$('.container').html(article_json);
+			do_rotation = false;
 			$('.container a').on("click", function (e) {
 				e.preventDefault();
 				
@@ -51,6 +52,7 @@ function getURL(URL,cache,iframe) {
 //alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("براي مشاهده اين صفحه نياز به اينترنت داريد");
+			do_rotation = false;
 			unblockui();
 		}
 	} else {
@@ -66,6 +68,7 @@ function getURL(URL,cache,iframe) {
 					{
 						$('.container').html(text);
 						unblockui();
+						do_rotation = false;
 						
 						$('.container a').on("click", function (e) {
 							e.preventDefault();
@@ -95,6 +98,7 @@ function getURL(URL,cache,iframe) {
 		else
 		{
 			$('.container').html("<iframe src='" + URL + "'></iframe>");
+			do_rotation = false;
 			unblockui();
 		}
 		
