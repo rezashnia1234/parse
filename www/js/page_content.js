@@ -1,12 +1,6 @@
 var pathname = window.location.pathname; // Returns path only
 var url      = window.location.href;     // Returns full URL
 
-$(function () {
-    $('.container a').on("click", function (e) {
-        e.preventDefault();
-		alert("00");
-    });
-});
 
 function getParameterByName(name) {
 	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -25,20 +19,23 @@ function getURL(URL,cache,iframe) {
 		cache = false;
 	if(cache == "true")
 		cache = true;
-		
+
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
 		var article_json = window.localStorage.getItem($.md5(URL));
 		if(article_json)
 		{
 			$('.container').html(article_json);
+			unblockui();
 		}
 		else
 		{
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("براي مشاهده اين صفحه نياز به اينترنت داريد");
+			unblockui();
 		}
 	} else {
+		
 		if(iframe == false)
 		{
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
@@ -48,20 +45,23 @@ function getURL(URL,cache,iframe) {
 					success : function(text)
 					{
 						$('.container').html(text);
+						unblockui();
 						
 						$('.container a').on("click", function (e) {
 							e.preventDefault();
-							if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/parse3/") >= 0)
-								getURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/parse3/") >= 0)
-								getURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+							
+							if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+							else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								////////////////////////////////getURL("http://smgroup.ir/parse3/" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-								getURL("http://smgroup.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+								////////////////////////////////openURL("http://smgroup.ir/parse3/" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+								openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							}
+							
 						});
 						
 						if(cache == true)
@@ -72,6 +72,30 @@ function getURL(URL,cache,iframe) {
 		else
 		{
 			$('.container').html("<iframe src='" + URL + "'></iframe>");
+			unblockui();
 		}
+		
 	}
+}
+function openURL(URL,cache,iframe) {
+	cache = cache || true;
+	iframe = iframe || false;
+	if(iframe == "false")
+		iframe = false;
+	if(iframe == "true")
+		iframe = true;
+	if(cache == "false")
+		cache = false;
+	if(cache == "true")
+		cache = true;
+
+	window.sessionStorage.setItem('PERV_URL',window.sessionStorage.getItem('NEXT_URL'));
+	window.sessionStorage.setItem('PERV_CACHE',window.sessionStorage.getItem('NEXT_CACHE'));
+	window.sessionStorage.setItem('PERV_IFRAME',window.sessionStorage.getItem('NEXT_IFRAME'));
+
+	window.sessionStorage.setItem('NEXT_URL',URL);
+	window.sessionStorage.setItem('NEXT_CACHE',cache);
+	window.sessionStorage.setItem('NEXT_IFRAME',iframe);
+		
+	window.location.href = "show.html?url=" + $.md5(URL);
 }

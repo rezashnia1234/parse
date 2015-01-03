@@ -29,6 +29,8 @@
 					//$( "#right-panel" ).panel( "open" );
 				} else if ( e.type === "swiperight" ) {
 					$( "#nav-panel" ).panel( "close" );
+					parent.history.back();
+					blockui();
 					//alert();
 				}
 			}
@@ -49,6 +51,7 @@
 			if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
 				if ( e.type === "swipeleft"  ) {
 					//$( "#right-panel" ).panel( "open" );
+					parent.history.back();
 				} else if ( e.type === "swiperight" ) {
 					$( "#nav-panel" ).panel( "close" );
 					//alert();
@@ -79,4 +82,22 @@
 		//window.open(url, '_blank', 'location=yes');
 		window.open(url, '_system', 'location=yes');
 		return false;
+	}
+	function blockui() {
+		$.blockUI({
+			message: '<img src="images/preloader.gif"/>',
+			css: {
+				color: '#f2f2f2',
+				backgroundColor: '#f2f2f2',
+				border: 'none'
+			},
+			overlayCSS: {
+				backgroundColor: '#f2f2f2',
+				opacity: 1
+			}
+		});
+	}
+	function unblockui(next) {
+		$.unblockUI();
+		//next();
 	}

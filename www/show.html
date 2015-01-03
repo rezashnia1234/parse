@@ -20,7 +20,6 @@
 	<script>
 		function init() {			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
-			blockui();
 			document.addEventListener("deviceready", onDeviceReady, false);
 			//onDeviceReady();
 		}
@@ -28,24 +27,24 @@
 			if(window.sessionStorage.getItem('PERV_URL') == null)
 			{
 				window.sessionStorage.setItem('PERV_URL',"http://parseh.smcms.ir");
-				window.sessionStorage.setItem('PERV_IFRAME',false);
 				window.sessionStorage.setItem('PERV_CACHE',true);
+				window.sessionStorage.setItem('PERV_IFRAME',false);
 			}
-			//if(window.sessionStorage.getItem('NEXT_URL') == null)
-			//{
+			if(window.sessionStorage.getItem('NEXT_URL') == null)
+			{
 				window.sessionStorage.setItem('NEXT_URL',"http://parseh.smcms.ir");
-				window.sessionStorage.setItem('NEXT_IFRAME',false);
 				window.sessionStorage.setItem('NEXT_CACHE',true);
-			//}
+				window.sessionStorage.setItem('NEXT_IFRAME',false);
+			}
 			
-			getURL("http://parseh.smcms.ir",true,false);
+			getURL(window.sessionStorage.getItem('NEXT_URL'),window.sessionStorage.getItem('NEXT_CACHE'),window.sessionStorage.getItem('NEXT_IFRAME'));
 		}
 	</script>
 </head>
 <body onload="init();">
 <div style="z-index: 999; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: rgb(242, 242, 242); opacity: 1; cursor: default; position: fixed;" class="blockUI blockOverlay"></div>
 <script>blockui();</script>
-
+	
 <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-main" >
 
     <div data-role="header" data-position="fixed" data-fullscreen="false">
