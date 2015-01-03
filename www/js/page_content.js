@@ -65,7 +65,7 @@ alert("we have internet - iframe : false");
 								////////////////////////////////openURL("http://smgroup.ir/parse3/" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 								openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							}
-							
+							FastClick.attach(document.body);	
 						});
 						
 						if(cache == true)
