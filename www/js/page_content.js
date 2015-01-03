@@ -22,26 +22,42 @@ function getURL(URL,cache,iframe) {
 
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
-alert("we have no internet");
+//alert("we have no internet");
 		var article_json = window.localStorage.getItem($.md5(URL));
 		if(article_json)
 		{
-alert("we have no internet - we have cache");
+//alert("we have no internet - we have cache");
 			$('.container').html(article_json);
+			$('.container a').on("click", function (e) {
+				e.preventDefault();
+				
+				if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+				else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+					loadURL($(this).attr("href"));
+				else
+				{
+					////////////////////////////////openURL("http://smgroup.ir/parse3/" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+					openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+				}
+				FastClick.attach(document.body);	
+			});
 			unblockui();
 		}
 		else
 		{
-alert("we have no internet - no cache");
+//alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("براي مشاهده اين صفحه نياز به اينترنت داريد");
 			unblockui();
 		}
 	} else {
-alert("we have internet");
+//alert("we have internet");
 		if(iframe == false)
 		{
-alert("we have internet - iframe : false");
+//alert("we have internet - iframe : false");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
 			$.ajax({ type: "GET",   
 					url: URL,
@@ -71,7 +87,7 @@ alert("we have internet - iframe : false");
 						if(cache == true)
 						{
 							window.localStorage.setItem($.md5(URL),text);
-							alert("we have internet - cached" + $.md5(URL));
+//alert("we have internet - cached" + $.md5(URL));
 						}
 					}
 			});
