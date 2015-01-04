@@ -216,9 +216,7 @@ textarea{
   box-shadow:0 0px 0px transparent inset !important;
 }
 #myCanvas{
-	position:absolute;
-	top: 35%;
-	left: 50%;
+
 	z-index:1013;
 }
 
