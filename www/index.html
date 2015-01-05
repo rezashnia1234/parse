@@ -36,8 +36,11 @@
 			//{
 				window.sessionStorage.setItem('NEXT_URL',"http://parseh.smcms.ir");
 				window.sessionStorage.setItem('NEXT_IFRAME',false);
-				window.sessionStorage.setItem('NEXT_CACHE',true);
+				window.sessionStorage.setItem('NEXT_CACHE',true);			
 			//}
+			if(window.sessionStorage.getItem('LOAD_URL') == null)
+				window.sessionStorage.setItem('LOAD_URL',[]);
+
 			
 			getURL("http://parseh.smcms.ir",true,false);
 		}

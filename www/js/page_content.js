@@ -63,7 +63,7 @@ function getURL(URL,cache,iframe) {
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
 			$.ajax({ type: "GET",   
 					url: URL,
-					async: false,
+					async: true,
 					success : function(text)
 					{
 						$('.container').html(text);
@@ -90,6 +90,9 @@ function getURL(URL,cache,iframe) {
 						if(cache == true)
 						{
 							window.localStorage.setItem($.md5(URL),text);
+							var temp_array = window.sessionStorage.getItem('LOAD_URL');
+							temp_array.push($.md5(URL));
+							window.sessionStorage.setItem('LOAD_URL',temp_array);
 //alert("we have internet - cached" + $.md5(URL));
 						}
 					}
