@@ -59,7 +59,7 @@ function getURL(URL,cache,iframe) {
 		{
 //alert("we have internet - iframe : false");
 			var article_json = window.localStorage.getItem($.md5(URL));
-			var temp_array = window.sessionStorage.getItem('LOAD_URL');
+			var temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 			if((jQuery.inArray($.md5(URL),temp_array) != -1)	&&	article_json)
 			{
 					if(article_json)
@@ -113,11 +113,12 @@ function getURL(URL,cache,iframe) {
 								
 								if(cache == true)
 								{
+//alert("we have internet - cached 000  " + $.md5(URL));
 									window.localStorage.setItem($.md5(URL),text);
-									temp_array = window.sessionStorage.getItem('LOAD_URL');
+									temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 									temp_array.push($.md5(URL));
-									window.sessionStorage.setItem('LOAD_URL',temp_array);
-//alert("we have internet - cached" + $.md5(URL));
+									window.sessionStorage.setItem('LOAD_URL',JSON.stringify(temp_array));	
+//alert("we have internet - cached  " + $.md5(URL));
 								}
 							},
 							error: function(jqXHR, exception) {
