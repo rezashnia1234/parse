@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>پارسه</title>
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/yekan.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+	<script src="js/jquery.min.js"></script>
+    <script src="phonegap.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/jquery.blockUI.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/page_content.js"></script>
+	<script>
+		function init() {			
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			document.addEventListener("deviceready", onDeviceReady, false);
+			//onDeviceReady();
+		}
+		function onDeviceReady() {
+			
+
+		}
+	</script>
+	<style>
+		*{
+			text-decoration:none;
+		}
+		.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+			color: #383838 !important;
+			font-weight: normal !important;
+			font-family:web_yekan;
+			font-size:15px;
+		}
+		table
+		{
+			width:calc(100% + 32px);
+			margin-right:-16px;
+		}
+		tbody tr td
+		{
+			padding-right:23px;
+		}
+		tbody tr:nth-child(2n+1)
+		{
+			background: none repeat scroll 0 0 #e4e4e4;
+			height: 45px;
+		}
+		tbody tr:nth-child(2n)
+		{
+			background: none repeat scroll 0 0 #f3f3f3;
+			height: 45px;
+		}
+	</style>
+</head>
+<body onload="init();">
+
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-main" >
+
+    <div data-role="header" data-position="fixed" data-fullscreen="false">
+        <h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image"> آخرین اخبار</h1>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext"  class="ui-btn-right menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<div class="container" >
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+<style>
+#content{
+direction:rtl;
+}
+</style>
+<div id="content">
+
+
+<div id="system-message-container">
+	</div>
+<div class="category-list">
+
+<div>
+	<div class="content-category">
+																<div class="category-desc">
+									<img src="/parse3/images/books/tarmimi.jpg"/>
+													<p> نام کتاب : ترمیمی</p>
+<p>نام استاد : دکتر کسری طبری</p>								<div class="clr"></div>
+			</div>
+				
+
+<form action="http://smgroup.ir/parse3/%D9%85%D8%AD%D8%AA%D9%88%D8%A7%DB%8C-%D8%AF%D8%B1%D9%88%D8%B3-%D8%B1%D8%B2%DB%8C%D8%AF%D9%86%D8%AA%DB%8C/%D8%AA%D8%B1%D9%85%DB%8C%D9%85%DB%8C/%D9%85%D8%AA%D9%86-%D8%A7%D8%B5%D9%84%DB%8C-%D8%AF%D8%B1%D8%B3%D9%86%D8%A7%D9%85%D9%87.html" method="post" name="adminForm" id="adminForm" class="form-inline">
+		<fieldset class="filters btn-toolbar clearfix">
+							<div class="btn-group pull-right">
+				<label for="limit" class="element-invisible">
+					نمایش #				</label>
+				<select id="limit" name="limit" class="inputbox input-mini" size="1" onchange="this.form.submit()">
+	<option value="5">5</option>
+	<option value="10" selected="selected">10</option>
+	<option value="15">15</option>
+	<option value="20">20</option>
+	<option value="25">25</option>
+	<option value="30">30</option>
+	<option value="50">50</option>
+	<option value="100">100</option>
+	<option value="0">همه</option>
+</select>
+			</div>
+		
+		<input type="hidden" name="filter_order" value="" />
+		<input type="hidden" name="filter_order_Dir" value="" />
+		<input type="hidden" name="limitstart" value="" />
+		<input type="hidden" name="task" value="" />
+	</fieldset>
+	
+	<table class="category table table-striped table-bordered table-hover">
+				<thead>
+			<tr>
+				<th id="categorylist_header_title">
+					<a href="#" onclick="Joomla.tableOrdering('a.title','asc','');return false;" class="hasTooltip" title="&lt;strong&gt;عنوان&lt;/strong&gt;&lt;br /&gt;برای مرتب کردن بر اساس این ستون کلیک کنید">عنوان</a>				</th>
+																			</tr>
+		</thead>
+				<tbody>
+											<tr class="cat-list-row0" >
+									<td headers="categorylist_header_title" class="list-title">
+													<a href="/parse3/محتوای-دروس-رزیدنتی/ترمیمی/متن-اصلی-درسنامه/33-مقدمه.html">
+								مقدمه							</a>
+																													</td>
+																								</tr>
+											<tr class="cat-list-row1" >
+									<td headers="categorylist_header_title" class="list-title">
+													<a href="/parse3/محتوای-دروس-رزیدنتی/ترمیمی/متن-اصلی-درسنامه/34-فصل-اول-آناتومی،-هیستولوژی-و-فیزیولوژی-دندان.html">
+								فصل اول: آناتومی، هیستولوژی و فیزیولوژی دندان							</a>
+																													</td>
+																								</tr>
+											<tr class="cat-list-row0" >
+									<td headers="categorylist_header_title" class="list-title">
+													<a href="/parse3/محتوای-دروس-رزیدنتی/ترمیمی/متن-اصلی-درسنامه/35-فصل-دوم-پوسیدگی-و-پیشگیری.html">
+								فصل دوم: پوسیدگی و پیشگیری							</a>
+																													</td>
+																								</tr>
+											<tr class="cat-list-row1" >
+									<td headers="categorylist_header_title" class="list-title">
+													<a href="/parse3/محتوای-دروس-رزیدنتی/ترمیمی/متن-اصلی-درسنامه/36-فصل-سوم-باندینگ-های-مینایی-و-عاجی.html">
+								فصل سوم: باندینگ های مینایی و عاجی							</a>
+																													</td>
+																								</tr>
+					</tbody>
+	</table>
+
+
+	</form>
+
+			</div>
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+		</div>
+
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+
+	</div><!-- /content -->
+
+    <div data-role="footer" data-fullscreen="false" data-position="fixed">
+
+    </div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>
