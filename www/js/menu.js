@@ -143,10 +143,11 @@
 		{
 			menu_json = window.sessionStorage.getItem('menu_json');
 		}
-		if(menu_json!="")
+		if(menu_json!= null)
 		{
-			alert(menu_json);
+			
 		}
+		alert(menu_json);
 	}
 
 	
