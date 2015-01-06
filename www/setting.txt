@@ -1,1 +1,3 @@
-    window.localStorage.clear();
+﻿    window.localStorage.clear();
+notification
+فعال کردن کش به صورت همیشگی بجز برای صفحه اول
