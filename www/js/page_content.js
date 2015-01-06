@@ -94,11 +94,12 @@ function getURL(URL,cache,iframe) {
 							async: true,
 							success : function(text)
 							{
-								text = text.replace("scr='images/","scr='http://parseh.smcms.ir/images/");
-								text = text.replace('scr="images/','scr="http://parseh.smcms.ir/images/');
-								text = text.replace("scr='/images/","scr='http://parseh.smcms.ir/images/");
-								text = text.replace('scr="/images/','scr="http://parseh.smcms.ir/images/');
-								$('.container').html(text);
+								var target_text = text.replace("src='images/","src='http://parseh.smcms.ir/images/");
+								target_text = target_text.replace('src="images/','src="http://parseh.smcms.ir/images/');
+								target_text = target_text.replace("src='/images/","src='http://parseh.smcms.ir/images/");
+								target_text = target_text.replace('src="/images/','src="http://parseh.smcms.ir/images/');
+								
+								$('.container').html(target_text);
 								
 								$('.container a').on("click", function (e) {
 									e.preventDefault();
@@ -120,7 +121,7 @@ function getURL(URL,cache,iframe) {
 								if(cache == true)
 								{
 //alert("we have internet - cached 000  " + $.md5(URL));
-									window.localStorage.setItem($.md5(URL),text);
+									window.localStorage.setItem($.md5(URL),target_text);
 									temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 									temp_array.push($.md5(URL));
 									window.sessionStorage.setItem('LOAD_URL',JSON.stringify(temp_array));	
