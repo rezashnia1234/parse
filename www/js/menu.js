@@ -107,6 +107,8 @@
 		//next();
 	}
 	function getMENU() {
+		return;
+		
 		var menu_json;
 		if(window.sessionStorage.getItem('menu_json') == null)
 		{
@@ -115,7 +117,7 @@
 			{
 				if(window.localStorage.getItem('menu_json') != null)
 				{
-					menu_json = window.localStorage.getItem(menu_json);			
+					menu_json = window.localStorage.getItem("menu_json");			
 				}
 			}
 			else
@@ -133,7 +135,7 @@
 						error: function(jqXHR, exception) {
 							if(window.localStorage.getItem('menu_json') != null)
 							{
-								menu_json = window.localStorage.getItem(menu_json);			
+								menu_json = window.localStorage.getItem("menu_json");
 							}
 						},
 				});
