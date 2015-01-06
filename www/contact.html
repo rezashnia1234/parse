@@ -21,7 +21,7 @@
 	function init() {			
 		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 		document.addEventListener("deviceready", onDeviceReady, false);
-		onDeviceReady();
+		//onDeviceReady();
 	}
 	function onDeviceReady() {
 		var networkState = navigator.connection.type;
@@ -72,7 +72,7 @@
 			}	
 			
 		}
-
+		getMENU();
 	}
 	$( document ).on( "pageinit", "#panel-responsive-main", function() {
 
