@@ -125,6 +125,7 @@
 						async: true,
 						success : function(text)
 						{
+							alert(text);
 							menu_json = text;
 							window.localStorage.setItem("menu_json",text);
 							window.sessionStorage.setItem("menu_json",text);
