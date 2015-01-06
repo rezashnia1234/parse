@@ -69,7 +69,9 @@ function getURL(URL,cache,iframe) {
 						$('.container a').on("click", function (e) {
 							e.preventDefault();
 							
-							if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+							if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
+								loadURL($(this).attr("href"));
+							else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));

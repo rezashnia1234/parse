@@ -79,9 +79,8 @@
 		</array>
 	</gap:config-file>
 	
-	<!--<gap:plugin name="com.moust.cordova.videoplayer" version="1.0.0" />	 platform="android"-->
-	<gap:plugin name="com.dawsonloudon.videoplayer" 	platform="android"	version="1.0.0" />
-
+	<!--<gap:plugin name="com.dawsonloudon.videoplayer" 	platform="android"	version="1.0.0" />-->
+	<gap:plugin name="de.neofonie.cordova.plugin.nativeaudio"  source="plugins.cordova.io" />
 	
     <!-- Define app icon      -->
     <icon src="icon.png" />
