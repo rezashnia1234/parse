@@ -22,11 +22,11 @@ function getURL(URL,cache,iframe) {
 
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
-alert("we have no internet");
+//alert("we have no internet");
 		var article_json = window.localStorage.getItem($.md5(URL));
 		if(article_json)
 		{
-alert("we have no internet - we have cache");
+//alert("we have no internet - we have cache");
 			$('.container').html(article_json);
 			$('.container a').on("click", function (e) {
 				e.preventDefault();
@@ -47,24 +47,24 @@ alert("we have no internet - we have cache");
 		}
 		else
 		{
-alert("we have no internet - no cache");
+//alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("براي مشاهده اين صفحه نياز به اينترنت داريد");
 		}
 	}
 	else
 	{
-alert("we have internet");
+//alert("we have internet");
 		if(iframe == false)
 		{
-alert("we have internet - iframe : false");
+//alert("we have internet - iframe : false");
 			var article_json = window.localStorage.getItem($.md5(URL));
 			var temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 			if((jQuery.inArray($.md5(URL),temp_array) != -1)	&&	article_json)
 			{
 					if(article_json)
 					{
-alert("we have internet - we have recent cache");
+//alert("we have internet - we have recent cache");
 						$('.container').html(article_json);
 						$('.container a').on("click", function (e) {
 							e.preventDefault();
@@ -96,6 +96,8 @@ alert("we have internet - we have recent cache");
 							{
 								text = text.replace("scr='images/","scr='http://parseh.smcms.ir/images/");
 								text = text.replace('scr="images/','scr="http://parseh.smcms.ir/images/');
+								text = text.replace("scr='/images/","scr='http://parseh.smcms.ir/images/");
+								text = text.replace('scr="/images/','scr="http://parseh.smcms.ir/images/');
 								$('.container').html(text);
 								
 								$('.container a').on("click", function (e) {
@@ -117,16 +119,16 @@ alert("we have internet - we have recent cache");
 								
 								if(cache == true)
 								{
-alert("we have internet - cached 000  " + $.md5(URL));
+//alert("we have internet - cached 000  " + $.md5(URL));
 									window.localStorage.setItem($.md5(URL),text);
 									temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 									temp_array.push($.md5(URL));
 									window.sessionStorage.setItem('LOAD_URL',JSON.stringify(temp_array));	
-alert("we have internet - cached  " + $.md5(URL));
+//alert("we have internet - cached  " + $.md5(URL));
 								}
 							},
 							error: function(jqXHR, exception) {
-alert("we have internet - but we have error : " + exception);
+//alert("we have internet - but we have error : " + exception);
 								if (jqXHR.status === 0) {
 									$('.container').html('Not connect.\n Verify Network.');
 								} else if (jqXHR.status == 404) {
