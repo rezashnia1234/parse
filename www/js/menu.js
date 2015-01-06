@@ -3,7 +3,7 @@
 		panel = panel + '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#" data-rel="close"><img src="images/menu/close.png">بستن منو</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb"><a href="index.html" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"  data-rel="external" data-ajax="false" ><img src="images/menu/news.png">اخبار و اطلاعیه ها</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a href="test.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r"  data-rel="external" data-ajax="false" ><img src="images/menu/exam.png">ثبت نام کلاس های آمادگی رزیدنتی</a></li>';
-		panel = panel + '<li class="odd ui-li-has-thumb"><a href="#panel-responsive-page2" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/book.png">محتوای دروس رزیدنتی</a></li>';
+		panel = panel + '<li class="odd ui-li-has-thumb"><a href="audio.html" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r" data-rel="external" data-ajax="false"><img src="images/menu/book.png">محتوای دروس رزیدنتی</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"><img src="images/menu/fasl.png">مشاوره و برنامه ریزی</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb"><a href="#panel-responsive-page2" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/book.png">ثبت نام آزمون ها</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"><img src="images/menu/setting.png">محتوای سوالات و آزمون ها</a></li>';
