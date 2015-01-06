@@ -94,8 +94,8 @@ alert("we have internet - we have recent cache");
 							async: true,
 							success : function(text)
 							{
-								//text = text.replace("scr='images/","scr='http://parseh.smcms.ir/images/"));
-								//text = text.replace('scr="images/','scr="http://parseh.smcms.ir/images/'));
+								text = text.replace("scr='images/","scr='http://parseh.smcms.ir/images/");
+								text = text.replace('scr="images/','scr="http://parseh.smcms.ir/images/');
 								$('.container').html(text);
 								
 								$('.container a').on("click", function (e) {
