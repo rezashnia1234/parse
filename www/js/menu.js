@@ -1,6 +1,8 @@
 //var panel = '<div data-position="right" id="nav-panel" data-theme="b" data-display="push" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-push ui-body-b ui-panel-animate ui-panel-open"><div class="ui-panel-inner"><ul data-role="listview" class="ui-listview"><li class="ui-li-has-thumb ui-first-child"><a data-rel="close" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/close.png">بستن منو</a></li><li class="odd ui-li-has-thumb"><a class="odd ui-btn ui-btn-icon-right ui-icon-carat-r" href="index.html"><img src="images/menu/news.png">اخبار</a></li><li class="even ui-li-has-thumb"><a href="#panel-responsive-page2" class="ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/exam.png">آزمون ها</a></li><li class="odd ui-li-has-thumb"><a class="odd ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"><img src="images/menu/book.png">کتاب ها</a></li><li class="even ui-li-has-thumb"><a href="#panel-responsive-page2" class="ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/fasl.png">فصل ها</a></li><li class="odd ui-li-has-thumb"><a class="odd ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"><img src="images/menu/notif.png">اطلاعیه ها</a></li><li class="even ui-li-has-thumb"><a href="#panel-responsive-page2" class="ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/setting.png">تنظیمات</a></li><li class="odd ui-li-has-thumb"><a class="odd ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"><img src="images/menu/about.png">درباره پارسه</a></li><li class="even ui-li-has-thumb ui-last-child"><a data-rel="external" href="contact.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/contact.png">تماس با پارسه</a></li></ul></div></div>';
 	var panel = '<div data-position="right" id="nav-panel" data-theme="b" data-display="push" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-push ui-body-b ui-panel-animate ui-panel-open"><div class="ui-panel-inner"><ul class="ui-listview" data-role="listview">';
 		panel = panel + '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#" data-rel="close"><img src="images/menu/close.png">بستن منو</a></li>';
+		
+		
 		panel = panel + '<li class="odd ui-li-has-thumb"><a href="index.html" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"  data-rel="external" data-ajax="false" ><img src="images/menu/news.png">اخبار و اطلاعیه ها</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a href="test.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r"  data-rel="external" data-ajax="false" ><img src="images/menu/exam.png">ثبت نام کلاس های آمادگی رزیدنتی</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb"><a href="audio.html" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r" data-rel="external" data-ajax="false"><img src="images/menu/book.png">محتوای دروس رزیدنتی</a></li>';
@@ -11,6 +13,8 @@
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/setting.png">دوره های اموزش کوتاه مدت</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/book.png">فیلم های اموزشی رایگان</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/setting.png">آرشیو نشریات</a></li>';
+		
+		
 		panel = panel + '<li class="odd ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/book.png">تنظیمات</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="contact.html" data-rel="external" data-ajax="false" ><img src="images/menu/contact.png">تماس با پارسه</a></li>';//data-rel="external" data-ajax="false"
 		panel = panel + '<li class="odd ui-li-has-thumb ui-last-child"><a href="#panel-responsive-page2" onclick="exit();" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/about.png">خروج</a></li>';
@@ -101,6 +105,47 @@
 		$(".blockUI" ).css("display","none");
 		//$.unblockUI();
 		//next();
+	}
+	function getMENU() {
+		var menu_json;
+		if(window.sessionStorage.getItem('menu_json') != null)
+		{
+			var networkState = navigator.connection.type;
+			if (networkState == Connection.NONE)
+			{
+				if(window.localStorage.getItem('menu_json') != null)
+				{
+					menu_json = window.localStorage.getItem(menu_json);			
+				}
+			}
+			else
+			{
+				$.ajax({ type: "GET",   
+						url: "http://parseh.smcms.ir/?MobileMenu=135,137",
+						async: true,
+						success : function(text)
+						{
+							menu_json = text;
+							window.localStorage.setItem("menu_json",text);
+							window.sessionStorage.setItem("menu_json",text);
+						},
+						error: function(jqXHR, exception) {
+							if(window.localStorage.getItem('menu_json') != null)
+							{
+								menu_json = window.localStorage.getItem(menu_json);			
+							}
+						},
+				});
+			}
+		}
+		else
+		{
+			menu_json = window.sessionStorage.getItem('menu_json');
+		}
+		if(menu_json!="")
+		{
+			alert(menu_json);
+		}
 	}
 
 	
