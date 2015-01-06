@@ -108,7 +108,7 @@
 	}
 	function getMENU() {
 		var menu_json;
-		if(window.sessionStorage.getItem('menu_json') != null)
+		if(window.sessionStorage.getItem('menu_json') == null)
 		{
 			var networkState = navigator.connection.type;
 			if (networkState == Connection.NONE)
