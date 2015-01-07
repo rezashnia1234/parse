@@ -397,7 +397,7 @@ body{font-family:"web_Yekan";}
 		padding-top: 0;
 		margin-top: -8px;
 	}
-	.blog .vg-page.ui-link {
+	.blog .vg-page a {
 		color:white !important;
 	}
 	.blog .fasele {
@@ -510,7 +510,7 @@ word-wrap: break-word;
 #jc .comment-box {
 margin-top: 37px;
 }
-#jc a.refresh.ui-link {
+#jc a.refresh {
 display: none;
 }
 #jc .page-header{display:none}
@@ -531,7 +531,7 @@ padding-right: 14px;
 #jc div#comments-footer {
 display: none;
 }
-#jc .btn  a.ui-link {
+#jc .btn  a {
 display: block;
 overflow:hidden;
 color: transparent !important;
@@ -612,7 +612,7 @@ overflow: hidden;
 background-color:#f4f4f4;
 }
 
-.haveimage a.iframe.ui-link {
+.haveimage a.iframe {
 color: transparent !important;
 background-image: url(../images/comment.png);
 display: block;
@@ -661,7 +661,7 @@ width: 100%;
 font-size: 20px;
 /* line-height: 63px; */
 }
-.noimage  a.iframe.ui-link {
+.noimage  a.iframe {
 color: transparent !important;
 background-image: url(../images/comment.png);
 display: block;
