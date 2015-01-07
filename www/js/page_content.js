@@ -238,7 +238,6 @@ function getURL(URL,cache,iframe) {
 		}
 		else
 		{
-			alert(URL);
 			$('.container').html("<iframe src='" + URL + "' id='comment_content'></iframe>");
 		}
 		
