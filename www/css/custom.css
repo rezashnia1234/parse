@@ -218,10 +218,351 @@ textarea{
 #myCanvas{
 	z-index:1013;
 }
+body{font-family:"web_Yekan";}
+#content{
+	direction:rtl;
+}
+#smgroup_audio_player,#smgroup_audio_player *,#smgroup_audio_player span{
+	direction:ltr !important;
+}
+#play2 {
+    display:none;
+}
+.ui-content {
+  padding: 0 !important;
+  margin-top:0px !important;
+}
+#footer{
+	position: fixed;
+	bottom: 0;
+	height: 42px;
+	width: 100%;
+	text-align: center;
+	background-color: #e03e5d;
+	z-index: 1000;
+}
+.ui-panel-wrapper {
+  margin-bottom: 42px;
+}
+.ui-title {
+  direction: rtl;
+  margin: 0 94px 0 0 !important;
+}
+.container{
+  direction: rtl;
+}
+#comment_content {
+  border: 0 none;
+  width: 100%;
+}
+.comment_warpper{
+
+}
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////START liste fasl ha////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
+	*{
+		text-decoration:none;
+	}
+	.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+		color: #383838 !important;
+		font-weight: normal !important;
+		font-family:web_yekan;
+		font-size:15px;
+	}
+	table
+	{
+		width:100%;
+		margin-right:0px;
+	}
+	tbody tr td
+	{
+		padding-right:23px;
+	}
+	tbody tr
+	{
+		background-color:#f3f3f3;
+		height: 45px;
+	}
+	tbody tr:nth-child(2n+1)
+	{
+		background-color:#e4e4e4;
+	}
+		
+	.category-desc p {
+		font-family:web_yekan;
+		color:#3a3a3a;
+	}
+	.category-desc img {
+		float: right;
+		margin-left: 16px;
+		margin-top: -4px;
+		width: 74px;
+	}
+	.category-desc .clr {
+		clear: both;
+	}
+	.content-category #adminForm {
+		float: right;
+		width: 100%;
+	}
+	.content-category .category-desc {
+		margin-bottom: 2px;
+		margin-top: -13px;
+		padding-top: 21px;
+	}
+	.red{
+		color:#ea3356 !important;
+	}
+	.gray{
+		color:#5e5e5e !important;
+	}
+	.bold {
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 0;
+	}
+	.content-category .table.category tr {
+		background-image: url("../images/bakhsh-icon/list-icon.png");
+		background-position: 22px top;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////END liste fasl ha////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
+	.blog .image {
+		float: right;
+		display: block;
+		padding:5px;
+		/*
+		width: 75px;
+		height: 79px;
+		background-color: #c2c2c2;
+		*/
+	}
+
+	.blog  .text-subtitle {
+		display: none;
+	}
+	.blog p {
+			font-family: "web_Yekan";
+			margin-right: 91px;
+			padding-left: 14px;
+			padding-top: 0;
+	}
+	.blog .vg-pages.vg-table-display.a-center {
+		position: absolute;
+		left: 0;
+		bottom: -0px;
+		width: 100%;
+		z-index: 200000;
+		font-family: "web_Yekan";
+		text-align: center;
+	}
+	.vg-pages.vg-table-display.a-center {
+	  background: none repeat scroll 0 0 #e03e5d;
+	}
+	.blog  a.ui-link {
+		color: #e03e5d !important;
+		font-family: "web_Yekan";
+		text-decoration: none;
+	}
+	.blog  h4{ 
+		margin: 0;
+		padding-bottom: 0;
+		padding-right: 92px;
+		padding-top: 6px;
+		text-align: right;
+	}
+	.blog  p.counter {
+		display: none;
+	}
+	.blog .items-row.cols-1{
+		float:right;
+		background:#e6e6e6;	
+	}
+	.blog .items-row.cols-1:nth-child(2n+1){
+		background:#efefef;
+	}
+	.blog .smcms-intro-text {
+		padding-top: 0;
+		margin-top: -12px;
+	}
+	.blog .vg-page.ui-link {
+		color:white !important;
+	}
+	.blog .fasele {
+	  margin-bottom: 53px;
+	}
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////END blog item////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
+.list-cat .content-category .category-desc {
+margin-top: -16px;
+padding-top: 12px;
+}
+.list-cat tbody tr td {
+padding-right: 69px;
+}
+.list-cat tbody tr {
+background: none repeat scroll 0 0 #dedede !important;
+height: 45px !important;
+background-image: url(../images/bakhsh-icon/icon-1th-dark.png) !important;
+background-repeat: no-repeat !important;
+background-size: 51px 51px !important;
+background-position:right center !important;
+}
+.list-cat tbody tr:nth-child(2n+1) {
+background: none repeat scroll 0 0 #ebebeb !important;
+background-image: url(../images/bakhsh-icon/icon-1th-light.png) !important;
+background-repeat: no-repeat !important;
+background-size: 51px 51px !important;
+background-position:right center !important;
+}
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////END bakhsh list item////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////coomment start////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
+#jc  h4 {
+	display:none;
+}
+.page-header h2{display:none}
+#jc  span.comment-date {
+display: none;
+}
+#jc .comment-anchor {
+  background-color: gray;
+  border-radius: 2em;
+  color: #ffffff !important;
+  height: 32px;
+  margin-right: 2px;
+  margin-top: -12px;
+  padding-top: 12px;
+  position: absolute;
+  text-align: center;
+  width: 45px;
+}
+#jc .ui-body-a,#jc  .ui-page-theme-a .ui-body-inherit,#jc  html .ui-bar-a .ui-body-inherit,#jc  html .ui-body-a .ui-body-inherit,#jc  html body .ui-group-theme-a .ui-body-inherit,#jc  html .ui-panel-page-container-a {
+  background-color: #f2f2f2;
+  border-color: #ddd;
+  box-shadow: 0 0 0 transparent;
+  color: #333;
+  text-shadow: 0 0 0 transparent !important;
+}
+#jc  span.comment-author {
+	color: #f24c6b;
+	font-weight: bold;
+	font-size: 19px;
+	margin-right: 60px;
+	color: transparent !important;
+}
+
+#jc  span.comments-buttons {
+	background-image: url(../images/nazardehi/arrow.png);
+	color: red;
+	background-size: 28px;
+	background-repeat: no-repeat;
+	/* background-color: gray; */
+	width: 60px;
+	height: 54px;
+	float: left;
+	position: absolute; 
+	left: -28px;
+	top: -8px;
+	background-position: 22px 8px;
+	
+
+}
+
+#jc  div#comments {
+width: 75%;
+display: block;
+margin: 0 auto;
+}
+#jc  .comment-body {
+width: 100%;
+background-color: #dbdbdb;
+border-radius: 12px;
+/* height: 98px; */
+margin-top: 25px;
+line-height: 45px;
+padding-right: 13px;
+word-wrap: break-word;
+}
+
+#jc .comment-box {
+margin-top: 37px;
+}
+#jc a.refresh.ui-link {
+display: none;
+}
+#jc .page-header{display:none}
 
 
+#jc form#comments-form {
+width: 76%;
+display: block;
+margin: 0 auto;
+padding-right: 14px;
+}
+#jc form#comments-form input{
+	text-align:right
+}
+#jc .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+	border:none
+}
+#jc div#comments-footer {
+display: none;
+}
+#jc .btn  a.ui-link {
+display: block;
+overflow:hidden;
+color: transparent !important;
+}
+#jc div#comments-form-send {
+	background-image: url(../images/contact/submit.png);
+	background-position: center;
+	background-size: 77px;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-color: #f24c6b;
+	border-radius: 8px;
+	height: 39px;
+	padding-top: 1px;
+	margin-bottom: 23px;
 
+}
+#jc .comments-buttons a{
+	color:transparent !important;
+}
+#jc label.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-checkbox-off {
+text-align: right;
+}
+#jc label.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-checkbox-on {
+text-align: right;
+}
+#jc .comment-box {
+position: relative;
+}
 
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////coomment end////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
 
 
 
