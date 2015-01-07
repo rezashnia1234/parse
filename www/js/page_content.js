@@ -22,50 +22,81 @@ function getURL(URL,cache,iframe) {
 
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
-//alert("we have no internet");
+alert("we have no internet");
 		var article_json = window.localStorage.getItem($.md5(URL));
 		if(article_json)
 		{
-//alert("we have no internet - we have cache");
+alert("we have no internet - we have cache");
 			$('.container').html(article_json);
+			FastClick.attach(document.body);
+			
 			$('.container a').on("click", function (e) {
 				e.preventDefault();
 				
-				if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+				if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
+					loadURL($(this).attr("href"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
 					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					////////////////////////////////openURL("http://smgroup.ir/parse3/" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 					openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				}
-				FastClick.attach(document.body);	
 			});
+			
+			$('.container a.iframe').on("click", function (e) {
+				e.preventDefault();
+				
+				if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+					openURL($(this).attr("href"),false,true);
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
+					openURL($(this).attr("href"),false,true);
+				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+					loadURL($(this).attr("href"));
+				else
+				{
+					openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,true);
+				}
+			});
+			
+			$('.container a.external').on("click", function (e) {
+				e.preventDefault();
+				
+				if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+					loadURL($(this).attr("href"));
+				else
+				{
+					loadURL("http://parseh.smcms.ir" + $(this).attr("href"));
+				}
+			});
+			
 		}
 		else
 		{
-//alert("we have no internet - no cache");
+alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("براي مشاهده اين صفحه نياز به اينترنت داريد");
 		}
 	}
 	else
 	{
-//alert("we have internet");
+alert("we have internet");
 		if(iframe == false)
 		{
-//alert("we have internet - iframe : false");
+alert("we have internet - iframe : false");
 			var article_json = window.localStorage.getItem($.md5(URL));
 			var temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 			if((jQuery.inArray($.md5(URL),temp_array) != -1)	&&	article_json)
 			{
 					if(article_json)
 					{
-//alert("we have internet - we have recent cache");
+alert("we have internet - we have recent cache");
 						$('.container').html(article_json);
+						FastClick.attach(document.body);
+						
 						$('.container a').on("click", function (e) {
 							e.preventDefault();
 							
@@ -73,16 +104,40 @@ function getURL(URL,cache,iframe) {
 								loadURL($(this).attr("href"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-							else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								////////////////////////////////openURL("http://smgroup.ir/parse3/" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 								openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							}
-							FastClick.attach(document.body);	
+						});
+						
+						$('.container a.iframe').on("click", function (e) {
+							e.preventDefault();
+							
+							if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+								openURL($(this).attr("href"),false,true);
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
+								openURL($(this).attr("href"),false,true);
+							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+								loadURL($(this).attr("href"));
+							else
+							{
+								openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,true);
+							}
+						});
+						
+						$('.container a.external').on("click", function (e) {
+							e.preventDefault();
+							
+							if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+								loadURL($(this).attr("href"));
+							else
+							{
+								loadURL("http://parseh.smcms.ir" + $(this).attr("href"));
+							}
 						});
 					}
 			}
@@ -100,36 +155,63 @@ function getURL(URL,cache,iframe) {
 								target_text = target_text.replace('src="/images/','src="http://parseh.smcms.ir/images/');
 								
 								$('.container').html(target_text);
+								FastClick.attach(document.body);
 								
 								$('.container a').on("click", function (e) {
 									e.preventDefault();
 									
-									if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+									if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
+										loadURL($(this).attr("href"));
 									else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
 										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										////////////////////////////////openURL("http://smgroup.ir/parse3/" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 										openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									}
-									FastClick.attach(document.body);	
+								});
+								
+								$('.container a.iframe').on("click", function (e) {
+									e.preventDefault();
+									
+									if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+										openURL($(this).attr("href"),false,true);
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
+										openURL($(this).attr("href"),false,true);
+									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+										loadURL($(this).attr("href"));
+									else
+									{
+										openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,true);
+									}
+								});
+								
+								$('.container a.external').on("click", function (e) {
+									e.preventDefault();
+									
+									if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+										loadURL($(this).attr("href"));
+									else
+									{
+										loadURL("http://parseh.smcms.ir" + $(this).attr("href"));
+									}
 								});
 								
 								if(cache == true)
 								{
-//alert("we have internet - cached 000  " + $.md5(URL));
+alert("we have internet - cached 000  " + $.md5(URL));
 									window.localStorage.setItem($.md5(URL),target_text);
 									temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 									temp_array.push($.md5(URL));
 									window.sessionStorage.setItem('LOAD_URL',JSON.stringify(temp_array));	
-//alert("we have internet - cached  " + $.md5(URL));
+alert("we have internet - cached  " + $.md5(URL));
 								}
 							},
 							error: function(jqXHR, exception) {
-//alert("we have internet - but we have error : " + exception);
+alert("we have internet - but we have error : " + exception);
 								if (jqXHR.status === 0) {
 									$('.container').html('Not connect.\n Verify Network.');
 								} else if (jqXHR.status == 404) {
