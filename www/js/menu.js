@@ -12,7 +12,7 @@
 		panel = panel + '<li class="odd ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/book.png">محتوای دروس مرور سریع</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/setting.png">دوره های اموزش کوتاه مدت</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/book.png">فیلم های اموزشی رایگان</a></li>';
-		panel = panel + '<li class="even ui-li-has-thumb"><a href="#" onclick="openURL(' + "'http://parseh.smcms.ir/آرشيو-نشریات.html'" + ',false,true);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/setting.png">آرشیو نشریات</a></li>';
+		panel = panel + '<li class="even ui-li-has-thumb"><a href="#" onclick="openURL(' + "'http://parseh.smcms.ir/آرشيو-نشریات.html'" + ',true,false);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/setting.png">آرشیو نشریات</a></li>';
 		
 		
 		panel = panel + '<li class="odd ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/book.png">تنظیمات</a></li>';
