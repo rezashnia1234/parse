@@ -155,6 +155,7 @@ alert("we have internet - we have recent cache");
 								target_text = target_text.replace('src="/images/','src="http://parseh.smcms.ir/images/');
 								
 								$('.container').html(target_text);
+alert("we have internet - download completed 0");
 								FastClick.attach(document.body);
 alert("we have internet - download completed 1");
 
