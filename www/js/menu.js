@@ -33,7 +33,10 @@
 					//$( "#right-panel" ).panel( "open" );
 				} else if ( e.type === "swiperight" ) {
 					$( "#nav-panel" ).panel( "close" );
-					//parent.history.back();
+					if ( device.platform == 'iOS' ){//Android,iOS,win7=WinCE,win8=Win32NT
+						go_back();
+						//parent.history.back();
+					}
 					//blockui();
 					//alert();
 				}
@@ -55,10 +58,6 @@
 			if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
 				if ( e.type === "swipeleft"  ) {
 					//$( "#right-panel" ).panel( "open" );
-					if ( device.platform == 'iOS' ){//Android,iOS,win7=WinCE,win8=Win32NT
-						go_back();
-						//parent.history.back();
-					}
 				} else if ( e.type === "swiperight" ) {
 					$( "#nav-panel" ).panel( "close" );
 					//alert();
