@@ -156,7 +156,8 @@ alert("we have internet - we have recent cache");
 								
 								$('.container').html(target_text);
 								FastClick.attach(document.body);
-								
+alert("we have internet - download completed 1");
+
 								$('.container a').on("click", function (e) {
 									e.preventDefault();
 									
@@ -173,7 +174,7 @@ alert("we have internet - we have recent cache");
 										openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									}
 								});
-								
+alert("we have internet - download completed 2");
 								$('.container a.iframe').on("click", function (e) {
 									e.preventDefault();
 									
@@ -188,7 +189,7 @@ alert("we have internet - we have recent cache");
 										openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,true);
 									}
 								});
-								
+alert("we have internet - download completed 3");
 								$('.container a.external').on("click", function (e) {
 									e.preventDefault();
 									
@@ -199,7 +200,7 @@ alert("we have internet - we have recent cache");
 										loadURL("http://parseh.smcms.ir" + $(this).attr("href"));
 									}
 								});
-								
+alert("we have internet - download completed 4");
 								if(cache == true)
 								{
 alert("we have internet - cached 000  " + $.md5(URL));
