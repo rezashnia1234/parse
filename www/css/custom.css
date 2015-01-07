@@ -331,6 +331,20 @@ body{font-family:"web_Yekan";}
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
+	
+.moduletable_menu .menu{
+  background-image: none;
+  background-size: cover;
+  border: 0 none !important;
+  box-shadow: 0 0 0 transparent;
+  height: auto;
+  position:relative;
+  right: auto;
+  top: auto;
+  width: 100%;
+  margin:0;
+}
+
 /*
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////END liste fasl ha////////////////////////////////////////////////////////////////
@@ -357,13 +371,17 @@ body{font-family:"web_Yekan";}
 			padding-top: 0;
 	}
 	.blog .vg-pages.vg-table-display.a-center {
-		position: absolute;
-		left: 0;
-		bottom: -0px;
-		width: 100%;
-		z-index: 200000;
-		font-family: "web_Yekan";
-		text-align: center;
+	  bottom: auto;
+	  float: right;
+	  font-family: "web_Yekan";
+	  height: auto;
+	  left: auto;
+	  padding-bottom: 0;
+	  padding-top: 4px;
+	  position: relative;
+	  text-align: center;
+	  width: 100%;
+	  z-index: 200000;
 	}
 	.vg-pages.vg-table-display.a-center {
 	  background: none repeat scroll 0 0 #e03e5d;
@@ -397,11 +415,21 @@ body{font-family:"web_Yekan";}
 		padding-top: 0;
 		margin-top: -8px;
 	}
-	.blog .vg-page a {
-		color:white !important;
+	.blog a.vg-page {
+	  background-color: #f5738d;
+	  border-radius: 14px;
+	  color: white !important;
+	  display: inline-block;
+	  height: 21px;
+	  width: 22px !important;
+	}
+	.blog a.vg-page.vg-pages-active {
+	  background-color: #ffffff !important;
+	  color: #f34b6c !important;
 	}
 	.blog .fasele {
-	  margin-bottom: 53px;
+	  margin-bottom: 0px;
+	  float: right;
 	}
 /*
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -433,6 +461,31 @@ background-position:right center !important;
 /*
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////END bakhsh list item////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
+.moduletable_menu .menu li {
+	background-color: #dedede !important;
+	height: 33px;
+	list-style: outside none none;
+	margin-right: -40px;
+	padding-right: 69px;
+	padding-top: 12px;
+	background-image: url(../images/bakhsh-icon/icon-1th-dark.png) !important;
+	background-repeat: no-repeat !important;
+	background-size: 51px 51px !important;
+	background-position:right center !important;
+}
+.moduletable_menu .menu li:nth-child(2n+1)
+{
+	background-color:#ebebeb !important;
+	background-image: url(../images/bakhsh-icon/icon-1th-light.png) !important;
+	background-repeat: no-repeat !important;
+	background-size: 51px 51px !important;
+	background-position:right center !important;
+}
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////END bakhsh MENU item////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 */
 /*
@@ -580,7 +633,8 @@ display: none;
 .haveimage p{
 	text-align: justify;
 	padding-right: 13px;
-padding-left: 13px;}
+	padding-left: 13px;
+}
 .haveimage h2.contentheading {
 	background: none !important;
 	font-weight: bold !important;
@@ -611,22 +665,24 @@ position: relative;
 overflow: hidden;
 background-color:#f4f4f4;
 }
-
-.haveimage a.iframe {
+.haveimage  a.iframe {
 color: transparent !important;
 background-image: url(../images/comment.png);
 display: block;
 background-position: center;
 background-repeat: no-repeat;
 background-size: 81px;
-height: 39px;
+height: 42px;
 }
+
 .haveimage div#comment {
-position: absolute;
-bottom: 0;
-width: 100%;
-height: 39px;
-background-color: #f24c6b;
+  background-color: #f24c6b;
+  bottom: 0;
+  height: 42px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 20000;
 }
 /*
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -634,32 +690,27 @@ background-color: #f24c6b;
 /////////////////////////////////////////////////////////////////////////////////////////
 */
 .noimage p {
-margin-right: 25px;
-padding-left: 36px;
-/* margin-top: -13px; */
+margin-right: 17px;
+padding-left: 17px;
 }
 .noimage h2.contentheading a {
-/* background: none !important; */
-color: #e43c5f !important;
-margin-right: 28px;
-	background: none repeat scroll 0 0 #e1e1e1;
-	font-weight: bold !important;
-	height: 38px;
-	margin-top: 0;
-	padding: -10px -49px;
-	width: 100%;
-	font-size: 20px;
-	/* line-height: 63px; */
+  color: #e43c5f !important;
+  font-size: 17px;
+  font-weight: bold !important;
+  margin-right: 0px;
+  margin-top: 0;
+  width: 100%;
 }
-.noimage .item-page h2.contentheading, .item-page h2.contentheading a {
-background: none repeat scroll 0 0 #e1e1e1;
-font-weight: bold !important;
-height: 38px;
-margin-top: 0;
-padding: -10px -49px;
-width: 100%;
-font-size: 20px;
-/* line-height: 63px; */
+.noimage h2.contentheading {
+  background-color: #e1e1e1 !important;
+  background-image: url("../images/title-bg.png") !important;
+  background-position: right 28px center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  line-height: 55px;
+  margin: 4px 0 0;
+  min-height: 55px;
+  padding-right: 65px;
 }
 .noimage  a.iframe {
 color: transparent !important;
@@ -668,14 +719,17 @@ display: block;
 background-position: center;
 background-repeat: no-repeat;
 background-size: 81px;
-height: 39px;
+height: 42px;
 }
-.noimage  div#comment {
-position: absolute;
-bottom: 0;
-width: 100%;
-height: 39px;
-background-color: #f24c6b;
+
+.noimage div#comment {
+  background-color: #f24c6b;
+  bottom: 0;
+  height: 42px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 20000;
 }
 /*
 /////////////////////////////////////////////////////////////////////////////////////////

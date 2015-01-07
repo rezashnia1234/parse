@@ -25,6 +25,11 @@
 		//onDeviceReady();
 	}
 	function onDeviceReady() {
+		window.sessionStorage.setItem('we_are_in',"contact");
+		
+		if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
+			document.addEventListener("backbutton", go_back, false);
+		
 		var networkState = navigator.connection.type;
 		if (networkState == Connection.NONE)
 		{
