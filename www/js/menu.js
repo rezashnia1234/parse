@@ -19,6 +19,7 @@
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="contact.html" data-rel="external" data-ajax="false" ><img src="images/menu/12-contact.png">تماس با پارسه</a></li>';//data-rel="external" data-ajax="false"
 		panel = panel + '<li class="odd ui-li-has-thumb ui-last-child"><a href="#panel-responsive-page2" onclick="exit();" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/13-close.png">خروج</a></li>';
 		panel = panel + '</ul></div></div>';
+		
 	$(document).one('pagebeforecreate', function () {
 	  $.mobile.pageContainer.prepend(panel);
 	  $("#nav-panel").panel();

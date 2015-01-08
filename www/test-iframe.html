@@ -11,7 +11,6 @@
     
 	<script src="js/jquery.min.js"></script>
     <script src="phonegap.js"></script>
-    <script src="js/fastclick.js"></script>
     <script src="js/index.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/jquery.md5.js"></script>
@@ -22,65 +21,81 @@
 		function init() {			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
-			//onDeviceReady();
+			onDeviceReady();
 		}
 		function onDeviceReady() {
-			window.sessionStorage.setItem('we_are_in',"show");
-			
-			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
-				document.addEventListener("backbutton", go_back, false);
-			}
-			
-			if(window.sessionStorage.getItem('PERV_URL') == null)
-			{
-				window.sessionStorage.setItem('PERV_URL',"http://parseh.smcms.ir");
-				window.sessionStorage.setItem('PERV_CACHE',true);
-				window.sessionStorage.setItem('PERV_IFRAME',false);
-			}
-			if(window.sessionStorage.getItem('NEXT_URL') == null)
-			{
-				window.sessionStorage.setItem('NEXT_URL',"http://parseh.smcms.ir");
-				window.sessionStorage.setItem('NEXT_CACHE',true);
-				window.sessionStorage.setItem('NEXT_IFRAME',false);
-			}
-			if(window.sessionStorage.getItem('LOAD_URL') == null)
-			{
-				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
-			}
-			
-			getURL(window.sessionStorage.getItem('NEXT_URL'),window.sessionStorage.getItem('NEXT_CACHE'),window.sessionStorage.getItem('NEXT_IFRAME'));
-			
-			//getMENU();
+			var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div><div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 40%; left: 0%; text-align: center;border: medium none;overflow:hidden;height:100%;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div></div>';
+			temp_html = temp_html + "<iframe src='" + "http://parseh.smcms.ir/?MobileMenu=423" + "' id='comment_content' onload='loadcompeleted();'></iframe>";
+			$('.container').html(temp_html);
 		}
 		function loadcompeleted() {
 			$("#loading").html("");
 		}
 	</script>
 	<style>
-		.blog {
-		  float: right;
-		  margin-bottom: 19px;
+		*{
+			text-decoration:none;
+		}
+		.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+			color: #383838 !important;
+			font-weight: normal !important;
+			font-family:web_yekan;
+			font-size:15px;
+		}
+		table
+		{
+			width:calc(100% + 32px);
+			margin-right:-16px;
+		}
+		tbody tr td
+		{
+			padding-right:23px;
+		}
+		tbody tr:nth-child(2n+1)
+		{
+			background: none repeat scroll 0 0 #e4e4e4;
+			height: 45px;
+		}
+		tbody tr:nth-child(2n)
+		{
+			background: none repeat scroll 0 0 #f3f3f3;
+			height: 45px;
 		}
 	</style>
 </head>
 <body onload="init();">
-	
+
 <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-main" >
 
     <div data-role="header" data-position="fixed" data-fullscreen="false">
-        <h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image"> مرکز ارتقاء آگاهی های دندانپزشکی پارسه</h1>
+        <h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image"> آخرین اخبار</h1>
 		<a href="#nav-panel" data-icon="bars" data-iconpos="notext"  class="ui-btn-right menu">Menu</a>
     </div><!-- /header -->
 
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
 		<div class="container" >
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
 				<div id="ajax">
 					<div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div>
 					<div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div>
 					<div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 40%; left: 0%; text-align: center;border: medium none;overflow:hidden;height:100%;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div>
-				</div>
+				</div>	
+
+
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
 		</div>
 
+	
+	
+	
+	
+	
+
+	
 	
 	
 	
