@@ -37,6 +37,7 @@
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    no internet ');
 			$('.internet').css({'display':'none'});
 			$('.nointernet').css({'display':'block'});
+			$('#iframe_warpper').html("");
 		}
 		else
 		{
@@ -134,7 +135,10 @@
 				<div onclick="loadURL('http://www.dparseh.com');" class="text contact">وب سایت : http://www.dparseh.com</div>
 				<hr/>
 				<br/>
-				<form action="#"  onsubmit="alert();" id="contactform" style="padding: 0px 8px;">
+				<div id="iframe_warpper">
+					<iframe class="internet" style="border:0 none;width:100%;height:1000px;" src="http://parseh.smcms.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%BE%D8%A7%D8%B1%D8%B3%D9%87.html?template=comment" ></iframe>
+				</div>
+				<form action="#"  onsubmit="alert();" id="contactform" class="nointernet" style="padding: 0px 8px;">
 					<input type="input" name="name" placeholder="عنوان" onclick="alert('برای ارسال پیام ، شما به اینترنت نیاز دارید');"  >
 					<textarea name="text" placeholder="متن پیام خود را بنویسید..." onclick="alert('برای ارسال پیام ، شما به اینترنت نیاز دارید');" ></textarea>	
 					<div class="submit" onclick="alert('برای ارسال پیام ، شما به اینترنت نیاز دارید');"></div>
