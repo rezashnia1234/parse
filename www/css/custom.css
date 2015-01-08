@@ -158,13 +158,13 @@
   background-repeat:repeat;
   background-size:cover;
   background-attachment:scroll;
-  height: 140px;
+  height: 200px;
   width:calc(100% + 32px);
   margin:-16px -16px 0 -16px;
 }
 #map-canvas{
 	width:100%;
-	height:140px;
+	height:200px;
 	margin:0;
 }
 .internet,.nointernet{
@@ -429,34 +429,7 @@ body{font-family:"web_Yekan";}
 	}
 /*
 /////////////////////////////////////////////////////////////////////////////////////////
-////////////////END blog item////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-*/
-.list-cat .content-category .category-desc {
-margin-top: -16px;
-padding-top: 12px;
-}
-.list-cat tbody tr td {
-padding-right: 69px;
-}
-.list-cat tbody tr {
-background: none repeat scroll 0 0 #dedede !important;
-height: 45px !important;
-background-image: url(../images/bakhsh-icon/icon-1th-dark.png) !important;
-background-repeat: no-repeat !important;
-background-size: 51px 51px !important;
-background-position:right center !important;
-}
-.list-cat tbody tr:nth-child(2n+1) {
-background: none repeat scroll 0 0 #ebebeb !important;
-background-image: url(../images/bakhsh-icon/icon-1th-light.png) !important;
-background-repeat: no-repeat !important;
-background-size: 51px 51px !important;
-background-position:right center !important;
-}
-/*
-/////////////////////////////////////////////////////////////////////////////////////////
-////////////////END bakhsh list item////////////////////////////////////////////////////////////////
+////////////////START bakhsh MENU item////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 */
 .moduletable_menu .menu li {
@@ -466,7 +439,7 @@ background-position:right center !important;
 	margin-right: -40px;
 	padding-right: 69px;
 	padding-top: 12px;
-	background-image: url(../images/bakhsh-icon/icon-1th-dark.png) !important;
+	background-image: url(../images/bakhsh-icon/Dark-10.png) !important;
 	background-repeat: no-repeat !important;
 	background-size: 51px 51px !important;
 	background-position:right center !important;
@@ -474,16 +447,301 @@ background-position:right center !important;
 .moduletable_menu .menu li:nth-child(2n+1)
 {
 	background-color:#ebebeb !important;
-	background-image: url(../images/bakhsh-icon/icon-1th-light.png) !important;
+	background-image: url(../images/bakhsh-icon/Light-10.png) !important;
 	background-repeat: no-repeat !important;
 	background-size: 51px 51px !important;
 	background-position:right center !important;
+}
+.moduletable_menu .menu.icon1 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-01.png) !important;
+}
+.moduletable_menu .menu.icon1.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-01.png) !important;
+}
+.moduletable_menu .menu.icon2 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-02.png) !important;
+}
+.moduletable_menu .menu.icon2.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-02.png) !important;
+}
+.moduletable_menu .menu.icon3 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-03.png) !important;
+}
+.moduletable_menu .menu.icon3.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-03.png) !important;
+}
+.moduletable_menu .menu.icon4 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-04.png) !important;
+}
+.moduletable_menu .menu.icon4.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-04.png) !important;
+}
+.moduletable_menu .menu.icon5 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-05.png) !important;
+}
+.moduletable_menu .menu.icon5.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-05.png) !important;
+}
+.moduletable_menu .menu.icon6 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-06.png) !important;
+}
+.moduletable_menu .menu.icon6.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-06.png) !important;
+}
+.moduletable_menu .menu.icon7 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-07.png) !important;
+}
+.moduletable_menu .menu.icon7.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-07.png) !important;
+}
+.moduletable_menu .menu.icon8 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-08.png) !important;
+}
+.moduletable_menu .menu.icon8.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-08.png) !important;
+}
+.moduletable_menu .menu.icon9 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-09.png) !important;
+}
+.moduletable_menu .menu.icon9.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-09.png) !important;
+}
+.moduletable_menu .menu.icon10 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-10.png) !important;
+}
+.moduletable_menu .menu.icon10.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-10.png) !important;
+}
+.moduletable_menu .menu.icon11 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-11.png) !important;
+}
+.moduletable_menu .menu.icon11.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-11.png) !important;
+}
+.moduletable_menu .menu.icon12 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-12.png) !important;
+}
+.moduletable_menu .menu.icon12.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-12.png) !important;
+}
+.moduletable_menu .menu.icon13 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-13.png) !important;
+}
+.moduletable_menu .menu.icon13.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-13.png) !important;
+}
+.moduletable_menu .menu.icon14 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-14.png) !important;
+}
+.moduletable_menu .menu.icon14.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-14.png) !important;
+}
+.moduletable_menu .menu.icon15 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-15.png) !important;
+}
+.moduletable_menu .menu.icon15.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-15.png) !important;
+}
+.moduletable_menu .menu.icon16 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-16.png) !important;
+}
+.moduletable_menu .menu.icon16.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-16.png) !important;
+}
+.moduletable_menu .menu.icon17 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-17.png) !important;
+}
+.moduletable_menu .menu.icon17.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-17.png) !important;
+}
+.moduletable_menu .menu.icon18 li {
+{
+	background-image: url(../images/bakhsh-icon/Dark-18.png) !important;
+}
+.moduletable_menu .menu.icon8.light li:nth-child(2n+1)
+{
+	background-image: url(../images/bakhsh-icon/Light-18.png) !important;
 }
 /*
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////END bakhsh MENU item////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 */
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////END blog item////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
+.list-cat .content-category .category-desc {
+	margin-top: -16px;
+	padding-top: 12px;
+}
+.list-cat tbody tr td {
+	padding-right: 69px;
+}
+.list-cat tbody tr {
+	background: none repeat scroll 0 0 #dedede !important;
+	height: 45px !important;
+	background-image: url(../images/bakhsh-icon/Dark-10.png) !important;
+	background-repeat: no-repeat !important;
+	background-size: 51px 51px !important;
+	background-position:right center !important;
+}
+.list-cat tbody tr:nth-child(2n+1) {
+	background: none repeat scroll 0 0 #ebebeb !important;
+	background-image: url(../images/bakhsh-icon/Light-10.png) !important;
+	background-repeat: no-repeat !important;
+	background-size: 51px 51px !important;
+	background-position:right center !important;
+}
+.list-cat.icon1 tbody tr,.icon1 {
+	background-image: url(../images/bakhsh-icon/Dark-01.png) !important;
+}
+.list-cat.icon1 tbody tr:nth-child(2n+1),.icon1.light {
+	background-image: url(../images/bakhsh-icon/Light-01.png) !important;
+}
+.list-cat.icon2 tbody tr,.icon2 {
+	background-image: url(../images/bakhsh-icon/Dark-02.png) !important;
+}
+.list-cat.icon2 tbody tr:nth-child(2n+1),.icon2.light {
+	background-image: url(../images/bakhsh-icon/Light-02.png) !important;
+}
+.list-cat.icon3 tbody tr,.icon3 {
+	background-image: url(../images/bakhsh-icon/Dark-03.png) !important;
+}
+.list-cat.icon3 tbody tr:nth-child(2n+1),.icon3.light {
+	background-image: url(../images/bakhsh-icon/Light-03.png) !important;
+}
+.list-cat.icon4 tbody tr,.icon4 {
+	background-image: url(../images/bakhsh-icon/Dark-04.png) !important;
+}
+.list-cat.icon4 tbody tr:nth-child(2n+1),.icon4.light {
+	background-image: url(../images/bakhsh-icon/Light-04.png) !important;
+}
+.list-cat.icon5 tbody tr,.icon5 {
+	background-image: url(../images/bakhsh-icon/Dark-05.png) !important;
+}
+.list-cat.icon5 tbody tr:nth-child(2n+1),.icon5.light {
+	background-image: url(../images/bakhsh-icon/Light-05.png) !important;
+}
+.list-cat.icon6 tbody tr,.icon6 {
+	background-image: url(../images/bakhsh-icon/Dark-06.png) !important;
+}
+.list-cat.icon6 tbody tr:nth-child(2n+1),.icon6.light {
+	background-image: url(../images/bakhsh-icon/Light-06.png) !important;
+}
+.list-cat.icon7 tbody tr,.icon7 {
+	background-image: url(../images/bakhsh-icon/Dark-07.png) !important;
+}
+.list-cat.icon7 tbody tr:nth-child(2n+1),.icon7.light {
+	background-image: url(../images/bakhsh-icon/Light-07.png) !important;
+}
+.list-cat.icon8 tbody tr,.icon8 {
+	background-image: url(../images/bakhsh-icon/Dark-08.png) !important;
+}
+.list-cat.icon8 tbody tr:nth-child(2n+1),.icon8.light {
+	background-image: url(../images/bakhsh-icon/Light-08.png) !important;
+}
+.list-cat.icon9 tbody tr,.icon9 {
+	background-image: url(../images/bakhsh-icon/Dark-09.png) !important;
+}
+.list-cat.icon9 tbody tr:nth-child(2n+1),.icon9.light {
+	background-image: url(../images/bakhsh-icon/Light-09.png) !important;
+}
+.list-cat.icon10 tbody tr,.icon10 {
+	background-image: url(../images/bakhsh-icon/Dark-10.png) !important;
+}
+.list-cat.icon10 tbody tr:nth-child(2n+1),.icon10.light {
+	background-image: url(../images/bakhsh-icon/Light-10.png) !important;
+}
+.list-cat.icon11 tbody tr,.icon11 {
+	background-image: url(../images/bakhsh-icon/Dark-11.png) !important;
+}
+.list-cat.icon11 tbody tr:nth-child(2n+1),.icon11.light {
+	background-image: url(../images/bakhsh-icon/Light-11.png) !important;
+}
+.list-cat.icon12 tbody tr,.icon12 {
+	background-image: url(../images/bakhsh-icon/Dark-12.png) !important;
+}
+.list-cat.icon12 tbody tr:nth-child(2n+1),.icon12.light {
+	background-image: url(../images/bakhsh-icon/Light-12.png) !important;
+}
+.list-cat.icon13 tbody tr,.icon13 {
+	background-image: url(../images/bakhsh-icon/Dark-13.png) !important;
+}
+.list-cat.icon13 tbody tr:nth-child(2n+1),.icon13.light {
+	background-image: url(../images/bakhsh-icon/Light-13.png) !important;
+}
+.list-cat.icon14 tbody tr,.icon14 {
+	background-image: url(../images/bakhsh-icon/Dark-14.png) !important;
+}
+.list-cat.icon14 tbody tr:nth-child(2n+1),.icon14.light {
+	background-image: url(../images/bakhsh-icon/Light-14.png) !important;
+}
+.list-cat.icon15 tbody tr,.icon15 {
+	background-image: url(../images/bakhsh-icon/Dark-15.png) !important;
+}
+.list-cat.icon15 tbody tr:nth-child(2n+1),.icon15.light {
+	background-image: url(../images/bakhsh-icon/Light-15.png) !important;
+}
+.list-cat.icon16 tbody tr,.icon16 {
+	background-image: url(../images/bakhsh-icon/Dark-16.png) !important;
+}
+.list-cat.icon16 tbody tr:nth-child(2n+1),.icon16.light {
+	background-image: url(../images/bakhsh-icon/Light-16.png) !important;
+}
+.list-cat.icon17 tbody tr,.icon17 {
+	background-image: url(../images/bakhsh-icon/Dark-17.png) !important;
+}
+.list-cat.icon17 tbody tr:nth-child(2n+1),.icon17.light {
+	background-image: url(../images/bakhsh-icon/Light-17.png) !important;
+}
+.list-cat.icon18 tbody tr,.icon18 {
+	background-image: url(../images/bakhsh-icon/Dark-18.png) !important;
+}
+.list-cat.icon18 tbody tr:nth-child(2n+1),.icon18.light {
+	background-image: url(../images/bakhsh-icon/Light-18.png) !important;
+}
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////END bakhsh list item////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
+
 /*
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////coomment start////////////////////////////////////////////////////////////////

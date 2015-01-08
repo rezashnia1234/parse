@@ -62,6 +62,21 @@ function getURL(URL,cache,iframe) {
 				}
 			});
 			
+			$('.container a.nocache').on("click", function (e) {
+				e.preventDefault();
+				
+				if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+					openURL($(this).attr("href"),false,false);
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
+					openURL($(this).attr("href"),false,false);
+				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+					loadURL($(this).attr("href"));
+				else
+				{
+					openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,false);
+				}
+			});
+			
 			$('.container a.external').on("click", function (e) {
 				e.preventDefault();
 				
@@ -129,6 +144,21 @@ function getURL(URL,cache,iframe) {
 							}
 						});
 						
+						$('.container a.nocache').on("click", function (e) {
+							e.preventDefault();
+							
+							if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+								openURL($(this).attr("href"),false,false);
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
+								openURL($(this).attr("href"),false,false);
+							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+								loadURL($(this).attr("href"));
+							else
+							{
+								openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,false);
+							}
+						});
+						
 						$('.container a.external').on("click", function (e) {
 							e.preventDefault();
 							
@@ -155,9 +185,7 @@ function getURL(URL,cache,iframe) {
 								target_text = target_text.replace('src="/images/','src="http://parseh.smcms.ir/images/');
 								
 								$('.container').html(target_text);
-//alert("we have internet - download completed 0");
 								FastClick.attach(document.body);
-//alert("we have internet - download completed 1");
 
 								$('.container a').on("click", function (e) {
 									e.preventDefault();
@@ -175,7 +203,7 @@ function getURL(URL,cache,iframe) {
 										openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									}
 								});
-//alert("we have internet - download completed 2");
+
 								$('.container a.iframe').on("click", function (e) {
 									e.preventDefault();
 									
@@ -190,7 +218,22 @@ function getURL(URL,cache,iframe) {
 										openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,true);
 									}
 								});
-//alert("we have internet - download completed 3");
+
+								$('.container a.nocache').on("click", function (e) {
+									e.preventDefault();
+									
+									if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
+										openURL($(this).attr("href"),false,false);
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
+										openURL($(this).attr("href"),false,false);
+									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
+										loadURL($(this).attr("href"));
+									else
+									{
+										openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,false);
+									}
+								});
+								
 								$('.container a.external').on("click", function (e) {
 									e.preventDefault();
 									
@@ -201,7 +244,7 @@ function getURL(URL,cache,iframe) {
 										loadURL("http://parseh.smcms.ir" + $(this).attr("href"));
 									}
 								});
-//alert("we have internet - download completed 4");
+
 								if(cache == true)
 								{
 //alert("we have internet - cached 000  " + $.md5(URL));
