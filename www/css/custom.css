@@ -242,7 +242,7 @@ body{font-family:"web_Yekan";}
 	z-index: 1000;
 }
 .ui-panel-wrapper {
-  margin-bottom: 42px;
+  margin-bottom: 0px;
 }
 .ui-title {
   direction: rtl;
@@ -344,7 +344,9 @@ body{font-family:"web_Yekan";}
   width: 100%;
   margin:0;
 }
-
+.vg-pages ul.pagination {
+  padding: 0 !important;
+}
 /*
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////END liste fasl ha////////////////////////////////////////////////////////////////
