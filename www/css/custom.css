@@ -369,17 +369,16 @@ body{font-family:"web_Yekan";}
 			padding-top: 0;
 	}
 	.blog .vg-pages.vg-table-display.a-center {
-	  bottom: auto;
-	  float: right;
 	  font-family: "web_Yekan";
 	  height: auto;
-	  left: auto;
 	  padding-bottom: 0;
 	  padding-top: 4px;
-	  position: relative;
 	  text-align: center;
 	  width: 100%;
-	  z-index: 200000;
+		bottom: 0 !important;
+		left: 0 !important;
+		position: fixed !important;
+		z-index:200000 !important;
 	}
 	.vg-pages.vg-table-display.a-center {
 	  background: none repeat scroll 0 0 #e03e5d;
@@ -414,12 +413,14 @@ body{font-family:"web_Yekan";}
 		margin-top: -8px;
 	}
 	.blog a.vg-page {
-	  background-color: #f5738d;
-	  border-radius: 14px;
-	  color: white !important;
-	  display: inline-block;
-	  height: 21px;
-	  width: 22px !important;
+		background-color: #f5738d;
+		border-radius: 14px;
+		color: white !important;
+		display: inline-block;
+		height: 21px;
+		margin-right: 9px;
+		width: 22px !important;
+		z-index: 10000000;
 	}
 	.blog a.vg-page.vg-pages-active {
 	  background-color: #ffffff !important;
