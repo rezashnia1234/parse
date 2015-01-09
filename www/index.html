@@ -114,7 +114,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 		function onDeviceReady() {
 			window.sessionStorage.setItem('we_are_in',"show");
-			FastClick.attach(document.body:not(. nofastclick));
+			//FastClick.attach(document.body);
 			
 			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
 				document.addEventListener("backbutton", go_back, false);
