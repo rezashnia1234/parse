@@ -36,14 +36,14 @@ function getURL(URL,cache,iframe) {
 				if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 					loadURL($(this).attr("href"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+					openURL($(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+					openURL($(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+					openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 				}
 			});
 			
@@ -51,14 +51,14 @@ function getURL(URL,cache,iframe) {
 				e.preventDefault();
 				
 				if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-					openURL($(this).attr("href"),false,true);
+					openURL($(this).attr("href") + "?user=" + device.uuid,false,true);
 				else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-					openURL($(this).attr("href"),false,true);
+					openURL($(this).attr("href") + "?user=" + device.uuid,false,true);
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,true);
+					openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,false,true);
 				}
 			});
 			
@@ -66,14 +66,14 @@ function getURL(URL,cache,iframe) {
 				e.preventDefault();
 				
 				if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-					openURL($(this).attr("href"),false,false);
+					openURL($(this).attr("href") + "?user=" + device.uuid,false,false);
 				else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-					openURL($(this).attr("href"),false,false);
+					openURL($(this).attr("href") + "?user=" + device.uuid,false,false);
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,false);
+					openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,false,false);
 				}
 			});
 			
@@ -116,16 +116,16 @@ function getURL(URL,cache,iframe) {
 							e.preventDefault();
 							
 							if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
-								loadURL($(this).attr("href"));
+								loadURL($(this).attr("href") + "?user=" + device.uuid);
 							else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+								openURL($(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+								openURL($(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+								openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 							}
 						});
 						
@@ -133,14 +133,14 @@ function getURL(URL,cache,iframe) {
 							e.preventDefault();
 							
 							if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-								openURL($(this).attr("href"),false,true);
+								openURL($(this).attr("href") + "?user=" + device.uuid,false,true);
 							else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-								openURL($(this).attr("href"),false,true);
+								openURL($(this).attr("href") + "?user=" + device.uuid,false,true);
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,true);
+								openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,false,true);
 							}
 						});
 						
@@ -148,14 +148,14 @@ function getURL(URL,cache,iframe) {
 							e.preventDefault();
 							
 							if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-								openURL($(this).attr("href"),false,false);
+								openURL($(this).attr("href") + "?user=" + device.uuid,false,false);
 							else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-								openURL($(this).attr("href"),false,false);
+								openURL($(this).attr("href") + "?user=" + device.uuid,false,false);
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,false);
+								openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,false,false);
 							}
 						});
 						
@@ -191,16 +191,16 @@ function getURL(URL,cache,iframe) {
 									e.preventDefault();
 									
 									if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
-										loadURL($(this).attr("href"));
+										loadURL($(this).attr("href") + "?user=" + device.uuid);
 									else if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+										openURL($(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 									else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+										openURL($(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://parseh.smcms.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+										openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,$(this).attr("cache"),$(this).attr("iframe"));
 									}
 								});
 
@@ -208,14 +208,14 @@ function getURL(URL,cache,iframe) {
 									e.preventDefault();
 									
 									if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-										openURL($(this).attr("href"),false,true);
+										openURL($(this).attr("href") + "?user=" + device.uuid,false,true);
 									else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-										openURL($(this).attr("href"),false,true);
+										openURL($(this).attr("href") + "?user=" + device.uuid,false,true);
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,true);
+										openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,false,true);
 									}
 								});
 
@@ -223,14 +223,14 @@ function getURL(URL,cache,iframe) {
 									e.preventDefault();
 									
 									if($(this).attr("href").toLowerCase().indexOf("http://parseh.smcms.ir") >= 0)
-										openURL($(this).attr("href"),false,false);
+										openURL($(this).attr("href") + "?user=" + device.uuid,false,false);
 									else if($(this).attr("href").toLowerCase().indexOf("http://www.parseh.smcms.ir") >= 0)
-										openURL($(this).attr("href"),false,false);
+										openURL($(this).attr("href") + "?user=" + device.uuid,false,false);
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://parseh.smcms.ir" + $(this).attr("href"),false,false);
+										openURL("http://parseh.smcms.ir" + $(this).attr("href") + "?user=" + device.uuid,false,false);
 									}
 								});
 								
