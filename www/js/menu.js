@@ -78,6 +78,7 @@
 	});
 	
 	function go_back() {
+		/*
 		if(window.sessionStorage.getItem('we_are_in')=="show")
 		{
 			window.sessionStorage.setItem('PERV_URL_TEMP',window.sessionStorage.getItem('PERV_URL'));
@@ -98,6 +99,7 @@
 		{
 			parent.history.back();
 		}
+		*/
 	}
 	function exit() {
 		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Exit the app! command');
