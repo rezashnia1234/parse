@@ -46,8 +46,8 @@
 				//alert("regID = " + e.regid);
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
-							url: "http://parseh.smcms.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
-							data: {regID : e.regid,user:device.uuid,OS:device.platform},
+							url: "http://ar.irdmfestival.com/notification/RegisterDeviceIDtoDB.php", 
+							data: {regID : e.regid,user:"ir.smgroup.festival",OS:device.platform},
 							async: false,
 							success : function(text)
 							{
@@ -159,8 +159,8 @@
 				console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Notification Callback Success! Result (ios) = '+result);
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
-							url: "http://parseh.smcms.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
-							data: {regID : result,user:device.uuid,OS:device.platform},
+							url: "http://ar.irdmfestival.com/notification/RegisterDeviceIDtoDB.php", 
+							data: {regID : result,user:"ir.smgroup.festival",OS:device.platform},
 							async: false,
 							success : function(text)
 							{
