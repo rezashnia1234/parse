@@ -85,6 +85,7 @@
 	
     <!-- Define app icon      -->
     <icon src="images/splash/icon.png" />
+    <icon src="images/splash/ios.png" platform="ios" />
 	
     <!-- Define app splash screen for each platform. -->
 	<gap:splash src="images/splash/screen-hdpi-landscape.png" />
