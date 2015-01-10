@@ -98,7 +98,7 @@ function getURL(URL,cache,iframe) {
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("<div style='text-align: center; font-weight: bold; margin-top: 50px; width: 100%;'>براي مشاهده اين صفحه نياز به اينترنت داريد</div>");
 			navigator.notification.alert(
-				'شما برای مشاهده این صفجه نیاز به اینترنت دارید',  // message
+				'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
 				alertDismissed,         // callback
 				'اخطار',            // title
 				'تائید'                  // buttonName
