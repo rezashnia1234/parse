@@ -3,8 +3,12 @@
     src: url('webyekan.ttf'); 
 }
 @font-face {
-    font-family: 'web_Yekan';
+    font-family: 'web_Yekann';
     src: url('/webyekan.ttf'); 
+}
+@font-face {
+    font-family: 'web_Yekannn';
+    src: url('./webyekan.ttf'); 
 }
 @font-face{
 	font-family:'Yekan';
