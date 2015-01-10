@@ -104,7 +104,7 @@ function getURL(URL,cache,iframe) {
 //alert("we have internet - iframe : false");
 			var article_json = window.localStorage.getItem($.md5(URL));
 			var temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
-			if((jQuery.inArray($.md5(URL),temp_array) != -1)	&&	article_json)
+			if((jQuery.inArray($.md5(URL),temp_array) != -1)	&&	article_json && (cache==true) )
 			{
 					if(article_json)
 					{
