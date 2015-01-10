@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>پارسه</title>
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/yekan.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+	<script src="js/jquery.min.js"></script>
+    <script src="phonegap.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/jquery.blockUI.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/page_content.js"></script>
+	<script>
+		function init() {			
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			document.addEventListener("deviceready", onDeviceReady, false);
+			//onDeviceReady();
+		}
+		function onDeviceReady() {
+			
+
+		}
+	</script>
+	<style>
+#reg_div {
+	width:100%;
+	text-align:center;
+}
+#reg_div .reg_btn {
+  background-color: #f24c6b;
+  border: medium none;
+  border-radius: 8px;
+  color: #ffffff;
+  display: block;
+  font-size: 17px;
+  height: 33px;
+  line-height: 33px;
+  margin: 10px auto;
+  text-align: center;
+  width: 257px;
+}
+#reg_div #desc {
+  line-height: 200%;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  width: 100%;
+}
+
+	</style>
+</head>
+<body onload="init();">
+
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-main" >
+
+    <div data-role="header" data-position="fixed" data-fullscreen="false">
+        <h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image"> آخرین اخبار</h1>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext"  class="ui-btn-right menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<div class="container" >
+			<div id="reg_div" >
+				<div id="desc">
+					این بخش برای کاربران عضو فعال می باشد .
+					<br/>
+					لطفا یکی از گزینه های زیر را انتخاب نمایید .
+				</div>
+				<a href="/ثبت-نام.html?template=comment&title=عضویت در سامانه" class="iframe"><div id="width:100%;" class="reg_btn" >ورود کاربر</div></a>
+				<a href="/ورود-کاربران.html?template=comment&title=ورود به سامانه" class="iframe"><div id="width:100%;" class="reg_btn">ثبت نام</div></a>
+			</div>
+		</div>
+
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+
+	</div><!-- /content -->
+
+    <div id="footer"></div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>

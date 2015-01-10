@@ -1272,6 +1272,33 @@ width: 100%;
 ////////////book page END////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 */
+#reg_div {
+	width:100%;
+	text-align:center;
+}
+#reg_div .reg_btn {
+  background-color: #f24c6b;
+  border: medium none;
+  border-radius: 8px;
+  color: #ffffff;
+  display: block;
+  font-size: 17px;
+  height: 33px;
+  line-height: 33px;
+  margin: 10px auto;
+  text-align: center;
+  width: 257px;
+}
+#reg_div #desc {
+  line-height: 200%;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  width: 100%;
+}
+
+
+
+
 
 
 
