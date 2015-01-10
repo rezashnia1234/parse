@@ -1184,7 +1184,94 @@ height: 42px;
 */
 textarea{min-height:100px;}
 
+#mainbook{
+	float:right;
+	width:100%;
+	font-family:'web_Yekan';
+	direction:rtl;
+}
+#mainbook .bookimage img {
+float: right;
+width: 74px;
+height: 90px;
+margin-top: 2px;
+}
+#mainbook .bookimage {
+  margin-bottom: 1px;
+  margin-right: 2px;
+}
+div#bookname {
+/* float: left; */
+text-align: right;
+position: relative;
+direction: rtl;
+word-wrap: break-word;
+font-weight: bold;
+margin-top: 18px;
+margin-right: 100px;
+color:#5d5d5d;
+/* word-wrap: break-word; */
+/* padding-right: 40px; */
+}
+#mainbook span.name {
+color: #ea3356;
+}
+#mainbook span.masterimage img {
+width: 40px;
+height: 40px;
+border-radius: 2em;
+position: absolute;
+right: 100px;
+}
+#mainbook span.mastername {
+/* text-align: right; */
+position: absolute;
+right: 274px;
+text-align: right;
+direction: rtl;
+padding-left: 17px;
+margin-top:10px;
+color:#3a3a3a;
+}
+#mainbook span.masterdufaultname {
+position: absolute;
+right: 152px;
+margin-top:10px;
+color:#3a3a3a;
+}
+#mainbook .tik {
+    background-image: url("../images/tik.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+    float: right;
+    height: 15px;
+    position: absolute;
+    right: 100px;
+    width: 15px;
+    z-index: 58;
+}
+#mainbook #master {
+    margin-top: 11px;
+}
+#mainbook div#row {
+position: relative;
+clear: both;
+float: right;
+width: 100%;
+	min-height: 93px;
+	
+}
+#mainbook #row:nth-child(2n+1)
+ {
+        background-color:#e4e4e4;
+}
 
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////book page END////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+*/
 
 
 
