@@ -1,6 +1,9 @@
 var pathname = window.location.pathname; // Returns path only
 var url      = window.location.href;     // Returns full URL
 
+function alertDismissed() {
+    // do something
+}
 
 function getParameterByName(name) {
 	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -93,7 +96,13 @@ function getURL(URL,cache,iframe) {
 		{
 //alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
-			$('.container').html("براي مشاهده اين صفحه نياز به اينترنت داريد");
+			$('.container').html("<div style='text-align: center; font-weight: bold; margin-top: 50px; width: 100%;'>براي مشاهده اين صفحه نياز به اينترنت داريد</div>");
+			navigator.notification.alert(
+				'شما برای مشاهده این صفجه نیاز به اینترنت دارید',  // message
+				alertDismissed,         // callback
+				'اخطار',            // title
+				'تائید'                  // buttonName
+			);
 		}
 	}
 	else
