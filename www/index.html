@@ -136,9 +136,13 @@
 			{
 				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
 			}
+			if(window.sessionStorage.getItem('registered') == null)
+			{
+				window.localStorage.setItem('registered',0);				
+			}
 
 			
-			getURL("http://parseh.smcms.ir?user=" + device.uuid,true,false);
+			getURL("http://parseh.smcms.ir?uuid=" + device.uuid + "&registered=" + window.localStorage.getItem('registered'),true,false);
 			//getMENU();
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -191,7 +195,6 @@
     </div><!-- /header -->
 
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
-		000000000
 		<div class="container" >
 				<div id="ajax">
 					<div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:visible;" class="blockUI blockOverlay"></div>
