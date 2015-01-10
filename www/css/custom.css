@@ -358,18 +358,17 @@ body{font-family:"web_Yekan";}
 	.blog .image {
 		float: right;
 		display: block;
-		padding:5px;
-		/*
-		width: 75px;
-		height: 79px;
+		margin:5px;
+		height: 90px;
+		width: 80px;
 		background-color: #c2c2c2;
-		*/
 	}
 	.blog p {
 			font-family: "web_Yekan";
 			margin-right: 91px;
 			padding-left: 14px;
 			padding-top: 0;
+			margin-bottom: 0;
 	}
 	.blog .vg-pages.vg-table-display.a-center {
 	  font-family: "web_Yekan";
@@ -407,6 +406,7 @@ body{font-family:"web_Yekan";}
 	.blog .items-row.cols-1{
 		float:right;
 		background:#e6e6e6;	
+		width: 100%;
 	}
 	.blog .items-row.cols-1:nth-child(2n+1){
 		background:#efefef;
