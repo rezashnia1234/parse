@@ -1296,7 +1296,28 @@ width: 100%;
   width: 100%;
 }
 
-
+.mainmenu {
+  margin-top: 5px;
+}
+.mainmenu td{
+	width:33%;
+}
+.mainmenu td {
+  padding-right: 0 !important;
+}
+.mainmenu tr ,.mainmenu tr:nth-child(2n+1) {
+  background: none !important;
+  height: auto !important;
+}
+.mainmenu img {
+  width: 97%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.mainmenu tr,.mainmenu td {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 
 
