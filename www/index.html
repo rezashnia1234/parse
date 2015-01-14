@@ -204,7 +204,7 @@
 
 			<table  class="mainmenu" dir="rtl" cellspacing="0" cellpadding="0" align="center" style='-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;' unselectable='on' onselectstart='return false;' >
 				<tr>
-					<td  onclick="openURL('http://parseh.smcms.ir/',true,false);"  ><img src="images/mainmenu/01.png" unselectable='on' onselectstart='return false;' /></a></td>
+					<td  onclick="openURL('http://parseh.smcms.ir/',true,false);"  ><img src="images/mainmenu/01.png" id="test" unselectable='on' onselectstart='return false;' /></a></td>
 					<td  onclick="openURL('http://parseh.smcms.ir/آخرین-اخبار',true,false);" ><img src="images/mainmenu/02.png" unselectable='on' onselectstart='return false;' /></a></td>
 					<td  onclick="openURL('http://parseh.smcms.ir/ثبت-نام-کلاس-های-رزیدنتی',true,false);" ><img src="images/mainmenu/03.png" unselectable='on' onselectstart='return false;' /></a></td>
 				</tr>
@@ -226,7 +226,12 @@
 			</table>
 			<br/><br/>
 		
-		
+<script>
+$('.mainmenu img').on('dragstart', function(event) { event.preventDefault();				});
+//$('.mainmenu img').on('dragend', function(event) { event.preventDefault();		alert();		});
+//$('.mainmenu img').on('dragstop', function(event) { event.preventDefault();		alert();		});
+//document.getElementById('test').ondragstart = function() { alert();return false; };
+</script>
 		
 		</div>
 
