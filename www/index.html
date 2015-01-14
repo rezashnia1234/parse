@@ -234,16 +234,19 @@ $('.mainmenu img').on( "swipeleft swiperight",
 			if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
 				if ( event.type === "swipeleft"  ) {
 					//$( "#right-panel" ).panel( "open" );
+					alert("1");
 				} else if ( event.type === "swiperight" ) {
 					$( "#nav-panel" ).panel( "close" );
+					alert("2");
 				}
 			}
 			if ( $.mobile.activePage.jqmData( "panel" ) !== "close" ) {
 				if ( event.type === "swipeleft"  ) {
 					$( "#nav-panel" ).panel( "open" );
+					alert("3");
 				} else if ( event.type === "swiperight" ) {
 					$( "#nav-panel" ).panel( "close" );
-
+					alert("4");
 				}
 			}
 );
