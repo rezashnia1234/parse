@@ -12,15 +12,15 @@
 		panel = panel + '<li class="odd ui-li-has-thumb"><a  href="#" onclick="openURL(' + "'http://parseh.smcms.ir/ثبت-نام-آزمون-ها'" + ',true,false);" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"  data-rel="external" data-ajax="false" ><img src="images/menu/05-register.png">ثبت نام آزمون ها</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a href="#" onclick="openURL(' + "'http://parseh.smcms.ir/محتوای-سوالات-و-آزمون-ها'" + ',true,false);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/06-azmoon.png">محتوای سوالات و آزمون ها</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb"><a  href="#" onclick="openURL(' + "'http://parseh.smcms.ir/محتوای-دروس-مرور-سریع'" + ',true,false);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/07-speedreplay.png">محتوای دروس مرور سریع</a></li>';
-		panel = panel + '<li class="even ui-li-has-thumb"><a href="#" onclick="openURL(' + "'http://parseh.smcms.ir/دوره-ھای-آموزش-کوتاه-مدت'" + ',true,false);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/08-register.png">دوره های اموزش کوتاه مدت</a></li>';
-		panel = panel + '<li class="odd ui-li-has-thumb"><a  href="#" onclick="openURL(' + "'http://parseh.smcms.ir/فيلم-ھای-آموزشی-رایگان'" + ',true,false);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/09-video.png">فیلم های اموزشی رایگان</a></li>';
+		panel = panel + '<li class="even ui-li-has-thumb"><a href="#" onclick="openURL(' + "'http://parseh.smcms.ir/دوره-ھای-آموزش-کوتاه-مدت'" + ',true,false);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/08-register.png">دوره های آموزش کوتاه مدت</a></li>';
+		panel = panel + '<li class="odd ui-li-has-thumb"><a  href="#" onclick="openURL(' + "'http://parseh.smcms.ir/فيلم-ھای-آموزشی-رایگان'" + ',true,false);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/09-video.png">فیلم های آموزشی رایگان</a></li>';
 		panel = panel + '<li class="even ui-li-has-thumb"><a href="#" onclick="openURL(' + "'http://parseh.smcms.ir/آرشيو-نشریات'" + ',true,false);" class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/10-nashriat.png">آرشیو نشریات</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb"><a href="#"  onclick="openURL(' + "'http://parseh.smcms.ir/تنظیمات'" + ',false,false);"  class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/11-setting.png">تنظیمات</a></li>';
 		
 		
 		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="contact.html" data-rel="external" data-ajax="false" ><img src="images/menu/12-contact.png">تماس با پارسه</a></li>';//data-rel="external" data-ajax="false"
 		panel = panel + '<li class="odd ui-li-has-thumb ui-last-child"><a href="#panel-responsive-page2" onclick="exit();" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/13-close.png">خروج</a></li>';
-		panel = panel + '</ul></div></div>';
+		panel = panel + '</ul><br/><br/></div></div>';
 
 /*
 اخبار 226

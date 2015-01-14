@@ -228,6 +228,30 @@
 		
 <script>
 $('.mainmenu img').on('dragstart', function(event) { event.preventDefault();				});
+$('.mainmenu img').on('swipe', function(event) { event.preventDefault();				});
+$('.mainmenu img').on( "swipeleft swiperight",
+	function(event) { event.preventDefault();
+			if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+				if ( event.type === "swipeleft"  ) {
+					//$( "#right-panel" ).panel( "open" );
+				} else if ( event.type === "swiperight" ) {
+					$( "#nav-panel" ).panel( "close" );
+				}
+			}
+			if ( $.mobile.activePage.jqmData( "panel" ) !== "close" ) {
+				if ( event.type === "swipeleft"  ) {
+					$( "#nav-panel" ).panel( "open" );
+				} else if ( event.type === "swiperight" ) {
+					$( "#nav-panel" ).panel( "close" );
+
+				}
+			}
+);
+
+
+
+
+
 //$('.mainmenu img').on('dragend', function(event) { event.preventDefault();		alert();		});
 //$('.mainmenu img').on('dragstop', function(event) { event.preventDefault();		alert();		});
 //document.getElementById('test').ondragstart = function() { alert();return false; };
