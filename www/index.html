@@ -228,9 +228,7 @@
 		
 <script>
 $('.mainmenu img').on('dragstart', function(event) { event.preventDefault();				});
-$('.mainmenu img').on('swipe', function(event) { event.preventDefault();				});
-$('.mainmenu img').on( "swipeleft swiperight",
-	function(event) { event.preventDefault();
+$('.mainmenu img').on('swipe', function(event) { event.preventDefault();
 			if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
 				if ( event.type === "swipeleft"  ) {
 					//$( "#right-panel" ).panel( "open" );
@@ -249,6 +247,7 @@ $('.mainmenu img').on( "swipeleft swiperight",
 					alert("4");
 				}
 			}
+		}
 );
 
 
