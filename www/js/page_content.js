@@ -316,6 +316,6 @@ function openURL(URL,cache,iframe) {
 	window.sessionStorage.setItem('NEXT_URL',URL);
 	window.sessionStorage.setItem('NEXT_CACHE',cache);
 	window.sessionStorage.setItem('NEXT_IFRAME',iframe);
-		
+	alert("show.html?url=" + btoa(URL) + "&cache=" + btoa(cache) + "&iframe=" + btoa(iframe));
 	window.location.href = "show.html?url=" + btoa(URL) + "&cache=" + btoa(cache) + "&iframe=" + btoa(iframe);
 }
