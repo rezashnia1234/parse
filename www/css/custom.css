@@ -1382,7 +1382,17 @@ transition: .25s ease-in-out;
 ////////////Toggle check box END////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 */
-
+#backBTN {
+  background-image: url("../images/back.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  height: 100%;
+  width: 100px;
+}
 
 
 
