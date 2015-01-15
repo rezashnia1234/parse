@@ -50,9 +50,9 @@
 			}
 			
 			//getURL(window.sessionStorage.getItem('NEXT_URL'),window.sessionStorage.getItem('NEXT_CACHE'),window.sessionStorage.getItem('NEXT_IFRAME'));
-			var show_url	=	atob(getParameterByName("url"));
-			var show_cache	=	atob(getParameterByName("cache"));
-			var show_iframe	=	atob(getParameterByName("iframe"));
+			var show_url	=	Base64.decode(getParameterByName("url"));
+			var show_cache	=	Base64.decode(getParameterByName("cache"));
+			var show_iframe	=	Base64.decode(getParameterByName("iframe"));
 			
 			alert(show_url + "//" + show_cache + "//" + show_iframe);
 			
