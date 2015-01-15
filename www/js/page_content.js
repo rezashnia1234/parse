@@ -298,16 +298,16 @@ alert("we have internet - but we have error : " + exception);
 	}
 }
 function openURL(URL,cache,iframe) {
-	cache = cache || true;
-	iframe = iframe || false;
-	if(iframe == "false")
-		iframe = false;
-	if(iframe == "true")
-		iframe = true;
-	if(cache == "false")
-		cache = false;
-	if(cache == "true")
-		cache = true;
+	cache = cache || "true";
+	iframe = iframe || "false";
+	if(iframe == false)
+		iframe = "false";
+	if(iframe == true)
+		iframe = "true";
+	if(cache == false)
+		cache = "false";
+	if(cache == true)
+		cache = "true";
 
 	window.sessionStorage.setItem('PERV_URL',window.sessionStorage.getItem('NEXT_URL'));
 	window.sessionStorage.setItem('PERV_CACHE',window.sessionStorage.getItem('NEXT_CACHE'));
@@ -317,6 +317,13 @@ function openURL(URL,cache,iframe) {
 	window.sessionStorage.setItem('NEXT_CACHE',cache);
 	window.sessionStorage.setItem('NEXT_IFRAME',iframe);
 	
+
+	
+
 	alert("show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe));
 	window.location.href = "show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe);
 }
+
+
+
+
