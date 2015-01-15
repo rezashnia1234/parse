@@ -317,5 +317,5 @@ function openURL(URL,cache,iframe) {
 	window.sessionStorage.setItem('NEXT_CACHE',cache);
 	window.sessionStorage.setItem('NEXT_IFRAME',iframe);
 		
-	window.location.href = "show.html?url=" + $.md5(URL);
+	window.location.href = "show.html?url=" + btoa(URL) + "&cache=" + btoa(cache) + "&iframe=" + btoa(iframe);
 }

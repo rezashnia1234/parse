@@ -96,6 +96,7 @@
 	});
 	
 	function go_back() {
+		parent.history.back();
 		/*
 		if(window.sessionStorage.getItem('we_are_in')=="show")
 		{

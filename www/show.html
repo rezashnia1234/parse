@@ -49,8 +49,12 @@
 				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
 			}
 			
-			getURL(window.sessionStorage.getItem('NEXT_URL'),window.sessionStorage.getItem('NEXT_CACHE'),window.sessionStorage.getItem('NEXT_IFRAME'));
+			//getURL(window.sessionStorage.getItem('NEXT_URL'),window.sessionStorage.getItem('NEXT_CACHE'),window.sessionStorage.getItem('NEXT_IFRAME'));
+			var show_url	=	atob(getParameterByName("url"));
+			var show_cache	=	atob(getParameterByName("cache"));
+			var show_iframe	=	atob(getParameterByName("iframe"));
 			
+			getURL(show_url,show_cache,show_iframe);
 			//getMENU();
 		}
 	
