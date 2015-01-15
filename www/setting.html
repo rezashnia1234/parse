@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>Å«—”Â</title>
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/yekan.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+	<script src="js/jquery.min.js"></script>
+    <script src="phonegap.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/jquery.blockUI.js"></script>
+	<script src="js/menu.js"></script>
+    <script src="js/page_content.js"></script>
+	<script>
+		function init() {			
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			document.addEventListener("deviceready", onDeviceReady, false);
+			//onDeviceReady();
+		}
+		
+		function onDeviceReady() {
+			window.sessionStorage.setItem('we_are_in',"setting");
+			//FastClick.attach(document.body);
+			
+			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
+				document.addEventListener("backbutton", go_back, false);
+			}
+
+			
+
+		}
+	
+	</script>
+	<style>
+
+	
+	</style>
+</head>
+<body onload="init();">
+	
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-main" >
+
+    <div data-role="header" data-position="fixed" data-fullscreen="false">
+        <h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image">  ‰ŸÌ„« </h1>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext"  class="ui-btn-right menu nofastclick">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<div class="container" >
+
+			<div class="submit" onclick="window.localStorage.clear();"></div>
+
+		
+			<label>
+				<input type="checkbox" name="daneshgah" id="toggle" checked="checked">
+				«Œ»«— œ«‰‘ê«Â Â«
+				<label for="daneshgah" class="toggle"></label> 
+			</label> 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</div>
+	</div><!-- /content -->
+
+    <div id="footer"></div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>
