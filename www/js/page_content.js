@@ -25,11 +25,11 @@ function getURL(URL,cache,iframe) {
 
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
-//alert("we have no internet");
+alert("we have no internet");
 		var article_json = window.localStorage.getItem($.md5(URL));
 		if(article_json)
 		{
-//alert("we have no internet - we have cache");
+alert("we have no internet - we have cache");
 			$('.container').html(article_json);
 			//FastClick.attach(document.body);
 			
@@ -94,7 +94,7 @@ function getURL(URL,cache,iframe) {
 		}
 		else
 		{
-//alert("we have no internet - no cache");
+alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("<div style='text-align: center; font-weight: bold; margin-top: 50px; width: 100%;'>براي مشاهده اين صفحه نياز به اينترنت داريد</div>");
 			navigator.notification.alert(
@@ -107,17 +107,17 @@ function getURL(URL,cache,iframe) {
 	}
 	else
 	{
-//alert("we have internet");
+alert("we have internet");
 		if(iframe == false)
 		{
-//alert("we have internet - iframe : false");
+alert("we have internet - iframe : false");
 			var article_json = window.localStorage.getItem($.md5(URL));
 			var temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 			if((jQuery.inArray($.md5(URL),temp_array) != -1)	&&	article_json && (cache==true) )
 			{
 					if(article_json)
 					{
-//alert("we have internet - we have recent cache");
+alert("we have internet - we have recent cache");
 						$('.container').html(article_json);
 						//FastClick.attach(document.body);
 						
@@ -256,16 +256,16 @@ function getURL(URL,cache,iframe) {
 
 								if(cache == true)
 								{
-//alert("we have internet - cached 000  " + $.md5(URL));
+alert("we have internet - cached 000  " + $.md5(URL));
 									window.localStorage.setItem($.md5(URL),target_text);
 									temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
 									temp_array.push($.md5(URL));
 									window.sessionStorage.setItem('LOAD_URL',JSON.stringify(temp_array));	
-//alert("we have internet - cached  " + $.md5(URL));
+alert("we have internet - cached  " + $.md5(URL));
 								}
 							},
 							error: function(jqXHR, exception) {
-//alert("we have internet - but we have error : " + exception);
+alert("we have internet - but we have error : " + exception);
 								if (jqXHR.status === 0) {
 									$('.container').html('Not connect.\n Verify Network.');
 								} else if (jqXHR.status == 404) {
@@ -316,6 +316,7 @@ function openURL(URL,cache,iframe) {
 	window.sessionStorage.setItem('NEXT_URL',URL);
 	window.sessionStorage.setItem('NEXT_CACHE',cache);
 	window.sessionStorage.setItem('NEXT_IFRAME',iframe);
+	
 	alert("show.html?url=" + btoa(URL) + "&cache=" + btoa(cache) + "&iframe=" + btoa(iframe));
 	window.location.href = "show.html?url=" + btoa(URL) + "&cache=" + btoa(cache) + "&iframe=" + btoa(iframe);
 }
