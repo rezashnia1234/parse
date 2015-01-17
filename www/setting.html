@@ -27,7 +27,7 @@
 		
 		function onDeviceReady() {
 			window.sessionStorage.setItem('we_are_in',"setting");
-			//FastClick.attach(document.body);
+			FastClick.attach(document.getElementById('container'));
 			
 			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
 				document.addEventListener("backbutton", go_back, false);
@@ -54,7 +54,7 @@
     </div><!-- /header -->
 
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
-		<div class="container" >
+		<div class="container" id="container" >
 			<br/>
 			<br/>
 			<br/>

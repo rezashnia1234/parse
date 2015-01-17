@@ -33,18 +33,6 @@
 				document.addEventListener("backbutton", go_back, false);
 			}
 			
-			if(window.sessionStorage.getItem('PERV_URL') == null)
-			{
-				window.sessionStorage.setItem('PERV_URL',"http://parseh.smcms.ir");
-				window.sessionStorage.setItem('PERV_CACHE',true);
-				window.sessionStorage.setItem('PERV_IFRAME',false);
-			}
-			if(window.sessionStorage.getItem('NEXT_URL') == null)
-			{
-				window.sessionStorage.setItem('NEXT_URL',"http://parseh.smcms.ir");
-				window.sessionStorage.setItem('NEXT_CACHE',true);
-				window.sessionStorage.setItem('NEXT_IFRAME',false);
-			}
 			if(window.sessionStorage.getItem('LOAD_URL') == null)
 			{
 				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
@@ -92,7 +80,7 @@
     </div><!-- /header -->
 
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
-		<div class="container" >
+		<div class="container" id="container" >
 				<div id="ajax">
 					<div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:visible;" class="blockUI blockOverlay"></div>
 					<div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:visible;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div>

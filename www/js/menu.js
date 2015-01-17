@@ -42,6 +42,7 @@
 	$(document).one('pagebeforecreate', function () {
 	  $.mobile.pageContainer.prepend(panel);
 	  $("#nav-panel").panel();
+	  FastClick.attach(document.getElementById('nav-panel'));
 	});	
 	
 	

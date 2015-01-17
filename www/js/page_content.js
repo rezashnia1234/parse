@@ -31,7 +31,7 @@ function getURL(URL,cache,iframe) {
 		{
 //alert("we have no internet - we have cache");
 			$('.container').html(article_json);
-			//FastClick.attach(document.body);
+			FastClick.attach(document.getElementById('container'));
 			
 			$('.container a').on("click", function (e) {
 				e.preventDefault();
@@ -119,7 +119,7 @@ function getURL(URL,cache,iframe) {
 					{
 //alert("we have internet - we have recent cache");
 						$('.container').html(article_json);
-						//FastClick.attach(document.body);
+						FastClick.attach(document.getElementById('container'));
 						
 						$('.container a').on("click", function (e) {
 							e.preventDefault();
@@ -194,7 +194,7 @@ function getURL(URL,cache,iframe) {
 								target_text = target_text.replace('src="/images/','src="http://parseh.smcms.ir/images/');
 								
 								$('.container').html(target_text);
-								//FastClick.attach(document.body);
+								FastClick.attach(document.getElementById('container'));
 
 								$('.container a').on("click", function (e) {
 									e.preventDefault();
