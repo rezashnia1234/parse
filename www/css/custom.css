@@ -206,6 +206,13 @@ textarea{
   height: 40px;
   opacity: 1 !important;
 }
+.cache_clean {
+  background-image: url("../images/cache_clean.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  margin: 0 auto;
+  width: 98%;
+}
 #contactform .ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
   background: none repeat scroll 0 0 transparent;
   border: 0 solid transparent;
