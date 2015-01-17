@@ -297,6 +297,70 @@ function getURL(URL,cache,iframe) {
 		
 	}
 }
+
+
+
+function getURL_silent(URL,cache,iframe) {
+	cache = cache || true;
+	iframe = iframe || false;
+	if(iframe == "false")
+		iframe = false;
+	if(iframe == "true")
+		iframe = true;
+	if(cache == "false")
+		cache = false;
+	if(cache == "true")
+		cache = true;
+
+	var networkState = navigator.connection.type;
+	if (networkState == Connection.NONE) {
+
+	}
+	else
+	{
+//alert("we have internet");
+		if(iframe == false)
+		{
+//alert("we have internet - iframe : false");
+			var article_json = window.localStorage.getItem($.md5(URL));
+			var temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
+			if((jQuery.inArray($.md5(URL),temp_array) != -1)	&&	article_json && (cache==true) )
+			{
+
+			}
+			else
+			{
+				if(cache == true)
+				{
+					console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
+					$.ajax({ type: "GET",   
+							url: URL,
+							async: true,
+							success : function(text)
+							{
+								var target_text = text.replace("src='images/","src='http://parseh.smcms.ir/images/");
+								target_text = target_text.replace('src="images/','src="http://parseh.smcms.ir/images/');
+								target_text = target_text.replace("src='/images/","src='http://parseh.smcms.ir/images/");
+								target_text = target_text.replace('src="/images/','src="http://parseh.smcms.ir/images/');
+
+
+								window.localStorage.setItem($.md5(URL),target_text);
+								temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
+								temp_array.push($.md5(URL));
+								window.sessionStorage.setItem('LOAD_URL',JSON.stringify(temp_array));	
+							},
+							error: function(jqXHR, exception) {
+
+							
+							}
+					});
+				}
+			}
+		}
+	}
+}
+
+
 function openURL(URL,cache,iframe) {
 	cache = cache || "true";
 	iframe = iframe || "false";
