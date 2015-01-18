@@ -115,7 +115,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		function onDeviceReady() {
-			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, fail);
+			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 			
 			window.sessionStorage.setItem('we_are_in',"index");
 			FastClick.attach(document.getElementById('container'));
@@ -178,6 +178,11 @@
 			alert(uuid);
 			window.localStorage.setItem('uuid',uuid);
 		};
+		function uniqueDeviceIDfail(uuid)
+		{
+			alert("uniqueDeviceIDfail" + uuid);
+		};
+		
 		function loadcompeleted() {
 			$("#loading").html("");
 		}
