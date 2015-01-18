@@ -307,24 +307,25 @@ function getURL_login(uuid) {
 			async: true,
 			success : function(text)
 			{
-				if(text==0)
+				alert("getURL_login text=" + text);
+				if(text=="0")
 				{
 					window.localStorage.setItem('registered',0);
 					alert("getURL_login 1");
 				}
-				if(text==1)
+				if(text=="1")
 				{
 					window.localStorage.setItem('registered',1);
 					alert("getURL_login 2");
 				}
-				if(text==3)
+				if(text=="3")
 				{
 					alert("getURL_login 3");
 					window.localStorage.clear();
 					window.localStorage.setItem('registered',0);
 					window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 				}
-				if(text==4)
+				if(text=="4")
 				{
 					alert("getURL_login 4");
 					window.localStorage.clear();
