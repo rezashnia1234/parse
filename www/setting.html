@@ -39,6 +39,12 @@
 		function cache_clean() {
 			window.localStorage.clear();
 			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
+			navigator.notification.alert(
+				'کش برنامه با موفقیت پاکسازی شد',  // message
+				alertDismissed,         // callback
+				'اطلاعیه',            // title
+				'تائید'                  // buttonName
+			);
 		}
 		function uniqueDeviceIDsuccess_index(uuid)
 		{
