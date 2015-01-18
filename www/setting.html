@@ -36,7 +36,20 @@
 			
 
 		}
-	
+		function cache_clean() {
+			window.localStorage.clear();
+			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
+		}
+		function uniqueDeviceIDsuccess_index(uuid)
+		{
+			window.localStorage.setItem('uuid',uuid);
+			getURL_login(uuid);
+		};
+		function uniqueDeviceIDfail_index(uuid)
+		{
+			//alert("uniqueDeviceIDfail" + uuid);
+		};
+		
 	</script>
 	<style>
 
@@ -58,7 +71,7 @@
 			<br/>
 			<br/>
 			<br/>
-			<div class="submit cache_clean" onclick="window.localStorage.clear();"></div>
+			<div class="submit cache_clean" onclick="cache_clean();"></div>
 
 <!--
 			<label data-role="none">
