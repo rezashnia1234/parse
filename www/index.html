@@ -49,7 +49,7 @@
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
 							url: "http://parseh.smcms.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
-							data: {regID : e.regid,user:device.uuid,OS:device.platform},
+							data: {regID : e.regid,user:window.localStorage.getItem('uuid'),OS:device.platform},
 							async: false,
 							success : function(text)
 							{
@@ -115,6 +115,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		function onDeviceReady() {
+			window.plugins.uniqueDeviceID.get(uniqueDeviceID, fail);
+			
 			window.sessionStorage.setItem('we_are_in',"index");
 			FastClick.attach(document.getElementById('container'));
 			
@@ -132,7 +134,7 @@
 
 			
 			//getURL("http://parseh.smcms.ir?uuid=" + device.uuid + "&registered=" + window.localStorage.getItem('registered'),true,false);
-			getURL_silent("http://parseh.smcms.ir?uuid=" + device.uuid + "&registered=" + window.localStorage.getItem('registered'),true,false);
+			getURL_silent("http://parseh.smcms.ir?uuid=" + window.localStorage.getItem('uuid') + "&registered=" + window.localStorage.getItem('registered'),true,false);
 
 			//getMENU();
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -156,7 +158,7 @@
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
 							url: "http://parseh.smcms.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
-							data: {regID : result,user:device.uuid,OS:device.platform},
+							data: {regID : result,user:window.localStorage.getItem('uuid'),OS:device.platform},
 							async: false,
 							success : function(text)
 							{
@@ -171,6 +173,10 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		}
+		function uniqueDeviceIDsuccess(uuid)
+		{
+			window.localStorage.setItem('uuid',uuid);
+		};
 		function loadcompeleted() {
 			$("#loading").html("");
 		}
