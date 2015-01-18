@@ -267,9 +267,9 @@ function getURL(URL,cache,iframe) {
 							error: function(jqXHR, exception) {
 //alert("we have internet - but we have error : " + exception);
 								if (jqXHR.status === 0) {
-									$('.container').html('Not connect.\n Verify Network.');
+									$('.container').html('در اتصال شما به اینترنت مشکلی به وجود آمده است ، امکان نمایش محتوا وجود ندارد');
 								} else if (jqXHR.status == 404) {
-									$('.container').html('Requested page not found. [404]');
+									$('.container').html('صفحه مورد نظر شما یافت نشد');
 								} else if (jqXHR.status == 500) {
 									$('.container').html('Internal Server Error [500].');
 								} else if (exception === 'parsererror') {
@@ -299,6 +299,44 @@ function getURL(URL,cache,iframe) {
 }
 
 
+
+function getURL_login(uuid) {
+	alert("getURL_login start");
+	$.ajax({ type: "GET",   
+			url: "http://parseh.smcms.ir/?uuid=" + uuid + "&registered=" + window.localStorage.getItem('registered'),
+			async: true,
+			success : function(text)
+			{
+				if(text==0)
+				{
+					window.localStorage.setItem('registered',0);
+					alert("getURL_login 1");
+				}
+				if(text==1)
+				{
+					window.localStorage.setItem('registered',1);
+					alert("getURL_login 2");
+				}
+				if(text==3)
+				{
+					alert("getURL_login 3");
+					window.localStorage.clear();
+					window.localStorage.setItem('registered',0);
+					window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+				}
+				if(text==4)
+				{
+					alert("getURL_login 4");
+					window.localStorage.clear();
+					window.localStorage.setItem('registered',1);
+					window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+				}
+			},
+			error: function(jqXHR, exception) {
+			
+			}
+	});
+}
 
 function getURL_silent(URL,cache,iframe) {
 	cache = cache || true;
@@ -388,6 +426,15 @@ function openURL(URL,cache,iframe) {
 	window.location.href = "show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe);
 }
 
+function uniqueDeviceIDsuccess(uuid)
+{
+	alert("getURL_login uniqueDeviceIDsuccess");
+	window.localStorage.setItem('uuid',uuid);
+};
+function uniqueDeviceIDfail(uuid)
+{
+	//alert("uniqueDeviceIDfail" + uuid);
+};
 
 
 

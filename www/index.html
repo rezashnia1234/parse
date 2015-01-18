@@ -115,7 +115,10 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		function onDeviceReady() {
-			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+			if(window.localStorage.getItem('uuid') == null)
+				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
+			else
+				getURL_login(window.localStorage.getItem('uuid'));
 			
 			window.sessionStorage.setItem('we_are_in',"index");
 			FastClick.attach(document.getElementById('container'));
@@ -127,14 +130,14 @@
 			{
 				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
 			}
-			if(window.sessionStorage.getItem('registered') == null)
+			if(window.localStorage.getItem('registered') == null)
 			{
 				window.localStorage.setItem('registered',0);				
 			}
 
 			
 			//getURL("http://parseh.smcms.ir?uuid=" + device.uuid + "&registered=" + window.localStorage.getItem('registered'),true,false);
-			getURL_silent("http://parseh.smcms.ir?uuid=" + window.localStorage.getItem('uuid') + "&registered=" + window.localStorage.getItem('registered'),true,false);
+			//getURL_silent("http://parseh.smcms.ir?uuid=" + window.localStorage.getItem('uuid') + "&registered=" + window.localStorage.getItem('registered'),true,false);
 
 			//getMENU();
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -173,14 +176,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		}
-		function uniqueDeviceIDsuccess(uuid)
+		function uniqueDeviceIDsuccess_index(uuid)
 		{
-			//alert(uuid);
+			alert(uuid);
 			window.localStorage.setItem('uuid',uuid);
+			getURL_login(uuid);
 		};
-		function uniqueDeviceIDfail(uuid)
+		function uniqueDeviceIDfail_index(uuid)
 		{
-			//alert("uniqueDeviceIDfail" + uuid);
+			alert("uniqueDeviceIDfail" + uuid);
 		};
 		
 		function loadcompeleted() {
