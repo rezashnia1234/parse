@@ -54,6 +54,7 @@
 	
 		function loadcompeleted() {
 			$("#loading").html("");
+			$("#controls").css("display","none");
 			
 			url= window.sessionStorage.getItem('NEXT_URL');
 			name = "title";
@@ -75,6 +76,7 @@
 		{
 			//alert("uniqueDeviceIDfail" + uuid);
 		};
+
 	</script>
 	<style>
 
@@ -92,6 +94,12 @@
     </div><!-- /header -->
 
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<div id="controls">
+			<div id="css_style"></div>
+			<a href="#" id="small" class="selected">A</a>
+			<a href="#" id="medium">A</a>
+			<a href="#" id="large">A</a>
+		</div>
 		<div class="container" id="container" >
 				<div id="ajax">
 					<div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:visible;" class="blockUI blockOverlay"></div>
@@ -100,7 +108,7 @@
 				</div>
 		</div>
 
-	
+
 	
 	
 	

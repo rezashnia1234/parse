@@ -197,5 +197,7 @@
 		}
 		//alert(menu_json);
 	}
-
+	function alertDismissed() {
+		// do something
+	}
 	

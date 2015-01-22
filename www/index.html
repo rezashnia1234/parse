@@ -105,7 +105,13 @@
 				*/
 			}
 			
-			alert(e.payload.message);
+			//alert(e.payload.message);
+			navigator.notification.alert(
+				e.payload.message,  // message
+				alertDismissed,         // callback
+				'اطلاعیه',            // title
+				'تائید'                  // buttonName
+			);
 			//alert(e.payload.msgcnt);
 			/*
 			$("#app-status-ul").append('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
@@ -149,7 +155,7 @@
 			FastClick.attach(document.getElementById('container'));
 			
 			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
-				document.addEventListener("backbutton", go_back, false);
+				document.addEventListener("backbutton", go_back_index, false);
 			}
 			if(window.sessionStorage.getItem('LOAD_URL') == null)
 			{
@@ -212,6 +218,26 @@
 		function loadcompeleted() {
 			$("#loading").html("");
 		}
+		
+
+		function go_back_index() {
+			navigator.notification.confirm(
+				'آیا تمایل به خروج از برنامه را دارید؟',	// message
+				onExitConfirm,								// callback
+				'توجه',										// title
+				['خیر','بله']								// buttonName
+			);
+		}
+		function onExitConfirm(buttonIndex) {
+			if(buttonIndex==1)
+			{
+				
+			}
+			else
+			{
+				navigator.app.exitApp();
+			}
+		}
 	</script>
 	
 	
@@ -247,8 +273,8 @@
 					<br/>
 					لطفا یکی از گزینه های زیر را انتخاب نمایید .
 				</div>
-				<a href="#" onclick="openURL('/index.php?option=com_blankcomponent&view=default&Itemid=489&template=comment&uuid=0000',false,true);" ><div id="width:100%;" class="reg_btn" >ورود کاربر</div></a>
-				<a href="#" onclick="openURL('/index.php?option=com_myacademy&view=myuser&Itemid=488&template=comment&uuid=00000',false,true);" ><div id="width:100%;" class="reg_btn">عضویت بدون هزینه</div></a>
+				<a href="#" onclick="openURL('http://parseh.smcms.ir/index.php?option=com_blankcomponent&view=default&Itemid=489&template=comment&uuid=0000',false,true);" ><div id="width:100%;" class="reg_btn" >ورود کاربر</div></a>
+				<a href="#" onclick="openURL('http://parseh.smcms.ir/index.php?option=com_myacademy&view=myuser&Itemid=488&template=comment&uuid=00000',false,true);" ><div id="width:100%;" class="reg_btn">عضویت بدون هزینه</div></a>
 			</div>
 		</div>
 		<div class="container mymenu" id="container" >
