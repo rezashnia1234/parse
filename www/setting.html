@@ -37,8 +37,16 @@
 
 		}
 		function cache_clean() {
+			if(window.localStorage.getItem('uuid') !== null)
+				window.sessionStorage.setItem('uuid',window.localStorage.getItem('uuid'));
+			window.sessionStorage.setItem('registered',window.localStorage.getItem('registered'));
 			window.localStorage.clear();
-			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
+			if(window.localStorage.getItem('uuid') == null)
+				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
+			else
+				window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
+				
+			window.localStorage.setItem('registered',window.sessionStorage.getItem('registered'));
 			navigator.notification.alert(
 				'کش برنامه با موفقیت پاکسازی شد',  // message
 				alertDismissed,         // callback

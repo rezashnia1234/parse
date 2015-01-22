@@ -21,10 +21,28 @@
 	<script src="PushNotification.js" type="text/javascript" ></script>
 
 	<script>
-		function init() {			
+		function init() {		
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
 			//onDeviceReady();
+			if(window.localStorage.getItem('registered') == null)
+			{
+				window.localStorage.setItem('registered',0);				
+			}
+			if(window.localStorage.getItem('registered') == 0)
+			{
+				$('.mymenu').html("");
+				$('.ui-btn-right.menu').css("display","none");
+				$('.ui-header .ui-title').css("cssText","margin-right:39px !important");
+				//$('.ui-header .ui-title').attr("style","margin-right:39px !important");
+				$('.ui-header .ui-title .header-image').css("right","10px");
+				$('.mypreload').html("");
+			}
+			if(window.localStorage.getItem('registered') == 1)
+			{
+				$('.myregister').html("");
+				$('.mypreload').html("");
+			}
 		}
 		
 
@@ -115,11 +133,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		function onDeviceReady() {
+			if(window.localStorage.getItem('registered') == null)
+			{
+				window.localStorage.setItem('registered',0);				
+			}
+			
 			if(window.localStorage.getItem('uuid') == null)
 				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
 			else
-				getURL_login(window.localStorage.getItem('uuid'));
-			
+			{
+				//getURL_login(window.localStorage.getItem('uuid'));
+				
+			}
 			window.sessionStorage.setItem('we_are_in',"index");
 			FastClick.attach(document.getElementById('container'));
 			
@@ -130,10 +155,7 @@
 			{
 				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
 			}
-			if(window.localStorage.getItem('registered') == null)
-			{
-				window.localStorage.setItem('registered',0);				
-			}
+
 
 			
 			//getURL("http://parseh.smcms.ir?uuid=" + device.uuid + "&registered=" + window.localStorage.getItem('registered'),true,false);
@@ -180,7 +202,7 @@
 		{
 			//alert(uuid);
 			window.localStorage.setItem('uuid',uuid);
-			getURL_login(uuid);
+			//getURL_login(uuid);
 		};
 		function uniqueDeviceIDfail_index(uuid)
 		{
@@ -210,8 +232,26 @@
     </div><!-- /header -->
 
     <div role="main" class="ui-content jqm-content jqm-fullwidth">
-		<div class="container" id="container" >
-
+		<div class="container mypreload" id="container" >
+				<div id="ajax">
+					<div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:visible;" class="blockUI blockOverlay"></div>
+					<div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:visible;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div>
+					<div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 50%; left: 0%; text-align: center;border: medium none;overflow:visible;height:500px;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div>
+				</div>
+		</div>
+		<div class="container myregister" id="container" >
+			<div id="reg_div" >
+				<div id="desc">
+					<br/>
+					این بخش برای کاربران عضو فعال می باشد .
+					<br/>
+					لطفا یکی از گزینه های زیر را انتخاب نمایید .
+				</div>
+				<a href="#" onclick="openURL('/index.php?option=com_blankcomponent&view=default&Itemid=489&template=comment&uuid=0000',false,true);" ><div id="width:100%;" class="reg_btn" >ورود کاربر</div></a>
+				<a href="#" onclick="openURL('/index.php?option=com_myacademy&view=myuser&Itemid=488&template=comment&uuid=00000',false,true);" ><div id="width:100%;" class="reg_btn">عضویت بدون هزینه</div></a>
+			</div>
+		</div>
+		<div class="container mymenu" id="container" >
 			<table  class="mainmenu" dir="rtl" cellspacing="0" cellpadding="0" align="center" style='-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;' unselectable='on' onselectstart='return false;' >
 				<tr>
 					<td  onclick="openURL('http://parseh.smcms.ir/',true,false);"  ><img src="images/mainmenu/01.png" id="test" unselectable='on' onselectstart='return false;' /></a></td>
@@ -235,39 +275,7 @@
 				</tr>
 			</table>
 			<br/><br/>
-		
-<script>
-
-$('.mainmenu img').on('dragstart', function(event) { event.preventDefault();				});
-/*
-$('.mainmenu img').on('swipe', function(event) {
-			event.preventDefault();
-			if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
-				if ( event.type === "swipeleft"  ) {
-					//$( "#right-panel" ).panel( "open" );
-					alert("1");
-				} else if ( event.type === "swiperight" ) {
-					$( "#nav-panel" ).panel( "close" );
-					alert("2");
-				}
-			}
-			if ( $.mobile.activePage.jqmData( "panel" ) !== "close" ) {
-				if ( event.type === "swipeleft"  ) {
-					$( "#nav-panel" ).panel( "open" );
-					alert("3");
-				} else if ( event.type === "swiperight" ) {
-					$( "#nav-panel" ).panel( "close" );
-					alert("4");
-				}
-			}
-		}
-);
-*/
-//$('.mainmenu img').on('dragend', function(event) { event.preventDefault();		alert();		});
-//$('.mainmenu img').on('dragstop', function(event) { event.preventDefault();		alert();		});
-//document.getElementById('test').ondragstart = function() { alert();return false; };
-</script>
-		
+			<script>$('.mainmenu img').on('dragstart', function(event) { event.preventDefault();});</script>
 		</div>
 
 	</div><!-- /content -->
