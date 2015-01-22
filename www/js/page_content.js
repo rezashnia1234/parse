@@ -471,6 +471,7 @@ function uniqueDeviceIDfail(uuid)
 	//alert("uniqueDeviceIDfail" + uuid);
 };
 function iframe_recive_massage(msg) {
+	alert(msg);
 	if(msg=="login")
 	{
 		if(window.localStorage.getItem('uuid') !== null)
@@ -484,6 +485,8 @@ function iframe_recive_massage(msg) {
 			window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
 			
 		window.localStorage.setItem('registered',1);
+		
+		window.location.href = "index.html";
 	}
 	else if(msg=="logout")
 	{
@@ -498,6 +501,8 @@ function iframe_recive_massage(msg) {
 			window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
 			
 		window.localStorage.setItem('registered',0);
+		
+		window.location.href = "index.html";
 	}
 	else{
 		alert(msg);
