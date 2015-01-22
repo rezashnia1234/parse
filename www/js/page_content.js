@@ -296,7 +296,7 @@ function getURL(URL,cache,iframe) {
 		else
 		{
 			var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div><div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 40%; left: 0%; text-align: center;border: medium none;overflow:hidden;height:100%;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div></div>';
-			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' onload='loadcompeleted();'></iframe>";
+			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' style='margin-bottom:45px;' onload='loadcompeleted();' scrolling='no'></iframe>";
 			$('.container').html(temp_html);
 		}
 		
@@ -470,6 +470,38 @@ function uniqueDeviceIDfail(uuid)
 {
 	//alert("uniqueDeviceIDfail" + uuid);
 };
+function iframe_recive_massage(msg) {
+	if(msg=="login")
+	{
+		if(window.localStorage.getItem('uuid') !== null)
+			window.sessionStorage.setItem('uuid',window.localStorage.getItem('uuid'));
 
+		window.localStorage.clear();
+		
+		if(window.localStorage.getItem('uuid') == null)
+			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+		else
+			window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
+			
+		window.localStorage.setItem('registered',1);
+	}
+	else if(msg=="logout")
+	{
+		if(window.localStorage.getItem('uuid') !== null)
+			window.sessionStorage.setItem('uuid',window.localStorage.getItem('uuid'));
+
+		window.localStorage.clear();
+		
+		if(window.localStorage.getItem('uuid') == null)
+			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+		else
+			window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
+			
+		window.localStorage.setItem('registered',0);
+	}
+	else{
+		alert(msg);
+	}
+}
 
 

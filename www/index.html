@@ -225,17 +225,17 @@
 				'آیا تمایل به خروج از برنامه را دارید؟',	// message
 				onExitConfirm,								// callback
 				'توجه',										// title
-				['خیر','بله']								// buttonName
+				['بله','خیر']								// buttonName
 			);
 		}
 		function onExitConfirm(buttonIndex) {
 			if(buttonIndex==1)
 			{
-				
+				navigator.app.exitApp();
 			}
 			else
 			{
-				navigator.app.exitApp();
+				
 			}
 		}
 	</script>
