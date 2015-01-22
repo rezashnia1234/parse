@@ -76,7 +76,41 @@
 		{
 			//alert("uniqueDeviceIDfail" + uuid);
 		};
-
+		$(document).ready(function(){
+			$("#controls #small").click(function(event){
+				event.preventDefault();
+				$("#controls a").removeClass("selected");
+				$(this).addClass("selected");
+				var font_style = "<style>";
+					font_style = font_style + "#container p,.container p{font-size:" + "15" + "px !important;}";
+					font_style = font_style + "#container h2,.container h2{font-size:" + "15" + "px !important;}";
+					font_style = font_style + "#container *,.container *{font-size:" + "15" + "px !important;}";
+					font_style = font_style + "</style>";
+				$("#controls #css_style").html(font_style);
+			});	
+			$("#controls #medium").click(function(event){
+				event.preventDefault();
+				$("#controls a").removeClass("selected");
+				$(this).addClass("selected");
+				var font_style = "<style>";
+					font_style = font_style + "#container p,.container p{font-size:" + "18" + "px !important;}";
+					font_style = font_style + "#container h2,.container h2{font-size:" + "18" + "px !important;}";
+					font_style = font_style + "#container *,.container *{font-size:" + "18" + "px !important;}";
+					font_style = font_style + "</style>";
+				$("#controls #css_style").html(font_style);
+			});	
+			$("#controls #large").click(function(event){
+				event.preventDefault();
+				$("#controls a").removeClass("selected");
+				$(this).addClass("selected");
+				var font_style = "<style>";
+					font_style = font_style + "#container p,.container p{font-size:" + "21" + "px !important;}";
+					font_style = font_style + "#container h2,.container h2{font-size:" + "21" + "px !important;}";
+					font_style = font_style + "#container *,.container *{font-size:" + "21" + "px !important;}";
+					font_style = font_style + "</style>";
+				$("#controls #css_style").html(font_style);
+			});	
+		});
 	</script>
 	<style>
 
