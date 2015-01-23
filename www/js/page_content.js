@@ -183,12 +183,14 @@ function getURL(URL,cache,iframe) {
 			else
 			{
 					console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
+					var myuuid = window.localStorage.getItem('uuid');
+					var myregistered = window.localStorage.getItem('registered');
 					$.ajax({
 							url: URL,
 							type: "POST",
 							data: {
-								uuid: window.localStorage.getItem('uuidd'),
-								registered: window.localStorage.getItem('registered'),
+								uuid: myuuid,
+								registered: myregistered,
 								testdata: "test text"
 							},
 							async: true,
