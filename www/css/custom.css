@@ -355,6 +355,7 @@ body{font-family:"web_Yekan";}
   margin:0;
 }
 .vg-pages ul.pagination {
+  margin-top: 10px !important;
   padding: 0 !important;
 }
 /*
@@ -379,9 +380,9 @@ body{font-family:"web_Yekan";}
 	}
 	.blog .vg-pages.vg-table-display.a-center {
 	  font-family: "web_Yekan";
-	  height: auto;
+	  height: 42px;
 	  padding-bottom: 0;
-	  padding-top: 4px;
+	  padding-top: 0px;
 	  text-align: center;
 	  width: 100%;
 		bottom: 0 !important;
