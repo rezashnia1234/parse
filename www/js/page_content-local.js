@@ -12,6 +12,7 @@ function getParameterByName(name) {
 	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 function getURL(URL,cache,iframe) {
+alert("0");
 	cache = cache || true;
 	iframe = iframe || false;
 	if(iframe == "false")
@@ -22,7 +23,7 @@ function getURL(URL,cache,iframe) {
 		cache = false;
 	if(cache == "true")
 		cache = true;
-
+/*
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
 //alert("we have no internet");
@@ -107,6 +108,7 @@ function getURL(URL,cache,iframe) {
 	}
 	else
 	{
+*/
 //alert("we have internet");
 		if(iframe == false)
 		{
@@ -295,6 +297,7 @@ function getURL(URL,cache,iframe) {
 		}
 		else
 		{
+alert("1");
 			var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div><div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 40%; left: 0%; text-align: center;border: medium none;overflow:hidden;height:100%;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div></div>';
 			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' style='margin-bottom:45px;' onload='loadcompeleted();' scrolling='no'></iframe>";
 			temp_html = temp_html + "<script type='text/javascript'>";
@@ -303,7 +306,7 @@ function getURL(URL,cache,iframe) {
 			$('.container').html(temp_html);
 		}
 		
-	}
+//	}
 }
 
 
@@ -428,6 +431,7 @@ function openURL(URL,cache,iframe) {
 	window.sessionStorage.setItem('NEXT_CACHE',cache);
 	window.sessionStorage.setItem('NEXT_IFRAME',iframe);
 	*/
+/*
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
 		if(iframe == "true")
@@ -458,8 +462,9 @@ function openURL(URL,cache,iframe) {
 	}
 	else
 	{
+*/
 		window.location.href = "show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe);
-	}
+//	}
 
 	//alert("show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe));
 }
@@ -474,7 +479,7 @@ function uniqueDeviceIDfail(uuid)
 	//alert("uniqueDeviceIDfail" + uuid);
 };
 function iframe_recive_massage(msg) {
-	//alert(msg);
+	alert(msg);
 	if(msg=="login")
 	{
 		if(window.localStorage.getItem('uuid') !== null)

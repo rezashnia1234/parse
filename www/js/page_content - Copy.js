@@ -474,7 +474,7 @@ function uniqueDeviceIDfail(uuid)
 	//alert("uniqueDeviceIDfail" + uuid);
 };
 function iframe_recive_massage(msg) {
-	//alert(msg);
+	alert(msg);
 	if(msg=="login")
 	{
 		if(window.localStorage.getItem('uuid') !== null)
