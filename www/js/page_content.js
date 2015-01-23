@@ -298,6 +298,10 @@ function getURL(URL,cache,iframe) {
 		}
 		else
 		{
+			var myuuid = window.localStorage.getItem('uuid');
+			var myregistered = window.localStorage.getItem('registered');
+			URL = updateURLParameter(URL, "uuidd", myuuid);
+			URL = updateURLParameter(URL, "registered", myregistered);
 			var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div><div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 40%; left: 0%; text-align: center;border: medium none;overflow:hidden;height:100%;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div></div>';
 			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' style='margin-bottom:45px;' onload='loadcompeleted();' scrolling='no'></iframe>";
 			temp_html = temp_html + "<script type='text/javascript'>";
@@ -332,16 +336,27 @@ function getURL_login(uuid) {
 				if(text=="3")
 				{
 					//alert("getURL_login 3");
+					if(window.localStorage.getItem('uuid') !== null)
+						window.sessionStorage.setItem('uuid',window.localStorage.getItem('uuid'));
 					window.localStorage.clear();
 					window.localStorage.setItem('registered',0);
-					window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+					if(window.sessionStorage.getItem('uuid') == null)
+						window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+					else
+						window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
 				}
 				if(text=="4")
 				{
 					//alert("getURL_login 4");
+					if(window.localStorage.getItem('uuid') !== null)
+						window.sessionStorage.setItem('uuid',window.localStorage.getItem('uuid'));
 					window.localStorage.clear();
 					window.localStorage.setItem('registered',1);
-					window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+
+					if(window.sessionStorage.getItem('uuid') == null)
+						window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+					else
+						window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
 				}
 			},
 			error: function(jqXHR, exception) {
@@ -485,7 +500,7 @@ function iframe_recive_massage(msg) {
 
 		window.localStorage.clear();
 		
-		if(window.localStorage.getItem('uuid') == null)
+		if(window.sessionStorage.getItem('uuid') == null)
 			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 		else
 			window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
@@ -501,7 +516,7 @@ function iframe_recive_massage(msg) {
 
 		window.localStorage.clear();
 		
-		if(window.localStorage.getItem('uuid') == null)
+		if(window.sessionStorage.getItem('uuid') == null)
 			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 		else
 			window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));

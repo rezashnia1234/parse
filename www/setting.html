@@ -41,7 +41,7 @@
 				window.sessionStorage.setItem('uuid',window.localStorage.getItem('uuid'));
 			window.sessionStorage.setItem('registered',window.localStorage.getItem('registered'));
 			window.localStorage.clear();
-			if(window.localStorage.getItem('uuid') == null)
+			if(window.sessionStorage.getItem('uuid') == null)
 				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
 			else
 				window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));

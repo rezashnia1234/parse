@@ -36,12 +36,10 @@
 				$('.ui-header .ui-title').css("cssText","margin-right:39px !important");
 				//$('.ui-header .ui-title').attr("style","margin-right:39px !important");
 				$('.ui-header .ui-title .header-image').css("right","10px");
-				$('.mypreload').html("");
 			}
 			if(window.localStorage.getItem('registered') == 1)
 			{
 				$('.myregister').html("");
-				$('.mypreload').html("");
 			}
 		}
 		
@@ -149,7 +147,7 @@
 			else
 			{
 				//getURL_login(window.localStorage.getItem('uuid'));
-				
+				$('.mypreload').html("");
 			}
 			window.sessionStorage.setItem('we_are_in',"index");
 			FastClick.attach(document.getElementById('container'));
@@ -208,6 +206,7 @@
 		{
 			//alert(uuid);
 			window.localStorage.setItem('uuid',uuid);
+			$('.mypreload').html("");
 			//getURL_login(uuid);
 		};
 		function uniqueDeviceIDfail_index(uuid)
