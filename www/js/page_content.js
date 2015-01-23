@@ -189,6 +189,7 @@ function getURL(URL,cache,iframe) {
 							data: {
 								uuid: window.localStorage.getItem('uuidd'),
 								registered: window.localStorage.getItem('registered'),
+								testdata: "test text"
 							},
 							async: true,
 							success : function(text)
