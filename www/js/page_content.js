@@ -183,7 +183,7 @@ function getURL(URL,cache,iframe) {
 			else
 			{
 					console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
-					$.ajax({ type: "GET",   
+					$.ajax({
 							url: URL,
 							type: "POST",
 							data: {

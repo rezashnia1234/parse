@@ -1410,15 +1410,16 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
   width: 100px;
 }
 #controls {
-	background: none repeat scroll 0 0 #333;
-	float: left;
-	left: 0;
-	margin: 0 5px 5px 0;
-	padding: 0;
-	text-align: center;
-	top: 0;
-	transition: all 0.25s ease-out 0s;
-	width: 34px;
+  background: none repeat scroll 0 0 #333;
+  bottom: 34px;
+  float: left;
+  left: 0;
+  margin: 0 5px 5px 0;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  transition: all 0.25s ease-out 0s;
+  width: 34px;
 }
 #controls a {
   color: #c3c3c3 !important;
