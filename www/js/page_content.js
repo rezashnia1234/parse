@@ -189,7 +189,7 @@ function getURL(URL,cache,iframe) {
 							url: URL,
 							type: "POST",
 							data: {
-								uuid: myuuid,
+								uuidd: myuuid,
 								registered: myregistered,
 								testdata: "test text"
 							},
