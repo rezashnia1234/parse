@@ -305,6 +305,8 @@ function getURL(URL,cache,iframe) {
 			var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div><div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 40%; left: 0%; text-align: center;border: medium none;overflow:hidden;height:100%;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div></div>';
 			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' style='margin-bottom:45px;' onload='loadcompeleted();' scrolling='no'></iframe>";
 			temp_html = temp_html + "<script type='text/javascript'>";
+			if(window.localStorage.getItem('registered') == 0)
+				temp_html = temp_html + "$('.mymenu').html('');$('.ui-btn-right.menu').css('display','none');$('.ui-header .ui-title').css('cssText','margin-right:39px !important');$('.ui-header .ui-title .header-image').css('right','10px');";			
 			temp_html = temp_html + "iFrameResize({enablePublicMethods:true,resizedCallback:function(messageData){},messageCallback:function(messageData){iframe_recive_massage(messageData.message);}});";
 			temp_html = temp_html + "</script>";
 			$('.container').html(temp_html);
