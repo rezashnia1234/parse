@@ -309,6 +309,9 @@ function getURL(URL,cache,iframe) {
 				temp_html = temp_html + "$('.mymenu').html('');$('.ui-btn-right.menu').css('display','none');$('.ui-header .ui-title').css('cssText','margin-right:39px !important');$('.ui-header .ui-title .header-image').css('right','10px');";			
 			temp_html = temp_html + "iFrameResize({enablePublicMethods:true,resizedCallback:function(messageData){},messageCallback:function(messageData){iframe_recive_massage(messageData.message);}});";
 			temp_html = temp_html + "</script>";
+			temp_html = temp_html + "<style>";
+			temp_html = temp_html + "#footer{display:none}";
+			temp_html = temp_html + "</style>";
 			$('.container').html(temp_html);
 		}
 		
