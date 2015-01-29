@@ -42,8 +42,25 @@
 تماس با پارسه 234
 تنظیمات 423
 */
+	
+	function init_menu() {
+		$("#menu").html(panel);
+		FastClick.attach(document.getElementById('nav-panel'));
 		
-		
+		$(function() {
+			$('nav#menu').mmenu({
+				offCanvas: {
+					position: "right",
+					zpositions:"next"
+				},
+				dragOpen:
+				{
+					open:true
+				}
+			  });
+		});
+	}
+	/*
 	$(document).one('pagebeforecreate', function () {
 	  $.mobile.pageContainer.prepend(panel);
 	  $("#nav-panel").panel();
@@ -101,7 +118,7 @@
 			
 		});
 	});
-	
+	*/
 	function go_back() {
 		parent.history.back();
 		/*
