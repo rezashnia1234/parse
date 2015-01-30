@@ -46,6 +46,7 @@
 	function init_menu() {
 		$("#menu").html(panel);
 		FastClick.attach(document.getElementById('nav-panel'));
+		FastClick.attach(document.getElementById('header'));
 		
 		$(function() {
 			$('nav#menu').mmenu({
@@ -53,8 +54,7 @@
 					position: "right",
 					zpositions:"next"
 				},
-				dragOpen:
-				{
+				dragOpen: {
 					open:true
 				}
 			  });
