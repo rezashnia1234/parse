@@ -203,6 +203,7 @@
 html.mm-opened .mm-page {
   border-right: 2px solid #e03e5d;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
 }
 .mm-menu {}
   .mm-menu .mm-list > li:after {

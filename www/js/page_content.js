@@ -311,6 +311,7 @@ function getURL(URL,cache,iframe) {
 			temp_html = temp_html + "</script>";
 			temp_html = temp_html + "<style>";
 			temp_html = temp_html + "#footer{display:none}";
+			temp_html = temp_html + "#controls{display:none}";
 			temp_html = temp_html + "</style>";
 			$('.container').html(temp_html);
 		}

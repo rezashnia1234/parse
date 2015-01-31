@@ -103,6 +103,11 @@
 .ui-panel-inner li.odd,.ui-panel-inner li.odd a{
   background-color: #dedede !important;
  }
+ .ui-panel-inner li.odd, .ui-panel-inner li a {
+  height: 44px;
+  min-width: 100px;
+  direction:rtl;
+}
 .ui-listview img {
   border: 0 none !important;
   height: 43.75px;
@@ -294,8 +299,9 @@ body{background:#eeeeee;}
   direction: rtl;
   margin: 0 94px 0 0 !important;
 }
-.container{
+.container {
   direction: rtl;
+  margin-bottom: 44px;
 }
 #comment_content {
 	border: 0 none;
@@ -407,6 +413,7 @@ body{background:#eeeeee;}
 		height: 90px;
 		width: 80px;
 		background-color: #c2c2c2;
+		z-index: 100;
 	}
 	.blog p {
 			font-family: "web_Yekan";
@@ -661,7 +668,7 @@ background-position:right center !important;
 	background-color: #dedede !important;
 	height: 33px;
 	list-style: outside none none;
-	margin-right: -40px;
+	margin-right: 0px;
 	padding-right: 69px;
 	padding-top: 12px;
 	background-image: url(../images/bakhsh-icon/Dark-10.png) !important;
@@ -1204,7 +1211,7 @@ min-height: 55px;
   padding-right: 65px;
 }
 .item-page.noimage {
-  margin-top: 48px;
+  margin-top: 0px;
 }
 
 .noimage  a.iframe {
@@ -1256,8 +1263,8 @@ position: relative;
 direction: rtl;
 word-wrap: break-word;
 font-weight: bold;
-margin-top: 18px;
-margin-right: 100px;
+margin-top: 10px;
+margin-right: 95px;
 color:#5d5d5d;
 /* word-wrap: break-word; */
 /* padding-right: 40px; */
@@ -1270,12 +1277,12 @@ width: 40px;
 height: 40px;
 border-radius: 2em;
 position: absolute;
-right: 100px;
+right: 95px;
 }
 #mainbook span.mastername {
 /* text-align: right; */
 position: absolute;
-right: 274px;
+right: 269px;
 text-align: right;
 direction: rtl;
 padding-left: 17px;
@@ -1284,7 +1291,7 @@ color:#3a3a3a;
 }
 #mainbook span.masterdufaultname {
 position: absolute;
-right: 152px;
+right: 147px;
 margin-top:10px;
 color:#3a3a3a;
 }
@@ -1301,7 +1308,7 @@ color:#3a3a3a;
     z-index: 58;
 }
 #mainbook #master {
-    margin-top: 11px;
+    margin-top: 9px;
 }
 #mainbook div#row {
 position: relative;
@@ -1311,7 +1318,7 @@ width: 100%;
 	min-height: 93px;
 	
 }
-#mainbook #row:nth-child(2n+1)
+#mainbook #row.odd
  {
         background-color:#e4e4e4;
 }
