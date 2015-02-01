@@ -267,7 +267,11 @@ body{font-family:"web_Yekan";}
   margin-right: 92px;
   text-align: right;
 }
-body{background:#eeeeee;}
+body{background:#eeeeee;padding-bottom:45px;}
+.blank {
+  clear: both;
+}
+
 .container a {
   color: #383838 !important;
   font-family: web_yekan;
@@ -1295,11 +1299,20 @@ padding-left: 17px;
 margin-top:10px;
 color:#3a3a3a;
 }
+/*
 #mainbook span.masterdufaultname {
 position: absolute;
 right: 147px;
 margin-top:10px;
 color:#3a3a3a;
+}
+*/
+#mainbook span.masterdufaultname {
+  color: #3a3a3a;
+  display: block;
+  margin-right: 145px;
+  margin-top: 10px;
+  right: 147px;
 }
 #mainbook .tik {
     background-image: url("../images/tik.png");
