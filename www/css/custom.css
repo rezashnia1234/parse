@@ -301,7 +301,7 @@ body{background:#eeeeee;}
 }
 .container {
   direction: rtl;
-  margin-bottom: 44px;
+  margin-bottom: 0;
 }
 #comment_content {
 	border: 0 none;
