@@ -335,6 +335,12 @@ body{background:#eeeeee;}
 	{
 		padding-right:23px;
 	}
+	tbody tr td.list-title
+	{
+		padding-left: 50px;
+		padding-right: 23px;
+		text-align: justify;
+	}
 	tbody tr
 	{
 		background-color:#f3f3f3;
@@ -382,7 +388,7 @@ body{background:#eeeeee;}
 		background-image: url("../images/bakhsh-icon/list-icon.png");
 		background-position: 22px top;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: 14px 44px;
 	}
 	
 .moduletable_menu .menu{
@@ -1339,11 +1345,15 @@ width: 100%;
   color: #ffffff;
   display: block;
   font-size: 17px;
-  height: 33px;
-  line-height: 33px;
+  height: 57px;
+  line-height: 25px;
   margin: 10px auto;
+  padding-top: 8px;
   text-align: center;
   width: 257px;
+}
+#reg_div span {
+  font-size: 15px;
 }
 #reg_div #desc {
   line-height: 200%;

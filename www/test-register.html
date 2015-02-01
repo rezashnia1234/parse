@@ -38,30 +38,8 @@
 		}
 	</script>
 	<style>
-#reg_div {
-	width:100%;
-	text-align:center;
-}
-#reg_div .reg_btn {
-  background-color: #f24c6b;
-  border: medium none;
-  border-radius: 8px;
-  color: #ffffff;
-  display: block;
-  font-size: 17px;
-  height: 33px;
-  line-height: 33px;
-  margin: 10px auto;
-  text-align: center;
-  width: 257px;
-}
-#reg_div #desc {
-  line-height: 200%;
-  margin-bottom: 30px;
-  margin-top: 100px;
-  width: 100%;
-}
 
+	
 	</style>
 </head>
 <body onload="init();">
@@ -74,21 +52,14 @@
     </div><!-- /header -->
 
     <div id="main">
-		<div id="controls">
-			<div id="css_style"></div>
-			<a href="#" id="small" class="selected">A</a>
-			<a href="#" id="medium">A</a>
-			<a href="#" id="large">A</a>
-		</div>
-		<div class="container" >
+		<div class="container myregister" id="container" >
 			<div id="reg_div" >
 				<div id="desc">
-					این بخش برای کاربران عضو فعال می باشد .
 					<br/>
-					لطفا یکی از گزینه های زیر را انتخاب نمایید .
+					به سامانه هوشمند دندانپزشکی پارسه خوش آمدید.
 				</div>
-				<a href="/ثبت-نام.html?template=comment&title=عضویت در سامانه" class="iframe"><div id="width:100%;" class="reg_btn" >ورود کاربر</div></a>
-				<a href="/ورود-کاربران.html?template=comment&title=ورود به سامانه" class="iframe"><div id="width:100%;" class="reg_btn">ثبت نام</div></a>
+				<a href="#" onclick="openURL('http://parseh.smcms.ir/index.php?option=com_myacademy&view=myuser&Itemid=488&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn">عضویت بدون هزینه<br/><span>ورود برای اولین بار</span></div></a>
+				<a href="#" onclick="openURL('http://parseh.smcms.ir/index.php?option=com_blankcomponent&view=default&Itemid=489&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn" >ورود کاربران عضو<br/><span>دارای رمز ورود</span></div></a>
 			</div>
 		</div>
 
