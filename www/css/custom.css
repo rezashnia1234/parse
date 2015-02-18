@@ -278,8 +278,16 @@ body{background:#eeeeee;padding-bottom:45px;}
   font-size: 15px;
   font-weight: normal !important;
 }
+/*
 .container .category-list .list-title a {
   line-height: 41px;
+}
+*/
+.container .category-list .list-title a {
+  display: inline-block;
+  min-height: 45px;
+  line-height: 41px;
+  width: 100%;
 }
 .category-desc p.bold.gray .red {
   font-size: 20px;
@@ -1314,6 +1322,7 @@ color:#3a3a3a;
   margin-top: 10px;
   right: 147px;
 }
+/*
 #mainbook .tik {
     background-image: url("../images/tik.png");
     background-position: center center;
@@ -1326,6 +1335,7 @@ color:#3a3a3a;
     width: 15px;
     z-index: 58;
 }
+*/
 #mainbook #master {
     margin-top: 9px;
 }
@@ -1518,7 +1528,10 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
 #controls #small     {  font-size:13px !important;padding: 10px 5px 3px 0;}
 #controls #medium    {  font-size:19px !important;padding:7px 4px 10px 0;border-bottom:1px solid black;border-top:1px solid black}
 #controls #large     {  font-size:27px  !important;padding: 2px 8px 17px 6px;}
-
+strong {
+  font-size: 17px;
+  font-weight: bold;
+}
 
 
 
