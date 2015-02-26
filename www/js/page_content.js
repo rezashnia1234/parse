@@ -310,10 +310,11 @@ function getURL(URL,cache,iframe) {
 			temp_html = temp_html + "iFrameResize({enablePublicMethods:true,resizedCallback:function(messageData){},messageCallback:function(messageData){iframe_recive_massage(messageData.message);}});";
 			temp_html = temp_html + "</script>";
 			temp_html = temp_html + "<style>";
-			temp_html = temp_html + "#footer{display:none}";
-			temp_html = temp_html + "#controls{display:none}";
+			temp_html = temp_html + "#footer{display:none !important;}";
+			temp_html = temp_html + ".mm-fixed-bottom{display:none !important;}";
+			temp_html = temp_html + "#controls{display:none !important;}";
 			if(cache == true)
-				temp_html = temp_html + "#backBTN{display:none}";
+				temp_html = temp_html + "#backBTN{display:none;}";
 			temp_html = temp_html + "</style>";
 			$('.container').html(temp_html);
 		}
