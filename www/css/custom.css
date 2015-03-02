@@ -440,7 +440,7 @@ body{background:#eeeeee;padding-bottom:45px;}
 			padding-top: 0;
 			margin-bottom: 0;
 	}
-	.blog .vg-pages.vg-table-display.a-center {
+	.blog .vg-pages.vg-table-display.a-center,#nashr-main .vg-pages.vg-table-display.a-center {
 	  font-family: "web_Yekan";
 	  height: 42px;
 	  padding-bottom: 0;
@@ -485,7 +485,7 @@ body{background:#eeeeee;padding-bottom:45px;}
 		padding-top: 0;
 		margin-top: -8px;
 	}
-	.blog a.vg-page {
+	.blog a.vg-page,#nashr-main a.vg-page {
 		background-color: #f5738d;
 		border-radius: 40px;
 		color: white !important;
@@ -497,11 +497,11 @@ body{background:#eeeeee;padding-bottom:45px;}
 		width: 25px !important;
 		z-index: 10000000;
 	}
-	.blog a.vg-page.vg-pages-active {
+	.blog a.vg-page.vg-pages-active,#nashr-main a.vg-page.vg-pages-active {
 	  background-color: #ffffff !important;
 	  color: #f34b6c !important;
 	}
-	.blog .fasele {
+	.blog .fasele ,#nashr-main .fasele {
 	  margin-bottom: 0px;
 	  float: right;
 	}
@@ -1535,7 +1535,53 @@ strong {
   font-weight: bold;
 }
 
+/*///////////////////////////////////////////////////////////////////////
+///////////////////nashriat////////////////////////////////////*/
 
+#main-nashr{
+	width: 183px;
+	height: 237px;
+	position: relative;
+	float: right;
+	margin: 11.5px;
+	}
+/*#main-nashr :last-child{height:280px}*/
+#nashr-img{
+	height:217px;
+	width:183px;
+	background-color:gray;
+	float:left;
+	clear:both;
+	overflow: hidden;
+}
+#nashr-text p{
+	color:#5e5e5e;
+	padding:8.75px 5px 8.75px 5px;
+	line-height: 241%;
+	font-family:"web_Yekan";
+	
+}
+@media screen and (max-width:450px) {
+	#main-nashr{
+			float:none;
+			margin: 0 auto;
+			margin-top: 15.5px;
+	}
+}
+	#nashr-main{
+		width:50%;
+		margin:0 auto;
+	}
+@media screen and (max-width:450px) and (mmin-width:700px)  {
+	#nashr-main{
+		width:50%;
+		margin:0 auto;
+	}
+}
+/*///////////////////////////////////////////////////////////////////////
+///////////////////nashriat////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////
+///////////////////nashriat////////////////////////////////////*/
 
 
 

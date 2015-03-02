@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+html{height: 100%}
+*{font-family:"web_Yekan"}
+#main{width:100%;position:absolute;padding-bottom: 57px;}
+#big{min-width:325px;height:325px;float:left;position:relative;margin-left:15px;margin-top:15px;border:1px solid black;}
+#small{width:154px;height:154px;float:left;position:relative;margin-left:15px;margin-top:15px;border:1px solid black;}
+#text{background-color:rgba(48,48,48,0.8);position:absolute;bottom:0;right:0}
+#big #text p{font-size:15px;color:white;text-align:right;padding:8px 15px 8px 15px;}
+#small #text p{font-size:12px;color:white;text-align:right;padding:8px 15px 8px 15px;}
+
+@media screen and (max-width:600px) {
+    #big {
+        width:92%;
+		min-width:auto;
+    }
+	#small{
+		width:44%
+	}
+}
+@media screen and (min-width:600px) and (max-width: 1000px)  {
+   #big{width: 62%;}
+	#small{width:30%}
+	.a1{width:30%!important}
+	.a2{width:30% !important}
+}
+@media screen and (min-width:1000px) and (max-width: 1350px)  {
+	#big{width: 47.5%;}
+	#small{width:23%}
+	.a1{width:23%!important}
+	.a2{width:23% !important}
+	.a3{width:23% !important}
+	.a4{width:23% !important}
+}
+@media screen and (min-width:1350px) and (max-width: 1800px)  {
+	#big{width: 37.2%;}
+	#small{width:18%}
+	.a1{width:18%!important}
+	.a2{width:18% !important}
+	.a3{width:18% !important}
+	.a4{width:18% !important}
+}
+@media screen and (min-width:1800px) and (max-width: 5000px)  {
+	#big{width: 31%;}
+	#small{width:15%}
+	.a1{width:15%!important}
+	.a2{width:15% !important}
+	.a3{width:15% !important}
+	.a4{width:15% !important}
+}
+
+
+.a0{
+	background-image: url(../images/index/a0.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a1{
+	background-image: url(../images/index/a1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a2{
+	background-image: url(../images/index/a2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a3{
+	background-image: url(../images/index/a3.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a4{
+	background-image: url(../images/index/a4.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a5{
+	background-image: url(../images/index/a5.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a6{
+	background-image: url(../images/index/a6.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a7{
+	background-image: url(../images/index/a7.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a8{
+	background-image: url(../images/index/a8.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a9{
+	background-image: url(../images/index/a9.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a10{
+	background-image: url(../images/index/a10.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a11{
+	background-image: url(../images/index/a11.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a12{
+	background-image: url(../images/index/a12.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a13{
+	background-image: url(../images/index/a13.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a14{
+	background-image: url(../images/index/a14.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}

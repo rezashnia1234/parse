@@ -121,7 +121,14 @@
 	});
 	*/
 	function go_back() {
-		parent.history.back();
+		if(window.sessionStorage.getItem('go_to_first')=="true")
+		{
+			window.sessionStorage.setItem('go_to_first',"false");
+			window.location.href = "index.html";
+		}
+		else{
+			parent.history.back();
+		}
 		/*
 		if(window.sessionStorage.getItem('we_are_in')=="show")
 		{

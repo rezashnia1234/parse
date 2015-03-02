@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/yekan.css">
     <link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/index_new.css">
-
     
 	<script src="js/jquery-1.8.2.min.js"></script>
     <script src="phonegap.js"></script>
@@ -37,7 +36,7 @@
 			}
 			if(window.localStorage.getItem('registered') == 0)
 			{
-				$('.mymenu').html("");
+				//$('.mymenu').html("");
 				$('.ui-btn-right.menu').css("display","none");
 				$('#header h1').css("cssText","margin-right:39px !important");
 				//$('.ui-header .ui-title').attr("style","margin-right:39px !important");
@@ -47,7 +46,24 @@
 			{
 				$('.myregister').html("");
 			}
-	
+			
+			var session_rand = Math.random();
+			$('.a0').css('background-image', 'url("http://app.dparseh.com/images/home_page/a0.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a1').css('background-image', 'url("http://app.dparseh.com/images/home_page/a1.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a2').css('background-image', 'url("http://app.dparseh.com/images/home_page/a2.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a3').css('background-image', 'url("http://app.dparseh.com/images/home_page/a3.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a4').css('background-image', 'url("http://app.dparseh.com/images/home_page/a4.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a5').css('background-image', 'url("http://app.dparseh.com/images/home_page/a5.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a6').css('background-image', 'url("http://app.dparseh.com/images/home_page/a6.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a7').css('background-image', 'url("http://app.dparseh.com/images/home_page/a7.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a8').css('background-image', 'url("http://app.dparseh.com/images/home_page/a8.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a9').css('background-image', 'url("http://app.dparseh.com/images/home_page/a9.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a10').css('background-image', 'url("http://app.dparseh.com/images/home_page/a10.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a11').css('background-image', 'url("http://app.dparseh.com/images/home_page/a11.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a12').css('background-image', 'url("http://app.dparseh.com/images/home_page/a12.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a13').css('background-image', 'url("http://app.dparseh.com/images/home_page/a13.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a14').css('background-image', 'url("http://app.dparseh.com/images/home_page/a14.jpg?' + session_rand + '"),url("images/loading.gif")');
+
 		}
 		
 
@@ -144,31 +160,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		function onDeviceReady() {
-		
-			if(window.sessionStorage.getItem('session_rand') == null)
-			{
-				window.sessionStorage.setItem('session_rand',Math.random()));				
-			}
-			var networkState = navigator.connection.type;
-			if (networkState != Connection.NONE) {
-				var session_rand = window.sessionStorage.getItem('session_rand');
-				$('.a0').css('background-image', 'url("http://app.dparseh.com/images/home_page/a0.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a1').css('background-image', 'url("http://app.dparseh.com/images/home_page/a1.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a2').css('background-image', 'url("http://app.dparseh.com/images/home_page/a2.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a3').css('background-image', 'url("http://app.dparseh.com/images/home_page/a3.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a4').css('background-image', 'url("http://app.dparseh.com/images/home_page/a4.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a5').css('background-image', 'url("http://app.dparseh.com/images/home_page/a5.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a6').css('background-image', 'url("http://app.dparseh.com/images/home_page/a6.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a7').css('background-image', 'url("http://app.dparseh.com/images/home_page/a7.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a8').css('background-image', 'url("http://app.dparseh.com/images/home_page/a8.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a9').css('background-image', 'url("http://app.dparseh.com/images/home_page/a9.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a10').css('background-image', 'url("http://app.dparseh.com/images/home_page/a10.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a11').css('background-image', 'url("http://app.dparseh.com/images/home_page/a11.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a12').css('background-image', 'url("http://app.dparseh.com/images/home_page/a12.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a13').css('background-image', 'url("http://app.dparseh.com/images/home_page/a13.jpg?' + session_rand + '"),url("images/loading.gif")');
-				$('.a14').css('background-image', 'url("http://app.dparseh.com/images/home_page/a14.jpg?' + session_rand + '"),url("images/loading.gif")');
-			}
-			window.sessionStorage.setItem('go_to_first',"false");
 			init_menu();
 			if(window.localStorage.getItem('registered') == null)
 			{
@@ -288,27 +279,10 @@
 	<div id="header" class="FixedTop">
 			<h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image">دندانپزشکی پارسه</h1>
 			<a href="#menu" id="headermenu" class="ui-btn-right menu">Menu</a>
-			<!--<div id="backBTN" onclick="go_back();" class="ui-btn-left">back</div>-->
+			<div id="backBTN" onclick="go_back();" class="ui-btn-left">back</div>
     </div><!-- /header -->
 
     <div id="main">
-		<div class="container mypreload" id="container" >
-				<div id="ajax">
-					<div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:visible;" class="blockUI blockOverlay"></div>
-					<div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:visible;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div>
-					<div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 50%; left: 0%; text-align: center;border: medium none;overflow:visible;height:500px;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div>
-				</div>
-		</div>
-		<div class="container myregister" id="container" >
-			<div id="reg_div" >
-				<div id="desc">
-					<br/>
-					به سامانه هوشمند دندانپزشکی پارسه خوش آمدید.
-				</div>
-				<a href="#" onclick="openURL('http://app.dparseh.com/index.php?option=com_myacademy&view=myuser&Itemid=488&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn">عضویت بدون هزینه<br/><span>(ورود برای اولین بار)</span></div></a>
-				<a href="#" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=489&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn" >ورود کاربران عضو<br/><span>(دارای رمز ورود)</span></div></a>
-			</div>
-		</div>
 		<div class="container mymenu" id="container" >
 			<div id="main">
 				<div id="big" class="a0"  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=120',true,false);" >

@@ -30,6 +30,8 @@
 		//onDeviceReady();
 	}
 	function onDeviceReady() {
+		window.sessionStorage.setItem('go_to_first',"false");
+		
 		if(window.localStorage.getItem('uuid') == null)
 			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 			

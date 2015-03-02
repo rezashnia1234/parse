@@ -110,6 +110,7 @@ function getURL(URL,cache,iframe) {
 //alert("we have internet");
 		if(iframe == false)
 		{
+			window.sessionStorage.setItem('go_to_first',"false");
 //alert("we have internet - iframe : false");
 			var article_json = window.localStorage.getItem($.md5(URL));
 			var temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
@@ -314,7 +315,14 @@ function getURL(URL,cache,iframe) {
 			temp_html = temp_html + ".mm-fixed-bottom{display:none !important;}";
 			temp_html = temp_html + "#controls{display:none !important;}";
 			if(cache == true)
-				temp_html = temp_html + "#backBTN{display:none;}";
+			{
+				//temp_html = temp_html + "#backBTN{display:none;}";
+				window.sessionStorage.setItem('go_to_first',"true");
+			}
+			else
+			{
+				window.sessionStorage.setItem('go_to_first',"false");
+			}
 			temp_html = temp_html + "</style>";
 			$('.container').html(temp_html);
 		}
