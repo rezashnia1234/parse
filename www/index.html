@@ -150,7 +150,11 @@
 				window.sessionStorage.setItem('session_rand',Math.random());				
 			}
 			var networkState = navigator.connection.type;
-			if (networkState != Connection.NONE) {
+			if (networkState == Connection.NONE) {
+
+			}
+			else
+			{
 				var session_rand = window.sessionStorage.getItem('session_rand');
 				$('.a0').css('background-image', 'url("http://app.dparseh.com/images/home_page/a0.jpg?' + session_rand + '"),url("images/loading.gif")');
 				$('.a1').css('background-image', 'url("http://app.dparseh.com/images/home_page/a1.jpg?' + session_rand + '"),url("images/loading.gif")');
@@ -356,8 +360,6 @@
 				<div id="small" class="a14" onclick="openURL('http://app.dparseh.com/index.php?option=com_content&view=category&layout=blog&id=10&Itemid=528',true,false);" >
 					<span id="text"><p>باشگاه دانش آموختگان و اساتید پارسه</p></span>
 				</div>
-
-			<script>$('.mainmenu img').on('dragstart', function(event) { event.preventDefault();});</script>
 		</div>
 
 	</div><!-- /content -->
