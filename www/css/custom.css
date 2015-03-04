@@ -5,7 +5,7 @@
 	top: 12px;
 }
 .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
-  background-color: #f24c6b;
+  background-color: #fb331f;
   border-color: transparent;
   font-weight: normal;
   font-size:16px;
@@ -60,7 +60,7 @@
 }
 .ui-header-fullscreen, .ui-footer-fullscreen {
   opacity: 1;
-  background:#f24c6b;
+  background:#fb331f;
 }
 .ui-body-b, .ui-page-theme-b .ui-body-inherit, html .ui-bar-b .ui-body-inherit, html .ui-body-b .ui-body-inherit, html body .ui-group-theme-b .ui-body-inherit, html .ui-panel-page-container-b {
   background-color: #dedede;
@@ -93,7 +93,7 @@
   border:0;
 }
 .ui-panel-inner li.ui-first-child,.ui-panel-inner li.ui-first-child a{
-  background-color: #f24c6b !important;
+  background-color: #fb331f !important;
   color:#ffffff !important;
   height:44px;
  }
@@ -185,12 +185,12 @@ textarea{
 	height:10px;
 }
 .submit {
-  background-color: #f24c6b !important;
+  background-color: #fb331f !important;
   background-image: url("../images/contact/submit.png") !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
-  border: 1px solid #f24c6b !important;
+  border: 1px solid #fb331f !important;
   border-radius: 10px;
   cursor: pointer;
   height: 40px;
@@ -238,11 +238,11 @@ body{font-family:"web_Yekan";}
 	height: 42px;
 	width: 100%;
 	text-align: center;
-	background-color: #e03e5d;
+	background-color: #fb331f;
 	z-index: 1000;
 }
 #header {
-  background-color: #f24c6b;
+  background-color: #fb331f;
   height: 44px;
   overflow: hidden;
   position: fixed;
@@ -453,10 +453,10 @@ body{background:#eeeeee;padding-bottom:45px;}
 		z-index:200000 !important;
 	}
 	.vg-pages.vg-table-display.a-center {
-	  background: none repeat scroll 0 0 #e03e5d;
+	  background: none repeat scroll 0 0 #fb331f;
 	}
 	.blog  h4 a {
-		color: #e03e5d !important;
+		color: #fb331f !important;
 		font-family: "web_Yekan";
 		text-decoration: none;
 		font-weight: bold !important;
@@ -468,7 +468,7 @@ body{background:#eeeeee;padding-bottom:45px;}
 		padding-top: 6px !important;
 		text-align: right;
 		font-weight: bold !important;
-		color: #e03e5d !important;
+		color: #fb331f !important;
 	}
 	.blog  p.counter {
 		display: none;
@@ -1028,7 +1028,7 @@ display: none;
   text-shadow: 0 0 0 transparent !important;
 }
 #jc  span.comment-author {
-	color: #f24c6b;
+	color: #fb331f;
 	font-weight: bold;
 	font-size: 19px;
 	margin-right: 60px;
@@ -1103,7 +1103,7 @@ color: transparent !important;
 	background-size: 77px;
 	background-repeat: no-repeat;
 	width: 100%;
-	background-color: #f24c6b;
+	background-color: #fb331f;
 	border-radius: 8px;
 	height: 39px;
 	padding-top: 1px;
@@ -1155,7 +1155,7 @@ display: none;
 }
 .haveimage h2.contentheading  a{
 	background:none !important;
-color: #f24c6b !important;
+color: #fb331f !important;
 padding-right: 11px !important;
 }
 .haveimage .img-fulltext.left  img {
@@ -1184,7 +1184,7 @@ height: 42px;
 }
 
 .haveimage div#comment {
-  background-color: #f24c6b;
+  background-color: #fb331f;
   bottom: 0;
   height: 42px;
   left: 0;
@@ -1243,7 +1243,7 @@ height: 42px;
 }
 
 .noimage div#comment {
-  background-color: #f24c6b;
+  background-color: #fb331f;
   bottom: 0;
   height: 42px;
   left: 0;
@@ -1362,7 +1362,7 @@ width: 100%;
 	text-align:center;
 }
 #reg_div .reg_btn {
-  background-color: #f24c6b;
+  background-color: #fb331f;
   border: medium none;
   border-radius: 8px;
   color: #ffffff;
