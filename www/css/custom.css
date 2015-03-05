@@ -386,7 +386,7 @@ body{background:#eeeeee;padding-bottom:45px;}
 		padding-top: 21px;
 	}
 	.red{
-		color:#ea3356 !important;
+		color:#fb331f !important;
 	}
 	.gray{
 		color:#5e5e5e !important;
@@ -486,7 +486,7 @@ body{background:#eeeeee;padding-bottom:45px;}
 		margin-top: -8px;
 	}
 	.blog a.vg-page,#nashr-main a.vg-page {
-		background-color: #f5738d;
+		background-color: #b72415;
 		border-radius: 40px;
 		color: white !important;
 		display: inline-block;
@@ -499,7 +499,7 @@ body{background:#eeeeee;padding-bottom:45px;}
 	}
 	.blog a.vg-page.vg-pages-active,#nashr-main a.vg-page.vg-pages-active {
 	  background-color: #ffffff !important;
-	  color: #f34b6c !important;
+	  color: #fb331f !important;
 	}
 	.blog .fasele ,#nashr-main .fasele {
 	  margin-bottom: 0px;
@@ -1202,7 +1202,7 @@ margin-right: 17px;
 padding-left: 17px;
 }
 .noimage h2.contentheading a {
-  color: #e43c5f !important;
+  color: #fb331f !important;
   font-size: 17px;
   font-weight: bold !important;
   margin-right: -40px;
@@ -1288,7 +1288,7 @@ color:#5d5d5d;
 /* padding-right: 40px; */
 }
 #mainbook span.name {
-color: #ea3356;
+color: #fb331f;
 }
 #mainbook span.masterimage img {
 width: 40px;
@@ -1538,6 +1538,7 @@ strong {
 /*///////////////////////////////////////////////////////////////////////
 ///////////////////nashriat////////////////////////////////////*/
 
+
 #main-nashr{
 	width: 183px;
 	height: 237px;
@@ -1552,7 +1553,6 @@ strong {
 	background-color:gray;
 	float:left;
 	clear:both;
-	overflow: hidden;
 }
 #nashr-text p{
 	color:#5e5e5e;
@@ -1561,23 +1561,44 @@ strong {
 	font-family:"web_Yekan";
 	
 }
+
 @media screen and (max-width:450px) {
-	#main-nashr{
-			float:none;
-			margin: 0 auto;
-			margin-top: 15.5px;
-	}
-}
 	#nashr-main{
-		width:50%;
-		margin:0 auto;
-	}
-@media screen and (max-width:450px) and (mmin-width:700px)  {
-	#nashr-main{
-		width:50%;
+		width:183px;
 		margin:0 auto;
 	}
 }
+@media screen and (min-width:450px) and (max-width:700px)  {
+	#nashr-main{
+		width:413px;
+		margin:0 auto;
+	}
+}
+@media screen and (min-width:700px) and (max-width:1000px)  {
+	#nashr-main{
+		width:618px;
+		margin:0 auto;
+	}
+}
+@media screen and (min-width:1000px) and (max-width:1200px)   {
+	#nashr-main{
+		width:825px;
+		margin:0 auto;
+	}
+}
+@media screen and (min-width:1200px)  and (max-width:1500px)   {
+	#nashr-main{
+		width:1030px;
+		margin:0 auto;
+	}
+}
+@media screen and (min-width:1500px)   {
+	#nashr-main{
+		width:1236px;
+		margin:0 auto;
+	}
+}
+
 /*///////////////////////////////////////////////////////////////////////
 ///////////////////nashriat////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////

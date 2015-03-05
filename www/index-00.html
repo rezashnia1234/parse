@@ -37,16 +37,16 @@
 			if(window.localStorage.getItem('registered') == 0)
 			{
 				//$('.mymenu').html("");
-				$('.ui-btn-right.menu').css("display","none");
-				$('#header h1').css("cssText","margin-right:39px !important");
+				//$('.ui-btn-right.menu').css("display","none");
+				//$('#header h1').css("cssText","margin-right:39px !important");
 				//$('.ui-header .ui-title').attr("style","margin-right:39px !important");
-				$('#header .header-image').css("right","10px");
+				//$('#header .header-image').css("right","10px");
 			}
 			if(window.localStorage.getItem('registered') == 1)
 			{
 				$('.myregister').html("");
 			}
-			
+			init_menu();
 			var session_rand = Math.random();
 			$('.a0').css('background-image', 'url("http://app.dparseh.com/images/home_page/a0.jpg?' + session_rand + '"),url("images/loading.gif")');
 			$('.a1').css('background-image', 'url("http://app.dparseh.com/images/home_page/a1.jpg?' + session_rand + '"),url("images/loading.gif")');
@@ -160,7 +160,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		function onDeviceReady() {
-			init_menu();
+			
 			if(window.localStorage.getItem('registered') == null)
 			{
 				window.localStorage.setItem('registered',0);				
@@ -281,10 +281,35 @@
 			<a href="#menu" id="headermenu" class="ui-btn-right menu">Menu</a>
 			<div id="backBTN" onclick="go_back();" class="ui-btn-left">back</div>
     </div><!-- /header -->
-
+<style>
+#small span#text,#big span#text{
+	display:block;
+	width:100%;
+	height:43px;
+	background-position:bottom right;
+	background-color: rgba(48, 48, 48, 0.0);
+	background-repeat:no-repeat;
+	background-size: contain;
+}
+#small span#text p,#big span#text p{display:none;}
+.a0 span#text{background-image:url("images/index/title/a0.png");}
+.a1 span#text{background-image:url("images/index/title/a1.png");}
+.a2 span#text{background-image:url("images/index/title/a2.png");}
+.a3 span#text{background-image:url("images/index/title/a3.png");}
+.a4 span#text{background-image:url("images/index/title/a4.png");}
+.a5 span#text{background-image:url("images/index/title/a5.png");}
+.a6 span#text{background-image:url("images/index/title/a6.png");}
+.a7 span#text{background-image:url("images/index/title/a7.png");}
+.a8 span#text{background-image:url("images/index/title/a8.png");}
+.a9 span#text{background-image:url("images/index/title/a9.png");}
+.a10 span#text{background-image:url("images/index/title/a10.png");}
+.a11 span#text{background-image:url("images/index/title/a11.png");}
+.a12 span#text{background-image:url("images/index/title/a12.png");}
+.a13 span#text{background-image:url("images/index/title/a13.png");}
+.a14 span#text{background-image:url("images/index/title/a14.png");}
+</style>
     <div id="main">
 		<div class="container mymenu" id="container" >
-			<div id="main">
 				<div id="big" class="a0"  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=120',true,false);" >
 					<span id="text"><p>محتوای دروس کلاس های اصلی آمادگی رزیدنتی</p></span>
 				</div>
@@ -303,14 +328,14 @@
 				<div id="small" class="a5" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=542',true,false);" >
 					<span id="text"><p>محتوای زبان انگلیسی</p></span>
 				</div>
-				<div id="small" class="a6" onclick="openURL('http://app.dparseh.com/index.php?option=com_content&view=category&id=120&Itemid=233',true,false);" >
-					<span id="text"><p>آرشیو نشریات</p></span>
+				<div id="small" class="a6" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=227',true,false);" >
+					<span id="text"><p>منابع آزمون (ebook) </p></span>
 				</div>
-				<div id="small" class="a7" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=227',true,false);" >
+				<div id="small" class="a7" onclick="openURL('http://app.dparseh.com/index.php?option=com_content&view=category&id=120&Itemid=233',true,false);" >
 					<span id="text"><p>مشاوره و برنامه ریزی</p></span>
 				</div>
 				<div id="small" class="a8" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=543',true,false);" >
-					<span id="text"><p>منابع آزمون (ebook) </p></span>
+					<span id="text"><p>آرشیو نشریات</p></span>
 				</div>
 				<div id="small" class="a9" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=544',true,false);" >
 					<span id="text"><p>دستیار کنار دندانپزشک</p></span>
@@ -321,17 +346,15 @@
 				<div id="small" class="a11" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=231',true,false);" >
 					<span id="text"><p>دوره های آموزش کوتاه مدت</p></span>
 				</div>
-				<div id="small" class="a12" onclick="window.location.href = 'contact.html';">
-					<span id="text"><p>تماس با پارسه</p></span>
-				</div>
-				<div id="small" class="a13" onclick="openURL('http://app.dparseh.com/',true,false);" >
+				<div id="small" class="a12" onclick="openURL('http://app.dparseh.com/',true,false);" >
 					<span id="text"><p>اطلاعیه های پارسه</p></span>
+				</div>
+				<div id="small" class="a13" onclick="window.location.href = 'contact.html';" >
+					<span id="text"><p>تماس با پارسه</p></span>
 				</div>
 				<div id="small" class="a14" onclick="openURL('http://app.dparseh.com/index.php?option=com_content&view=category&layout=blog&id=10&Itemid=528',true,false);" >
 					<span id="text"><p>باشگاه دانش آموختگان و اساتید پارسه</p></span>
 				</div>
-
-			<script>$('.mainmenu img').on('dragstart', function(event) { event.preventDefault();});</script>
 		</div>
 
 	</div><!-- /content -->
