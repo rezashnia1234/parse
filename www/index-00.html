@@ -24,6 +24,7 @@
 	<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
 	<script type="text/javascript" src="js/jquery.mmenu.dragopen.js"></script>
 	<script type="text/javascript" src="js/jquery.mmenu.fixedelements.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slides.min.js"></script>
 
 	<script>
 		function init() {		
@@ -47,6 +48,7 @@
 				$('.myregister').html("");
 			}
 			init_menu();
+			
 			var session_rand = Math.random();
 			$('.a0').css('background-image', 'url("http://app.dparseh.com/images/home_page/a0.jpg?' + session_rand + '"),url("images/loading.gif")');
 			$('.a1').css('background-image', 'url("http://app.dparseh.com/images/home_page/a1.jpg?' + session_rand + '"),url("images/loading.gif")');
@@ -64,6 +66,11 @@
 			$('.a13').css('background-image', 'url("http://app.dparseh.com/images/home_page/a13.jpg?' + session_rand + '"),url("images/loading.gif")');
 			$('.a14').css('background-image', 'url("http://app.dparseh.com/images/home_page/a14.jpg?' + session_rand + '"),url("images/loading.gif")');
 
+			$('.a0-1').css('background-image', 'url("http://app.dparseh.com/images/home_page/slider/1.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a0-2').css('background-image', 'url("http://app.dparseh.com/images/home_page/slider/2.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a0-3').css('background-image', 'url("http://app.dparseh.com/images/home_page/slider/3.jpg?' + session_rand + '"),url("images/loading.gif")');
+			$('.a0-4').css('background-image', 'url("http://app.dparseh.com/images/home_page/slider/4.jpg?' + session_rand + '"),url("images/loading.gif")');
+			
 		}
 		
 
@@ -281,36 +288,31 @@
 			<a href="#menu" id="headermenu" class="ui-btn-right menu">Menu</a>
 			<div id="backBTN" onclick="go_back();" class="ui-btn-left">back</div>
     </div><!-- /header -->
-<style>
-#small span#text,#big span#text{
-	display:block;
-	width:100%;
-	height:43px;
-	background-position:bottom right;
-	background-color: rgba(48, 48, 48, 0.0);
-	background-repeat:no-repeat;
-	background-size: contain;
-}
-#small span#text p,#big span#text p{display:none;}
-.a0 span#text{background-image:url("images/index/title/a0.png");}
-.a1 span#text{background-image:url("images/index/title/a1.png");}
-.a2 span#text{background-image:url("images/index/title/a2.png");}
-.a3 span#text{background-image:url("images/index/title/a3.png");}
-.a4 span#text{background-image:url("images/index/title/a4.png");}
-.a5 span#text{background-image:url("images/index/title/a5.png");}
-.a6 span#text{background-image:url("images/index/title/a6.png");}
-.a7 span#text{background-image:url("images/index/title/a7.png");}
-.a8 span#text{background-image:url("images/index/title/a8.png");}
-.a9 span#text{background-image:url("images/index/title/a9.png");}
-.a10 span#text{background-image:url("images/index/title/a10.png");}
-.a11 span#text{background-image:url("images/index/title/a11.png");}
-.a12 span#text{background-image:url("images/index/title/a12.png");}
-.a13 span#text{background-image:url("images/index/title/a13.png");}
-.a14 span#text{background-image:url("images/index/title/a14.png");}
-</style>
+
     <div id="main">
 		<div class="container mymenu" id="container" >
+				<script>
+					$(function() {
+						$("#slides").slidesjs({
+							width: 512,
+							height: 797,//497,
+							navigation: {
+								active: false
+							},
+							pagination: {
+								active: false
+							},
+							play: { auto: true,interval: 5000}
+						});
+					});
+				</script>
 				<div id="big" class="a0"  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=120',true,false);" >
+					<div id="slides">
+						<div class="home_slide a0-1" style="background-image:url('images/index/slider/1.jpg');"></div>
+						<div class="home_slide a0-2" style="background-image:url('images/index/slider/2.jpg');"></div>
+						<div class="home_slide a0-3" style="background-image:url('images/index/slider/3.jpg');"></div>
+						<div class="home_slide a0-4" style="background-image:url('images/index/slider/4.jpg');"></div>
+					</div>
 					<span id="text"><p>محتوای دروس کلاس های اصلی آمادگی رزیدنتی</p></span>
 				</div>
 				<div id="small" class="a1" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=230',true,false);" >
