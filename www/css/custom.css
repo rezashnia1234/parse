@@ -1622,89 +1622,92 @@ strong {
 	top: 26px;
 	position: relative;
 	padding-right: 126px;
+	padding-left: 5px;
+	display: block;
+	text-align: justify;
 }
 
-.moduletable_menu .menu.custom_image  .classhayehozorikotahmodat {
+.moduletable_menu .menu.custom_image  li.classhayehozorikotahmodat {
 background-image: url(../images/newmenus/classhayehozorikotahmodat.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .archivefilm {
+.moduletable_menu .menu.custom_image  li.archivefilm {
 background-image: url(../images/newmenus/archivefilm.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .azmonhayeclassi {
+.moduletable_menu .menu.custom_image  li.azmonhayeclassi {
 background-image: url(../images/newmenus/azmonhayeclassi.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .azmonhayejame {
+.moduletable_menu .menu.custom_image  li.azmonhayejame {
 background-image: url(../images/newmenus/azmonhayejame.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .azmonhayeravanshenasi {
+.moduletable_menu .menu.custom_image  li.azmonhayeravanshenasi {
 background-image: url(../images/newmenus/azmonhayeravanshenasi.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .barnamemorordorosfeshorde {
+.moduletable_menu .menu.custom_image  li.barnamemorordorosfeshorde {
 background-image: url(../images/newmenus/barnamemorordorosfeshorde.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .barnamepishnahadi {
+.moduletable_menu .menu.custom_image  li.barnamepishnahadi {
 background-image: url(../images/newmenus/barnamepishnahadi.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .classhayehozori {
+.moduletable_menu .menu.custom_image  li.classhayehozori {
 background-image: url(../images/newmenus/classhayehozori.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .classhayemokatebei {
+.moduletable_menu .menu.custom_image  li.classhayemokatebei {
 background-image: url(../images/newmenus/classhayemokatebei.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .classhayemororsari {
+.moduletable_menu .menu.custom_image  li.classhayemororsari {
 background-image: url(../images/newmenus/classhayemororsari.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .classhayezaban {
+.moduletable_menu .menu.custom_image  li.classhayezaban {
 background-image: url(../images/newmenus/classhayezaban.png) !important;
 }
-.moduletable_menu .menu.custom_image  .listedastyaranamadebekar {
+.moduletable_menu .menu.custom_image  li.listedastyaranamadebekar {
 background-image: url(../images/newmenus/listedastyaranamadebekar.png) !important;
 }
-.moduletable_menu .menu.custom_image  .matneaslidarsname {
+.moduletable_menu .menu.custom_image  li.matneaslidarsname {
 background-image: url(../images/newmenus/matneaslidarsname.png) !important;
 }
 
-.moduletable_menu .menu.custom_image  .moarefivakharidpackageamozeshi {
+.moduletable_menu .menu.custom_image  li.moarefivakharidpackageamozeshi {
 background-image: url(../images/newmenus/moarefivakharidpackageamozeshi.png) !important;
 }
-.moduletable_menu .menu.custom_image  .moshavereemaili {
+.moduletable_menu .menu.custom_image  li.moshavereemaili {
 background-image: url(../images/newmenus/moshavereemaili.png) !important;
 }
-.moduletable_menu .menu.custom_image  .packajeamozeshi {
+.moduletable_menu .menu.custom_image  li.packajeamozeshi {
 background-image: url(../images/newmenus/packajeamozeshi.png) !important;
 }
-.moduletable_menu .menu.custom_image  .packajetaghirat {
+.moduletable_menu .menu.custom_image  li.packajetaghirat {
 background-image: url(../images/newmenus/packajetaghirat.png) !important;
 }
-.moduletable_menu .menu.custom_image  .pishsabtenameclasshayehozori {
+.moduletable_menu .menu.custom_image  li.pishsabtenameclasshayehozori {
 background-image: url(../images/newmenus/pishsabtenameclasshayehozori.png) !important;
 }
-.moduletable_menu .menu.custom_image  .sabteetelaatedandanpezeshki {
+.moduletable_menu .menu.custom_image  li.sabteetelaatedandanpezeshki {
 background-image: url(../images/newmenus/sabteetelaatedandanpezeshki.png) !important;
 }
-.moduletable_menu .menu.custom_image  .soalatclasshayemoror {
+.moduletable_menu .menu.custom_image  li.soalatclasshayemoror {
 background-image: url(../images/newmenus/soalatclasshayemoror.png) !important;
 }
-.moduletable_menu .menu.custom_image  .soalateazmonevorodi {
+.moduletable_menu .menu.custom_image  li.soalateazmonevorodi {
 background-image: url(../images/newmenus/soalateazmonevorodi.png) !important;
 }
-.moduletable_menu .menu.custom_image  .soalateazmoohayebord {
+.moduletable_menu .menu.custom_image  li.soalateazmoohayebord {
 background-image: url(../images/newmenus/soalateazmoohayebord.png) !important;
 }
-.moduletable_menu .menu.custom_image  .soalateclassi {
+.moduletable_menu .menu.custom_image  li.soalateclassi {
 background-image: url(../images/newmenus/soalateclassi.png) !important;
 }
-.moduletable_menu .menu.custom_image  .tadriseonlinesoti {
+.moduletable_menu .menu.custom_image  li.tadriseonlinesoti {
 background-image: url(../images/newmenus/tadriseonlinesoti.png) !important;
 }
 /******************************* menus new///////////*/
