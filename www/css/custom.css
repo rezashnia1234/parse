@@ -1603,7 +1603,113 @@ strong {
 ///////////////////nashriat////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////
 ///////////////////nashriat////////////////////////////////////*/
+/******************************* menus new///////////*/
+/******************************* menus new///////////*/
+/******************************* menus new///////////*/
+.moduletable_menu .menu.custom_image li{
+	width: 99%;
+	background-color: #dfdada !important;
+	height: 81px;
+	margin: 6px auto;
+	padding: 0;
+	background-repeat: no-repeat !important;
+	background-size: 86px 81px !important;
+	background-position: right center !important;
+}
+.moduletable_menu .menu.custom_image li a{
+	font-size: 20px;
+	line-height: 20px;
+	top: 26px;
+	position: relative;
+	padding-right: 126px;
+}
 
+.moduletable_menu .menu.custom_image  .classhayehozorikotahmodat {
+background-image: url(../images/newmenus/classhayehozorikotahmodat.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .archivefilm {
+background-image: url(../images/newmenus/archivefilm.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .azmonhayeclassi {
+background-image: url(../images/newmenus/azmonhayeclassi.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .azmonhayejame {
+background-image: url(../images/newmenus/azmonhayejame.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .azmonhayeravanshenasi {
+background-image: url(../images/newmenus/azmonhayeravanshenasi.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .barnamemorordorosfeshorde {
+background-image: url(../images/newmenus/barnamemorordorosfeshorde.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .barnamepishnahadi {
+background-image: url(../images/newmenus/barnamepishnahadi.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .classhayehozori {
+background-image: url(../images/newmenus/classhayehozori.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .classhayemokatebei {
+background-image: url(../images/newmenus/classhayemokatebei.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .classhayemororsari {
+background-image: url(../images/newmenus/classhayemororsari.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .classhayezaban {
+background-image: url(../images/newmenus/classhayezaban.png) !important;
+}
+.moduletable_menu .menu.custom_image  .listedastyaranamadebekar {
+background-image: url(../images/newmenus/listedastyaranamadebekar.png) !important;
+}
+.moduletable_menu .menu.custom_image  .matneaslidarsname {
+background-image: url(../images/newmenus/matneaslidarsname.png) !important;
+}
+
+.moduletable_menu .menu.custom_image  .moarefivakharidpackageamozeshi {
+background-image: url(../images/newmenus/moarefivakharidpackageamozeshi.png) !important;
+}
+.moduletable_menu .menu.custom_image  .moshavereemaili {
+background-image: url(../images/newmenus/moshavereemaili.png) !important;
+}
+.moduletable_menu .menu.custom_image  .packajeamozeshi {
+background-image: url(../images/newmenus/packajeamozeshi.png) !important;
+}
+.moduletable_menu .menu.custom_image  .packajetaghirat {
+background-image: url(../images/newmenus/packajetaghirat.png) !important;
+}
+.moduletable_menu .menu.custom_image  .pishsabtenameclasshayehozori {
+background-image: url(../images/newmenus/pishsabtenameclasshayehozori.png) !important;
+}
+.moduletable_menu .menu.custom_image  .sabteetelaatedandanpezeshki {
+background-image: url(../images/newmenus/sabteetelaatedandanpezeshki.png) !important;
+}
+.moduletable_menu .menu.custom_image  .soalatclasshayemoror {
+background-image: url(../images/newmenus/soalatclasshayemoror.png) !important;
+}
+.moduletable_menu .menu.custom_image  .soalateazmonevorodi {
+background-image: url(../images/newmenus/soalateazmonevorodi.png) !important;
+}
+.moduletable_menu .menu.custom_image  .soalateazmoohayebord {
+background-image: url(../images/newmenus/soalateazmoohayebord.png) !important;
+}
+.moduletable_menu .menu.custom_image  .soalateclassi {
+background-image: url(../images/newmenus/soalateclassi.png) !important;
+}
+.moduletable_menu .menu.custom_image  .tadriseonlinesoti {
+background-image: url(../images/newmenus/tadriseonlinesoti.png) !important;
+}
+/******************************* menus new///////////*/
+/******************************* menus new///////////*/
+/******************************* menus new///////////*/
 
 
 
