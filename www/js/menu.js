@@ -121,13 +121,17 @@
 	});
 	*/
 	function go_back() {
-		if(window.sessionStorage.getItem('go_to_first')=="true")
+		if(is_back_btn_triggered==0)
 		{
-			window.sessionStorage.setItem('go_to_first',"false");
-			window.location.href = "index.html";
-		}
-		else{
-			parent.history.back();
+			is_back_btn_triggered = 1;
+			if(window.sessionStorage.getItem('go_to_first')=="true")
+			{
+				window.sessionStorage.setItem('go_to_first',"false");
+				window.location.href = "index.html";
+			}
+			else{
+				parent.history.back();
+			}
 		}
 		/*
 		if(window.sessionStorage.getItem('we_are_in')=="show")
