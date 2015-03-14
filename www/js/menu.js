@@ -123,6 +123,8 @@
 	function go_back() {
 		if(window.sessionStorage.getItem('is_back_btn_triggered')=="false")
 		{
+			window.sessionStorage.setItem('is_back_btn_triggered',"true");
+			
 			if(window.sessionStorage.getItem('go_to_first')=="true")
 			{
 				window.sessionStorage.setItem('go_to_first',"false");
