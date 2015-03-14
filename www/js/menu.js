@@ -121,7 +121,7 @@
 	});
 	*/
 	function go_back() {
-		if(is_back_btn_triggered==0)
+		if(is_back_btn_triggered!=1)
 		{
 			is_back_btn_triggered = 1;
 			if(window.sessionStorage.getItem('go_to_first')=="true")
