@@ -34,10 +34,11 @@
 	<script src="gallery/photoswipe.init.js"></script>
 	
 	<script>
-		var is_back_btn_triggered = 0;
+		
 		function init() {			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
+
 			//init_menu();
 			//onDeviceReady();
 		}
@@ -47,6 +48,7 @@
 				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 				
 			window.sessionStorage.setItem('we_are_in',"show");
+			window.sessionStorage.setItem('is_back_btn_triggered',"false");
 			//FastClick.attach(document.body);
 			
 			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT

@@ -121,18 +121,32 @@
 	});
 	*/
 	function go_back() {
-		if(is_back_btn_triggered!=1)
+		if(window.sessionStorage.getItem('is_back_btn_triggered')=="false")
 		{
-			is_back_btn_triggered = 1;
 			if(window.sessionStorage.getItem('go_to_first')=="true")
 			{
 				window.sessionStorage.setItem('go_to_first',"false");
 				window.location.href = "index.html";
 			}
-			else{
+			else
+			{
 				parent.history.back();
 			}
 		}
+		window.sessionStorage.setItem('is_back_btn_triggered',"true");
+
+		/*
+			last_click_time = new Date().getTime();
+			document.addEventListener('click', function (e) {
+				click_time = e['timeStamp'];
+				if (click_time && (click_time - last_click_time) < 1000) {
+					e.stopImmediatePropagation();
+					e.preventDefault();
+					return false;
+				}
+				last_click_time = click_time;
+			}, true);
+		*/
 		/*
 		if(window.sessionStorage.getItem('we_are_in')=="show")
 		{
