@@ -1497,7 +1497,7 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
   width: 100px;
 }
 #controls {
-  background: none repeat scroll 0 0 #333;
+  background: none repeat scroll 0 0 #e91804;
   bottom: 34px;
   float: left;
   left: 0;
@@ -1521,20 +1521,22 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
 }
 #controls a:hover{
 	color:#fff;
-	background:#000;
+	background:#fb331f;
 }
 #controls a.selected{
-	background:#000;
+	background:#fb331f;
     color:#fff !important;
 }
 #controls #small     {  font-size:13px !important;padding: 10px 5px 3px 0;}
-#controls #medium    {  font-size:19px !important;padding:7px 4px 10px 0;border-bottom:1px solid black;border-top:1px solid black}
+#controls #medium    {  font-size:19px !important;padding:7px 4px 10px 0;border-bottom:1px solid #fb331f;border-top:1px solid #fb331f}
 #controls #large     {  font-size:27px  !important;padding: 2px 8px 17px 6px;}
 strong {
   font-size: 17px;
   font-weight: bold;
 }
-
+.container img {
+  max-width: 100%;
+}
 /*///////////////////////////////////////////////////////////////////////
 ///////////////////nashriat////////////////////////////////////*/
 

@@ -463,24 +463,11 @@ function openURL(URL,cache,iframe) {
 	window.sessionStorage.setItem('NEXT_CACHE',cache);
 	window.sessionStorage.setItem('NEXT_IFRAME',iframe);
 	*/
-	var networkState = navigator.connection.type;
-	if (networkState == Connection.NONE) {
-		if(iframe == "true")
-		{
-			navigator.notification.alert(
-				'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
-				alertDismissed,         // callback
-				'اخطار',            // title
-				'تائید'                  // buttonName
-			);
-		}
-		else{
-			var article_json = window.localStorage.getItem($.md5(URL));
-			if(article_json)
-			{
-				window.location.href = "show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe);
-			}
-			else
+	if(URL != "#")
+	{
+		var networkState = navigator.connection.type;
+		if (networkState == Connection.NONE) {
+			if(iframe == "true")
 			{
 				navigator.notification.alert(
 					'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
@@ -489,13 +476,28 @@ function openURL(URL,cache,iframe) {
 					'تائید'                  // buttonName
 				);
 			}
+			else{
+				var article_json = window.localStorage.getItem($.md5(URL));
+				if(article_json)
+				{
+					window.location.href = "show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe);
+				}
+				else
+				{
+					navigator.notification.alert(
+						'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
+						alertDismissed,         // callback
+						'اخطار',            // title
+						'تائید'                  // buttonName
+					);
+				}
+			}
+		}
+		else
+		{
+			window.location.href = "show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe);
 		}
 	}
-	else
-	{
-		window.location.href = "show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe);
-	}
-
 	//alert("show.html?url=" + Base64.encode(URL) + "&cache=" + Base64.encode(cache) + "&iframe=" + Base64.encode(iframe));
 }
 
