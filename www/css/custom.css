@@ -1498,15 +1498,16 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
 }
 #controls {
   background: none repeat scroll 0 0 #e91804;
-  bottom: 34px;
+  bottom: -1px;
   float: left;
-  left: 0;
-  margin: 0 5px 5px 0;
+  left: 37px;
+  margin: 0 5px 5px -1px;
   padding: 0;
   position: fixed;
   text-align: center;
   width: 34px;
   z-index: 1000;
+  transform: rotate(90deg);
 }
 #controls a {
   color: #c3c3c3 !important;
@@ -1518,6 +1519,7 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
   margin: 0;
   padding: 4px 4px 4px 0px;
   text-decoration: none;
+  transform: rotate(-90deg);
 }
 #controls a:hover{
 	color:#fff;
@@ -1528,7 +1530,7 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
     color:#fff !important;
 }
 #controls #small     {  font-size:13px !important;padding: 10px 5px 3px 0;}
-#controls #medium    {  font-size:19px !important;padding:7px 4px 10px 0;border-bottom:1px solid #fb331f;border-top:1px solid #fb331f}
+#controls #medium    {  font-size:19px !important;padding:7px 4px 10px 0;}
 #controls #large     {  font-size:27px  !important;padding: 2px 8px 17px 6px;}
 strong {
   font-size: 17px;

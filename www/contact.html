@@ -41,11 +41,10 @@
 			
 		window.sessionStorage.setItem('we_are_in',"contact");
 		
-		/*
 		if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
-			document.addEventListener("backbutton", go_back, false);
+			document.addEventListener("backbutton", parent.history.back, false);
+			//document.addEventListener("backbutton", go_back, false);
 		}
-		*/
 		
 		var networkState = navigator.connection.type;
 		if (networkState == Connection.NONE)
@@ -136,7 +135,7 @@
 	<div id="header" class="FixedTop">
 			<h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image" />تماس با پارسه</h1>
 			<a href="#menu" id="headermenu" class="ui-btn-right menu">Menu</a>
-			<div id="backBTN" onclick="go_back();" class="ui-btn-left">back</div>
+			<div id="backBTN" onclick="parent.history.back();" class="ui-btn-left">back</div>
     </div><!-- /header -->
 
     <div id="main">
