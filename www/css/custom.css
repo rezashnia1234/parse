@@ -1498,16 +1498,14 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
 }
 #controls {
   background: none repeat scroll 0 0 #e91804;
-  bottom: -1px;
+  bottom: 31px;
   float: left;
-  left: 37px;
+  left: 0px;
   margin: 0 5px 5px -1px;
   padding: 0;
   position: fixed;
   text-align: center;
-  width: 34px;
   z-index: 1000;
-  transform: rotate(90deg);
 }
 #controls a {
   color: #c3c3c3 !important;
@@ -1519,7 +1517,8 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
   margin: 0;
   padding: 4px 4px 4px 0px;
   text-decoration: none;
-  transform: rotate(-90deg);
+  width: 34px;
+  float:right;
 }
 #controls a:hover{
 	color:#fff;
