@@ -30,32 +30,18 @@
 	function init() {			
 		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 		document.addEventListener("deviceready", onDeviceReady, false);
-		//onDeviceReady();
-		//init_menu();
+		onDeviceReady();
+		init_menu();
 	}
 	function onDeviceReady() {
 		window.sessionStorage.setItem('go_to_first',"false");
 		
-		if(window.localStorage.getItem('uuid') == null)
-			window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+
 			
 		window.sessionStorage.setItem('we_are_in',"contact");
 		
-		if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
-			document.addEventListener("backbutton", parent.history.back, false);
-			//document.addEventListener("backbutton", go_back, false);
-		}
+
 		
-		var networkState = navigator.connection.type;
-		if (networkState == Connection.NONE)
-		{
-			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    no internet ');
-			$('.internet').css({'display':'none'});
-			$('.nointernet').css({'display':'block'});
-			$('#iframe_warpper').html("");
-		}
-		else
-		{
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    we have internet ');
 			$('.nointernet').css({'display':'none'});
 			$('.internet').css({'display':'block'});
@@ -106,9 +92,9 @@
 				});
 			}	
 			
-		}
+
 		//getMENU();
-		init_menu();
+		//init_menu();
 	}
 
 	function uniqueDeviceIDsuccess(uuid)
