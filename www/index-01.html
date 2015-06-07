@@ -70,7 +70,7 @@
 				//alert("regID = " + e.regid);
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
-							url: "http://app.dparseh.com/SMCMS_notification/RegisterDeviceIDtoDB.php", 
+							url: "http://apps.dparseh.com/SMCMS_notification/RegisterDeviceIDtoDB.php", 
 							data: {regID : e.regid,user:window.localStorage.getItem('uuid'),OS:device.platform},
 							async: false,
 							success : function(text)
@@ -170,8 +170,8 @@
 
 
 			
-			//getURL("http://app.dparseh.com?uuid=" + device.uuid + "&registered=" + window.localStorage.getItem('registered'),true,false);
-			//getURL_silent("http://app.dparseh.com?uuid=" + window.localStorage.getItem('uuid') + "&registered=" + window.localStorage.getItem('registered'),true,false);
+			//getURL("http://apps.dparseh.com?uuid=" + device.uuid + "&registered=" + window.localStorage.getItem('registered'),true,false);
+			//getURL_silent("http://apps.dparseh.com?uuid=" + window.localStorage.getItem('uuid') + "&registered=" + window.localStorage.getItem('registered'),true,false);
 
 			//getMENU();
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -194,7 +194,7 @@
 				console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Notification Callback Success! Result (ios) = '+result);
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
-							url: "http://app.dparseh.com/SMCMS_notification/RegisterDeviceIDtoDB.php", 
+							url: "http://apps.dparseh.com/SMCMS_notification/RegisterDeviceIDtoDB.php", 
 							data: {regID : result,user:window.localStorage.getItem('uuid'),OS:device.platform},
 							async: false,
 							success : function(text)
@@ -280,36 +280,36 @@
 					<br/>
 					به سامانه هوشمند دندانپزشکی پارسه خوش آمدید.
 				</div>
-				<a href="#" onclick="openURL('http://app.dparseh.com/index.php?option=com_myacademy&view=myuser&Itemid=488&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn">عضویت بدون هزینه<br/><span>(ورود برای اولین بار)</span></div></a>
-				<a href="#" onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=489&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn" >ورود کاربران عضو<br/><span>(دارای رمز ورود)</span></div></a>
+				<a href="#" onclick="openURL('http://apps.dparseh.com/index.php?option=com_myacademy&view=myuser&Itemid=488&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn">عضویت بدون هزینه<br/><span>(ورود برای اولین بار)</span></div></a>
+				<a href="#" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=489&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn" >ورود کاربران عضو<br/><span>(دارای رمز ورود)</span></div></a>
 			</div>
 		</div>
 		<div class="container mymenu" id="container" >
 			<table  class="mainmenu" dir="rtl" cellspacing="0" cellpadding="0" align="center" style='-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;' unselectable='on' onselectstart='return false;' >
 				<tr>
-					<td  onclick="openURL('http://app.dparseh.com/',true,false);"  ><img src="images/mainmenu/01.png" id="test" unselectable='on' onselectstart='return false;' /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_content&view=category&layout=blog&id=10&Itemid=528',true,false);" ><img src="images/mainmenu/02.png" unselectable='on' onselectstart='return false;' /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=403',true,false);" ><img src="images/mainmenu/03.png" unselectable='on' onselectstart='return false;' /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/',true,false);"  ><img src="images/mainmenu/01.png" id="test" unselectable='on' onselectstart='return false;' /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_content&view=category&layout=blog&id=10&Itemid=528',true,false);" ><img src="images/mainmenu/02.png" unselectable='on' onselectstart='return false;' /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=403',true,false);" ><img src="images/mainmenu/03.png" unselectable='on' onselectstart='return false;' /></a></td>
 				</tr>
 				<tr>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=120',true,false);" ><img src="images/mainmenu/04.png" unselectable='on' onselectstart='return false;' /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=227',true,false);" ><img src="images/mainmenu/05.png" /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=228',true,false);" ><img src="images/mainmenu/06.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=120',true,false);" ><img src="images/mainmenu/04.png" unselectable='on' onselectstart='return false;' /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=227',true,false);" ><img src="images/mainmenu/05.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=228',true,false);" ><img src="images/mainmenu/06.png" /></a></td>
 				</tr>
 				<tr>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=229',true,false);" ><img src="images/mainmenu/07.png" /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=230',true,false);" ><img src="images/mainmenu/08.png" /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=231',true,false);" ><img src="images/mainmenu/09.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=229',true,false);" ><img src="images/mainmenu/07.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=230',true,false);" ><img src="images/mainmenu/08.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=231',true,false);" ><img src="images/mainmenu/09.png" /></a></td>
 				</tr>
 				<tr>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_content&view=category&id=119&Itemid=232',true,false);" ><img src="images/mainmenu/10.png" /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_content&view=category&id=120&Itemid=233',true,false);" ><img src="images/mainmenu/11.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_content&view=category&id=119&Itemid=232',true,false);" ><img src="images/mainmenu/10.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_content&view=category&id=120&Itemid=233',true,false);" ><img src="images/mainmenu/11.png" /></a></td>
 					<td  onclick="window.location.href = 'contact.html';" ><img src="images/mainmenu/12.png" /></a></td>
 				</tr>
 				<tr>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=542',true,false);" ><img src="images/mainmenu/13.png" /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=543',true,false);" ><img src="images/mainmenu/14.png" /></a></td>
-					<td  onclick="openURL('http://app.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=544',true,false);" ><img src="images/mainmenu/15.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=542',true,false);" ><img src="images/mainmenu/13.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=543',true,false);" ><img src="images/mainmenu/14.png" /></a></td>
+					<td  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=544',true,false);" ><img src="images/mainmenu/15.png" /></a></td>
 				</tr>
 			</table>
 			<script>$('.mainmenu img').on('dragstart', function(event) { event.preventDefault();});</script>
