@@ -126,7 +126,20 @@
 		{
 			window.sessionStorage.setItem('is_back_btn_triggered',"true");
 			
-			if(window.sessionStorage.getItem('go_to_first')=="true")
+			if(window.sessionStorage.getItem('close_gallery')=="true")
+			{
+				//window.sessionStorage.setItem('close_gallery',"false");
+
+				/*
+				navigator.notification.alert(
+					'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
+					alertDismissed,         // callback
+					'اخطار',            // title
+					'تائید'                  // buttonName
+				);
+				*/
+			}
+			else if(window.sessionStorage.getItem('go_to_first')=="true")
 			{
 				window.sessionStorage.setItem('go_to_first',"false");
 				window.location.href = "index.html";

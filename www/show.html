@@ -50,6 +50,7 @@
 			window.sessionStorage.setItem('we_are_in',"show");
 			window.sessionStorage.setItem('is_back_btn_triggered',"false");
 			//FastClick.attach(document.body);
+			FastClick.attach(document.getElementById('controls'));
 			
 			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
 				document.addEventListener("backbutton", go_back, false);
@@ -70,6 +71,7 @@
 			getURL(show_url,show_cache,show_iframe);
 			//getMENU();
 			init_menu();
+			
 		}
 	
 		function loadcompeleted() {
