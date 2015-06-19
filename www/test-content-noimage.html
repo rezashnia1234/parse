@@ -43,6 +43,8 @@
 				event.preventDefault();
 				$("#controls a").removeClass("selected");
 				$(this).addClass("selected");
+				$("#controls").removeClass("opened");
+				$("#controls_over").css("position","relative");
 				var font_style = "<style>";
 					font_style = font_style + "#container p,.container p{font-size:" + "15" + "px !important;}";
 					font_style = font_style + "#container h2,.container h2{font-size:" + "15" + "px !important;}";
@@ -52,19 +54,35 @@
 			});	
 			$("#controls #medium").click(function(event){
 				event.preventDefault();
-				$("#controls a").removeClass("selected");
-				$(this).addClass("selected");
-				var font_style = "<style>";
-					font_style = font_style + "#container p,.container p{font-size:" + "18" + "px !important;}";
-					font_style = font_style + "#container h2,.container h2{font-size:" + "18" + "px !important;}";
-					font_style = font_style + "#container *,.container *{font-size:" + "18" + "px !important;}";
-					font_style = font_style + "</style>";
-				$("#controls #css_style").html(font_style);
+				if ($("#controls").hasClass("opened")) {
+					$("#controls a").removeClass("selected");
+					$(this).addClass("selected");
+					$("#controls").removeClass("opened");
+					$("#controls_over").css("position","relative");
+					var font_style = "<style>";
+						font_style = font_style + "#container p,.container p{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "#container h2,.container h2{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "#container *,.container *{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "</style>";
+					$("#controls #css_style").html(font_style);
+				}
+				else
+				{
+					$("#controls_over").css("position","fixed");
+					$("#controls").addClass("opened");
+				}
+			});
+			$("#controls_over").click(function(event){
+				event.preventDefault();
+				$("#controls").removeClass("opened");
+				$(this).css("position","relative");
 			});	
 			$("#controls #large").click(function(event){
 				event.preventDefault();
 				$("#controls a").removeClass("selected");
 				$(this).addClass("selected");
+				$("#controls").removeClass("opened");
+				$("#controls_over").css("position","relative");
 				var font_style = "<style>";
 					font_style = font_style + "#container p,.container p{font-size:" + "21" + "px !important;}";
 					font_style = font_style + "#container h2,.container h2{font-size:" + "21" + "px !important;}";
@@ -92,6 +110,7 @@
     <div id="main">
 		<div id="controls">
 			<div id="css_style"></div>
+			<div id="controls_over"></div>
 			<a href="#" id="small" >A</a>
 			<a href="#" id="medium" class="selected">A</a>
 			<a href="#" id="large">A</a>
@@ -135,7 +154,7 @@
 <!-- content-links -->
 <!-- end content-links -->
 <p style="text-align: justify;">از آنجائیکه پوسیدگی بیش از 90 درصد معالجه را درگیر خود ساخته است ، رشته ترمیمی به عنوان اولین و صاحب نظر ترین تخصص ها و به تبع پر مراجعه ترین رشته می باشد . با توجه به ورود روش های جدید درمانی و تکنولوژی های نوین به دانش دندانپزشکی موسسه دندان پزشکی پارسه جهت ارتقاء سطح دانش کاربردی دندانپزشکان ، اقدام به طراحی و تدوین دوره های تخصصی کوتاه مدت و میان مدت دندانپزشکی نموده است و با ورود بسیار مؤثر در عرصه دوره های آموزشی کاربردی دندانپزشکی تاکنون بیش از 500 نفر از دندانپزشکان محترم را آموزش داده است و در حال برگزاری یازدهمین دوره می باشد .</p>
- 
+<p><div onclick="window.plugins.streamingMedia.playAudio(audioUrl, options);" >پخش فایل صوتی</div></p>
 <p style="text-align: justify;"> </p>
 <p style="text-align: justify;">شرایط ثبت نام کلاس های رزیدنتی (مرداد تا آذر ماه)</p>
 <p style="text-align: justify;">(سال تحصیلی 94-93)</p>

@@ -100,6 +100,8 @@
 				event.preventDefault();
 				$("#controls a").removeClass("selected");
 				$(this).addClass("selected");
+				$("#controls").removeClass("opened");
+				$("#controls_over").css("position","relative");
 				var font_style = "<style>";
 					font_style = font_style + "#container p,.container p{font-size:" + "15" + "px !important;}";
 					font_style = font_style + "#container h2,.container h2{font-size:" + "15" + "px !important;}";
@@ -109,19 +111,35 @@
 			});	
 			$("#controls #medium").click(function(event){
 				event.preventDefault();
-				$("#controls a").removeClass("selected");
-				$(this).addClass("selected");
-				var font_style = "<style>";
-					font_style = font_style + "#container p,.container p{font-size:" + "18" + "px !important;}";
-					font_style = font_style + "#container h2,.container h2{font-size:" + "18" + "px !important;}";
-					font_style = font_style + "#container *,.container *{font-size:" + "18" + "px !important;}";
-					font_style = font_style + "</style>";
-				$("#controls #css_style").html(font_style);
+				if ($("#controls").hasClass("opened")) {
+					$("#controls a").removeClass("selected");
+					$(this).addClass("selected");
+					$("#controls").removeClass("opened");
+					$("#controls_over").css("position","relative");
+					var font_style = "<style>";
+						font_style = font_style + "#container p,.container p{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "#container h2,.container h2{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "#container *,.container *{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "</style>";
+					$("#controls #css_style").html(font_style);
+				}
+				else
+				{
+					$("#controls_over").css("position","fixed");
+					$("#controls").addClass("opened");
+				}
+			});
+			$("#controls_over").click(function(event){
+				event.preventDefault();
+				$("#controls").removeClass("opened");
+				$(this).css("position","relative");
 			});	
 			$("#controls #large").click(function(event){
 				event.preventDefault();
 				$("#controls a").removeClass("selected");
 				$(this).addClass("selected");
+				$("#controls").removeClass("opened");
+				$("#controls_over").css("position","relative");
 				var font_style = "<style>";
 					font_style = font_style + "#container p,.container p{font-size:" + "21" + "px !important;}";
 					font_style = font_style + "#container h2,.container h2{font-size:" + "21" + "px !important;}";
@@ -149,8 +167,9 @@
     <div id="main">
 		<div id="controls">
 			<div id="css_style"></div>
-			<a href="#" id="small" class="selected">A</a>
-			<a href="#" id="medium">A</a>
+			<div id="controls_over"></div>
+			<a href="#" id="small" >A</a>
+			<a href="#" id="medium" class="selected">A</a>
 			<a href="#" id="large">A</a>
 		</div>
 		<div class="container" id="container" >

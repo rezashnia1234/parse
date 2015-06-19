@@ -328,6 +328,12 @@ function getURL(URL,cache,iframe) {
 		}
 		
 	}
+	if($("#Title").length == 0) {
+		// Does not exist
+	} else {
+		//exists
+		
+	}
 }
 
 

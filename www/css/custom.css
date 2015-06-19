@@ -1531,6 +1531,18 @@ box-shadow: inset 0 0 0 1px #41b38f, 0 2px 4px rgba(0,0,0,.2);
 #controls #small     {  font-size:13px !important;padding: 10px 5px 3px 0;}
 #controls #medium    {  font-size:19px !important;padding:7px 4px 10px 0;}
 #controls #large     {  font-size:27px  !important;padding: 2px 8px 17px 6px;}
+/*/////////////////////NEW STYLE///////////////////////*/
+#controls_over{position:relative;top:0;left:0;width:100%;height:100%;z-index: 900;}
+#controls {bottom: 46px;}
+#controls #small,#controls #large{display:none;}
+#controls #large,#controls #medium,#controls #small{width: 38px;color:#ffffff !important;border-radius: 0 11px 11px 0 !important;background-color:#fb331f;padding-left:4px;z-index: 1002 !important;position:absolute;bottom: 0;}
+#controls.opened #large,#controls.opened #medium,#controls.opened #small{display:block !important;}
+#controls.opened{border-radius: 0 11px 11px 0 !important;background-color:#fb331f;}
+#controls.opened #small{bottom: 76px;border-radius:0 11px 0 0 !important;padding-left: 3px;width: 38px;}
+#controls.opened #medium{bottom: 39px;border-radius:0 !important;padding-left: 3px;width: 39px;}
+#controls.opened #large{bottom: 0px;border-radius:0 0 11px 0 !important;width: 34px;}
+#controls.opened #large.selected,#controls.opened #medium.selected,#controls.opened #small.selected{background-color:#d11300 !important;}
+
 strong {
   font-size: 17px;
   font-weight: bold;

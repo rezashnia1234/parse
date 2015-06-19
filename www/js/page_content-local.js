@@ -512,6 +512,11 @@ function iframe_recive_massage(msg) {
 		
 		window.location.href = "index.html";
 	}
+	else if(msg=="back")
+	{
+		parent.history.back();
+		window.sessionStorage.setItem('is_back_btn_triggered',"true");
+	}
 	else{
 		alert(msg);
 	}
