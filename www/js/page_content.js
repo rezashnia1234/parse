@@ -120,6 +120,7 @@ function getURL(URL,cache,iframe) {
 					{
 //alert("we have internet - we have recent cache");
 						$('.container').html(article_json);
+alert(article_json);
 						FastClick.attach(document.getElementById('container'));
 						
 						$('.container a').on("click", function (e) {
