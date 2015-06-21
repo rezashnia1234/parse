@@ -130,14 +130,14 @@
 			{
 				//window.sessionStorage.setItem('close_gallery',"false");
 
-				/*
+				/**/
 				navigator.notification.alert(
-					'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
+					'لطفا برای بسته شدن این صفحه ، از علامت X در بالای صفحه استفاده نمایید.',  // message
 					alertDismissed,         // callback
-					'اخطار',            // title
+					'توجه',            // title
 					'تائید'                  // buttonName
 				);
-				*/
+				
 			}
 			else if(window.sessionStorage.getItem('go_to_first')=="true")
 			{
