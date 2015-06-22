@@ -125,12 +125,11 @@
 		if(window.sessionStorage.getItem('is_back_btn_triggered')=="false")
 		{
 			window.sessionStorage.setItem('is_back_btn_triggered',"true");
-			
+			/*
 			if(window.sessionStorage.getItem('close_gallery')=="true")
 			{
 				//window.sessionStorage.setItem('close_gallery',"false");
 
-				/**/
 				navigator.notification.alert(
 					'لطفا برای بسته شدن این صفحه ، از علامت X در بالای صفحه استفاده نمایید.',  // message
 					alertDismissed,         // callback
@@ -139,7 +138,9 @@
 				);
 				
 			}
-			else if(window.sessionStorage.getItem('go_to_first')=="true")
+			else 
+			*/
+			if(window.sessionStorage.getItem('go_to_first')=="true")
 			{
 				window.sessionStorage.setItem('go_to_first',"false");
 				window.location.href = "index.html";
