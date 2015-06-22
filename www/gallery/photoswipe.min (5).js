@@ -1000,7 +1000,7 @@
             }
         });
         var qd, rd, sd, td, ud, vd, wd, xd, yd, zd, Ad, Bd, Cd = {
-                // history: !0,
+                history: !0,
                 galleryUID: 1
             },
             Dd = function() {
@@ -1035,7 +1035,6 @@
         yb("History", {
             publicMethods: {
                 initHistory: function() {
-					/*
                     if (e.extend(i, Cd, !0), i.history) {
                         Ad = window.location, zd = !1, yd = !1, xd = !1, wd = Dd(), Bd = "pushState" in history, wd.indexOf("gid=") > -1 && (wd = wd.split("&gid=")[0], wd = wd.split("?gid=")[0]), Bb("afterChange", f.updateURL), Bb("unbindEvents", function() {
                             e.unbind(window, "hashchange", f.onHashChange)
@@ -1055,7 +1054,6 @@
                             j && e.bind(window, "hashchange", f.onHashChange)
                         }, 40)
                     }
-					*/
                 },
                 /*START HAMID*/
 				onHashChange: function() {
@@ -1064,12 +1062,11 @@
                 }
 				/*END HAMID*/ ,
                 onHashChange2: function() {
-                    // return Dd() === wd ? (yd = !0, void f.close()) : void(td || (ud = !0, f.goTo(Fd().pid), ud = !1))
+                    return Dd() === wd ? (yd = !0, void f.close()) : void(td || (ud = !0, f.goTo(Fd().pid), ud = !1))
                 },
                 updateURL: function() {
-                    // Ed(), ud || (xd ? qd = setTimeout(Gd, 800) : Gd())
+                    Ed(), ud || (xd ? qd = setTimeout(Gd, 800) : Gd())
                 }
-				
             }
         }), e.extend(f, dc)
     };
