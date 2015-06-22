@@ -38,6 +38,8 @@ function getURL(URL,cache,iframe) {
 				
 				if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 					loadURL($(this).attr("href"));
+				else if($(this).attr("href") == "#")
+					{}
 				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
@@ -52,8 +54,9 @@ function getURL(URL,cache,iframe) {
 			
 			$('.container a.iframe').on("click", function (e) {
 				e.preventDefault();
-				
-				if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+				if($(this).attr("href") == "#")
+					{}
+				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 					openURL($(this).attr("href"),false,true);
 				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
 					openURL($(this).attr("href"),false,true);
@@ -68,7 +71,9 @@ function getURL(URL,cache,iframe) {
 			$('.container a.nocache').on("click", function (e) {
 				e.preventDefault();
 				
-				if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+				if($(this).attr("href") == "#")
+					{}
+				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 					openURL($(this).attr("href"),false,false);
 				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
 					openURL($(this).attr("href"),false,false);
@@ -125,7 +130,9 @@ function getURL(URL,cache,iframe) {
 						$('.container a').on("click", function (e) {
 							e.preventDefault();
 							
-							if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
+							if($(this).attr("href") == "#")
+								{}
+							else if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 								loadURL($(this).attr("href"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
@@ -142,7 +149,9 @@ function getURL(URL,cache,iframe) {
 						$('.container a.iframe').on("click", function (e) {
 							e.preventDefault();
 							
-							if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+							if($(this).attr("href") == "#")
+								{}
+							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 								openURL($(this).attr("href"),false,true);
 							else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
 								openURL($(this).attr("href"),false,true);
@@ -157,7 +166,9 @@ function getURL(URL,cache,iframe) {
 						$('.container a.nocache').on("click", function (e) {
 							e.preventDefault();
 							
-							if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+							if($(this).attr("href") == "#")
+								{}
+							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 								openURL($(this).attr("href"),false,false);
 							else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
 								openURL($(this).attr("href"),false,false);
@@ -208,7 +219,9 @@ function getURL(URL,cache,iframe) {
 								$('.container a').on("click", function (e) {
 									e.preventDefault();
 									
-									if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
+									if($(this).attr("href") == "#")
+										{}
+									else if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 										loadURL($(this).attr("href"));
 									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
@@ -225,7 +238,9 @@ function getURL(URL,cache,iframe) {
 								$('.container a.iframe').on("click", function (e) {
 									e.preventDefault();
 									
-									if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+									if($(this).attr("href") == "#")
+										{}
+									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 										openURL($(this).attr("href"),false,true);
 									else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
 										openURL($(this).attr("href"),false,true);
@@ -240,7 +255,9 @@ function getURL(URL,cache,iframe) {
 								$('.container a.nocache').on("click", function (e) {
 									e.preventDefault();
 									
-									if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+									if($(this).attr("href") == "#")
+										{}
+									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
 										openURL($(this).attr("href"),false,false);
 									else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
 										openURL($(this).attr("href"),false,false);
