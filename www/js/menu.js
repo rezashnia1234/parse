@@ -25,8 +25,7 @@
 		
 		panel = panel + '<li class="odd ui-li-has-thumb"><a href="setting.html"  onclick="//openURL(' + "'http://apps.dparseh.com/تنظیمات'" + ',false,false);"  class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/11-setting.png">تنظیمات</a></li>';
 		
-		
-		panel = panel + '<li class="even ui-li-has-thumb"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="contact.html" data-rel="external" data-ajax="false" ><img src="images/menu/12-contact.png">تماس با پارسه</a></li>';//data-rel="external" data-ajax="false"
+		panel = panel + '<li class="even ui-li-has-thumb"><a href="contact.html"  																													 class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#panel-responsive-page2"  data-rel="external" data-ajax="false" ><img src="images/menu/12-contact.png">تماس با پارسه</a></li>';
 		panel = panel + '<li class="odd ui-li-has-thumb ui-last-child"><a href="#panel-responsive-page2" onclick="exit();" class="odd ui-btn ui-btn-icon-right ui-icon-carat-r"><img src="images/menu/13-close.png">خروج</a></li>';
 		panel = panel + '</ul><br/><br/></div></div>';
 
@@ -149,11 +148,13 @@
 		{
 			window.localStorage.setItem('favorite_URL',JSON.stringify(["786"]));
 		}
-			
-		temp_array = JSON.parse(window.localStorage.getItem('favorite_URL'));
-		if((jQuery.inArray(getParameterByName("url"),temp_array) != -1))
+		else
 		{
-			$('#favoriteBTN').addClass("added");
+			temp_array = JSON.parse(window.localStorage.getItem('favorite_URL'));
+			if((jQuery.inArray(getParameterByName("url"),temp_array) != -1))
+			{
+				$('#favoriteBTN').addClass("added");
+			}
 		}
 	});
 	
