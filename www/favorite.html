@@ -33,7 +33,17 @@
 			init_menu();
 		}
 		function onDeviceReady() {
+			window.sessionStorage.setItem('go_to_first',"false");
+			window.sessionStorage.setItem('is_back_btn_triggered',"false");
 			
+			if(window.localStorage.getItem('uuid') == null)
+				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+				
+			window.sessionStorage.setItem('we_are_in',"contact");
+			
+			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
+				document.addEventListener("backbutton", go_back, false);
+			}
 
 		}
 		
