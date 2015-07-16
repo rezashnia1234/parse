@@ -135,37 +135,20 @@
 			removedItems = temp_array.remove("786", true);
 			content = '<table class="table table-striped favorite" id="articleList"><tbody>';
 			$.each(temp_array, function(i, val) {
-				content =	content	+ '<tr onclick="openURL(' + "'" + Base64.decode(val) + "'" + ',true,false);"> ' + window.localStorage.getItem(val) + ' </tr>';
+				content =	content	+ '<tr><td onclick="openURL(' + "'" + Base64.decode(val) + "'" + ',true,false);"> ' + window.localStorage.getItem(val) + ' </td></tr>';
 			});
 			content =	content	+ '</tbody></table>';
-			alert(content);
 			$('#content').html(content);
 			//$('#content').html(Base64.encode('http://apps.dparseh.com/%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%DA%A9%D9%84%D8%A7%D8%B3-%D9%87%D8%A7%DB%8C-%D8%B1%D8%B2%DB%8C%D8%AF%D9%86%D8%AA%DB%8C/%DA%A9%D9%84%D8%A7%D8%B3-%D9%87%D8%A7%DB%8C-%D9%85%DA%A9%D8%A7%D8%AA%D8%A8%D9%87-%D8%A7%DB%8C'));
 		}
 	});
 </script>
 <div id="content">
-		<table class="table table-striped favorite" id="articleList">
+	<table class="table table-striped favorite" id="articleList">
+		<tbody>
 
-			<tbody>
-							<tr class="row0">
-					<td onclick="alert();">هر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیرههر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیرههر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیره</td>
-				</tr>
-								<tr class="row1">
-					<td>هر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیرههر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیره</td>
-				</tr>
-								<tr class="row0">
-					<td>هر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیرههر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیرههر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیره</td>
-				</tr>
-								<tr class="row1">
-					<td>هر کاپیوتر به صورت مستمر و هر یک ثانیه یه بار ، وضعیتی که باید در اون باشه رو استعلام میگیره</td>
-				</tr>
-								<tr class="row0">
-					<td>متن تست متن تست متن تست متن تست متن تست متن تست متن تست متن تست 
-متن تست </td>
-				</tr>
-							</tbody>
-		</table>
+		</tbody>
+	</table>
 </div>
 <!----------------------------------------------------------------------------->
 <!----------------------------------------------------------------------------->
