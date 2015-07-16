@@ -1760,14 +1760,14 @@ background-image: url(../images/newmenus/tadriseonlinesoti.png) !important;
 .notiflist td{
 	background-image:url('../images/notif-icon.png');
 	background-repeat:no-repeat;
-	background-position:right 14px center;
+	background-position:right 19px;
 	background-size: 70px auto;
 	padding:10px 99px 10px 10px;
 }
 .favorite td{
 	background-image:url('../images/favorite-icon.png');
 	background-repeat:no-repeat;
-	background-position:right 14px center;
+	background-position:right 19px;
 	background-size: 70px auto;
 	padding:10px 99px 10px 10px;
 }
