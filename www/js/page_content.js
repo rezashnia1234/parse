@@ -102,6 +102,7 @@ function getURL(URL,cache,iframe) {
 //alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("<div style='text-align: center; font-weight: bold; margin-top: 50px; width: 100%;'>براي مشاهده اين صفحه نياز به اينترنت داريد</div>");
+			$('#favoriteBTN').css("display","none");
 			navigator.notification.alert(
 				'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
 				alertDismissed,         // callback
@@ -331,6 +332,7 @@ function getURL(URL,cache,iframe) {
 			temp_html = temp_html + "#footer{display:none !important;}";
 			temp_html = temp_html + ".mm-fixed-bottom{display:none !important;}";
 			temp_html = temp_html + "#controls{display:none !important;}";
+			temp_html = temp_html + "#favoriteBTN{display:none !important;}";
 			if(cache == true)
 			{
 				//temp_html = temp_html + "#backBTN{display:none;}";
