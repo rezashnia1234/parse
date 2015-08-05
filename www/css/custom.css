@@ -278,6 +278,14 @@ body{background:#eeeeee;padding-bottom:45px;}
   font-size: 15px;
   font-weight: normal !important;
 }
+.container .fullmenu a {
+	display: block;
+	height: 58px;
+	line-height: 20px;
+	position: relative;
+	text-align: justify;
+	top: 0;
+}
 /*
 .container .category-list .list-title a {
   line-height: 41px;
