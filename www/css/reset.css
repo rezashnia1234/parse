@@ -50,7 +50,13 @@ a{
 	text-decoration:none;
 }
 
-
+input[type='submit']
+{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background: red;
+}
 
 
 /* HTML5 display-role reset for older browsers */
