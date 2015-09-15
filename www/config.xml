@@ -122,6 +122,8 @@
 
 	
 	<access origin="*"/> <!-- allow local pages -->
+	<access origin="https://shaparak.ir" subdomains="true"/> <!-- allow local pages -->
+	<access origin="https://bpm.shaparak.ir" subdomains="true"/> <!-- allow local pages -->
 	
 	
 	
