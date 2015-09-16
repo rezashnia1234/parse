@@ -121,7 +121,7 @@
 
 
 	
-	<access origin="*" browserOnly="true" /> 
+	<access origin="*" /> 
 	
 	
 
