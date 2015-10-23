@@ -1239,6 +1239,10 @@ min-height: 55px;
 .item-page.noimage {
   margin-top: 0px;
 }
+.item-page{
+  width: 100%;
+  overflow:hidden;
+}
 
 .noimage  a.iframe {
 color: transparent !important;

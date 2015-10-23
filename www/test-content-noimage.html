@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>پارسه</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/yekan.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+	<script src="js/hammer.min.js"></script>
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="phonegap.js"></script>
+	<script src="js/fastclick.js"></script>
+	<script src="js/jquery.md5.js"></script>
+	<script src="js/jquery.blockUI.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/page_content.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/menu/jquery.mmenu.all.css" />
+	<link type="text/css" rel="stylesheet" href="css/menu/jquery.mmenu.positioning.css" />
+	<link type="text/css" rel="stylesheet" href="css/menu/jquery.mmenu.dragopen.css" />
+	<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+	<script type="text/javascript" src="js/jquery.mmenu.dragopen.js"></script>
+	<script type="text/javascript" src="js/jquery.mmenu.fixedelements.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mmenu.debugger.js"></script>
+	<script src="js/iframeResizer.min.js"	type="text/javascript"></script> 
+	<script>
+		function init() {			
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			document.addEventListener("deviceready", onDeviceReady, false);
+			//onDeviceReady();
+			init_menu();
+		}
+		function onDeviceReady() {
+			
+
+		}
+		
+		
+		$(document).ready(function(){
+			$("#controls #small").click(function(event){
+				event.preventDefault();
+				$("#controls a").removeClass("selected");
+				$(this).addClass("selected");
+				$("#controls").removeClass("opened");
+				$("#controls_over").css("position","relative");
+				var font_style = "<style>";
+					font_style = font_style + "#container p,.container p{font-size:" + "15" + "px !important;}";
+					font_style = font_style + "#container h2,.container h2{font-size:" + "15" + "px !important;}";
+					font_style = font_style + "#container *,.container *{font-size:" + "15" + "px !important;}";
+					font_style = font_style + "</style>";
+				$("#controls #css_style").html(font_style);
+			});	
+			$("#controls #medium").click(function(event){
+				event.preventDefault();
+				if ($("#controls").hasClass("opened")) {
+					$("#controls a").removeClass("selected");
+					$(this).addClass("selected");
+					$("#controls").removeClass("opened");
+					$("#controls_over").css("position","relative");
+					var font_style = "<style>";
+						font_style = font_style + "#container p,.container p{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "#container h2,.container h2{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "#container *,.container *{font-size:" + "16" + "px !important;}";
+						font_style = font_style + "</style>";
+					$("#controls #css_style").html(font_style);
+				}
+				else
+				{
+					$("#controls_over").css("position","fixed");
+					$("#controls").addClass("opened");
+				}
+			});
+			$("#controls_over").click(function(event){
+				event.preventDefault();
+				$("#controls").removeClass("opened");
+				$(this).css("position","relative");
+			});	
+			$("#controls #large").click(function(event){
+				event.preventDefault();
+				$("#controls a").removeClass("selected");
+				$(this).addClass("selected");
+				$("#controls").removeClass("opened");
+				$("#controls_over").css("position","relative");
+				var font_style = "<style>";
+					font_style = font_style + "#container p,.container p{font-size:" + "21" + "px !important;}";
+					font_style = font_style + "#container h2,.container h2{font-size:" + "21" + "px !important;}";
+					font_style = font_style + "#container *,.container *{font-size:" + "21" + "px !important;}";
+					font_style = font_style + "</style>";
+				$("#controls #css_style").html(font_style);
+			});	
+		});
+		
+	</script>
+	<style>
+
+	
+	</style>
+</head>
+<body onload="init();">
+<nav id="menu" class="mm-offcanvas mm-menu mm-horizontal mm-right"></nav>
+<div id="wrapper" >
+	<div id="header" class="FixedTop">
+            <h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image"> آخرین اخبار آخرین اخبار آخرین اخبار آخرین اخبار آخرین اخبار آخرین اخبار آخرین اخبار</h1>
+			<a href="#menu" id="headermenu" class="ui-btn-right menu">Menu</a>
+			<div id="backBTN" onclick="go_back();" class="ui-btn-left">back</div>
+    </div><!-- /header -->
+
+    <div id="main">
+		<div id="controls">
+			<div id="css_style"></div>
+			<div id="controls_over"></div>
+			<a href="#" id="small" >A</a>
+			<a href="#" id="medium" class="selected">A</a>
+			<a href="#" id="large">A</a>
+		</div>
+		<div class="container" >
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+<script>window.localStorage.setItem('registered',1);</script><style>
+.ui-panel-wrapper {
+  margin-bottom: 0px;
+}
+#joomla_message{
+	display:none;
+}
+</style>
+<div id="content">
+<script>
+$("#header h1").html('<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFsAAABbCAYAAAAcNvmZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTQ1M0Y3RDA4RUE3MTFFNEIxMTZGRTRFNzg4QTBGRkEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTQ1M0Y3RDE4RUE3MTFFNEIxMTZGRTRFNzg4QTBGRkEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NDUzRjdDRThFQTcxMUU0QjExNkZFNEU3ODhBMEZGQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1NDUzRjdDRjhFQTcxMUU0QjExNkZFNEU3ODhBMEZGQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pg7xH1MAAApUSURBVHja7F0LtBZTFD73vz2UrhQ96EEPIUUriSvSS5LnjUiUoqg8QpbFanmXLJQsLI88ijxSQnp51epdrJVHSFS3olLpluri1q1rf/49+o2zZ+afOzP/zNy71/pWq3P+mf/Md8+/zz5777Mnq6SkRIVYKhEaEmoTqhGqEw4jVCHs5c/8TthG2EJYRygM68NUCNFYQGQu41TCSYQGhOw077OVsILxOWERYUMYHjArwzMbhOYRuhPauiDWqawmzCa8R5hH2F9WyIZK6Evox2QHLVA3bxFeInwXV7JbEoYRrmJdHAaZTxhNmE444PeXJQJ4oJMJHxC+JlwbIqIh7XlsX7E6y4rqzD6KMILVRbp/VOjUtYRv+F8scJvZ8thJwKCrsoUC1CAcTWjMqqk54RAXY15IuIm/NxJkJ3jAIwk5Dq8pYethDgOL2K5SWlmtCWcRzuMZ7JT8YsIzhPsIuz1lBmR7iIaERSXO5RvCMEIDj8dhRg7hasJMwn6HY9tI6OjlOLx8oAsJvzl4iH2ESYRcnwm2mhCPEnY4GGsx4SFCdljIrkAYQzjggOQJhMYZIlk32+91SPocQt1Mk12V8KGDwc4ltAgJyWYcSXiWJ4OVrCe0zBTZNQmLbQYItXJNSEk2ow3hS5vn2UloHzTZ9Qjf2Qxslhc/vYBRkTDKZhEtJHQNiuw6hB9tFpV7CFkRIzoVXWwW+0I3lkq6g6jO5pokewjdI0xyKhoRVlk86y7CaencM52dXUXCVPZx6GQ7oTNhpoqH5POm6AuhP4f5qO+Hb+RxQiehbyMPbJmKl2zjZ/5E6K/PbttKXpINT91QC5dlB8IPKp6yh3ApYa7Q34bwhFe+ETh3vuRwlFngGDqb/RpxF0SSFghqFCRezmrF9cxG/+sC0fDMXVFGiDYmFiJKm3STlvCynf62IxveuzOFvkcIH6uyJb8QegthtcMJz7n1+tVl80bafmfHxMRzg+EWJmGedJ2Vzh7PkRWdideSnfllVRJsoXQSTEYEL/5yqkZOIfQR+u4u40QrjlcOIhRp+hqx+nWssx8U+pbwQlAuSv1EeEzou4vDdbZkY1ZfLFgfQ9jMKZeDRkK+pr02z3xbsu8QosxvcBS6XA4K9PK9Qt8typRxZl4ga7I+rqQJgh6vkpHuOAnIGMDm7RrC04QCF4vlt4QTNX09CVMk02+IYM5MiqH5VokwzfSc3xOquLjXAIG3j6xcrEuEi3JjSLQUzrvS5f22ae61nwMt/3OxNiOcofkprGArJC4CFTmZcKHQf6iLeyJ9eYKgYnrqFsgrhRtNiBnRkwRry/DwzXZ579eE9st0ZHcTvFmTY0T0W+wu1cmfTMwml/dHytpKTXsuewz/JRv/OV3zQbhWN8SAaESZ3iT0sDDh8jxwrH2gaUPOeedUsnOVPhF9dgyIrsBEXyb0FzHRH3nwXRJf7cxk62ReDIiG6rjcYmHL83BSLdM5oMxktxKcLUsjTHQ2z2g7omd5vKNcrmlvAa4NsnWhnp9V6dJ2w0B0Twuiob/9yARYLpiTTRK8Sh+j+cDKCBM9USVDdhLR0N8zfPr+b4X2piC7oeCQ+jGiRMPe7WVBNGb7dB/HsEZobwSS6wmdqyNI9HiVjBFKRGPjNs3ncawT2o8C2UcIndsjSPQ1FkQj9+X9AMayVWivBbJrCJ2lWRzzeEeFL36bcKTPRL9iQfQ+nu1TA/rDg7diTXtOBSWnTrk9vNOKt/jZKT4XmD6dLP7qpSEah0f7WhCNGf1uwL+0QmOLnkq2Vd6IW7Iv0exGcVwOp8Bqe/hAGPs4lTz6p5NintFBEy2O14rsyi5v+rvQ7iXhWUx0f6F/PxM9JUwLS0LJx4jdVmxAutovPhJuEH2dDdGZ9FbqJupukL1DuOAIl19k5Glv8oFwg+jrLYjGQvlOhonWHXD9A2QXeEy2sSHq6DHhIPoFG6L7svWTSakltBeA7C1CZ5NSfqmXhINoJC0OtCH6zRCo5oZC++aExY7neA++2AvCQfSzhBstiO4XEqL/2ZZLO8sEm3g6+7eZR1/uhPC5AuEgGrkcgy2IxkI5MURGRwuhfa0Riv9ME4Yv4qPSXqUPNOPD95LgXGXtlM8jgehpmyOA/UKYJjFTOEpexbCzdacHsLNs7eFf3G6GN0+Z4ZjRTxFuFj57gPX3+JD5aDDu04Vn/9MgW4rItPN4ME4Jf14lc+V0UsJEvxpChxhUYk1N+zJjUwNZJFzczYcBOSH8BguiB7DjKYxyntC+KJXsn5U+WHCOcl4Nx0vCrWZ0WImGSFlWn6aSDZkt7IYu9mlg6RBewqZfmBPx66pkeSSz4HzoejPZkr+3t48DdEJ4CZt+41S45SqlDy8eTNwxmVr5gtnidw0nySxEdZ7BEcmMXSGYqK11WayYQW8I3r8hPs8KY4ZvNLUPU3ZnC8MhHYTNzPcqJbXBfPIAu8ZVmotQSw9FaPcE4MTBIlhHJQOzn6loCNIiumvabyeMlchWbOd20Fw4XCUP7JTLf+U0tqPN55D2sFPqXxe2TqGPFW56p5KDw2VZRir9ga9XlSlWoCP7Q2H7DqIfKOf2P4I8wnM17UideNLcmBD8DvcJN8dC2aqc43+kmo5QFmy88p2QbdiGSwXLZJwKV0X5TAl+5bqSF9DVD+suSFhsJIYq/WleVI4ZUcaJ7kK4Teh7VNqk2VXSeUFwCuGiC5S3uc1REWzLv2Lz1CyrWM3+lc7MNuQuJVeOeU2lUfkrJpLNG786wgQcKBHthGwk3PQX1Any95BMXr2MEI0J9qKSK8CNUskaUhZeHmf7/tEW4akFXAA37tVzRllwMN9JZaF0jgsvsPiyafyZuBJ9u8Wzb009Mu1FxUojY19KK7uIVUpODFUHLK8xQj+yZHtpHGiudHaq/MrOFilxsjP7VerEaDF8nn1CksA8nuP4ji5+Uu25yq4kawitIq42ahBm2JSsHh5U/eyuNoSj7/qIEt2WJ4yVPBR0ZXjUINluM6ipESpYjgX+fgfl+O/J1DsPmhM22AyugDCQkAgx0R1s6oIb4cEBmX6bRwMH7wqALCecHzKSTyBMcTD27W5L7/vxnhrUVRrv8GU7eClFjwzPdCzgEzlf0MkkaRS2lwIBvfmNF05kDeu/egERfCihD+/2nAjqOz1OqOzVGPx4t1g9dqr3dPh5BCsW8qYINiui0V69HBMeum68P4CXsqrD677mQMliT3dIPr41D+EiJLEfl+Z1iOTPY9Jx6B5lONcp66OCxrt+UVgdKQWouoniYunmmO/iKBXGXez5dtTnl2+ChFvZVVurlPeC6xKHo4r412CcTkZ4qmIp772XA7SoQetbUd+g3nQKQgYx8Q1CtCUv5HjhGCUfd4kc2YZgBl7K0Z9OKpg3repkJcdSUUavIKgvzeTbqevzIgryzwwgiIxsUmRZTVL6ajexJjtVarDXsB0vbIjjHVKK+xXzwrqULZ05QaiJqJCtc2/iHGZTwrHstjXe13s4/1vEpO7mhXMzE5rPaqIobA/1twADADZk4olGUSDwAAAAAElFTkSuQmCC" class="header-image">فصل دوم : ضايعات استخوان  / پاتولوژی');
+
+
+//alert(window.localStorage.getItem('uuid'));
+//<form action="http://parseh.smcms.ir/show.php"><input type="submit"></form>
+
+
+</script>
+
+
+<div id="joomla_message">
+<div id="system-message-container">
+	</div>
+
+</div>
+<div class="item-page noimage">
+
+
+  
+		<h2 class="contentheading">
+								<a href="#">
+						فصل دوم : ضايعات استخوان </a>
+						</h2>
+<!-- begin class item-headinfo -->
+<div class="item-headinfor">
+
+	
+	
+
+	
+<div class="clear"></div>
+
+</div> 
+<!-- end class item-headinfo -->
+
+<!-- content-links -->
+<!-- end content-links -->
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>فصل 14 نويل</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">استئوژنزيس ايمپرفكتا (شایع ترین بیماری ارثی استخوان) : اختلال در روند بلوغ كلاژن Type&nbsp; I به علت بروز جهش درژنCOL 1A1 روي كروموزوم 17 و COL1A2 روي كروموزوم 7</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; بلوغ غير طبيعي كلاژن منجر به استخوان با كورتكس نازك ، ترابكولاسيون ظريف و استئوپروز منتشر&nbsp; مي گردد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">کلاژن قسمت عمده استخوان، عاج، اسکلرا، لیگامانها و پوست را تشکیل می دهد.*&nbsp; علائم ديگر شامل صلبيه آبي رنگ ، دندانهاي تغيير شكل يافته ، كم شنوايي Hypoacusis ،&zwnj;بد شكلي استخوان دراز و ستون مهره و افزايش تحرك مفاصل مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">شاخصه راديوگرافي بيماري :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">1. استئوپني</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">2. خميدگي و زاويه دار شدن و بدشكلي استخوانهاي دراز</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">3. شكستگي متعدد و استخوان كرمي در جمجمه (10 عدد يا بيشتر استخوان درزي كه نماي موزاييكي ايجاد&nbsp; مي كند)</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">&nbsp;(Wormian bone) در بيماري ديسپلازي كليدوكرانيال و استئوژنزيس ايمپرفكتا ديده مي شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; هر دو سيستم دنداني درگير مي گردند و ترنس لوسنسي آبي تا قهوه اي را نشان مي دهد.(گاهی دندانها از نظر بالینی و رادیوگرافی مشابه دنتینوژنزیس ایمپرفکتا هستند که در این بیماری موسوم به( opalescent teeth ) میباشند. محو شدن(obliteration ) زودرس پالپ ديده مي شود . Shell teeth (دندان صدفی) ممكن است بندرت ديده شود.دنتينوژنزيس ايمپرفكتا و استئوژنزيس ايمپرفكتا دو بيماري جداگانه اند. در كلاس III بدليل هيپوپلازي فك بالا ، زبري واضح در استخوان باقی مانده دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; مشاهده راديولوسنسي چند كانوني ، رادیولوسنسی&nbsp; مختلط و يا راديواپستي منتشر (حساس به التهاب)شبيه به فلوريد سمنتواسئوس ديسپلازي به طور نادر ديده مي شود . 4 الگو دارد :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">1. تيپ I : شايع ترين و خفيف ترين نوع بيماري است . بيماران شكستگي خفيف تا شديد استخوان دارند كه با گذشت سن كمتر مي شود . از دست رفتن حس شنوايي قبل از 30 سالگي اتفاق مي افتد- تحرك بالاي مفاصل و كبودي به علت پارگي مويرگ ديده مي شود. اختلالات دنداني ممكن است ديده شود .صلبيه اين افراد به طور واضح در همه سنين آبي است . اتوزوم غالب مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">2. تيپ II : شديدترين فرم بيماري است . بسياري از نوزادان مرده به دنيا مي آيند و 90% قبل از چهار هفتگي مي ميرند . هر دو الگوي غالب و مغلوب ديده مي شود . صلبيه آبي رنگ وجود دارد &ndash; دندانهاي شفاف نيز ديده مي شوند . (شکنندگی بینهایت استخوان).</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">3. تيپ III&nbsp; : شديد ترين فرم در افراد بالاي سنين نوزادي را دارد . هر چند 1/3 بيماران تا دوران بزرگسالي زنده&nbsp; مي مانند ولي بيشتر افراد در دوران كودكي به علت عوارض قلبي &ndash; ريوي ناشي از انحناي ستون مهره ها مي ميرند . از دست رفتن حس شنوايي در بزرگسالي شايع است . تغيير رنگ صلبيه با بزرگ شدن كم مي شود به هر دو طريق غالب و مغلوب ديده مي شود . بعضي دندان شفاف و بعضي دندان نرمال دارند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">&nbsp;4. تيپ IV : صلبيه در اوايل كودكي آبي است اما در سالهاي بعدي از بين مي رود . شكستگي ها&nbsp;&nbsp; خفيف اند و پس از بلوغ كمتر مي شوند . بعضي عاج شفاف و بعضي دندان سالم دارند . اتوزوم غالب</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">&nbsp;*&nbsp; ميكروسكوپي:&nbsp;&nbsp; نقص در تبديل استخوان نابالغ (Woven ) به لاملار. استخوان کورتیکال نازک است&nbsp; با وجود استئوبلاست،.ماتریکس استخوانی کاهش می یابد. اختلالات دنتین،&nbsp; شبیه دنتینوژنزیس ایمپرفکتا می باشد.اختلالات خفیف عاجی در دندانهای به ظاهر نرمال دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">در این بیماری گاها اختلالات خونریزی دهنده، ناهنجاری قلبی و هایپرترمی&nbsp; دیده می شود.درمان علامتي است .استفاده از بیس فسفونات خوراکی و وریدی در موارد شدید تا متوسط. استفاده از بیس فسفونات ها باعث کاهش درد و شکستگی و بهتر شدن حرکت می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>بيماري استخوان مرمري Marble bone (Albers &ndash; Schonberg &ndash; Osteopetrosis) disease</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; افزايش مشخص دانسيته استخوان ناشي از نقص در ري مادلينگ به علت نقص عملكردي استئوكلاست ها با اينكه تعدادشان زياد مي شود اما تحليل استخوان انجام نمي شود كه به دو دسته كودكي و بزرگسالي تقسيم مي شود . کلید ضروری برای عمل استئوکلاست ها پمپ پروتون( H-ATPase)-کانالهای کلراید وcarbonic &nbsp;&nbsp;II anhydrase میباشد. این پروتئین ها برای اسیدی شدن لاکوناها، تنظیم شارژ یونی غشا استئوکلاست و جذب ماتریکس استخوان نیازند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; استئوپتروز كودكيinfantile &nbsp;: شدت بيماري بيشتر و به نوع بدخيم معروف است . اتوزوم مغلوب است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; علائم اوليه اغلب كم خوني نرموسيتيك همراه با بزرگي كبد و طحال ناشي از فعاليت خونسازي جبراني خارج استخواني است . نقص ايمني در برابر عفونت و گرانولوسيتوپني شايع است . بد شكلي صورت شامل صورت پهن ، دوري چشم ها از هم ، بيني زيني شكل و پيشاني برجسته مي باشد. رويش دندانها همیشه با تأخير بوده و به علت تنگ شدن سوراخ هاي جمجمه علائمي چون آتروفي عصب اپتيك ، كوري ، كري و فلج صورتي رخ مي دهد .نقص مغز استخوان،شکستگی متناوب و تحت فشار بودن اعصاب مغزی شایع است. استخوانهاي فكين مستعد به استئوميليت بعد از خارج کردن دندان&zwnj;اند و پروگنوز ضعیف است. نوع خفيف تر بيماري ، حد وسط (intermediate) نام دارد كه در هنگام تولد بدون علائم اند اما اغلب شكستگي هايي را در اواخر دهه اول نشان مي دهند . بروز نقص مغز استخوان و بزرگي كبد و طحال نادر است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : در بعضي موارد درراديوگرافي اسكلروز منتشر&nbsp; و نقص مغز استخوان ديده مي شود كه بيشتر موارد بدون علت به حالت نرمال بر مي گردند كه به آن استئوپتروز گذرا يا Transient مي گويند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; استئوپتروز بزرگسالي adult يا خوش خيم مدتها بعد درطول زندگي كشف مي شود و به صورت اتوزوم غالب است . اسكلت محوري اسكلروز قابل توجهي را از خود نشان مي دهد در حاليكه در استخوان طويل اتفاق&nbsp; نمي افتد . بيماري غالباً بدون علامت بوده و بروز نقص مغز استخوان نادر است . در يك نوع آن قرار گرفتن تحت فشار اعصاب جمجمه شايع و بروز شكستگي نادر است . در نوع دوم شكستگي شايع و فشرده شدن اعصاب نادر است . علل دیگر اسکلروز منتشر استخوان:استئواسکلروز اتوزوم غالب (هایپراستوز اندوستئال نوع worth) یا اسکلروستوز وبیماریvan Buchem</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp;&nbsp; تشكيل استخوان استئوفيتيك &ndash; جايگزيني استخوان اسفنجي با ترابكولهاي تيغه اي پيچ و خم دار &ndash; رسوب استخوان آمورف گلوبولار .استئوکلاست زیاد است ولی به دلیل دیده نشدن لاکونای هوشیپ فعالیت ندارند.درمان دائمی&nbsp; پیوند مغز استخوان است.کورتیکواستروئید(برای بالا بردن RBCو پلاکت)-اینترفرون همراه کلسیتریول (کاهش توده استخوان،کاهش عفونت وکاهش فشار بر اعصاب)-پاراتورمون-فاکتور محرک تجمع ماکروفاژ-اریتروپوئتین. آنتی بیوتیک تراپی و اکسیژن هایپرباریک در استئومیلیت فکی</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Cleidocranial dysplasia&zwnj;:</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ناهنجاري استخوان ترقوه و دندان ناشي از نقص RUNX2).CBFA1 ) روي كروموزوم 6 كه باعث نقص در تمايز استئوبلاست-ادنتوبلاست-ارگان مینائی و دنتال لامینا می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; هم استخوان سازي داخل غشايي و هم داخل غضروفي را درگير مي كند . *در 10% موارد استخوان ترقوه به صورت يك طرفه يا دو طرفه وجود ندارد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; قد كوتاه &ndash; گردن بلند &ndash; سربزرگ با برجستگي استخوانهاي پيشاني و آهيانه &ndash; هيپرتلوريسم &ndash; قاعده بيني پهن و پل بيني فرورفته و استخوان كرمي و عدم حضور سینوس ماگزیلا&nbsp; ديده مي شود . كام باريك و عميق گاهي همراه شكاف &ndash; تأخير در افتادن دندان شيري و حضور دندان اضافي با بدشکلی تاج وریشه &ndash; پروگناتيسم مانديبل و فضای اضافی بین اینسیزورهای آن. تاخیر در بسته شدن درزها وفونتالها.اختلال شنوایی Conductiveیا sensorineuralبه دلیل رشد غیرعادی گیجگاهی و لوله استاش.راموس باریک-کاهش ضخامت ماستر.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp; دندان دائمي رويش نيافته فاقد سمان ثانويه است .اما اخیرا تحلیل ناکافی استخوان الوئول را دلیل نقص در رویش میدانند (کاهش استئوکلاست). درمان علامتي</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Focal Osteoporotic Marrow Defect</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ناحيه اي از مغز استخوان كه بزرگ شده و ممكن است با نماي لوسنت ساير نئوپلاسم هاي داخل استخواني اشتباه شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; پاتوژنز: 1. سنتز و دوباره سازي استخوان نا به جا پس از كشيدن دندان 2. باقي ماندن مغز استخوان جنيني 3. هيپرپلازي مغز استخوان در پاسخ به افزايش نياز به توليد RBC . رابطه ای با آنمی یا اختلالات خونی ندارد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; هميشه بدون علامت و در طي راديوگرافي كشف مي شود بيش از 75% در زنان بالغ و در ناحيه خلفي فك پايين و نواحي بي دندان بروز مي كند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp;&nbsp; ضايعه حاوي مغز استخوان هماتوپويتيك ویا چربی&nbsp; یا تجمعات لنفوسیتی میباشد .درمان :&nbsp; پس از تشخيص نياز به درمان ندارد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">&nbsp;استئواسكلروز ايديوپاتيك&nbsp; :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">Dense bone island-bone eburnation-bone whorl- bone scar -enostosis-focal periapical osteopetrosis</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : ناحيه كانوني با افزايش راديودنسيتي اطلاق مي شود كه نتوان آن را به علتي نسبت دارد . در صورت پيدا كردن علت آماسي (دندان غیرزنده) نام استئيت متراكم شونده ( كندانسه ) و يا استئوميليت اسكلروزه مزمن كانوني به آن اطلاق مي شود . بيشتر در اواخر دهه اول و اوايل دهه دوم ديده مي شود و 90% در فك پايين و مولر اول ديده&nbsp; مي شود . در راديوگرافي نماي يكنواخت اپك و يا غير يكنواخت و مختلط دارد و ريم لوسنت آن را احاطه&nbsp; نمي كند و بيشتر موارد در ارتباط با آپكس دندان مي باشد .درموارد متعدد (شبیه استئوم ومشابه سندرم گاردنر میشود).به طور غیرشایع تحلیل ریشه و جابه جایی دندان دیده میشود. در استخوانهای دیگر هم می تواند دیده شود. در اطراف تاج دندان نهفته نیز دیده می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp;&nbsp; استخوان لاملار متراكم . * درمان :&nbsp; پيگيري ضايعه &ndash;فقدان اتساع وعدم رشد دائم آنرا از استئوم متمایز میکند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">استئوليز وسيعmassive osteolysis &nbsp;،&zwnj; بيماري Gorham ، سندرم Gorham &ndash; Stout &ndash; بيماري استخوان فانتوم :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; بيماري نادر كه يك يا چند استخوان به طور خود بخود و پيشرونده دچار تخريب مي شوند كه در ابتدا با پروليفراسيون عروقي و در نهايت با بافت فيبروزه متراكم جايگزين مي شود . این بیماری مرتبط با یک پرولیفراسیون عروق خونی یا لنفی چندکانونی است(آنژیوماتوز استخوانی)</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; كودكان و بالغين جوان با سابقه تروما . شایع ترین استخوان مبتلا لگن است. آزمایشات لابراتواری در محدوده نرمال است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">در 30% موارد درگيري فكين ، بيشتر فك پايين به صورت لقي دندان، درد ، مال اكلوژن، انحراف مانديبل و شكستگي پاتولوژيك ودرگیری TMJ دیده می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در اثر جابه جايي خلفي مانديبل Obstructive Sleep Apnea ايجاد مي شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در راديوگرافي راديولوسنسي كانوني كه پس از مدتي به هم پيوسته مي شوند، از بين رفتن لامينادورا و نازك شدن صفحات كورتيكال مشهود است .در بعضی موارد شبیه پریودنتیت و یا بیماری التهابی پری اپیکال می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp;&nbsp; در مراحل اوليه پروليفراسيون عروقي (مویرگی و کاورنوسی)همراه با بافت همبند و ارتشاح سلول آماسي مزمن . در مراحل بعدي نسج موجود بيشتر كلاژنه مي شوند و شواهدي دال بر ترميم اين مناطق توسط استخوان جديد وجود ندارد. مرگ در اثر تخریب ستون مهره وقفسه سینه. درمان : پرتو درماني موفق ترين روش درماني است .در مواردی خودبه خود متوقف میشود-بیس فسفوناتها</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>بيماري پاژت استخوان ( استئيت د فرمانس )&nbsp;</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; با جذب و رسوب غير طبيعي و بي قاعده استخوان كه منجر به بدشكلي و ضعيف شدن استخوان مي شود، مشخص مي گردد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; از عوامل ايجاد كننده آماس ، ژنتيك ، اندوكرين و ارث مطرح است . موتاسیون( P62(SQSTM1 وVCP gene &nbsp;یاValosin &nbsp;دیده می شود که مورد دوم در سندرمی با علائم پاژت،inclusion body myopathy و دمانس فرونتوتمپورال دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* در استئوكلاست هاي مربوط به ضايعه اجسام انكلوزيوني كه به عنوان نوكلئوكپسيدهاي پاراميكسوويروس شناخته شده اند ديده شده است . *&nbsp; در مردان سفيد پوست بالاي 45 سال شايع تر است و بروز بيماري مي تواند تحت كلينيكي(subclinical) باشد. * بيماري بدون علامت طي راديوگرافي يا افزايش سطح آلكالين فسفاتاز كشف مي شود . * نكته :&nbsp; بيشتر موارد پلي استاتيك اند .&nbsp;&nbsp;</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp;&nbsp; درد استخوان كه ممكن است شديد باشد يك شكايت شايع است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* استخوان پاژتي اغلب در نزديكي مفاصل ايجاد مي شود . استخوان مبتلا ضخيم، بزرگ و ضعيف مي شود . * نكته : ايستادن شبيه ميمون يا Simian Stance يكي از نماهاي تشخيصي بيماري است. * درگيري جمجمه باعث افزايش دور سر مي شود. * نكته :&nbsp;&nbsp; درگيري فك بالا بسيار بيشتر از فك پايين است كه منجر به بزرگ شدگي 1/3 مياني صورت مي شود. * نكته : صورت شبيه شير يا Leontiasis ossea و هايپر سمنتوز ريشه ايجاد مي شود . هیپرسمنتوزیس وسیع دندانی دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">بيماري داراي دو فاز استئوليتيك و استئوبلاستيك است . در فاز اول نواحي لوسنت و در فاز دوم نواحي اپك با نماي Patchy يا Cotton wool در راديوگرافي مشاهده مي شود . در مراحل اولیه تشخیص انجام سینتی گرافی مفید است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; اسكن استخواني جذب قابل توجهي را در همه قسمتهاي فك پايين از كنديل يك طرف تا كنديل طرف مقابل نشان مي دهد كه به Black beard يا علامت Lincoln معروف است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp;&nbsp; نماي راديوگرافي پاژت ممكن است شبيه ديسپلازي سمنتواسئوس باشد با این تفاوت که تورم در پاژت دیده می شود . رادیولوسنسی در جمجمه موسوم به (osteoporosis circumscripta) دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp;&nbsp; در فازليتيك فعاليت استئوكلاستيك وتحلیل استخوان و در فاز بلاستيك فعاليت استئوبلاستي وسيع در استخوان ديده&nbsp; مي شود.&nbsp; * ويژگي اختصاصي وجود خطوط رشدي Reversal با زوفيل در استخوان است و منجر به ايجاد نماي پازل يا موزاييك مي شود (فاز غیر فعال بیماری). اگر چه آلکالین فسفاتاز سرمی اختصاصی استخوان به عنوان مارکر حساس تشکیل استخوان مطرح است اما به صورت روتین آلکالین فسفاتاز total اندازه گیری می شود. نكته : در اين بيماري سطح آلكالين فسفاتازسرم (در بیماری کوله لیتیازیس نیز بالا می رود) و هيدروكسي پرولين ادرار بالا است اما معمولاً سطح CaوP نرمال است . نشانگرهای حساس تر شامل N,C تلوپپتید و پیریدینولین از طریق cross-link assay میباشد.بررسی میکروسکوپیک تأیید کننده است ولی ضروری نمیباشد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان : در موارد بدون علامت درمان نیاز ندارد.اگر ميزان آلكالين فسفاتاز 25%سطح نرمال باشد درمان سیستمیک شروع مي شود . در دوره فعال بیماری حین جراحی خطر خونریزی وجود دارد. در دوره اسکلروتیک مستعد عفونت است.کری و اختلالات دید ممکن است ایجاد شود.از بیس فسفوناتها و کلسی تونین نیز استفاده میشود. استئوساركومي كه در بيماري پاژت ايجاد مي شود بسيار مهاجم و داراي پيش آگهي ضعيف است و بندرت در فک ایجاد میشود و علائم بالینی نشاندهنده شامل درد استخوانی پایدار، توده جدید و شکستگی ناگهانی&nbsp; است.ابتلا به تومورهای خوش خیم و بدخیم ژانت در سرو صورت دیده میشود.</span></p>
+
+<p dir="ltr" style="text-align: right;">
+	<span style="color:#000000;"><strong>Central giant cell granuloma (CGCG)</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* يك ضايعه غير نئوپلاستيك در نظر گرفته مي شود. * بيش از 60% قبل از 30 سالگي و در زنان،&nbsp; در حدود 70% در فك پايين و بيشتر تمايل به درگير كردن قدام فكين دارد . * نكته :&nbsp; ضايعات فك پايين معمولاً خط وسط را رد مي كنند . *&nbsp; اكثراً بدون علامتند و يا اتساع بدون درد استخوان ايجاد مي كنند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; دو دسته تقسيم مي شود : 1. ضايعات غير مهاجم با رشد آهسته بدون پرفوريشن كورتيكال و بدون تحليل ريشه هاي درگير كه شايع ترند</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">2. ضايعات مهاجم(aggressive) كه با درد ، رشد سريع ، پرفوراسيون كورتيكال و تحليل ریشه مشخص مي شوند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; ضايعات مهاجم نسبت به غير مهاجم تمايل مشخصي را به عود پس از درمان نشان مي دهند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; در نماي راديوگرافي ضايعه، رادیولوسنسی يوني لاكولار و يا مولتي لاكولار با حدود مشخص اما غير كور تيكه به نظر&nbsp; مي رسد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; از نظر هيستولوژي محلهاي مشابه گرانولوم سلول ژانت در كيست استخواني آنورسيمال ديده&nbsp; مي شود و با فيبروم ادونتوژنيك مركزي نيز همراه بوده است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعات از نظر راديوگرافي اختصاصي نيستند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; چون CGCG از نظر هيستولوژي با تومور Brown هيپرپاراتيروئيدیسم يكسان است بايد در همه موارد اين ضايعات تفكيك شوند .درگيري چند كانوني حاكي از چرابيسم يا هايپرپاراتيروئيديسم مي باشد . در مواردی ضایعات متعدد بدون ارتباط با موارد ذکر شده دیده می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp;&nbsp; حضور سلولهاي ژانت چند هسته اي در زمينه حاوي سلولهاي مزانشيمي بيضي تا دوكي شكل (فیبروبلاست) و ماکروفاژهای مونوسیتی. *سلولهاي ژانت منشأ استئوكلاستي يا ماكروفاژي دارند.سلولهای پرولیفراتیو فیبروبلاست ها می باشند که توسط مسیر RANK&nbsp; باعث تمایز سلولهای ژانت میشوند.*&nbsp; استروما ممكن است، سست و ادماتوز يا كاملاً سلولار باشد . نواحي خروج RBC از رگ ورسوب هموسيدرين ديده مي شود . *&nbsp; گاهي كانونهاي استيوئيد ديده مي شود . شکل و تعداد سلولهای ژانت متفاوت است. ضایعات قدیمی فیبروز قابل توجه نشان می دهند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; ضايعاتي كه سلولهاي ژانت بزرگ با انتشار يكنواخت و استروماي سلولار دارند از نظر باليني داراي احتمال تهاجم و عود پس از درمان بيشتري هستند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">درمان : كورتاژ كه ميزان عود 15 تا 20% است . میزان عود در جوانتر ها بیشتر است. در موارد مهاجم جراحي وسيع انجام مي شود . * در تومورهاي مهاجم از كورتيكواستروئيد ، كلسي تونين و اينترفرون 2a&alpha; (عوارض شبیه سرماخوردگی تا پانکراتیت و SLE) (درمان آنتی آنژیوژنیک) استفاده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">تومور سلول ژانت : از نظر هيستوپاتولوژي مشابه CGCG است اما در اپي فيز استخوان دراز ايجاد شده و ميزان عود بالاتر و تغييرات بدخيمي در 10% موارد ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Cherubism</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; يك بيماري رشدي تكاملي نادر فكين كه به صورت اتوزوم غالب به ارث مي رسد و موتاسیون ژنSH3BP2 (فعالیت استئوبلاستی و استئوکلاستی را در دوره رویش دندان افزایش میدهد) روي كروموزوم 4 است.&nbsp; همچنین این ژن باعث فعالیت پاتولوژیک استئوکلاستها و اختلال در شکل گیری فک میشود.M&gt;f. * نماي صورت مبتلايان شبيه فرشتگان كوچك با گونه برجسته دورة رنسانس مي باشد . * در سنين 2 تا 5 سالگي ايجاد مي شود وتغييرات باليني تا دوره بلوغ پيشرفت مي كند، سپس روند بيماري متوقف شده و به آهستگي پسرفت مي كند . در قدیم موسوم به دیسپلازی فیبرو خانوادگی بوده که اشتباه است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; صورت فرشته به علت درگيري دوطرفه قسمت خلفي فك پايين است . موارد یک طرفه باید سابقه فامیلی داشته باشد.گردش چشم ها به سمت آسمان ناشي از درگيري حاشيه اينفرا اربيتال و كف كاسه چشم و كشيدگي پوست قسمت فوقاني صورت است . * گاهي بيماران لنفادنوپاتي گردني دارند</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; ضايعات مانديبل به صورت اتساع بدون درد و دو طرفه در قسمت خلفي فك پايين ظاهر مي شوند كه تمايل به درگير كردن زاويه ها و شاخه صعودي دارند . *&nbsp; درگيري خفیف&nbsp; فك بالا در نواحي توبرو زيته مي باشد . * ممكن است ديد يا شنوايي از دست برود . جا به جایی دندانی و عدم رویش دیده می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; در نماي راديوگرافي معمولاً ضايعات راديولوسنسي هاي وسيع چند حفره اي هستند. (تك حفره اي هم ديده مي شود ) . *يافته بيوشيميايي غير طبيعي يافت نمي شود . بندرت در استخوانهای دیگر دیده می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعات ژانت سل متعدد مي تواند همراه سندرم رامون &ndash; سندرم Noonan &ndash; like و Jaffe&nbsp; companacei باشند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي: *&nbsp; از نظر ميكروسكوپي شبيه CGCG مي باشد اما به طور عمده سلولهاي ژانت كوچك بوده و به صورت كانوني تجمع مي يابند. استروما در چرابيسم اغلب سست تر از آنچه در CGCG ديده مي شود، مي&nbsp; باشد. * نكته :&nbsp; در بعضي موارد رسوبات ائوزینوفيليك Cuff Like كه عروق خوني كوچك را احاطه كرده اند ديده مي شود كه مشخصه چرابيسم است اما در بيشتر موارد وجود ندارد . *&nbsp; ضايعات قديمي تر ، فيبروزه ترند ،سلول ژانت کاهش مییابد و ساخت استخوان دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; تا دهة چهارم علائم صورت بيشتر بيماران طبيعي مي شود</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان : انجام جراحي زيبايي پس از متوقف شدن سير بيماري در سنين بلوغ است</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">Simple bone cyst &ndash; Solitary bone cyst &ndash; hemorrhagic bone cyst (كيست تروماتيك استخوان)</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; يك حفره خالي و يا حاوي مايع در استخوان است كه فاقد پوشش اپي تليال است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; تئوري تروما &ndash; خونريزي در ايجاد آن مورد تأييد قرار گرفته است . اما عدم توانايي مايع بينابيني براي خارج شدن از استخوان بدليل درناژ وریدي نامناسب ، اختلال موضعي در رشد استخوان و نكروز ايسكميك مغز استخوان و تغييرات موضعي در متابوليسم استخوان نيز مطرح مي باشند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; در سنين 10 تا 20 سال كه عمدتاً محدود به فك پايين و بيشتر در مردان و در نواحي مولر و پره مولر ديده مي شود . *&nbsp; به صورت دو طرفه هم گزارش شده است . *&nbsp; اكثراً بدون علامت و در 20% موارد تورم بدون درد است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; در نماي راديوگرافي به شكل رادیو لوسنسي با حدود واضح ديده مي شود كه در بالا به شكل كنگره اي بين ريشه دندانها قرار گرفته است كه اين ويژگي كمك كننده است ولي ارزش تشخيص ندارد . در ضایعات بزرگتر حدود Cone-shaped</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* در جهت قدامی-خلفی دیده میشود.حاشیه بیضی، نامنظم و گرد نیز دیده میشود.دندانها زنده اند و تحلیل ریشه نداریم.بندرت چند حفره ای با تورم و رشد آهسته است که در نمای اکلوزال پوسته نازکی ازاستخوان کورتیکال بدون تغییر خاص دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*نكته :&nbsp; اين كيست ها گاهي در سنين بالا مي توانند همراه ديسپلازي سمنتواسئوس و ديگر پروليفراسيون هاي فيبرواسئوس ديده شوند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp; فاقد پوشش اپي تليال بوده و سطح استخواني حفره اغلب حاوي نواحي تحليل يافته لاكوناهاي هوشيپ مي باشد كه نشان دهنده فعاليت استئوكلاستي در گذشته مي باشد. * &nbsp;جدار ضايعه از يك نوار نازك بافت همبند فيبروزه پر عروق تا يك پروليفراسيون ميكسوفيبروماتوز ضخيم متغير است. * سلول ژانت ،RBC، فیبرین و کلسیفیکاسیون دیستروفیک دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان : انجام جراحي اكتشافي .در یک سوم موارد به صورت حفره خالی و در دوسوم موارد حاوی مایع سرمی-خونی است.ممکن است باندل عصبی عروقی ماندیبولر به صورت آزاد دیده شود.در استخوان دراز تزریق استروئید.</span></p>
+
+<p dir="ltr" style="text-align: right;">
+	<span style="color:#000000;"><strong>Aneurysmal bone cyst (ABC)</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; تجمع فضاهاي پرخون با اندازه هاي مختلف در داخل استخوان است كه به وسيلة بافت همبند فيبروي پرسلولي احاطه مي شود كه اغلب حاوي ترابكولهاي استخوان نابالغ را كتيو است . *پاتوژنز آن ناشي از حادثه تروماتيك ، مالفورماسيون عروقي يانئوپلاسم است . به صورت یک ضایعه اولیه یا در کنار ضایعه قبلی ایجاد میشود.ناهنجاری کروموزومی نیز مطرح است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* در فكين غير شايع و بيشتر در كودكان و بالغين جوان (20 سال ) ديده مي شوند. * نكته :&nbsp; بيشتر در خلف فك پايين به صورت تورمي با رشد سريع و اغلب همراه درد گزارش مي شود. * نكته :&nbsp; پاراستزي و كريپتوس بندرت ديده مي شود. * گاهي باعث لقي ، مهاجرت ، تحليل و يا مال اكلوژن دنداني مي شود. * در راديوگرافي به صورت رادیولوسنسی يوني يا مولتي لاكولار با حدود واضح يا منتشر&nbsp; و همراه با نازك شدگي استخوان كورتيكال ديده مي شود. متناوبا در استخوان مبتلا نمای Ballooning or blow-out دیده میشود. گاهي مناطق راديواپك كوچك كه بيانگر استخوان راكتيو است درون ضايعه ديده مي شود . * امكان پرفوريشن كورتيكالي وجود دارد اما انتشار به بافت نرم گزارش نشده است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; ظاهر نسج در هنگام جراحي شبيه به اسفنج پر از خون Blood Soaked Sponge مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp; ضايعه از كيست هاي حاوي خون تازه تشكيل شده است كه بافت فيبروبلاستي پرسلول حاوي سلولهاي ژانت چند هسته اي و ترابكولهاي استيوئيدي&nbsp; و Woven آنها را احاطه كرده است . *&nbsp; فضاهاي پرخون توسط اندوتليوم پوشيده نمي شوند. * نكته :&nbsp; در 20% موارد همراه ضايعات فيبرواسئوس و گرانولوماي سلول ژانت مي باشد . &nbsp;گاها دیواره ضایعه حاوی الگوی کلسیفیکاسیون lacelike می باشد که در ضایعات استخوانی دیگر دیده نمی شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp; انوكليشن كورتاژ ضايعه&nbsp; به همراه کرایوسرجری&ndash; عود به علت جراحي ناكافي یا ضايعات همراه مثل استئوبلاستوما و فيبروماي اسيفيه&nbsp; مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ضايعات فيبرواسئوس فكين :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در اين ضايعات استخوان طبيعي با بافت فيبروي حاوي محصولات مينراليزه تازه ساخته شده جايگزين&nbsp;&nbsp; مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعات فيبرواسئوس فكين شامل هامارتوم ها(FD) ، ضايعات راكتيو و يا ديسپلاستيك( COD)و نئوپلاسم &nbsp;(OF)مي باشند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Fibrous dysplasia</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; يك&nbsp; ضايعه شبه توموري رشد &ndash; تكاملي است و ناشي از بروز جهش در ژن GNAS1 مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعه ممكن است به صورت منواستوتيك ،&zwnj;پلي استوتيك و يا همراه با ناهنجاريهاي پوستي و اندوكريني بروز كند كه اين امر بسته به زمان بروز جهش مي باشد . *&nbsp; جهش در آغاز زندگي روياني برروي استئوبلاست ،&zwnj;ملانوسيت و سلول اندوكريني اثر مي گذارد . در صورتي كه جهش در مراحل انتهایی تكامل جنيني رخ دهد منجر به ضايعات استخواني متعدد مي شود. اگر جهش در زندگي پس ازتولد رخ دهد يك استخوان منفرد درگير مي شود . * نكته :&nbsp; بيماري در 80 تا 85 درصد موارد مونواستوتيك بوده و فكين از شايع ترين محل هاي ابتلا هستند. * نكته :&nbsp; ديسپلازي فيبروي منوستوتيك طي دهه دوم زندگي تشخيص داده مي شود و درگيري مردان مساوي زنان است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; تورم آهسته و بدون درد شايع ترين ويژگي ضايعه است . دندانهاي درگير معمولاً لق نمي شوند ولي ممكن است به وسيلة توده استخواني جابه جا شوند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; در فك بالا شايع تر است و به صورت ديسپلازي كرانيوفاسيال مي باشد (کاملا منوستوتیک نیست).</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; نماي راديوگرافي اصلي Ground glass يا شيشه مات مي باشد كه حدود مشخصي ندارد. در مراحل اوليه عمدتاً راديولوسنت و يا لكه لكه می باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; تنگ شدگي فضاي PDL و لامينا دوراي نا واضح ديده مي شود . *&nbsp; در فك بالا ممكن است باعث محو شدگي سينوس ماگزيلا شود . درگیری فک پایین تورم باکال، لینگوال و تحتانی میدهد. جابه جایی فوقانی کانال آلوئولار تحتانی غیرشایع نیست.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ويژگي اختصاصي ديسپلازي فيبرو افزايش دانسيته قاعده جمجمه همراه با درگيري استخوان هاي اكسي پيتال ،&zwnj;اسفنووئيد، فرونتال و سقف كاسة چشم است . *&nbsp; نوع پلي استوتيك اغلب همراه سندرم هاي Jaffe &ndash; lichtenstein و Mccune &ndash; Albright ديده مي شود . * نكته :&nbsp; در سندرم Albright ديسپلازي فيبرو و لكه هاي شير قهوه و اختلالات غددي مثل بلوغ جنسي زودرس(شایعترین تظاهر اندوکرینی در زنان)، آدنوماي هيپوفيز و يا هيپرتيروئيديسم&nbsp; ديده مي شود كه در زنان شايع تر است . * نكته :&nbsp; در سندرم Jaffe ، ديسپلازي فيبرو و&nbsp; لكه هاي شير قهوه ديده مي شود كه بر خلاف نور و فيبروماتوز حاشيه نامنظم دارند .* نكته :&nbsp; بد شكلي موسوم به چوب هاكي يا Hockey stick در استخوانهاي دراز ، درد و شكستگي هاي پاتولوژيك نماي باليني عمده بيماران مبتلا به ديسپلازي فيبروي پلي استوتيك است . درنوع پلی استوتیک علائم استخوانهای دراز بسیار شایعتر است. احتمال ایجاد استئوسارکوم بعد از رادیوتراپی وجود دارد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">در سندرم Mazabraud دیسپلازی فیبرو همراه با میکزوم داخل عضلانی دیده می شود.در این افراد افزایش ریسک ابتلا به سارکوم حتی بدون رادیوتراپی دیده می شود.Hypophosphatemia &nbsp;در دیسپلازی فیبرو&nbsp; پلی استوتیک شایع است که&nbsp; FGF23 (اثرات کلیوی دارد و توسط استخوان ساخته و ترشح می شود) در ایجاد آن موثر است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي: ترابكولهاي نامنظم استخوان Woven به صورت ناپيوسته و شبيه حروف چيني در استروماي فيبرو سلولار سست قرار گرفته اند. *اين ترابكولها توسط استئوبلاست احاطه نمي شوند و&nbsp; محصول متاپلازي اند . برخلاف ضایعات فیبرواسئوس دیگرالگوی یکنواخت دارد. * ضايعه مرز مشخص ندارد و در ضايعات بالغ(انواع فکی) ترابكولهاي استخواني تمايل به موازي قرار گرفتن كنار يكديگر دارند . انواع استخوان دراز بالغ نمی شوند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان : اصلاح كانتور استخواني به منظور زيبايي است . در موارد پلی استوتیک: بیس فسفوناتها. حذف کامل به دلیل سایز بزرگ و حدود نامشخص انجام نمی شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Cemento &ndash; Osseous Dysplasia</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در نواحي داراي دندان فكين بروز مي كند و احتمالاً شايع ترين ضايعه فيبرواسئوسي است كه در معاينات باليني ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; داراي منشأ PDL مي باشند و اختلال هورمونال زمينه اي را نيز پيشنهاد مي كنند .(یا نقص در بازسازی استخوانی خارج لیگامانی).</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">براساس مشخصات باليني و راديوگرافي به سه دسته تقسيم مي شوند : 1. كانوني 2.پري اپيكال 3. فلوريد</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; Focal Cemento-osseous dysplasia : حدود 90% اين ضايعات در زنان سفید پوست با ميانگين سني 38 سال در دهة سوم تا ششم بروز مي كند . محل شايع خلف فك پايين</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; نماي راديوگرافي شامل ضايعه اي لوسنت ، مختلط يا اپك با حدود واضح اما كمي نا منظم است كه ممكن است يك ريم لوسنت آن را احاطه كند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; بسياري از موارد در محل دندان كشيده شده ديده مي شود</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* &nbsp;Periapical cemento-osseous dysplasia ( سمنتوما) : اغلب در ناحيه پري اپيكال قسمت قدامي فك پايين و متعدد ديده مي شود . در زنان سياهپوست و در سن 30 تا 50 سال شايع است . * نكته :&nbsp; دندانهاي درگير زنده اند و اتصال ضايعه به دندان ديده نمي شود . * نكته :&nbsp; راديوگرافي ضايعه لوسنت ،&zwnj;مختلط يا اپك را نشان مي دهد. در مرحله اپك يك ريم لوسنت ضايعه را احاطه مي كند . با اين وجود PDL دست نخورده است . *&nbsp; اتساع كورتكس ديده نمي شود . در مراحل اولیه شبیه گرانولوم و کیست پری اپیکال می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* Florid cemento &ndash; osseous dysplasia : ضايعه بيشتر درزنان سياهپوست ميانسال ديده مي شود . بندرت اتساع فکی دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; تمايل زيادي به درگيري دو طرفه و اغلب قرينه دارند و احتمال درگيري هرچهار كوادرانت وجود دارد. میتواند به طور همزمان درگیری قدام فکین دیده شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; ضايعه ممكن است بدون علامت يا همراه درد مبهم باشد و يا مجراي سينوسي آلوئولار ايجاد شود كه منجر به نمايان شدن استخوان فاقد عروق و زرد رنگ در حفره دهان شود . به ندرت اتصال مواد سمنتواسئوس به ریشه دیده می شود که نمای Hypercementosis-like ایجاد میکند. یک مورد MFH گزارش شده است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; ممكن است همراه Simple bone cyst باشند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميكروسكوپي:&nbsp; هر سه حالت ضايعه حاوي بخش هايي از بافت مزانشيمال سلولار حاوي فيبروبلاست هاي دوكي شكل و عروق خوني كوچك مي باشد كه در اين زمينه مخلوطي از استخوان جنيني wovenو لاملار و قطعات شبه سماني ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; با تكامل ضايعه نسبت بافت همبند به مواد مينراليزه كاهش مي يابد و ترابكولهاي ضخيم استخواني شبيه ريشه زنجبيل(ginger roots)&nbsp; مي شود. * قبل از مرحله اسکلروتیک نهایی یک بافت ترد وشکننده Gritty دیده میشود که به سادگی کورت میشوداما از استخوان مجاور (برخلاف فیبروم اسیفیه) به راحتی جدا نمیشود.اين ضايعات نئوپلاستيك نيستندو نياز به درمان جراحي ندارند . در موارد علامت دار و يا عفوني شدن درمانهاي مانند آنتي بيوتيك تراپي ، جراحي و Saucerization استخوان مرده توصيه مي شود . این ضایعات در مرحله اپک مستعد عفونت اند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">در نمای میکروسکوپی افتراق COD از COF مشکل است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Familial gigantiform cementoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; اختلال ارثي اتوزوم غالب كه نهايتاً منجر به تشكيل توده هاي بزرگ اسكلروتيك از مواد مينراليزه نامنظم مي گردد . در موارد اسپورادیک موسوم به multiple COF میباشد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعه محدود به فكين بوده و بيشتر در سفيد پوستان و دهة اول بروز مي كند . M=F</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; درگيري چند كانوني در هر دو فك به صورت تورم ، بد شكلي صورت و نهفتگي و در مواردی شکستگی استخوان&nbsp; ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; نماي راديوگرافي مشابه ديسپلازي سمنتواسئوس است .*&nbsp; طي دوره بيماري افزايش آلكالين فسفاتاز سرم گزارش شده است كه ميزان آن پس از جراحي كاهش&nbsp; مي يابد.&nbsp; *&nbsp; در تعدادي از زنان مبتلا كم خوني و آدنوم پلي پوئيد چند كانوني رحم ديده شده است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">در نمای میکروسکوپی از cemento-osseous dysplasia &nbsp;فلورید&nbsp; غیر قابل افتراق است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان : رزكسيون وسيع استخوان مبتلا و بازسازي استخوان صورت.اگر درمان نشود، طی دهه 5 متوقف میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Ossifying Fibroma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; هر چند از نظر ميكروسكوپي و راديوگرافي شبيه ديسپلازي سمنتواسئوس است اما يك نئوپلاسم حقيقي مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; مواد شبه سماني موجود در فيبروم اسيفيه را نوعي از استخوان مي دانند . درزنان ، در خلف فك پايين و دهه سوم و چهارم شايع تر است .:&nbsp; تومورهاي بزرگ ايجاد تورم بدون درد مي كنند . در راديوگرافي معمولاً يوني لاكولار و با حدود واضح و اسكلروتيك و به صورت راديولوسنت يا مختلط مي باشد . ديدن نماي اپك با ريم لوسنت نا شايع است . *&nbsp; تباعد و تحليل ريشه دندان مجاور ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; فيبروم اسيفيه بزرگ فك پايين اغلب يك تورم كماني شكل روبه پايين اختصاصي در كورتكس تحتاني منديبل ايجاد مي كنند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">موتاسیون ژن HRPT2 که محصول ان PARAFIBROMIN نام دارد در سندرم</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">Hyperparathyroidism-jaw tumor که مشخصه آن ادنوم و کارسینوم پاراتیروئید،اسیفایینگ فیبرومای فکی ،کیست های کلیه و تومور ویلمز میباشد دیده شده است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; معمولاً بدون كپسول ولي از بافت اطراف كاملاً مجزا هستند . *&nbsp; بافت فيبرو حاوي ماده مينراليزه استيوئيد و يا توده هاي كروي بازوفيل شبيه سمان مي باشد . *&nbsp; مخلوطي از طرح هاي نابالغ و تيغه اي ديده مي شود (برخلاف FD که یک طرح استخوانی یکنواخت را نشان میدهد). ريم استئوبلاستي اطراف استيوئيد ديده مي شود وترابکولها نسبت به دیسپلازی سمنتواسئوس ظریفترند. * توده هاي سمنتوئيد اغلب داراي حاشيه مسواكي هستند و خونريزي در اطراف ضايعه ديده مي شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; توده هاي سمان ديسپلازي سمنتواسئوس شكل نامنظم دارند و جداشدگی از استرومای مجاور را نشان میدهد و خونريزي در سرتاسر ضايعه ديده&nbsp; مي شود و عروق سینوزوئیدی در ارتباط با ترابکولهای استخوانی اند. * درمان : انوكليشن تومور</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Juvenile ossifying fibroma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; داراي دو طرح است :&nbsp; 1. ترابكولر&nbsp;&nbsp;&nbsp; 2. ساموماتوئيد( psammomatoid) (در سر و صورت شایعتر از ترابکولر-ترانسلوکیشنX;2)</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* اغلب رشد سریع و حدود مشخص دارند. * M&gt;F .در راديوگرافي ضايعات راديولوسنت محدودي هستند كه گاهي حاوي راديواپسيته مركزي مي باشند.در بعضی موارد نمای ground glass دیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعات داخل سينوس نماي Cloudy ايجاد مي كنند كه با سينوزيت اشتباه مي شود . *&nbsp; ميانگين سني در نوع ترابكولار 11 سالگي و در نوع ساموماتوئيد 22 سال است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; نوع ترابكولار بيشتر در فك بالا و نوع ساموماتوئيد بيشتر خارج فكي و در استخوان اربيتال، فرونتال و سينوس پارانازال مي باشد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; عوارض ضايعه مربوط به تهاجم موضعي در محل است . *&nbsp; به علت رشد محدود تومور، لوب فرونتال بدون علائم نورولوژيك بالا مي رود .بندرت باعث مننژیت شده است. در مواردی از نوع ساموماتوئید ABC دیده شده است که بیشتر در افراد جوانتر و ضایعات بزرگ ماگزیلا دیده میشود. از عوارض آن فشار بر ساختارهای اطراف و ایجاد کوری موقت و دائم میباشد. تومورهای نزدیک صفحه غربالی بینی به مغز گسترش مییابند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; هر دو بدون كپسول و با حدود مشخص شامل بافت همبند فيبروي سلولار همراه با تخريب سود و سيستيك و میکسوماتوز ، خونریزی، سلول ژانت چند هسته اي و میتوز محدود ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">در نوع ترابكولار مواد مينراليزه شامل نوارهاي نامنظمي از استيوئيد بسيار پرسلول&nbsp; (استئوبلاست و کلاست) مي باشد. در نوع ساموماتوئيد قطعات استخواني كوچك لاملار و كروي متحدالمركز با مراكز بازوفيل و حاشيه هاي استيوئيدي ائوزينوفيليك ديده مي شوند . قطعات اغلب حاشيه مسواكي دارند كه با استروماي اطراف يكي مي شود . ممکن است الگوی Crescent ایجاد کند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp; براي ضايعات كوچك جراحي ساده و كورتاژ كافي است . ضايعات مهاجم درنوزادان و كودكان ايجاد مي شود .&nbsp; برخلاف فيبروم اسيفيه معمولي اين ضايعات ميزان عود 30 تا 58% دارند ولي تغيير بدخيمي ندارند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>&nbsp;Osteoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; تومور خوش خيم كه از استخوان بالغ متراكم و يا اسفنجي تشكيل شده است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; عمدتاً محدود به استخوان هاي كرانيوفاسيال اند كه مي توانند تورم ايجاد كنند . ممکن است مراحل انتهایی یک ضایعه التهابی یا هامارتوماتوز مانند FD باشد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; توروس و اگزوستوز از نظر پاتولوژي مشابه استئوم هستند .*&nbsp; اين ضايعه به 3 شكل ديده مي شود :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">1. پريوستئال یا اگزوفیتیک یا محیطی : به صورت پايه دار يا بدون پايه روي سطح استخوان بروز مي كنند . (تورم بدون درد). در کندیل همراه درد و مال اکلوژن.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">2. اندوستيال یا مرکزی : كه در بخش مركزي استخوان واقعند . اصولا بدون علامتند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">3. نوع بافت نرم که معمولا در داخل عضله یا درم پوست( osteoma cutis) ایجاد می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; بيشتر در بالغين جوان و سطح لينگوال خلف فك پايين ( تنه و كنديل ) ديده مي شود . *&nbsp; استئوم كنديل معمولاً لبوله است اما در هيپرپلازي شكل اصلي خود را حفظ مي كنند . *&nbsp; در نماي راديوگرافي به شكل توده هاي اسكلروتيك محدود مي باشد . *&nbsp; رشد مداوم ضايعه آن را از ضايعات استئواسكلروز ايديو پاتيك و استئوميليت اسكلروزه شونده مجزا&nbsp; مي كند . ضایعات سینوس پارانازال شایع تر از نوع فکی بوده و بیشتر سینوس فرونتال را درگیر می کند.بندرت گسترش داخل جمجمه منجر به مننژیت،آبسه مغزی و موکوسل داخل جمجمه ای میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; انواع متراكم حاوي استخوان متراكم و حداقل بافت مغز استخواني و انواع اسفنجي شامل ترابكول هاي استخوان و مغز استخوان همبندي چربي است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp; در موارد علامت دار و ضایعات کندیل جراحي محافظه كارانه &ndash;درغیر این صورت پیگیری بیمار.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Gardner Syndrome</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; اختلال نادر ارثي اتوزوم غالب به علت جهش در ژن سرکوبگر تومور APC روی&nbsp; كروموزوم 5 كه به صورت پلي پوز كولوركتال خانوادگي تعريف مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; پوليپ هاي روده اي كولون در خلال دهه دوم ايجاد شده و چون آدنوماتوزند به آدنوكارسينوم تبديل مي شوند . ممکن است پولیپ روده کوچک ومعده دیده شود که درصد کمی تغییرات کارسینوماتوز دارند. * نكته :&nbsp; 90% بيماران ضايعات استخواني دارند كه شايع ترين آنها استئوم مي باشد كه بيشتر جمجمه ،&zwnj;سينوس پارانازال و فك پايين را درگير مي كند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; ضايعات فكي بيشتر در ناحيه زاويه منديبل بروز مي كنند و اغلب همراه با بد شكلي واضح صورت اند . *&nbsp; استئوم در دوران بلوغ و قبل از ايجاد پوليپ روده بوجود مي آيند . *&nbsp; بيشتر بيماران 3 تا 6 ضايعه استخواني دارند. * نكته :&nbsp; شيوع دندانهاي اضافي ، نهفته و ادنتوم در اين افراد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; كيست هاي اپي در موئيد پوست و تومورهاي دسموئيد در روي اسكار شكمي که در زنان شایعتر است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; افزايش شيوع كارسينوم تيروئيد كه در زنان 100 برابر است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعات پيگمانته ته چشم در 90% افراد و در تشخیص سندرم کمک کننده است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; استئوم بيشتر از نوع متراكم است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp; كلكتومي پيشگيري كننده .پیش اگهی مربوط به مشی آدنوکارسینوم میباشد.شدت علائم به موقعیت موتاسیون APC ربط دارد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Osteoblastoma and osteiod osteoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; نئوپلاسم خوش خيم استخوان كه منشأ استئوبلاستي دارد . F&gt;M</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; بسياري سمنتوبلاستوما و استئوبلاستوما را مشابه مي دانند فقط در مورد اول ضايعه به دندان متصل است. انواع پریوستئال نیز دیده میشود. * ضايعات فكي بيشتر مانديبل و نواحي خلفي را درگير مي كنند . حدود 85% زير 30 سالگي ديده مي شود و درد و تورم يافته شايع است .لقی و تحلیل ریشه دیده می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; اندازه اكثر استئوبلاستوماها بين cm 4-2 است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; برخلاف استيوئيد استئوما درد مربوط به استئوبلاستوما با آسپرين تسكين نمي يابد . درد در استیوئید استئوما ماهیت شبانه دارد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :در&nbsp; راديوگرافي ضايعه لوسنت با حدود واضح و نا واضح و اغلب با لكه هاي مينراليزه مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; بروز اسكلروز واكنشي در حاشيه ضايعه در استئوبلاستوما بر خلاف استيوئيد استئوما شايع نيست. ممکن است لقی دندان،تحلیل ریشه و یا جابه جایی دندان دیده شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; توده مركزي در استيوئيد استئوما حاوي تجمعي از اعصاب محيطي است (که در هیچ یک از ضایعات فیبرواسئوس دیده نمی شود) و همچنین&nbsp; پروستاگلندین تولید میکند</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; استيوئيد استئوما زير cm2 و استئوبلاستوما بزرگتر از cm2 اندازه دارد . *&nbsp; منظره Target Like در راديوگرافي استيوئيد استئوما ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; گروهي از استئوبلاستوماها مهاجم تر بوده و در سنين بالاي 30 سال بروز مي نمايند و اندازه بزرگتري دارند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي: نمای هر دو ضایعه مشابه است. ضايعه حاوي مواد مينراليزه با خطوط معكوس واضح است و سلولهاي شبه استئوكلاست و استئوبلاست فراوان در حاشيه آنها ديده مي شود . * استروما شامل بافت همبند فيبروي سست حاوي كانالهاي عروقي ديلاته است</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; در نوع مهاجم استئوبلاست هاي بزرگ (اپي تليوئيد) با فعاليت ميتوتيك بالا و صفحات غير ترابكولار و يا شبكه هاي استيوئيد ديده مي شود . * نكته :&nbsp; گاهي استئوبلاستوماي پرسلول با استئوساركوم Low grade اشتباه مي شود . بندرت استئوبلاستوم به استئوسارکوم تبدیل می شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp; كورتاژ و جراحي ساده در انواع مهاجم 50% عود دارد ولي متاستاز ديده نمي شود .</span></p>
+
+<p dir="ltr" style="text-align: right;">
+	<span style="color:#000000;"><strong>Cementoblastoma (True cementuma)</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; يك نئوپلاسم ادونتوژنيك با منشأ سمنتوبلاست هاست و تنها نئوپلاسم حقيقي سمان مي باشد. *&nbsp; در خلف فك پايين ( مولر اول دائمي ) شايع است .بندرت دندان نهفته و شیری مبتلا میشود. * در كودكان و بالغين جوان بروز مي كند و درد و تورم در 2/3 موارد ديده مي شود . &nbsp;* در راديوگرافي به صورت يك توده راديو اپك ديده مي شود كه به يك يا تعداد بيشتري از ريشه هاي دندان چسبيده است و به وسيله يك حاشيه راديولوسنت نازك احاطه مي گردد . * نكته :&nbsp; حدود خارجي ريشه درگير در نتيجه تحليل ريشه و اتصال تومور به دندان محو مي شود. اگر چه اکثرا غیر مهاجمند اما رفتار مهاجم مانند تورم استخوان، اروژن کورتکس، جابه جایی دندان مجاور، درگیر کردن چندین دندان، درگیری سینوس ماگزیلاو نفوذ به پالپ و کانالهای ریشه گزارش شده است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; مشابه استئوبلاستوما مي باشد و ويژگي تمايز دهنده اتصال تومور به دندان درگير است . اطراف ضایعه که معادل ریم لوسنت رادیوگرافی است حاوی ماتریکس غیرکلسیفیه به صورت ستونهای شعاعی می باشد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp; بيرون آوردن دندان همراه توده كلسيفيه</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Chondroma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; تومور خوش خيم با منشأ غضروف هيالين بالغ كه اغلب در استخوانهاي كوچك دست و پا ايجاد مي شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; كندروما در مجموعة كرانيوفاسيال مشي ء بدخيمي از خود نشان مي دهند&nbsp; *&nbsp; دهه سوم و چهارم و بيشتر در كنديل و قدام فك بالا بروز مي كنند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; رشد آهسته و بدون درد و گاهي باعث لقي دندان&nbsp; و تحليل ريشه مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در راديوگرافي به صورت راديولوسنسي با نواحي مركزي اپك ديده مي شوند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; Ollier disease : كندروماي متعدد ، منتشر و يك طرفه</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; Maffucci syndrome : كندروماي متعدد همراه با آنژيوم هاي متعدد بافت نرم&nbsp;</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي: غضروف هيالن با لاكوناهاي حاوي كندروسيت</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در نماي ميكروسكوپي تمايز بين كندروماي خوش خيم و كندروساركوم Low grade مشكل است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">&nbsp;* نكته :&nbsp; معمولاً ضايعه كندروماي فكين يك كندروساركوم بالقوه در نظر گرفته مي شود و درمان شامل برداشت كل ضايعه با جراحي است</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; عود در فكين نسبتاً بالا است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Chondromyxoid fibroma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; نئوپلاسم خوش خيم نادر در متافيز استخوان دراز كه بندرت فكين درگير مي شوند *&nbsp; در دهه دوم و سوم و 3/4 موارد در فك پايين ديده مي شود. *&nbsp; در 1/4 موارد درد علامت اوليه بوده و در 3/4 موارد تورم مشاهده شده است . * نماي راديوگرافيك ضايعه شامل لوسنسي محدود با حدود اسكلروتيك يا كنگره اي و راديواپسيتي مركزي مي باشد . ابنورمالیتی کروموزوم 6 دیده میشود که می تواند در افتراق از کندروسارکوم کمک کننده باشد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; ضايعه لوبولر و متشكل از سلولهاي دوكي يا ستاره اي همراه با مقدار زیادی ماده بین سلولی میکسوئید وکندروئید مي باشد كه لبول ها توسط بافت پرسلول تري حاوي سلولهاي دوكي ، گرد و سلولهاي ژانت چند هسته اي از هم جدا مي شوند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; احتمال ديدن سلول پلئومورف در ضايعه وجود دارد كه با كندروساركوم (بخصوص میکسوئید) اشتباه مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان : در ضایعات بزرگ&nbsp;&nbsp; Ressection يا block excision توصيه مي شود. رادیاسیون کنتراایندیکاسیون دارد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Synovial chondromatosis (كندرومتاپلازي)</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعه مفصلي غير نئوپلاستيك نادر و خوش خيم است كه طي آن ندولهاي متاپلاستيك غضروفي در پرده سينوويال ايجاد مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">در مواردیکه همراه بیماری التهابی مفصل، آرتروپاتی غیر التهابی و تروما باشد یک پدیده راکتیو در نظر گرفته می شود. در مواردیکه عامل پیدا نشود نوع primary&nbsp; در نظر گرفته می شود که رفتار مهاجمتری دارند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; فرايند بيماري سه مرحله است : 1. تشكيل كانون هاي غضروفي در پرده سینوويال 2. بلوغ و كنده شدن اين كانونها ی غضروفی هم در پرده و هم در مفصل ديده مي شود .3. غضروف فقط در مفصل ديده مي شود . همه كانونها كنده شده اند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; معمولاً يك مفصل،&nbsp; مخصوصاً زانو را درگير مي كند و بيشتر در زنان ميانسال ديده مي شود . * تورم ، درد و كريپتوس ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : در راديوگرافي اجسام سست يا Loose bodies مشاهده مي شود كه شامل راديواپسيته گرد به اشكال و اندازه مختلف در مفصل است . * تشخيص بهتر با CT و MRI انجام مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; ضايعه از ندولهاي پراكنده غضروفي تشكيل شده است كه اغلب كلسيفيه و يا استخواني شده اند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در غضروف ها كندروسيت هاي هيپركروماتيك و دو هسته اي ديده مي شود كه نبايد با كندروساركوم اشتباه شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان : قطع مفصل (Synovectomy) و يا ديسك مفصل (Menisectomy) مي باشد . پيش آگهي خوب است . در مواردی گسترش به خارج از مفصل وحتی داخل جمجمه گزارش شده است.فقدان اجسام سست مانع از تشخیص نمیشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Desmoplastic Fibroma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; تومور ناشايع با منشأ فيبروبلاستيك و همتاي استخواني فيبروماتوزيس بافت نرم (تومور دسموئيد)&nbsp; مي باشد . در Tuberous sclerosis &nbsp;ضایعات مشابه در فک دیده می شود.*&nbsp; بيشتر در افراد جوانتر از 30 سال ديده مي شود . *&nbsp; منديبل از مناطق شايع درگير است (مولر و زاويه و شاخه صعودي) . *&nbsp; شايع ترين علامت ضايعه تورم بدون درد است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; دررادیو گرافي رادیولوسنسی يوني يا مولتي لاكولار با حدود واضح يا ناواضح است كه باعث نازك شدن كورتكس مي گردد اما واكنش كورتيكالي ايجاد نمي شود . &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; مي تواند توده بافت نرم نيز ايجاد كند و يا تحليل ريشه، لقی دندان ايجاد كند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; ضايعه از فيبروبلاست هاي طبيعي ، بدون اشكال ميتوتيك و فيبرهاي كلاژن فراوان تشكيل شده است.عده ای معتقدند که بیوپسی باید از مرکز ضایعه برداشته شود تا استخوان اطراف ما را به سمت تشخیص اشتباه استئو سارکوم نبرد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp;&nbsp;&nbsp; ضايعه خوش خيم اما مهاجم است . *&nbsp; در ضايعات كوچك بدون تخريب از كورتاژ و در ضايعات بزرگ و گسترش يافته به بافت نرم از رزكسيون Segmental استفاده مي شود . * نكته :&nbsp; پيش آگهي طولاني مدت خوب بوده و متاستاز رخ نمي دهد . افتراق از فیبروسارکوم تمایزیافته مشکل است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>OsteoSarcoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; بدخيمي سلولهاي مزانشيمي كه توانايي توليد استيوئيد يا استخوان نابالغ را دارا است . * نكته :&nbsp; به استثناء نئوپلاسم هاي هماتوپويتيك ، استئوساركوم شايع ترين بدخيمي استخوان است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; انواع اين ضايعه عبارتند از : 1. Intramedullary 2. Juxtacortical</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">3. بندرت خارج استخواني (بافت نرم)</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; سن شايع بين 10 تا 20 سال و بالاي 50 سال است . *&nbsp; احتمال بروز آن در زمان رشد استخوان بيشتر است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در سنين پايين بيشتر متافيز ديستال فمورو پروگزيمال تيبيا و در سنين بالا بيشتر اسكلت محوري و استخوانهاي پهن درگير مي شوند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; 8-6 % در فكين و بيشتر دهه سوم و چهارم (33 سالگي) بروز مي كنند . (Man = max)</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; كمي در مردان شايع تر است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; تورم و درد از علائم شايع است اما گاهي لقي دندان ،&zwnj;پاراستزي و انسداد بيني رخ مي دهد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; تومورهاي مانديبل اغلب در تنه خلفي و بخش افقي راموس اند و در ماگزيلا اغلب در قسمت تحتاني (ريج آلوئول ، كف سينوس &ndash; كام) بيشتر از فوقاني (زايگوما و اربيتال) مشاهده مي شوند . *&nbsp; استئوساركوم فكين نسبتاً به آهستگي رشد مي كند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; در راديوگرافي نماي لوسنت ، مختلط و يا كاملاً اسكلروزه با حدود ناواضح دارد. از سی تی اسکن برای بررسی وسعت تومور، میزان کلسیفیکاسیون، درگیری کورتکس و بافت نرم و حدود جراحی استفاده میشود. در مواردی ضایعات وسیع نمای رادیوگرافی محدود دارند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته :&nbsp; تحليل ريشه ها موسوم به تحليل ميخي شكل(Spiking) و نماي اشعه خورشيدي (Sunburst) در نتيجه تشكيل استخوان استئوفيتيك در سطح ضايعه از ويژگي هاي تشخيص ضايعه اند . به علت بلند شدن پریوست نمای مثلث Codman &nbsp;&nbsp;ممکن است دیده شود</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : ارتشاح سلولهاي توموري به فضاي PDL باعث گشاد شدن قرينة PDL دندانها مي شود كه براي استئوسارکوم اختصاصي نيست و در ديگر بدخيمي ها هم ديده مي شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; ويژگي اصلي توليد استيوئيد از سلولهاي مزانشيمي بدخيم گرد تا دوکی پلئومورف است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : علاوه بر توليد استيوئيد امكان توليد غضروف و يا بافت همبند فيبرو نيز وجود دارد كه به انواع زير تقسيم مي شود : 1. استئوبلاستيك 2. كندروبلاستيك (در فكين شايع تر) 3. فيبروبلاستيك. برخلاف کندروسارکوم نمای میکروسکوپی در پیش آگهی موثر نیست.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* انواع نا شايع تر عبارتند از :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">1. Small Cell</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">2. Epithelioid &nbsp;&nbsp;&nbsp;</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">3. Telangectatic</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">4. Giant cell rich</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">5. MFH &ndash; Like</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : انواع&nbsp; Low grade&nbsp; از نظر میکروسکوپی شبيه ديسپلازي فيبرو يا فيبروماي اسيفيه مي شوند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp;&nbsp;&nbsp;&nbsp; پيش آگهي ضايعات فكي از استخوانهاي دراز بهتر است و متاستاز كمتري مي دهند . * نكته : مهمترين شاخصة پيش آگهي توانايي برداشت كامل اوليه آنها از طريق جراحي است&nbsp; .*&nbsp; شيمي درماني قبل از عمل (neoadjuvant) ،&zwnj;برداشت وسيع و شيمي درماني بعد از عمل (adjuvant) پيش آگهي را بهتر كرده است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : علت مرگ در استئوساركوم فكي بيشتر عود موضعي است . *&nbsp; متاستاز اغلب به ريه و مغز مي باشد . * نكته : متاستاز بيشتر در استئوساركوم فك پايين و عود موضعي بيشتر در فك بالا ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Juxtacorical OsteoSarcoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Peripheral OsteoSarcoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; اين ضايعه كه رشدي به سمت خارج دارد در فكين نادر است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : به دو شكل ديده مي شود : 1. Parosteal: به شكل يك ندول لوبولر ديده مي شود كه به وسيلة ساقة كوتاه به كورتكس متصل شده است. اثري از بلند شدن پريوست و واكنش پريوستال محيطي ديده نمي شود . اين ضايعات اغلب Low grade با خطر عود و متاستاز پايين اند اما با جراحي نامناسب مي توانند به انواع High grade تبديل شوند. و از سلولهای دوکی فیبروبلاستی به همراه استخوان تمایزیافته تشکیل شده اند. 2. Periosteal: ضايعه اي بدون پايه و داخل كورتكس است كه پريوست روي ضايعه را بلند كرده و باعث تحريك ساخت استخوان پريوستئال مي شود. احتمال پرفوريشن پريوست وجود دارد. پيش آگهي از intramedullary بهتر از نوع پاروستئال بدتر است . اين تومور داراي تمايز كندروبلاستيك مي باشد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Postirradiation Osteosarcoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ميانگين دوره نهفته از زمان راديوتراپي تا بروز ساركوم 14 سال است اما پس از 3 سال هم احتمال بروز دارد. * دوزهاي كمتر از 1000 سانتي گري اثري در افزايش ايجاد ندارد . * نكته : استئوساركوما شايع ترين نوع ساركوم پس از تابش است و بعد از آن فيبروساركوم و كندرو ساركوم&nbsp; مي باشد . * پيش آگهي&nbsp; و نمای میکروسکوپی مشابه انواع غير وابسته به پرتو تابي مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>ChondroSarcoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : تومور بدخيم كه با تشكيل غضروف و نه استخوان به وسيلة سلولهاي تومورال مشخص مي شود كه بندرت در فكين ايجاد مي شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : كندروساركوم نصف شيوع استئوساركوم و دو برابر شيوع ساركوم يوينگ را دارد . * دهه ششم و هفتم</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در فك بالا شايع تر است (4 برابر مانديبل) .* نكته : بروز يك تورم بدون درد شايع ترين علامت بيماري است كه مي تواند لقي دندان ايجاد كند. اغلب دارای ارتشاح وسیع به داخل ترابکول استخوانی اند، بدون اینکه تحلیل قابل توجه ایجاد کنند. یک سوم موارد سر و گردن در بافت نرم با منشا layngotracheal یا بافت نرم میباشند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در راديوگرافي ضايعه لوسنت با حدود نامشخص مي باشد كه نقاط اپك با اندازه هاي مختلف در اثر كلسيفيكاسيون غضروفي در آن ديده مي شود . . ممکن است به صورت یک رادیولوسنسی چندحفره ای و شبیه ضایعات خوش خیم دیده شود. *&nbsp; نفوذ به كورتكس ممكن است باعث ايجاد نماي اشعه خورشيدي شود . *&nbsp; گاهي تحليل ريشه و گشادي متقارن PDL ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي:&nbsp; تومور شامل بافت غضروفي است كه توسط تيغه هاي نازك بافت همبند فيبرو لوبوله شده است . * در مركز لوبول ها غضروف بالغ و در محيط غضروف نابالغ و بافت مزانشيمي ديده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; كندروساركوم از نظر پاتولوژي به سه درجه تقسيم مي شود :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">1. Grade I: شبيه كندروما است. كندرو بلاست ها و غضروف تفاوت كمي با بافت طبيعي دارند و مشاهده ميتوز نادر است . كلسيفيكاسيون و استخواني شدن ماتريكس كندروئيد اغلب بارز است . وجود کندروبلاست plump و کندروسیت دوهسته ای موید بدخیمی است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">2. Grade II: ميزان سلولاريته بيشتر است و سلول ها با هسته هاي متوسط بيشتر در محيط لوبول ها قرار گرفته اند. ميزان ميتوز كم است . ماتريكس بيشتر ميكسوئيد و حاوي مقدار كم هيالن است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">3. Grade III: سلولاريته بسيار بالا (سلول دوکی) همراه ميتوز فراوان</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : انواع فكي اغلب از نوع I و II هستند . Grading تومور در پيش آگهي تأثير دارد.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; انواع ناشايع تر :</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">1) نوع Clear Cell كه جزء Low grade تقسيم مي شود و با كارسينوم متاستاتيك سلول روشن در تشخيص افتراقي قرار مي گيرد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">2)&nbsp; كندروساركوم Dedifferentiated : توموري بسيار بدخيم است كه از كندروساركوم با تمايز بالا به همراه يك تومور مزانشيمال بدخيم مثل فيبرو ساركوم تشكيل شده است كه بسيار نادر است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">3)نوع Myxoid که بیشتر در بافت نرم دیده میشود و حاوی سلول روشن یا ائوزینوفیل در استرومای موکوئید است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">4)نوع Mesenchymal</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان : جراحي وسيع درمان انتخابي بوده و در مقايسه با استئوساركوم راديوتراپي و كموتراپي كمتر مؤثر است.&nbsp; رادیوتراپی و کموتراپی در انواع غیرقابل برداشت high grade کاربرد دارد. * نكته : پيش آگهي به اندازة محل و grading مربوط است و مهمترين عامل محل تومور است . * نكته : پيش آگهي كندروساركوم فكي بهتر از استئوساركوم است و در صد عود و متاستاز كمتر است . * نكته : مرگ بيشتر به علت تهاجم موضعي است که دیررس میباشد.متاستاز بیشتر در انواع high grade و ضایعات سینونازال دیده میشود. انواع معمولی پروگنوز بهتری از نوع میکسوئید و مزانشیمال دارند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Mesenchymal Chondrosarcoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; تومور ناشايع در استخوان و بافت نرم است و نوع مهاجم كندروساركوما مي باشد. *&nbsp; دهه دوم و سوم زندگي و فكين از شايع ترين استخوانهاي درگير است. * حدود 1/3 تا 1/4 موارد در بافت نرم بروز مي كند . * رشد نسبتاٌ سريع كه مي تواند منجر به درد و تورم شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* در راديوگرافي راديولوسنسي محدود با حاشيه هاي انفيلتراتيو همراه با كلسيفيكاسيون پوست پرتقالي (Stippled) مشاهده مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي: ندولهاي غضروفي مجزا كه صفحات و يا توده هاي سلولي دوكي شكل و يا گرد تمايز نيافته آنها را احاطه كرده اند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; بافت كندروئيد ميزان آتيپيسم و سلولاريته متفاوتي را از خود نشان مي دهد . *نكته : بخش غير غضروفي شبيه ساركوم يوينگ ، لنفوما و يا كارسينوم متاستاتيك سلول كوچك به نظر مي رسد . *&nbsp; وجود الگوي عروقي شاخه شاخه ممكن است نماي همانژيو پري سايتوما را تقليد كند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp; جراحي راديكال . متاستاز بيشتر از مسيرهاي خوني رخ داده و ريه محل شايع مي باشد . امكان عود موضعي وجود دارد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Ewing&#39;s Sarcoma</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; تومور بدخيم اوليه استخوان با منشا نورواکتودرمال است كه حاوي سلولهاي گرد تمايز نيافته كوچك مي باشد كه Translocation بين كروموزم 11 و 22 اتفاق افتاده است . *&nbsp; در دهه دوم و كمي در مردان بيشتر ديده مي شود . *&nbsp; سياهپوستان هرگز دچار بيماري نمي شوند . *&nbsp; درگيري فك غير شايع است و درد اغلب همراه تورم شايع ترين علامت است . موارد بافت نرم گزارش شده است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : تب &ndash; لكوسيتوز و افزايش ESR ديده مي شود كه اشتباهاً تشخيص استئوميليت گذاشته مي شود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : معمولاً به كورتكس نفوذ كرده و باعث ايجاد نسج نرم مي شود . * در فك پايين شيوع بيشتري دارد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; پاراستزي و لقي دندان يافته هاي شايع در ساركوم يوينگ است . *&nbsp; در راديوگرافي تخريب استخواني ليتيك نامنظم با حاشيه هاي ناواضح وجود دارد . * نكته : واكنش اختصاصي با نماي پوست پيازي Onion skin در استخوان هاي دراز مشاهده مي شود كه در فكين شايع نيست .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي: تومور از سلولهاي گرد و كوچك با حدود مشخص هسته و سيتوپلاسم ناواضح تشكيل شده است&nbsp; كه به صورت صفحه یا بدون الگوي مشخص قرار گرفته اند. *&nbsp; گاهي تيغه هاي فيبرو واسكولار باعث ايجاد نماي لوبولر مي شود .&nbsp; * مشاهده مناطق نكروز و خونريزي بعيد نيست .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; در صورت فراواني سلولهاي گرد بزرگ Atypical Ewing Sarcoma نام مي گيرد. * نكته : در 75% موارد سيتوپلاسم سلولهاي تومور حاوي دانه هاي گليكوژن(PAS+)هستند . * نكته : CD99 كه محصول ژن MIC2 است مثبت مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : اين تومور در تشخيص افتراقي با ضايعات زير قرار مي گيرد : 1. نورو بلاستوماي متاستاتيك 2. لنفوم بدخيم3. استئوساركوم سلول كوچك 4.رابدوميوساركوم جنيني5. تومور نورو اكتو درمال اوليه 6. كارسينوم سلول كوچك متاستاتيك</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* درمان :&nbsp; تركيبي از جراحي ، شيمي درماني و راديوتراپي است .برای تائید تشخیص ازروش اختصاصی&nbsp; تر RT-PCR ,FISH استفاده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : به علت وجود ميكرومتاستازهاي مخفي در زمان تشخيص انجام درمان سيستميك اغلب ضروري است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; محل هاي شايع متاستاز: ريه ، كبد ، غده لنفاوي و استخوان هاي ديگر</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعات ديستالي پيش آگهي بهتري نسبت به ضايعات پروگزيمالي دارند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; ضايعات لگن پيش آگهي ضعيف تري دارد .محل آناتومیک در پروگنوز بسیار موثر است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Metastatic Tumors of the Jaws</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : كارسينوم هاي متاستاتيك شايع ترين سرطانهايي هستند كه استخوان را درگير مي كنند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : 2/3 كارسينوم پستان ، 1/2 پروستات و 1/3 ريه و كليه به استخوان متاستاز مي دهند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : كارسينوم پستان، ريه ،&zwnj;تيروئيد ،&zwnj;پروستات و كليه باعث بروز اكثر متاستازهاي فكي اند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; اغلب در سنين بالا و استخوان هاي مهره ، دنده ، لگن و جمجمه ايجاد مي شوند .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : 80% متاستازها در مانديبل مي باشد .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : علامت شايع ،&zwnj;توده فكي ، درد ، تورم ، لقي دندان و يا پاراستزي است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : سندرم چانه بي حس (Numb &ndash; chin) در متاستاز به فك پايين تومورهای اولیه این ناحیه و ضایعات التهابی دیده می شود كه در اثر درگيري عصب آلوئولار تحتاني ايجاد مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : در راديوگرافي اغلب حدود ناواضح و نماي بيد خورده Moth &ndash; eaten دارند و گاهي شبيه كيست مي شوند . میتواند شبیه بیماری پریودنتال شود.گشادی PDLدیده میشود.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">* نكته : گاهي در متاستازهاي پستان و پروستات استخوان سازي در محل متاستاز تحريك شده و ضايعه نماي راديو اپك يا مختلط پيدا مي كند . * براي كشف ميكرومتاستاز استخواني از سينتي گرافي استفاده مي شود كه در افراد با سابقة درد طولاني مدت غير قابل توجيه و يا سابقه سرطان و متاستاز نيز توصيه مي شود .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">ميكروسكوپي: شبيه تومور منشأ است اما اغلب تمايز ناچيز دارند و تشخيص اوليه محل متاستاز مشكل است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; تشخيص افتراقي كارسينوم متاستاتيك كم تمايز يافته با ملانوم،&nbsp; لنفوم و ساركوم سلول كوچك آناپلاستيك مطرح است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">*&nbsp; پيش آگهي ضعيف است و معمولاً در Stage IV مي باشد . درگيري فك هميشه همراه با انتشار گسترده بيماري است .</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">Suppurative osteomyelitisچرکی-باکتریال-ثانویه</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">روند التهابی حاد یا مزمن در فضای مغز استخوان یا سطوح کورتیکال می باشد.<br />
+	استئورادیونکروز ناشی از هیپوکسی،هیپوسلولاریتی و هیپوواسکولاریتی است.<br />
+	عوامل مستعد کننده: بیماری سیستمیک مزمن&nbsp; ، ضعف ایمنی ، کاهش عروق استخوان مانند استئوپتروز ، اواخر پاژت و مرحله ی نهایی سمنتواسئوس دیسپلازی ، مصرف الکل ، سیگار و مواد مخدر&nbsp; ، دیابت ، تب های اگزانتوماتوز مالاریا ، آنمی سلول داسی ، ایدز، بیماری کلاژن واسکولار،سوء تغذیه.<br />
+	در کشور های پیشرفته در اثر عفونت ادنتوژنیک و شکستگی فکی ایجاد می شود و در آفریقا به علت ANUG ایجاد می شود.استئومیلیت در مردان و مندیبل شایع تر است و گرفتاری ماگزیلا در نوزادان&nbsp; و ANUG&nbsp;&nbsp; دیده میشود.<br />
+	استئومیلیت حاد کمتر از یک ماه طول می کشد ، نمای رادیوگرافی ندارد یا یک رادیولوسنسی با حدود ناواضح دیده می شود.در جوانان ممکن است شکل گیری استخوان جدید پریوستئال در پاسخ به عفونت دیده شود. گاهی پاراستزی ، درناژ و سکستر استخوانی دیده می شود و در میکروسکوپی استخوان نکروتیک ( از بین رفتن استئوسیت ، تحلیل حاشیه ای و کلونی باکتری) دیده می شود. و درمان آن آنتی بیوتیک تراپی است.<br />
+	استئومیلیت مزمن به دنبال نوع حاد و یا به طور اولیه ایجاد میشود. ممکن است درد و تورم و&nbsp; سکستر دیده شود در رادیوگرافی رادیولوسنسی patchy , ragged با حدود نامشخص دیده می شود و گاهی در سطح کورتکس هیپرپلازی پریوستئال داریم. که اغلب در مرکز آن سکستر رادیواپک دیده می شود درمان جراحی و آنتی بیوتیک تراپی داخل وریدی است و در مواردی اکسیژن هایپرباریک استفاده میشود.در میکروسکوپی سکستر استخوانی به همراه بافت فیبروزه التهابی دیده می شود.<br />
+	از طریق مصرف تتراسایکلین در زیر نور uv استخوان زنده مشخص میشود.از تکنتیوم 99m جهت ارزیابی درمان استفاده میشود.<br />
+	سکستر:استخوان نکروتیک<br />
+	Involucrum: استخوان نکروتیک که توسط استخوان زنده احاطه شده است.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Sclerosing osteomyelitis</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">&nbsp;ضایعات به سه گروه تقسیم می شوند:</span></p>
+
+<p dir="ltr" style="text-align: right;">
+	<span style="color:#000000;">Diffuse sclerosing osteomyelitis (D.O.S)<br />
+	Primary chronic osteomyelitis (P.C.O)<br />
+	Chronic tendoperiostitis</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">D.S.O: این نام را فقط هنگامی به کار می بریم که یک بیمار عفونی به طور مستقیم مسئول ایجاد اسکلروزیس استخوان باشد. و با بیماری پاژت و فلورید سمنتواسئوس دیسپلازی قابل اشتباه است.<br />
+	در بالغین و مندیبل دیده می شود و باعث افزایش رادیودنسیتی در اطراف محل عفونت مزمن مانند پریودنتیت ، پری کورونیت و بیماری التهابی پری اپیکال می شود.وجود درد و تورم تیپیک نیست.<br />
+	مراکز اسکلروزه روی کرست ریج آلوئولار متمرکز می شوند.<br />
+	نهایتاً کورتکس سوراخ می شود و رسوب موضعی استخوان جدید پریوستئال سطح پریوست را برجسته می کند.<br />
+	کشت میکروبی باید مثبت شود .<br />
+	در میکروسکوپی اسکلروز و ریمادلینگ استخوان دیده می شود و بافت نرم التهابی قابل توجه وجود ندارد.بهترین درمان حذف کانون عفونی مجاور است.<br />
+	P.C.O :<br />
+	همراهی با عفونت باکتریال وجود ندارد و چرک و سکستر دیده نمی شود.<br />
+	اتیولوژی آن پاسخ ایمنی متفاوت به یک ارگانیسم با ویرولانس پایین مطرح است.کشت میکروبی منفی است و به آنتی بیوتیک پاسخ نمی دهد.<br />
+	دو بیماری[ SAPHO syn[1] , CRMO[2 شبیهP.C.O &nbsp;هستند اما تظاهرات خارج فکی دارند.<br />
+	درد و تورم و محدودیت باز شدن دهان دیده می شود که همراه عفونت دندانی نیست.<br />
+	رادیوگرافی الگوی مخلوط رادیولوسنت و اسکلروز را نشان می دهد.( medullary (sclerosis&nbsp;&nbsp;&nbsp;<br />
+	پرولیفراسیون پریوستئال دیده می شود که بسیار تو پر تر از انواع با منشاء التهابی است.<br />
+	در SAPHO ضایعات متعدد استخوانی و درگیری پوستی وجود دارد. در این افراد اختلال اتوایمیون در اثر تماس با باکتری های پوستی دیده می شود و با HLA27 همراه است.<br />
+	تحلیل خارجی استخوان و دفورمیتی مندیبل در ضایعات قدیمی اختصاصی اند.شایعترین ناحیه مبتلا دیواره قدامی قفسه سینه است.<br />
+	در &nbsp;CRMO ضایعات متعدد استخوانی در غیاب پوستی وجود دارد.<br />
+	میکروسکوپی هر سه مورد شامل نواحی اسکلروز و ترابکولهای نامنظم پاژتوئید با خطوط reversal &nbsp;واضح می باشد.<br />
+	درمان: مصرف biphosphonate , alendronate بهبودی طولانی مدت داده است.<br />
+	Chronic tendoperiostitis: سن شایع 40 سالگی است و نشانه درد راجعه ، تورم گونه و تریسموس می باشد. یک هیپرپلازی راکتیو استخوان است که در اثر استفاده زیاد و مزمن از عضلات جونده و عادات پارافانکشنال ایجاد می شود.<br />
+	کشت میکروبیولوژیک منفی است. در اسکلروزیس محدود به ناحیه قدامی زاویه ماندیبل و خلف مندیبل می باشد. ( محل اتصال عضله ماستر و دیگاستریک)<br />
+	میکروسکوپی اسکلروزیس و remodeling &nbsp;&nbsp;استخوان کورتیکال و تحت کورتیکال را نشان می دهد.بندرت خودبخود بهبود یافته است.<br />
+	درمان: شل کننده ی عضلانی</span></p>
+
+<p dir="ltr" style="text-align: right;">
+	<span style="color:#000000;"><strong>Condensing osteitis (focal sclerosing osteomyelitis)</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">نواحی موضعی از استخوان اسکلروزه در رابطه با اپکس دندان مبتلا به پالپیت یا نکروز پالپ .در کودکان و بالغین جوان و اکثراً در نواحی پره مولر و مولر مندیبل. اتساع کلینیکی نداریم.<br />
+	ناحیه موضعی از افزایش رادیو دنسیتی در مجاورت اپکس دندان که ضخیم شدگی PDL یا ضایعه پری اپیکال را نشان می دهد.<br />
+	بر خلاف focal cementeosseous dysplasia &nbsp;فاقد حاشیه رادیولوسنت&nbsp; است و برخلافidiopatic osteosclerosis &nbsp;رادیواپسیتی آن همیشه در ارتباط با آپکس است.درمان حذف کانون عفونی.<br />
+	به ناحیه ای از condensing osteitis که بعد از حذف کانون التهابی باقی می ماند اسکار استخوانی(bone scar) می گویند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;"><strong>Osteomyelitis with proliferative perriostitis &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">&nbsp;(Periostitis ossificans)- &nbsp;استئومیلیت گاره&nbsp;</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">تشکیل استخوان پریوستئال در برابر التهاب به شکل تیغه های موازی از استخوان راکتیو<br />
+	علل ایجاد استخوان جدید پریوستئال شامل موارد زیر است:</span></p>
+
+<p dir="ltr">
+	<span style="color:#000000;">1-osteomyelitis -2-trauma -3-cysts -4-infantile cortical hyperostosis -5-fluorosis -6-avitaminosis C -7-hypertropic osteoarthropathy -8-congential syphilis -9-Ewing sarcoma -10- langerhance cell histocytosis -11-osteogenic sarcoma.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">متوسط سنی 13 سال و در ناحیه پره مولر و مولر مندیبل<br />
+	شایع ترین علت پوسیدگی اما عفونت پریو ، شکستگی ، buccal bifurcation cyst و عفونت غیر ادنتوژنیک نیز مطرح است.در نمای میکروسکوپی ردیفهای موازی از جنس استخوان نابالغ راکتیو و پرسلول دیده میشود.که ممکن است شبیه دیسپلازی فیبرو نابالغ شود.<br />
+	استفاده از CT بر رادیوگرافی ترجیح دارد.&nbsp; درمان حذف کانون عفونی است که تورم برطرف میشود.</span></p>
+
+<p dir="ltr" style="text-align: right;">
+	<span style="color:#000000;"><strong>&nbsp;(Fabrinolytic alveolitis- Dry socket) Alveolar osteitis</strong></span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">تخریب لخته اولیه در اثر تبدیل پلاسمینوژن به پلاسمین به علت ترومای موضعی ، استروژن و محصولات تب زای باکتریال و استفاده دخانیات<br />
+	در مندیبل و نواحی خلفی<br />
+	شیوع آن پس از کشیدن دندان عفونی بالاتر است. کینین باعث بوجود امدن درد می گردد.<br />
+	بین 20 تا 40 سالگی<br />
+	محل کشیدن با لخته ای به رنگ خاکستری چرک پر می شود و به زودی ساکت استخوانی برهنه ای بر جا می ماند.<br />
+	مشاهده استخوان شدیداً حساس و عریان تشخیص را تایید می کند.<br />
+	درد شدید ، بوی بد و تورم و لنفادنوپاتی 3 تا 4 روز پس از کشیدن دندان ایجاد شده و 10 تا 40 روز طول می کشد.<br />
+	بندرت درد&nbsp; در گوش ، تمپورال و یا چشم همان طرف احساس می شود.<br />
+	درمان: کورتاژ ضایعه توصیه نمی شود و پانسمان با اوژنول هر 24h ، سه روز اول تا زمانیکه ساکت پر شود.<br />
+	در افراد زیر از آنتی بیوتیک استفاده می شود:</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">1- مصرف داروی ضد بارداری</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">2-افرادیکه پری کرونیت دارند.</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">3-افرادیکه دندان آنها با تروما کشیده شده</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">&nbsp;4-افراد سیگاری</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">5-افرادیکه سابقه alveolar osteitis دارند</span></p>
+
+<p style="text-align: justify;">
+	&nbsp;</p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">[1] Synnovitis &ndash; ance &ndash; pustulosis hyperostosis osteomyelitis</span></p>
+
+<p style="text-align: justify;">
+	<span style="color:#000000;">[2] Chronic recurrent multifocal osteomyelitis</span></p>
+ 
+	
+<div id="comment">
+	<a href="http://apps.dparseh.com/%D9%85%D8%AD%D8%AA%D9%88%D8%A7%DB%8C-%D8%AF%D8%B1%D9%88%D8%B3-%D8%B1%D8%B2%DB%8C%D8%AF%D9%86%D8%AA%DB%8C/2015-08-02-13-04-58/%D9%85%D8%AA%D9%86-%D8%A7%D8%B5%D9%84%DB%8C-%D8%AF%D8%B1%D8%B3%D9%86%D8%A7%D9%85%D9%87/1190-2015-10-17-11-50-16?template=comment&back=1&title=%D9%81%D8%B5%D9%84+%D8%AF%D9%88%D9%85+%3A+%D8%B6%D8%A7%D9%8A%D8%B9%D8%A7%D8%AA+%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86+" class="iframe" iframe="true" cache="false">comment</a>
+</div>
+</div>
+
+<div id="page_title" style="display:none;">پاتولوژی / فصل دوم : ضايعات استخوان </div>
+
+<!--<div onclick="window.localStorage.clear();alert('done');">clean</div>-->
+<!--<a href="/redirect.php">0000</a>-->
+<!--<a href="/?id=1072">0000</a>-->
+<!--<a href="/%D9%85%D8%AD%D8%AA%D9%88%D8%A7%DB%8C-%D8%AF%D8%B1%D9%88%D8%B3-%D8%B1%D8%B2%DB%8C%D8%AF%D9%86%D8%AA%DB%8C/%D8%AA%D8%B1%D9%85%DB%8C%D9%85%DB%8C/%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1-%D9%81%D8%B5%D9%88%D9%84/173-%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1-%D9%81%D8%B5%D9%84-1">0000</a>-->
+<!--
+<br/><br/><br/><br/>
+-->
+
+<script>
+// alert('uuid:' + window.localStorage.getItem('uuid') );
+// alert($('.container').html());
+</script>
+</div>
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
+
+		
+		</div>
+		
+
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+
+	</div><!-- /content -->
+
+    <div id="footer" class="FixedBottom"></div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>
