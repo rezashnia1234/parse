@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "ir.smgroup.parseh"
-        version   = "1.0.14">
+        version   = "1.0.15">
 		
 		
     <name>دندانپزشکی پارسه</name>
@@ -17,7 +17,7 @@
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
-    <!--<preference name="phonegap-version"           value="3.7.0" />  -->        <!-- all: current version of PhoneGap -->
+    <!--<preference name="phonegap-version"           value='cli-5.1.1' />  -->        <!-- all: current version of PhoneGap -->
 	<preference name='phonegap-version'			  value='cli-5.2.0' />
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
@@ -83,8 +83,8 @@
 	</gap:config-file>
 	
 	<!--<gap:plugin name="com.dawsonloudon.videoplayer" 	platform="android"	version="1.0.0" />-->
-	<gap:plugin name="com.hutchind.cordova.plugins.streamingmedia"  source="plugins.cordova.io" />
-
+	<!--<gap:plugin name="com.hutchind.cordova.plugins.streamingmedia"  source="plugins.cordova.io" />-->
+	<gap:plugin name="com.hutchind.cordova.plugins.streamingmedia"  />
 	
     <!-- Define app icon      -->
     <icon src="images/splash/icon.png" />
