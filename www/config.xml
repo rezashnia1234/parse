@@ -91,10 +91,10 @@
     <icon src="images/splash/icon.png" platform="android" />
     <icon src="images/splash/ios.png" platform="ios" />
 	
-<icon src="images/splash/icon-57.png" width="57" height="57" gap:platform="ios" / >
-<icon src="images/splash/icon-57@2x.png" width="114" height="114" gap:platform="ios" / >
-<icon src="images/splash/icon-72.png" width="72" height="72" gap:platform="ios" / >
-<icon src="images/splash/icon-72@2x.png" width="152" height="152" gap:platform="ios" / > 
+<icon src="images/splash/icon-57.png" width="57" height="57" gap:platform="ios" />
+<icon src="images/splash/icon-57@2x.png" width="114" height="114" gap:platform="ios" />
+<icon src="images/splash/icon-72.png" width="72" height="72" gap:platform="ios" />
+<icon src="images/splash/icon-72@2x.png" width="152" height="152" gap:platform="ios" /> 
 
 <!-- iPhone 6 / 6+ -->
 <icon src="images/splash/icon-60@3x.png" platform="ios" width="180" height="180" />
