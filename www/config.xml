@@ -42,9 +42,8 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-	<gap:plugin name="cordova-plugin-whitelist" source="npm" /> 
     <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
-    <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
+    <!--<gap:plugin name="org.apache.cordova.media-capture" source="npm" />-->
     <gap:plugin name="org.apache.cordova.console" source="npm" />
     <gap:plugin name="org.apache.cordova.device" source="npm" />
     <gap:plugin name="org.apache.cordova.device-motion" source="npm" />
@@ -53,12 +52,14 @@
     <gap:plugin name="org.apache.cordova.file" source="npm" />
     <!--<gap:plugin name="org.apache.cordova.file-transfer" source="npm" />-->
     <!--<gap:plugin name="org.apache.cordova.geolocation" source="npm" />-->
-    <gap:plugin name="org.apache.cordova.globalization" source="npm" />
+    <!--<gap:plugin name="org.apache.cordova.globalization" source="npm" />-->
     <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" /><!---->
 	<gap:plugin name="org.apache.cordova.media" source="npm" />
     <gap:plugin name="org.apache.cordova.network-information" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
     <gap:plugin name="org.apache.cordova.vibration" source="npm" />
+
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
@@ -87,7 +88,7 @@
 	<gap:plugin name="com.hutchind.cordova.plugins.streamingmedia"  />
 	
     <!-- Define app icon      -->
-    <icon src="images/splash/icon.png" />
+    <icon src="images/splash/icon.png" platform="android" />
     <icon src="images/splash/ios.png" platform="ios" />
 	
     <!-- Define app splash screen for each platform. -->
