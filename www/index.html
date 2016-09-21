@@ -49,7 +49,14 @@
 			}
 	
 		}
-		
+		$(document).ready(function(){
+			setTimeout(function(){
+				if (! window.cordova)
+					//onDeviceReady();
+					$('.mypreload').html("");
+					$('.myregister').html("");
+			}, 2000);
+		});
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -333,8 +340,20 @@
 							},
 							play: { auto: true,interval: 3000}
 						});
+						$("#slides2").slidesjs({
+							width: 512,
+							height: 797,//497,
+							navigation: {
+								active: false
+							},
+							pagination: {
+								active: false
+							},
+							play: { auto: true,interval: 3000}
+						});
 					});
 				</script>
+				<!--
 				<div id="big" class="a0"  onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=120',true,false);" >
 					<div id="slides">
 						<div class="home_slide a0-1" style="background-image:url('images/index/slider/1.jpg');"></div>
@@ -344,6 +363,29 @@
 					</div>
 					<span id="text"><p>محتوای دروس کلاس های اصلی آمادگی رزیدنتی</p></span>
 				</div>
+				-->
+				<div id="big" class="a0" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=120',true,false);" >
+					<div id="slides">
+						<div class="home_slide a0-1" style="background-image:url('images/index/slider/1.jpg');"></div>
+						<div class="home_slide a0-2" style="background-image:url('images/index/slider/2.jpg');"></div>
+						<div class="home_slide a0-3" style="background-image:url('images/index/slider/3.jpg');"></div>
+						<div class="home_slide a0-4" style="background-image:url('images/index/slider/4.jpg');"></div>
+					</div>
+					<span id="text"><p>محتوای دروس کلاس های اصلی آمادگی رزیدنتی</p></span>
+				</div>
+				<!--<div id="big" class="a16" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=959',true,false);" >
+					<div id="slides2">
+						<div class="home_slide a0-1" style="background-image:url('images/index/slider/1.jpg');"></div>
+						<div class="home_slide a0-2" style="background-image:url('images/index/slider/2.jpg');"></div>
+						<div class="home_slide a0-3" style="background-image:url('images/index/slider/3.jpg');"></div>
+						<div class="home_slide a0-4" style="background-image:url('images/index/slider/4.jpg');"></div>
+					</div>
+					<span id="text"><p>محتوای پکیج درک مفاهیم کتب ملی</p></span>
+				</div>-->
+				<div id="small" class="a16" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=959',true,false);" >
+					<span id="text"><p>محتوای پکیج درک مفاهیم کتب ملی</p></span>
+				</div>
+				
 				<div id="small" class="a1" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=230',true,false);" >
 					<span id="text"><p>محتوای دروس مرور سریع</p></span>
 				</div>

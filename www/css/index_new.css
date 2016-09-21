@@ -159,6 +159,12 @@ html{height: 100%}
 	background-position: center;
 	background-size: cover;
 }
+.a16{
+	background-image: url(../images/index/a16.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 #small span#text,#big span#text{
 	display:block;
 	width:100%;
@@ -189,6 +195,7 @@ html{height: 100%}
 .a13 span#text{background-image:url("../images/index/title/a13.png");}
 .a14 span#text{background-image:url("../images/index/title/a14.png");}
 .a15 span#text{background-image:url("../images/index/title/a15.png");}
+.a16 span#text{background-image:url("../images/index/title/a16.png");}
 #slides {
   display:none;
 }
