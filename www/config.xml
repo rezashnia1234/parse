@@ -57,7 +57,8 @@
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-geolocation.git" source="git" />-->
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-globalization.git" source="git" />-->
 	<plugin spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />
-	<plugin spec="https://github.com/apache/cordova-plugin-media.git" source="git" />
+	<!--<plugin spec="https://github.com/apache/cordova-plugin-media.git" source="git" />-->
+	<gap:plugin name="org.apache.cordova.media" source="npm" />
 	<plugin spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-vibration.git" source="git" />
