@@ -157,10 +157,10 @@
 
 	
 	<access origin="*" /> 
-	<access origin="*.dparseh.com" />
-	<allow-navigation href="http://*dparseh.com/*" />
-	<allow-navigation href="http://*.dparseh.com/*" />
-	<allow-navigation href="http://apps.dparseh.com/*" />
+	<!-- <access origin="*.dparseh.com" /> -->
+	<!-- <allow-navigation href="http://*dparseh.com/*" /> -->
+	<!-- <allow-navigation href="http://*.dparseh.com/*" /> -->
+	<!-- <allow-navigation href="http://apps.dparseh.com/*" /> -->
 	
 	<preference name="AllowInlineMediaPlayback" value="true"/>
 	<preference name="MediaPlaybackRequiresUserAction" value="false"/>
