@@ -69,10 +69,12 @@
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
 		<gap:plugin name="com.kumbe.phonegap.zoom.zoomcontrol" version="0.1.5" />
     -->	
+
 	<preference name="android-build-tool" value="gradle" />
-	<plugin name="phonegap-plugin-push" source="npm">
+	<plugin spec="https://github.com/phonegap/phonegap-plugin-push.git" source="git" />
 		<param name="SENDER_ID" value="804625540618" />
 	</plugin>
+
 
 	<plugin spec="https://github.com/Paldom/UniqueDeviceID.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-statusbar.git " source="git" />
