@@ -71,7 +71,7 @@
     -->	
 
 	<preference name="android-build-tool" value="gradle" />
-	<plugin spec="https://github.com/phonegap/phonegap-plugin-push.git" source="git" />
+	<plugin spec="https://github.com/phonegap/phonegap-plugin-push.git" source="git" >
 		<param name="SENDER_ID" value="804625540618" />
 	</plugin>
 
