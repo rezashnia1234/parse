@@ -71,7 +71,7 @@
 		<gap:plugin name="com.kumbe.phonegap.zoom.zoomcontrol" version="0.1.5" />
     -->	
 
-
+	<preference name="android-build-tool" value="gradle" />
 	<plugin spec="https://github.com/phonegap-build/PushPlugin.git" source="git" />
 	<!--<plugin spec="https://github.com/phonegap/phonegap-plugin-push.git" source="git" >-->
 	<!--
