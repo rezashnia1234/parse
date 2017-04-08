@@ -72,7 +72,7 @@
     -->	
 
 
-	<plugin spec="https://github.com/phonegap-build/PushPlugin.git" source="git" >
+	<plugin spec="https://github.com/phonegap-build/PushPlugin.git" source="git" />
 	<!--<plugin spec="https://github.com/phonegap/phonegap-plugin-push.git" source="git" >-->
 	<!--
 	<preference name="android-build-tool" value="gradle" />
