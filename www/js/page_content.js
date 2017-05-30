@@ -40,15 +40,15 @@ function getURL(URL,cache,iframe) {
 					loadURL($(this).attr("href"));
 				else if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://apps.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+					openURL("http://newapp.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				}
 			});
 			
@@ -56,15 +56,15 @@ function getURL(URL,cache,iframe) {
 				e.preventDefault();
 				if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 					openURL($(this).attr("href"),false,true);
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 					openURL($(this).attr("href"),false,true);
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://apps.dparseh.com" + $(this).attr("href"),false,true);
+					openURL("http://newapp.dparseh.com" + $(this).attr("href"),false,true);
 				}
 			});
 			
@@ -73,15 +73,15 @@ function getURL(URL,cache,iframe) {
 				
 				if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 					openURL($(this).attr("href"),false,false);
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 					openURL($(this).attr("href"),false,false);
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://apps.dparseh.com" + $(this).attr("href"),false,false);
+					openURL("http://newapp.dparseh.com" + $(this).attr("href"),false,false);
 				}
 			});
 			
@@ -92,7 +92,7 @@ function getURL(URL,cache,iframe) {
 					loadURL($(this).attr("href"));
 				else
 				{
-					loadURL("http://apps.dparseh.com" + $(this).attr("href"));
+					loadURL("http://newapp.dparseh.com" + $(this).attr("href"));
 				}
 			});
 			
@@ -135,15 +135,15 @@ function getURL(URL,cache,iframe) {
 								{}
 							else if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 								loadURL($(this).attr("href"));
-							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://apps.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+								openURL("http://newapp.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							}
 						});
 						
@@ -152,15 +152,15 @@ function getURL(URL,cache,iframe) {
 							
 							if($(this).attr("href") == "#")
 								{}
-							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 								openURL($(this).attr("href"),false,true);
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 								openURL($(this).attr("href"),false,true);
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								openURL($(this).attr("href"),false,true);
 							else
 							{
-								openURL("http://apps.dparseh.com" + $(this).attr("href"),false,true);
+								openURL("http://newapp.dparseh.com" + $(this).attr("href"),false,true);
 							}
 						});
 						
@@ -169,15 +169,15 @@ function getURL(URL,cache,iframe) {
 							
 							if($(this).attr("href") == "#")
 								{}
-							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 								openURL($(this).attr("href"),false,false);
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 								openURL($(this).attr("href"),false,false);
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://apps.dparseh.com" + $(this).attr("href"),false,false);
+								openURL("http://newapp.dparseh.com" + $(this).attr("href"),false,false);
 							}
 						});
 						
@@ -188,7 +188,7 @@ function getURL(URL,cache,iframe) {
 								loadURL($(this).attr("href"));
 							else
 							{
-								loadURL("http://apps.dparseh.com" + $(this).attr("href"));
+								loadURL("http://newapp.dparseh.com" + $(this).attr("href"));
 							}
 						});
 					}
@@ -209,10 +209,10 @@ function getURL(URL,cache,iframe) {
 							async: true,
 							success : function(text)
 							{
-								var target_text = text.replace("src='images/","src='http://apps.dparseh.com/images/");
-								target_text = target_text.replace('src="images/','src="http://apps.dparseh.com/images/');
-								target_text = target_text.replace("src='/images/","src='http://apps.dparseh.com/images/");
-								target_text = target_text.replace('src="/images/','src="http://apps.dparseh.com/images/');
+								var target_text = text.replace("src='images/","src='http://newapp.dparseh.com/images/");
+								target_text = target_text.replace('src="images/','src="http://newapp.dparseh.com/images/');
+								target_text = target_text.replace("src='/images/","src='http://newapp.dparseh.com/images/");
+								target_text = target_text.replace('src="/images/','src="http://newapp.dparseh.com/images/');
 								
 								$('.container').html(target_text);
 								FastClick.attach(document.getElementById('container'));
@@ -224,15 +224,15 @@ function getURL(URL,cache,iframe) {
 										{}
 									else if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 										loadURL($(this).attr("href"));
-									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://apps.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+										openURL("http://newapp.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									}
 								});
 
@@ -241,15 +241,15 @@ function getURL(URL,cache,iframe) {
 									
 									if($(this).attr("href") == "#")
 										{}
-									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 										openURL($(this).attr("href"),false,true);
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 										openURL($(this).attr("href"),false,true);
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://apps.dparseh.com" + $(this).attr("href"),false,true);
+										openURL("http://newapp.dparseh.com" + $(this).attr("href"),false,true);
 									}
 								});
 
@@ -258,15 +258,15 @@ function getURL(URL,cache,iframe) {
 									
 									if($(this).attr("href") == "#")
 										{}
-									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://newapp.dparseh.com") >= 0)
 										openURL($(this).attr("href"),false,false);
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.newapp.dparseh.com") >= 0)
 										openURL($(this).attr("href"),false,false);
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://apps.dparseh.com" + $(this).attr("href"),false,false);
+										openURL("http://newapp.dparseh.com" + $(this).attr("href"),false,false);
 									}
 								});
 								
@@ -277,7 +277,7 @@ function getURL(URL,cache,iframe) {
 										loadURL($(this).attr("href"));
 									else
 									{
-										loadURL("http://apps.dparseh.com" + $(this).attr("href"));
+										loadURL("http://newapp.dparseh.com" + $(this).attr("href"));
 									}
 								});
 
@@ -360,7 +360,7 @@ function getURL(URL,cache,iframe) {
 function getURL_login(uuid) {
 	//alert("getURL_login start");
 	$.ajax({ type: "GET",   
-			url: "http://apps.dparseh.com/?uuid=" + uuid + "&registered=" + window.localStorage.getItem('registered'),
+			url: "http://newapp.dparseh.com/?uuid=" + uuid + "&registered=" + window.localStorage.getItem('registered'),
 			async: true,
 			success : function(text)
 			{
@@ -445,10 +445,10 @@ function getURL_silent(URL,cache,iframe) {
 							async: true,
 							success : function(text)
 							{
-								var target_text = text.replace("src='images/","src='http://apps.dparseh.com/images/");
-								target_text = target_text.replace('src="images/','src="http://apps.dparseh.com/images/');
-								target_text = target_text.replace("src='/images/","src='http://apps.dparseh.com/images/");
-								target_text = target_text.replace('src="/images/','src="http://apps.dparseh.com/images/');
+								var target_text = text.replace("src='images/","src='http://newapp.dparseh.com/images/");
+								target_text = target_text.replace('src="images/','src="http://newapp.dparseh.com/images/');
+								target_text = target_text.replace("src='/images/","src='http://newapp.dparseh.com/images/");
+								target_text = target_text.replace('src="/images/','src="http://newapp.dparseh.com/images/');
 
 
 								window.localStorage.setItem($.md5(URL),target_text);
