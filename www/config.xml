@@ -47,7 +47,7 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-	<plugin spec="https://github.com/apache/cordova-plugin-whitelist.git" source="git" />
+	<plugin spec="https://github.com/apache/cordova-plugin-whitelist/tree/7c2f3c4422e9c8c14850ec333cf95562ac16307c" source="git" />
 
 
 
