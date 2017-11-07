@@ -19,7 +19,7 @@
     <!-- Customize your app and platform with the preference element. -->
     <!--<preference name="phonegap-version"           value='cli-5.4.1' />  -->        <!-- all: current version of PhoneGap -->
     <!--<preference name="phonegap-version"           value='cli-6.5.1' />  -->        <!-- all: current version of PhoneGap -->
-	<preference name='phonegap-version'			  value='cli-5.4.1' />
+	<preference name='phonegap-version'			  value='cli-6.5.1' />
 	<preference name='pgb-builder-version'		  value='1' />
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
@@ -31,7 +31,6 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-minSdkVersion"      value="14" />             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
-	<!--<preference name="android-targetSdkVersion"	  value="12" />-->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 	<preference name="SplashScreenDelay"		  value="4000"/>
 	<preference name="FadeSplashScreen"			  value="false" />
@@ -47,38 +46,86 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-	<!-- <plugin spec="https://github.com/apache/cordova-plugin-whitelist.git" source="git" /> -->
-<plugin name="cordova-plugin-whitelist" />
+	<plugin spec="https://github.com/apache/cordova-plugin-whitelist.git" source="git" />
+	<!--<plugin spec="https://github.com/apache/cordova-plugin-battery-status.git" source="git" />-->
+	<!--<plugin spec="https://github.com/apache/cordova-plugin-media-capture.git" source="git" />-->
+	<plugin spec="https://github.com/apache/cordova-plugin-console.git" source="git" />
+	<plugin spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
+	<!--<plugin spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />-->
+	<!--<plugin spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />-->
+	<plugin spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
+	<!-- <plugin spec="https://github.com/apache/cordova-plugin-file.git" source="git" /> -->
+	<!--<plugin spec="https://github.com/apache/cordova-plugin-file-transfer.git" source="git" />-->
+	<!--<plugin spec="https://github.com/apache/cordova-plugin-geolocation.git" source="git" />-->
+	<!--<plugin spec="https://github.com/apache/cordova-plugin-globalization.git" source="git" />-->
+	<plugin spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />
+	<!-- <plugin spec="https://github.com/apache/cordova-plugin-media.git" source="git" /> -->
+	<plugin spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
+	<plugin spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git" />
+	<plugin spec="https://github.com/apache/cordova-plugin-vibration.git" source="git" />
+	
+	
+
+    <!-- Third party plugins -->
+    <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
+    <!-- 
+        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+		<gap:plugin name="com.kumbe.phonegap.zoom.zoomcontrol" version="0.1.5" />
+    -->	
+
+	<preference name="android-build-tool" value="gradle" />
+	<plugin name="phonegap-plugin-push" spec="~1.9.1" source="npm">
+		<param name="SENDER_ID" value="804625540618" />
+	</plugin>
+
+
+	<plugin spec="https://github.com/Paldom/UniqueDeviceID.git" source="git" />
+	<plugin spec="https://github.com/apache/cordova-plugin-statusbar.git " source="git" />
+	<gap:config-file platform="ios" parent="UIStatusBarHidden">
+		<true/>
+	</gap:config-file>
+
+	<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+		<false/>
+	</gap:config-file>
+	<gap:config-file platform="ios" parent="UIBackgroundModes" overwrite="true">
+		<array>
+			<string>audio</string>
+		</array>
+	</gap:config-file>
+	
+	<!--<gap:plugin name="com.dawsonloudon.videoplayer" 	platform="android"	version="1.0.0" />-->
+	<!--<gap:plugin name="com.hutchind.cordova.plugins.streamingmedia"  source="plugins.cordova.io" />-->
+	<plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media.git" source="git" />
+	<plugin spec="https://github.com/nchutchind/Vitamio-Cordova-Plugin.git" source="git" />
 
 
     <!-- Define app icon      -->
-    <icon src="images/splash/icon.png" platform="android" />
+    <icon src="images/splash/icon.png" />
     <icon src="images/splash/ios.png" platform="ios" />
-	
-<icon src="images/splash/icon-57.png" width="57" height="57" gap:platform="ios" />
-<icon src="images/splash/icon-57@2x.png" width="114" height="114" gap:platform="ios" />
-<icon src="images/splash/icon-72.png" width="72" height="72" gap:platform="ios" />
-<icon src="images/splash/icon-72@2x.png" width="152" height="152" gap:platform="ios" /> 
 
-<!-- iPhone 6 / 6+ -->
-<icon src="images/splash/icon-60@3x.png" platform="ios" width="180" height="180" />
+	<icon gap:platform="ios" height="60" width="60" src="images/splash/ios/icon-60.png" />
+	<icon gap:platform="ios" height="120" width="120" src="images/splash/ios/icon-60-2x.png" />
+	<icon gap:platform="ios" height="180" width="180" src="images/splash/ios/icon-60-3x.png" />
+	<icon gap:platform="ios" height="76" width="76" src="images/splash/ios/icon-76.png" />
+	<icon gap:platform="ios" height="152" width="152" src="images/splash/ios/icon-76-2x.png" />
+	<icon gap:platform="ios" height="40" width="40" src="images/splash/ios/icon-40.png" />
+	<icon gap:platform="ios" height="80" width="80" src="images/splash/ios/icon-40-2x.png" />
+	<icon gap:platform="ios" height="57" width="57" src="images/splash/ios/icon-57.png" />
+	<icon gap:platform="ios" height="114" width="114" src="images/splash/ios/icon-57-2x.png" />
+	<icon gap:platform="ios" height="72" width="72" src="images/splash/ios/icon-72.png" />
+	<icon gap:platform="ios" height="144" width="144" src="images/splash/ios/icon-72-2x.png" />
+	<icon gap:platform="ios" height="29" width="29" src="images/splash/ios/icon-small.png" />
+	<icon gap:platform="ios" height="58" width="58" src="images/splash/ios/icon-small-2x.png" />
+	<icon gap:platform="ios" height="50" width="50" src="images/splash/ios/icon-50.png" />
+	<icon gap:platform="ios" height="100" width="100" src="images/splash/ios/icon-50-2x.png" />
 
-<!-- iPhone / iPod Touch  -->
-<icon src="images/splash/icon-60.png" platform="ios" width="60" height="60" />
-<icon src="images/splash/icon-60@2x.png" platform="ios" width="120" height="120" />
-
-<!-- iPad -->
-<icon src="images/splash/icon-76.png" platform="ios" width="76" height="76" />
-<icon src="images/splash/icon-76@2x.png" platform="ios" width="152" height="152" />
-
-<!-- Settings Icon -->
-<icon src="images/splash/icon-small.png" platform="ios" width="29" height="29" />
-<icon src="images/splash/icon-small@2x.png" platform="ios" width="58" height="58" />
-
-<!-- Spotlight Icon -->
-<icon src="images/splash/icon-40.png" platform="ios" width="40" height="40" />
-<icon src="images/splash/icon-40@2x.png" platform="ios" width="80" height="80" />
-
+	<icon gap:platform="android" gap:qualifier="ldpi" src="images/splash/android/icon-36-ldpi.png" />
+	<icon gap:platform="android" gap:qualifier="mdpi" src="images/splash/android/icon-48-mdpi.png" />
+	<icon gap:platform="android" gap:qualifier="hdpi" src="images/splash/android/icon-72-hdpi.png" />
+	<icon gap:platform="android" gap:qualifier="xhdpi" src="images/splash/android/icon-96-xhdpi.png" />
+	<icon gap:platform="android" gap:qualifier="xxhdpi" src="images/splash/android/icon-144-xxhdpi.png" />
+	<icon gap:platform="android" gap:qualifier="xxxhdpi" src="images/splash/android/icon-192-xxxhdpi.png" />
 
 
     <!-- Define app splash screen for each platform. -->
@@ -112,7 +159,8 @@
 
 
 	
-	<access origin="*" /> 
+	<access origin="*"/> <!-- allow local pages -->
+	<allow-navigation href="*" />
 	
 	
 
