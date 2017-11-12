@@ -159,8 +159,8 @@
     <gap:splash src="images/splash/screen-ipad-landscape.png"			gap:platform="ios"		width="768"		height="1024" />
     <gap:splash src="images/splash/screen-ipad-landscape-2x.png"		gap:platform="ios"		width="1536"	height="2048" />
 	
-    <gap:splash src="images/splash/screen-800-Portrait-736h@3x"			gap:platform="ios"		width="1242"	height="2208" />
-    <gap:splash src="images/splash/screen-screen-800-667h@2x.png"		gap:platform="ios"		width="750"	height="1334" />
+    <gap:splash src="images/splash/screen-800-736h@3x.png"			gap:platform="ios"		width="1242"	height="2208" />
+    <gap:splash src="images/splash/screen-800-667h@2x.png"			gap:platform="ios"		width="750"	height="1334" />
 
 
 
