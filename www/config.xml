@@ -119,6 +119,9 @@
 	<icon gap:platform="ios" height="58" width="58" src="images/splash/ios/icon-small@2x.png" />
 	<icon gap:platform="ios" height="50" width="50" src="images/splash/ios/icon-50.png" />
 	<icon gap:platform="ios" height="100" width="100" src="images/splash/ios/icon-50@2x.png" />
+	
+	<icon gap:platform="ios" height="87" width="87" src="images/splash/ios/icon-29@3x.png" />
+	<icon gap:platform="ios" height="167" width="167" src="images/splash/ios/icon-167.png" />
 
 	<icon gap:platform="android" gap:qualifier="ldpi" src="images/splash/android/icon-36-ldpi.png" />
 	<icon gap:platform="android" gap:qualifier="mdpi" src="images/splash/android/icon-48-mdpi.png" />
@@ -155,6 +158,9 @@
     <gap:splash src="images/splash/screen-iphone-landscape-568h-2x.png"	gap:platform="ios"		width="640"		height="1136" />
     <gap:splash src="images/splash/screen-ipad-landscape.png"			gap:platform="ios"		width="768"		height="1024" />
     <gap:splash src="images/splash/screen-ipad-landscape-2x.png"		gap:platform="ios"		width="1536"	height="2048" />
+	
+    <gap:splash src="images/splash/screen-800-Portrait-736h@3x"			gap:platform="ios"		width="1242"	height="2208" />
+    <gap:splash src="images/splash/screen-screen-800-667h@2x.png"		gap:platform="ios"		width="750"	height="1334" />
 
 
 
