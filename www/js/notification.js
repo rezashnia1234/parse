@@ -6,6 +6,48 @@ function register_notification_home() {
 	}
 	else
 	{
+		window.setInterval(function(){
+			if(window.localStorage.getItem('registered') != null && window.localStorage.getItem('username') != null )
+			{
+				if(window.sessionStorage.getItem('logined') == null)
+				{
+					$.ajax({ type: "get",
+							url: "http://apps.dparseh.com/webservice/", 
+							data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username')},
+							async: false,
+							success : function(text)
+							{
+								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logined : ' + text);
+								text = JSON.parse(text);
+								debugger;
+								if(text.success == "true")
+								{
+									window.sessionStorage.setItem('logined','yes');
+									window.sessionStorage.setItem('token',text.result.token);
+								}
+							}
+					});
+				}
+				else
+				{
+					$.ajax({ type: "get",
+							url: "http://apps.dparseh.com/webservice/", 
+							data: {act : "check",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),token:window.sessionStorage.getItem('token')},
+							async: false,
+							success : function(text)
+							{
+								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device checked : ' + text);
+								if(text.success == "true" && text.result.loged_in == "false")
+								{
+									window.location.href = "logout.html";
+								}
+							}
+					});
+				}
+			}
+		}, 10000);
+		
+		
 		var push = PushNotification.init({
 			android: {
 				senderID: "804625540618"
@@ -64,6 +106,47 @@ function register_notification() {
 	}
 	else
 	{
+		window.setInterval(function(){
+			if(window.localStorage.getItem('registered') != null && window.localStorage.getItem('username') != null )
+			{
+				if(window.sessionStorage.getItem('logined') == null)
+				{
+					$.ajax({ type: "get",
+							url: "http://apps.dparseh.com/webservice/", 
+							data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username')},
+							async: false,
+							success : function(text)
+							{
+								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logined : ' + text);
+								text = JSON.parse(text);
+								debugger;
+								if(text.success == "true")
+								{
+									window.sessionStorage.setItem('logined','yes');
+									window.sessionStorage.setItem('token',text.result.token);
+								}
+							}
+					});
+				}
+				else
+				{
+					$.ajax({ type: "get",
+							url: "http://apps.dparseh.com/webservice/", 
+							data: {act : "check",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),token:window.sessionStorage.getItem('token')},
+							async: false,
+							success : function(text)
+							{
+								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device checked : ' + text);
+								if(text.success == "true" && text.result.loged_in == "false")
+								{
+									window.location.href = "logout.html";
+								}
+							}
+					});
+				}
+			}
+		}, 10000);
+		
 		var push = PushNotification.init({
 			android: {
 				senderID: "804625540618"
