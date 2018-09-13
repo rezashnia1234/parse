@@ -19,7 +19,7 @@ function register_notification_home() {
 							{
 								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logined : ' + text);
 								text = JSON.parse(text);
-								debugger;
+								// debugger;
 								if(text.success == "true")
 								{
 									window.sessionStorage.setItem('logined','yes');
@@ -111,6 +111,7 @@ function register_notification() {
 			{
 				if(window.sessionStorage.getItem('logined') == null)
 				{
+					// console.log("need logined");
 					$.ajax({ type: "get",
 							url: "http://apps.dparseh.com/webservice/", 
 							data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username')},
@@ -119,7 +120,7 @@ function register_notification() {
 							{
 								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logined : ' + text);
 								text = JSON.parse(text);
-								debugger;
+								// debugger;
 								if(text.success == "true")
 								{
 									window.sessionStorage.setItem('logined','yes');
@@ -130,6 +131,7 @@ function register_notification() {
 				}
 				else
 				{
+					// console.log("we are logined");
 					$.ajax({ type: "get",
 							url: "http://apps.dparseh.com/webservice/", 
 							data: {act : "check",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),token:window.sessionStorage.getItem('token')},
