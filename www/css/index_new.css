@@ -165,6 +165,24 @@ html{height: 100%}
 	background-position: center;
 	background-size: cover;
 }
+.a17{
+	background-image: url(../images/index/a17.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a18{
+	background-image: url(../images/index/a18.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.a19{
+	background-image: url(../images/index/a19.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 #small span#text,#big span#text{
 	display:block;
 	width:100%;
