@@ -79,8 +79,6 @@
 		<param name="SENDER_ID" value="804625540618" />
 	</plugin>
 
-	<!-- <plugin name="cordova-plugin-document-viewer" /> -->
-	<plugin spec="https://github.com/sitewaerts/cordova-plugin-document-viewer.git" source="git" />
 
 
 	<plugin spec="https://github.com/fiscal-cliff/phonegap-plugin-brightness.git" source="git" />
