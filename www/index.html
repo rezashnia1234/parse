@@ -11,78 +11,329 @@
 	<link rel="stylesheet" href="css/index_new.css">
     
 	<script src="js/jquery-1.8.2.min.js"></script>
-    <script src="js/console.log.js"></script>
+    <!-- <script src="js/console.log.js"></script> -->
     <script src="cordova.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/jquery.blockUI.js"></script>
+	<script src="js/menu.js"></script>
+    <script src="js/page_content.js"></script>
+	<script src="PushNotification.js" type="text/javascript" ></script>
+	<link type="text/css" rel="stylesheet" href="css/menu/jquery.mmenu.all.css" />
+	<link type="text/css" rel="stylesheet" href="css/menu/jquery.mmenu.positioning.css" />
+	<link type="text/css" rel="stylesheet" href="css/menu/jquery.mmenu.dragopen.css" />
+	<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+	<script type="text/javascript" src="js/jquery.mmenu.dragopen.js"></script>
+	<script type="text/javascript" src="js/jquery.mmenu.fixedelements.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slides.min.js"></script>
+	<script type="text/javascript" src="js/notification.js"></script>
 	<!--<script src="js/notification.js"></script>-->
-</head>
-<body onload="init();">
-<div id="progress-placeholder" style="direction:ltr;text-align:left;width:100%;"><div id="progress" style="height:15px;background-color:green;width:50%;"></div></div></div>
-<div id="logs" style="direction:ltr;text-align:left;">
-Log Placeholder...
-</div>
-
 	<script>
-
+		setTimeout(function(){
+			if(!window.cordova)
+			{
+				alert("Error in JS");
+				Connection = {};
+				Connection.NONE = "0000";
+				device = {};
+				device.platform = "ios";
+				setTimeout(function(){
+					if(window.localStorage.getItem("udid")==null)
+						window.localStorage.setItem("udid","test");
+					if(window.localStorage.getItem("uuid")==null)
+						window.localStorage.setItem("uuid","test");
+						
+					onDeviceReady();
+				}, 1500);
+			}
+		}, 1000);
 		function init() {		
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
+			//onDeviceReady();
+			if(window.localStorage.getItem('registered') == null)
+			{
+				window.localStorage.setItem('registered',0);				
+			}
+			if(window.localStorage.getItem('registered') == 0)
+			{
+				$('.mymenu').html("");
+				$('.ui-btn-right.menu').css("display","none");
+				$('#header h1').css("cssText","margin-right:39px !important");
+				//$('.ui-header .ui-title').attr("style","margin-right:39px !important");
+				$('#header .header-image').css("right","10px");
+			}
+			if(window.localStorage.getItem('registered') == 1)
+			{
+				$('.myregister').html("");
+			}
+	
 		}
+		/*
+		$(document).ready(function(){
+			setTimeout(function(){
+				if (! window.cordova)
+					//onDeviceReady();
+					$('.mypreload').html("");
+					$('.myregister').html("");
+			}, 2000);
+		});
+		*/
 		function onDeviceReady() {
-			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start onDeviceReady()');
+		
+			if(window.sessionStorage.getItem('session_rand') == null)
+			{
+				window.sessionStorage.setItem('session_rand',Math.random());				
+			}
+			var networkState = navigator.connection.type;
+			if (networkState == Connection.NONE) {
 
-			document.addEventListener(DOWNLOADER_initialized, function(event){
-				var data = event.data;
-				console.log("DOWNLOADER_initialized :");
-				console.log(data);
-				console.log("--------------------------");
-			});
-			document.addEventListener(DOWNLOADER_gotFileSystem, function(event){
-				var data = event.data;
-				console.log("DOWNLOADER_gotFileSystem :");
-				console.log(data);
-				console.log("--------------------------");
-			});
-			document.addEventListener(DOWNLOADER_gotFolder, function(event){
-				var data = event.data;
-				console.log("DOWNLOADER_gotFolder :");
-				console.log(data);
-				console.log("--------------------------");
-			});
-			document.addEventListener(DOWNLOADER_error, function(event){
-				var data = event.data;
-				console.log("DOWNLOADER_error :");
-				console.log(data);
-				console.log("--------------------------");
-			});
-			document.addEventListener(DOWNLOADER_downloadSuccess, function(event){
-				var data = event.data;
-				console.log("DOWNLOADER_downloadSuccess :");
-				console.log(data);
-				console.log("--------------------------");
-			});
-			document.addEventListener(DOWNLOADER_downloadError, function(event){
-				var data = event.data;
-				console.log("DOWNLOADER_downloadError :");
-				console.log(data);
-				console.log("--------------------------");
-			});
-			document.addEventListener(DOWNLOADER_getFileError, function(event){
-				var data = event.data;
-				console.log("DOWNLOADER_getFileError :");
-				console.log(data);
-				console.log("--------------------------");
-			});
-			document.addEventListener(DOWNLOADER_downloadProgress, function(event){
-				var data = event.data;
-				$("#progress").css("width",data.percentage.toString() + "%");
-				console.log("DOWNLOADER_downloadProgress :");
-				console.log(data);
-				console.log("--------------------------");
-			});
-			downloader.init({folder: "pdf"});
-			downloader.get("http://apps.dparseh.com/images/test.pdf");
+			}
+			else
+			{
+				var session_rand = window.sessionStorage.getItem('session_rand');
+				$('.a0').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a0.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a1').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a1.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a2').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a2.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a3').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a3.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a4').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a4.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a5').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a5.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a6').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a6.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a7').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a7.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a8').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a8.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a9').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a9.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a10').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a10.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a11').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a11.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a12').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a12.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a13').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a13.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a14').css('background-image', 'url("http://apps.dparseh.com/images/home_page/a14.jpg?' + session_rand + '"),url("images/loading.gif")');
+				
+				$('.a0-1').css('background-image', 'url("http://apps.dparseh.com/images/home_page/slider/1.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a0-2').css('background-image', 'url("http://apps.dparseh.com/images/home_page/slider/2.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a0-3').css('background-image', 'url("http://apps.dparseh.com/images/home_page/slider/3.jpg?' + session_rand + '"),url("images/loading.gif")');
+				$('.a0-4').css('background-image', 'url("http://apps.dparseh.com/images/home_page/slider/4.jpg?' + session_rand + '"),url("images/loading.gif")');
+			}
+			window.sessionStorage.setItem('go_to_first',"false");
+			init_menu();
+			if(window.localStorage.getItem('registered') == null)
+			{
+				window.localStorage.setItem('registered',0);				
+			}
+			
+			if(window.localStorage.getItem('uuid') == null)
+				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
+			else
+			{
+				//getURL_login(window.localStorage.getItem('uuid'));
+				$('.mypreload').html("");
+			}
+			window.sessionStorage.setItem('we_are_in',"index");
+			FastClick.attach(document.body);
+			//FastClick.attach(document.getElementById('container'));
+			
+			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
+				document.addEventListener("backbutton", go_back_index, false);
+			}
+			if(window.sessionStorage.getItem('LOAD_URL') == null)
+			{
+				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
+			}
+
+
+			
+			//getURL("http://apps.dparseh.com?uuid=" + device.uuid + "&registered=" + window.localStorage.getItem('registered'),true,false);
+			//getURL_silent("http://apps.dparseh.com?uuid=" + window.localStorage.getItem('uuid') + "&registered=" + window.localStorage.getItem('registered'),true,false);
+
+			//getMENU();
+			register_notification_home();
+		}
+		function uniqueDeviceIDsuccess_index(uuid)
+		{
+			//alert(uuid);
+			window.localStorage.setItem('uuid',uuid);
+			$('.mypreload').html("");
+			//getURL_login(uuid);
+		};
+		function uniqueDeviceIDfail_index(uuid)
+		{
+			//alert("uniqueDeviceIDfail" + uuid);
+		};
+		
+		function loadcompeleted() {
+			$("#loading").html("");
+		}
+		
+
+		function go_back_index() {
+			navigator.notification.confirm(
+				'آیا تمایل به خروج از برنامه را دارید؟',	// message
+				onExitConfirm,								// callback
+				'توجه',										// title
+				['بله','خیر']								// buttonName
+			);
+		}
+		function onExitConfirm(buttonIndex) {
+			if(buttonIndex==1)
+			{
+				navigator.app.exitApp();
+			}
+			else
+			{
+				
+			}
 		}
 	</script>
+	
+	
+	
+<style>
+*{text-rendering:auto !important;}
 
+
+</style>
+</head>
+<body onload="init();">
+<nav id="menu" class="mm-offcanvas mm-menu mm-horizontal mm-right"></nav>
+
+<div id="wrapper" >
+	<div id="header" class="FixedTop">
+			<h1 style="font-weight: normal; text-shadow: 0px 0px 0px transparent;"><img src="images/news/header.png" class="header-image">دندانپزشکی پارسه</h1>
+			<a href="#menu" id="headermenu" class="ui-btn-right menu">Menu</a>
+			<!--<div id="backBTN" onclick="go_back();" class="ui-btn-left">back</div>-->
+    </div><!-- /header -->
+
+    <div id="main">
+	<!--
+		<div id="test" onclick="play_it_now();">
+		1111111111111111111111
+		</div>
+		<br/><br/>
+		<div id="test" onclick="play_it_now2();">
+		2222222222222222222222
+		</div>
+	-->
+	
+	
+		<div class="container mypreload" id="container" >
+				<div id="ajax">
+					<div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:visible;" class="blockUI blockOverlay"></div>
+					<div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:visible;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div>
+					<div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 50%; left: 0%; text-align: center;border: medium none;overflow:visible;height:500px;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div>
+				</div>
+		</div>
+		<div class="container myregister" id="container" >
+			<div id="reg_div" >
+				<div id="desc">
+					<br/>
+					به سامانه هوشمند دندانپزشکی پارسه خوش آمدید.
+				</div>
+				<a href="#" onclick="openURL('http://apps.dparseh.com/index.php?option=com_myacademy&view=myuser&Itemid=488&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn">عضویت بدون هزینه<br/><span>(ورود برای اولین بار)</span></div></a>
+				<a href="#" onclick="openURL('http://apps.dparseh.com/index.php?option=com_myacademy&view=login&Itemid=488&template=comment&uuid='+window.localStorage.getItem('uuid'),false,true);" ><div id="width:100%;" class="reg_btn" >ورود کاربران عضو<br/><span>(دارای رمز ورود)</span></div></a>
+			</div>
+		</div>
+		<div class="container mymenu" id="container" >
+				<script>
+					$(function() {
+						$("#slides").slidesjs({
+							width: 512,
+							height: 797,//497,
+							navigation: {
+								active: false
+							},
+							pagination: {
+								active: false
+							},
+							play: { auto: false,interval: 3000}
+							//play: { auto: true,interval: 3000}
+						});
+						$("#slides2").slidesjs({
+							width: 512,
+							height: 797,//497,
+							navigation: {
+								active: false
+							},
+							pagination: {
+								active: false
+							},
+							play: { auto: true,interval: 3000}
+						});
+					});
+				</script>
+				<div id="big" class="a0" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=120',true,false);" >
+					<div id="slides">
+						<div class="home_slide a0-1" style="background-image:url('images/index/slider/1.jpg');"></div>
+						<div class="home_slide a0-2" style="background-image:url('images/index/slider/2.jpg');"></div>
+						<div class="home_slide a0-3" style="background-image:url('images/index/slider/3.jpg');"></div>
+						<div class="home_slide a0-4" style="background-image:url('images/index/slider/4.jpg');"></div>
+					</div>
+					<span id="text"><p> محتوا پکیج بررسی و درک مفاهیم</p></span>
+				</div>
+				<!--
+				<div id="small" class="a2" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=229',true,false);" >
+					<span id="text"><p>محتوای سؤالات ورودی و بورد</p></span>
+				</div>
+				-->
+				<!--
+				<div id="small" class="a3" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=228',true,false);" >
+					<span id="text"><p>ثبت نام آزمون ها</p></span>
+				</div>
+				-->
+				<!--
+				<div id="small" class="a7" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=227',true,false);" >
+					<span id="text"><p>مشاوره و برنامه ریزی</p></span>
+				</div>
+				-->
+				<!--
+				<div id="small" class="a9" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=544',true,false);" >
+					<span id="text"><p>دستیار کنار دندانپزشک</p></span>
+				</div>
+				-->
+				<div id="small" class="a11" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=231',true,false);" >
+					<span id="text"><p>معرفی پکیج های آموزشی کلینیکال</p></span>
+				</div>
+				<!--
+				<div id="small" class="a15" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=528',true,false);" >
+					<span id="text"><p>باشگاه دانش آموختگان و اساتید پارسه</p></span>
+				</div>
+				-->
+				
+				
+				
+				<div id="small" class="a16" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=227',true,false);" >
+					<span id="text"><p>مشاوره و برنامه ریزی</p></span>
+				</div>
+				<div id="small" class="a4" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=403',true,false);" >
+					<span id="text"><p>معرفی پکیج های آمادگی آزمون رزیدنتی</p></span>
+				</div>
+				<div id="small" class="a1" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=230',true,false);" >
+					<span id="text"><p>محتوای خلاصه و جمع بندی (مرور سریع)</p></span>
+				</div>
+				<div id="small" class="a5" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=542',true,false);" >
+					<span id="text"><p>محتوای پکیج زبان انگلیسی</p></span>
+				</div>
+				<div id="small" class="a8" onclick="openURL('http://apps.dparseh.com/index.php?option=com_content&view=category&layout=smcms:bookarchive&id=120&Itemid=233',true,false);" >
+					<span id="text"><p>آرشیو نشریات</p></span>
+				</div>
+				<div id="small" class="a10" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=232',true,false);" >
+					<span id="text"><p>آموزش کلینیکال(بدون هزینه)</p></span>
+				</div>
+				<a href="favorite.html">
+					<div id="small" class="a13" ><span id="text"><p>صفحات مورد علاقه</p></span></div>
+				</a>
+				<a href="contact.html">
+					<div id="small" class="a14" ><span id="text"><p>ارتباط با ما</p></span></div>
+				</a>
+				<div id="small" class="a12" onclick="openURL('http://apps.dparseh.com/index.php?option=com_myacademy&view=notificationqueues&Itemid=424',true,false);" >
+					<span id="text"><p>اطلاع رسانی</p></span>
+				</div>
+				<div id="small" class="a6" onclick="openURL('http://apps.dparseh.com/index.php?option=com_blankcomponent&view=default&Itemid=543',true,false);" >
+					<span id="text"><p>منابع آزمون (ebook) </p></span>
+				</div>
+		</div>
+
+	</div><!-- /content -->
+
+    <div id="footer" class="FixedBottom"></div><!-- /footer -->
+</div><!-- /page -->
 </body>
 </html>
