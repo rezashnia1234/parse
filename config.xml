@@ -103,6 +103,7 @@
 	<!--<gap:plugin name="com.hutchind.cordova.plugins.streamingmedia"  source="plugins.cordova.io" />-->
 	<plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media.git" source="git" />
 	<plugin spec="https://github.com/nchutchind/Vitamio-Cordova-Plugin.git" source="git" />
+	<plugin spec="https://github.com/fastrde/cordova-plugin-fastrde-downloader.git" source="git" />
 
 
     <!-- Define app icon      -->
