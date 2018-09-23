@@ -82,7 +82,7 @@
 
 	<plugin spec="https://github.com/Paldom/UniqueDeviceID.git" source="git" />
 	<plugin spec="https://github.com/fiscal-cliff/phonegap-plugin-brightness.git" source="git" />
-	<!-- <plugin spec="https://github.com/phonegap/phonegap-plugin-contentsync" source="git" /> -->
+	<plugin spec="https://github.com/phonegap/phonegap-plugin-contentsync" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-statusbar.git " source="git" />
 	<preference name="StatusBarOverlaysWebView"			value="false" />
 	<preference name="StatusBarBackgroundColor" value="#141D1A" />
