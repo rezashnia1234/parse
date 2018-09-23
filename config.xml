@@ -101,8 +101,8 @@
 	
 	<!--<gap:plugin name="com.dawsonloudon.videoplayer" 	platform="android"	version="1.0.0" />-->
 	<!--<gap:plugin name="com.hutchind.cordova.plugins.streamingmedia"  source="plugins.cordova.io" />-->
-	<plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media.git" source="git" />
-	<plugin spec="https://github.com/nchutchind/Vitamio-Cordova-Plugin.git" source="git" />
+	<!-- <plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media.git" source="git" /> -->
+	<!-- <plugin spec="https://github.com/nchutchind/Vitamio-Cordova-Plugin.git" source="git" /> -->
 	<!-- <plugin spec="https://github.com/mramonlopez/cordova-plugin-file-downloader.git" source="git" /> -->
 	<plugin spec="https://github.com/nebulr/cordova-plugin-foxitpdf.git" source="git" platform="android" />
 	<plugin spec="https://github.com/sitewaerts/cordova-plugin-document-viewer.git" source="git" platform="ios" />
