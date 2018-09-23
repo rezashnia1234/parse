@@ -104,7 +104,7 @@
 	<!-- <plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media.git" source="git" /> -->
 	<!-- <plugin spec="https://github.com/nchutchind/Vitamio-Cordova-Plugin.git" source="git" /> -->
 	<plugin spec="https://github.com/mramonlopez/cordova-plugin-file-downloader.git" source="git" />
-	<plugin spec="https://github.com/sitewaerts/cordova-plugin-document-viewer.git" source="git" />
+	<plugin spec="https://github.com/Ajunboys/cordova-plugin-document-viewer.git" source="git" />
 	
 
 
