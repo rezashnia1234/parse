@@ -10,55 +10,27 @@
     <link rel="stylesheet" type="text/css" href="download/css/template.css">
 
 	<script src="download/js/jquery-2.2.2.min.js"></script>
-	<!-- <script src="js/console.log.js"></script> -->
+	<script src="js/console.log.js"></script>
     <script src="cordova.js"></script>
     <script src="download/js/jquery.md5.js"></script>
 	<script>
+alert("1");
+		window.sessionStorage.setItem("download_file","https://www.sample-videos.com/zip/10mb.zip");
+		//window.sessionStorage.setItem("download_file","http://apps.dparseh.com/images/test.pdf");
 		//window.sessionStorage.setItem("download_file","http://apps.dparseh.com/images/test.pdf");
 		var server_url = window.sessionStorage.getItem("download_file");
 		function goto_home() {
 			parent.history.back();
 			//window.location.href = "index.html";
 		}
-		function init() {		
+		function init() {
+alert("init");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////
-		document.addEventListener("DOWNLOADER_downloadProgress", function(event){
-			var data = event.data;
-			var perc = data[0];
-			$('#status').html(perc + "%");
-			$('.progress-bar-percent').css('width',perc + "%");
-		});
-		document.addEventListener("DOWNLOADER_downloadSuccess", function(event){
-			var data = event.data;
-			//alert(JSON.stringify(data[0]));
-			window.localStorage.setItem($.md5(URL),data[0]["nativeURL"]);
-			
-			navigator.notification.alert(
-				'The download process has been successfully completed.',  // message
-				goto_home,         // callback
-				'Warning',            // title
-				'Ok'                  // buttonName
-			);
-			//window.localStorage.setItem('pano_localPath',data.localPath);
-		});
-		document.addEventListener("DOWNLOADER_downloadError", function(event){
-			var data = event.data;
-			alert("Downloader Error :" + JSON.stringify(data));
-		});
-		document.addEventListener("DOWNLOADER_getFileError", function(event){
-			var data = event.data;
-			alert("Downloader getFileError :" + JSON.stringify(data));
-		});
-		document.addEventListener("DOWNLOADER_error", function(event){
-			var data = event.data;
-			alert("Downloader Error 2 :" + JSON.stringify(data));
-		});
-
 		function alertDismissed_check_net(){
 			console.log("alertDismissed_check_net : loop :" + window.sessionStorage.getItem("do_loop"));
 			if(window.sessionStorage.getItem("do_loop")=="1")
@@ -68,6 +40,7 @@
 			}
 		};
 		function check_net(show_alert,do_loop){
+alert("check net");
 			if(navigator.connection.type)
 				networkState = navigator.connection.type;
 			else
@@ -90,8 +63,8 @@
 				}
 				return false;
 			}
-			downloader.init({folder: "pdf",noMedia: true });
-			downloader.get(server_url);
+
+			download_file(server_url,'pdf');
 			return true;
 		}
 
@@ -109,6 +82,7 @@
 			);
 		}
 		function onDeviceReady() {
+alert("device ready");
 			setTimeout(function(){
 				window.brightness = cordova.require("cordova.plugin.Brightness.Brightness");
 				brightness.setKeepScreenOn(true);
@@ -129,7 +103,43 @@
 			check_net(true,true);
 		}
 
+		
+		
+	function download_file(URL,Folder) {//, type:'merge'
+alert("download file");
+		var sync = ContentSync.sync({ src: URL, id: Folder, type:'merge', timeout:144000000 });
+		sync.on('progress', function(data) {
+			// data.progress
+			var perc = data.progress;
+			//$('#status').html(perc + "% --" + data.status);
+			$('#status').html(perc + "%");
+			$('.progress-bar-percent').css('width',perc + "%");
+		});
 
+		sync.on('complete', function(data) {
+			// data.localPath
+alert("Downloader complete :" + JSON.stringify(data));
+alert("Downloader complete :" + data.localPath);
+
+			window.localStorage.setItem('pano_localPath',data.localPath);
+			//alert("complete : " + data.localPath);
+			//alert("complete cached : " + data.cached);
+			navigator.notification.alert(
+				'The download process has been successfully completed.',  // message
+				goto_home,         // callback
+				'Warning',            // title
+				'Ok'                  // buttonName
+			);
+		});
+
+		sync.on('error', function(e) {
+			// e.message
+alert("Downloader Error :" + JSON.stringify(e));
+			console.log(e);
+			console.log(e.message);
+			alert("error : " + e.message);
+		});
+	}
 /////END DOWNLOAD////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
