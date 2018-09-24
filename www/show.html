@@ -35,7 +35,71 @@
 	<script src="gallery/photoswipe.init.js"></script>
 	<script type="text/javascript" src="js/notification.js"></script>
 	<script>
-		
+		function view_pdf(url)
+		{
+			if(window.localStorage.getItem($.md5(server_url))==null)
+			{
+				window.sessionStorage.setItem("download_file",url);
+				window.location.href = "download.html";
+			}
+			else
+			{
+				var url = window.localStorage.getItem($.md5(server_url));
+				view_pdf(url);
+			}
+		}
+		function check_session_to_view_pdf(url)
+		{
+			if(window.sessionStorage.getItem("view_pdf_file")!=null && window.sessionStorage.getItem("view_pdf_file")!="" )
+			{
+				var url = window.sessionStorage.getItem("view_pdf_file");
+				window.sessionstorage.removeitem("view_pdf_file");
+				view_pdf(url);
+			}
+		}
+		function view_pdf(url)
+		{
+			var options = {
+				title: "View PDF FIle",
+				documentView : {
+					closeLabel : "Close"
+				},
+				navigationView : {
+					closeLabel : "Close"
+				},
+				email : {
+					enabled : false
+				},
+				print : {
+					enabled : false
+				},
+				openWith : {
+					enabled : false
+				},
+				bookmarks : {
+					enabled : true
+				},
+				search : {
+					enabled : true
+				},
+				autoClose: {
+					onPause : true
+				}
+			}
+			function onShow(){}
+			function onMissingApp(appId, installer)
+			{
+				if(confirm("Do you want to install the free PDF Viewer App " + appId + " for Android?"))
+				{
+					installer();
+				}
+			}
+			function onClose(){}
+			function onError(error){alert("DocumentViewer Error :" + JSON.stringify(error));}
+			window.sessionstorage.removeitem("view_pdf_file");
+			cordova.plugins.SitewaertsDocumentViewer.viewDocument(url, 'application/pdf', options, onShow, onClose, onMissingApp, onError, []);
+		}
+
 		function init() {			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);

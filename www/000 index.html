@@ -10,11 +10,11 @@
     <link rel="stylesheet" type="text/css" href="download/css/template.css">
 
 	<script src="download/js/jquery-2.2.2.min.js"></script>
-	<!-- <script src="js/console.log.js"></script> -->
+	<script src="js/console.log.js"></script>
     <script src="cordova.js"></script>
     <script src="download/js/jquery.md5.js"></script>
 	<script>
-		//window.sessionStorage.setItem("download_file","http://apps.dparseh.com/images/test.pdf");
+		window.sessionStorage.setItem("download_file","http://apps.dparseh.com/images/test.pdf");
 		var server_url = window.sessionStorage.getItem("download_file");
 		function goto_home() {
 			parent.history.back();
@@ -37,7 +37,51 @@
 			var data = event.data;
 			//alert(JSON.stringify(data[0]));
 			window.localStorage.setItem($.md5(server_url),data[0]["nativeURL"]);
-			window.sessionStorage.setItem("view_pdf_file",data[0]["nativeURL"])
+			
+			var options = {
+				title: "View PDF FIle",
+				documentView : {
+					closeLabel : "Close"
+				},
+				navigationView : {
+					closeLabel : "Close"
+				},
+				email : {
+					enabled : false
+				},
+				print : {
+					enabled : false
+				},
+				openWith : {
+					enabled : false
+				},
+				bookmarks : {
+					enabled : true
+				},
+				search : {
+					enabled : true
+				},
+				autoClose: {
+					onPause : true
+				}
+			}
+			function onShow(){}
+			function onMissingApp(appId, installer)
+			{
+				if(confirm("Do you want to install the free PDF Viewer App " + appId + " for Android?"))
+				{
+					installer();
+				}
+			}
+			function onClose(){}
+			function onError(error){alert("DocumentViewer Error :" + JSON.stringify(error));}
+			var url = data[0]["nativeURL"];
+			cordova.plugins.SitewaertsDocumentViewer.viewDocument(url, 'application/pdf', options, onShow, onClose, onMissingApp, onError, []);
+			
+			
+			
+			
+			
 			navigator.notification.alert(
 				'The download process has been successfully completed.',  // message
 				goto_home,         // callback
