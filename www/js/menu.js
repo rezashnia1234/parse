@@ -45,9 +45,9 @@
 	
 	function init_menu() {
 		$("#menu").html(panel);
-		FastClick.attach(document.getElementById('nav-panel'));
-		FastClick.attach(document.getElementById('header'));
-		FastClick.attach(document.getElementById('headermenu'));
+		// FastClick.attach(document.getElementById('nav-panel'));
+		// FastClick.attach(document.getElementById('header'));
+		// FastClick.attach(document.getElementById('headermenu'));
 		
 		$(function() {
 			$('nav#menu').mmenu({

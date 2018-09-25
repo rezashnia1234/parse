@@ -1588,6 +1588,7 @@ strong {
 }
 .container img {
   max-width: 100%;
+  width: 200px;
 }
 /*///////////////////////////////////////////////////////////////////////
 ///////////////////nashriat////////////////////////////////////*/
@@ -1791,7 +1792,16 @@ background-image: url(../images/newmenus/term2.png) !important;
 	background-size: 70px auto;
 	padding:10px 99px 10px 10px;
 }
-
+button.pdf_viewer {
+    width: 100%;
+    padding: 14px 5px;
+    direction: rtl;
+    background-color: #6E072E;
+    border-style: none;
+    border-radius: 5px;
+    color: #ffffff;
+    box-sizing: border-box;
+}
 
 
 
