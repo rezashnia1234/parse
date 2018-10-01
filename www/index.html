@@ -58,6 +58,7 @@
 			}
 			if(window.localStorage.getItem('registered') == 0)
 			{
+//alert("registered=0");
 				$('.mymenu').html("");
 				$('.ui-btn-right.menu').css("display","none");
 				$('#header h1').css("cssText","margin-right:39px !important");
@@ -68,12 +69,14 @@
 			}
 			if(window.localStorage.getItem('registered') == 1)
 			{
+//alert("registered=1");
 				$('#wrapper').remove();
 				$('#menu').remove();
 			}
 		}
 
 		function onDeviceReady() {
+//alert("onDeviceReady");
 		
 			if(navigator.connection.type)
 				networkState = navigator.connection.type;
@@ -81,6 +84,7 @@
 				networkState = navigator.connection.effectiveType;
 				
 			if (networkState != Connection.NONE && window.sessionStorage.getItem("homepage_text")==null) {
+//alert("ajax");
 				$.ajax({
 						url: 'http://apps.dparseh.com/menu.php',
 						type: "POST",
@@ -88,9 +92,13 @@
 						{
 							window.localStorage.setItem("homepage_text",text);
 							window.sessionStorage.setItem("homepage_text",text);
-							$("#container.mymenu").html(text);
-							setTimeout(function(){ jQuery('.mypreload').css("opacity","0"); }, 500);
-							setTimeout(function(){ jQuery('.mypreload').addClass("display_none"); }, 1400);
+//alert(text);
+							if(window.localStorage.getItem('registered') == 1)
+							{
+								$("#container.mymenu").html(text);
+								setTimeout(function(){ jQuery('.mypreload').css("opacity","0"); }, 500);
+								setTimeout(function(){ jQuery('.mypreload').addClass("display_none"); }, 1400);
+							}
 						},
 						error: function(jqXHR, exception) {
 						},
@@ -98,14 +106,22 @@
 			}
 			else if(window.localStorage.getItem("homepage_text")!=null)
 			{
-				$("#container.mymenu").html(window.localStorage.getItem("homepage_text"));
-				setTimeout(function(){ jQuery('.mypreload').css("opacity","0"); }, 500);
-				setTimeout(function(){ jQuery('.mypreload').addClass("display_none"); }, 1400);
+//alert("cach homepage_text");
+				if(window.localStorage.getItem('registered') == 1)
+				{
+					$("#container.mymenu").html(window.localStorage.getItem("homepage_text"));
+					setTimeout(function(){ jQuery('.mypreload').css("opacity","0"); }, 500);
+					setTimeout(function(){ jQuery('.mypreload').addClass("display_none"); }, 1400);
+				}
 			}
 			else
 			{
-				setTimeout(function(){ jQuery('.mypreload').css("opacity","0"); }, 500);
-				setTimeout(function(){ jQuery('.mypreload').addClass("display_none"); }, 1400);
+//alert("old cach homepage_text");
+				if(window.localStorage.getItem('registered') == 1)
+				{
+					setTimeout(function(){ jQuery('.mypreload').css("opacity","0"); }, 500);
+					setTimeout(function(){ jQuery('.mypreload').addClass("display_none"); }, 1400);
+				}
 			}
 			
 			
