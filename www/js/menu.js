@@ -238,7 +238,7 @@
 	}
 	function blockui() {
 		$.blockUI({
-			message: '<img src="images/preloader.gif"/>',
+			message: '<img src="images/preloader.svg"/>',
 			css: {
 				color: '#f2f2f2',
 				backgroundColor: '#f2f2f2',
