@@ -56,11 +56,12 @@
 			//onDeviceReady();
 			if(window.localStorage.getItem('registered') == null)
 			{
+				alert("registered : null");
 				window.localStorage.setItem('registered',0);				
 			}
 			if(window.localStorage.getItem('registered') == 0)
 			{
-//alert("registered=0");
+alert("registered=0");
 				$('.mymenu').html("");
 				$('.ui-btn-right.menu').css("display","none");
 				$('#header h1').css("cssText","margin-right:39px !important");
