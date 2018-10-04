@@ -49,6 +49,8 @@
 			}
 		}, 1000);
 		function init() {
+			alert("registered : " + window.localStorage.getItem('registered'));
+			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
 			//onDeviceReady();
