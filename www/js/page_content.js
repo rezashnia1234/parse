@@ -204,7 +204,8 @@ function getURL(URL,cache,iframe) {
 							data: {
 								uuidd: myuuid,
 								registered: myregistered,
-								testdata: "test text"
+								testdata: "test text",
+								app_version: app_version
 							},
 							async: true,
 							success : function(text)

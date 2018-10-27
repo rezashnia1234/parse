@@ -43,25 +43,26 @@
 						window.localStorage.setItem("uuid","test");
 						
 					window.localStorage.setItem("registered",1);
-						
+					window.localStorage.setItem('username',"1234");
+					
 					onDeviceReady();
 				}, 1500);
 			}
 		}, 1000);
 		function init() {
-			alert("registered : " + window.localStorage.getItem('registered'));
+			// alert("registered : " + window.localStorage.getItem('registered'));
 			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
 			//onDeviceReady();
 			if(window.localStorage.getItem('registered') == null)
 			{
-				alert("registered : null");
+				// alert("registered : null");
 				window.localStorage.setItem('registered',0);				
 			}
 			if(window.localStorage.getItem('registered') == 0)
 			{
-alert("registered=0");
+// alert("registered=0");
 				$('.mymenu').html("");
 				$('.ui-btn-right.menu').css("display","none");
 				$('#header h1').css("cssText","margin-right:39px !important");

@@ -11,6 +11,7 @@ function check_device() {
 			{
 				if(window.sessionStorage.getItem('logined') == null)
 				{
+					//http://apps.dparseh.com/webservice/?act=set_status&device_id=1&user=1234&status=1
 					// console.log("need logined");
 					$.ajax({ type: "get",
 							url: "http://apps.dparseh.com/webservice/", 
@@ -22,7 +23,11 @@ function check_device() {
 // alert(text);
 								text = JSON.parse(text);
 								// debugger;
-								if(text.success == "true")
+								if(text.success == "true" && text.result.account_online_status == "0")
+								{
+									window.location.href = "logout3.html";
+								}
+								else if(text.success == "true")
 								{
 									window.sessionStorage.setItem('logined','yes');
 									window.sessionStorage.setItem('token',text.result.token);
@@ -42,7 +47,11 @@ function check_device() {
 // alert(text);
 								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device checked : ' + text);
 								text = JSON.parse(text);
-								if(text.success == "true" && text.result.loged_in == "false")
+								if(text.success == "true" && text.result.account_online_status == "0")
+								{
+									window.location.href = "logout3.html";
+								}
+								else if(text.success == "true" && text.result.loged_in == "false")
 								{
 // alert("go to logout");
 									window.location.href = "logout.html";
