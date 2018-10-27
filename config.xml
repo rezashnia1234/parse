@@ -100,6 +100,12 @@
 	</edit-config>
 	<plugin spec="https://github.com/danielsogl/cordova-plugin-background-audio.git" source="git" />
 	
+	<!--<gap:plugin name="com.dawsonloudon.videoplayer" 	platform="android"	version="1.0.0" />-->
+	<!--<gap:plugin name="com.hutchind.cordova.plugins.streamingmedia"  source="plugins.cordova.io" />-->
+	<!-- <plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media.git" source="git" /> -->
+	<!-- <plugin spec="https://github.com/nchutchind/Vitamio-Cordova-Plugin.git" source="git" /> -->
+
+	
 
 
     <!-- Define app icon      -->
