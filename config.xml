@@ -107,6 +107,15 @@
 	<plugin spec="https://github.com/mramonlopez/cordova-plugin-file-downloader.git" source="git" />
 	<plugin spec="https://github.com/Ajunboys/cordova-plugin-document-viewer.git" source="git" />
 	
+
+
+    <!-- Define app icon      -->
+    <icon src="res/icon.png" />
+    <icon src="res/splash.png" />
+
+
+    <platform name="android">
+    </platform>
     <platform name="ios">
         <icon src="res/icons/ios/icon-1024.png" width="1024" height="1024"/>
         <icon src="res/icons/ios/icon-small.png" width="29" height="29"/>
