@@ -241,11 +241,16 @@
 	}
 	function blockui() {
 		$.blockUI({
-			message: '<img src="images/preloader.svg"/>',
+			message: '<img src="images/preloader.svg"/><br/>11111111111111111111111',
 			css: {
-				color: '#f2f2f2',
+				// color: '#f2f2f2',
 				backgroundColor: '#f2f2f2',
-				border: 'none'
+				border: 'none',
+				
+				left: '0',
+				top: '28%',
+				width: '100%',
+				
 			},
 			overlayCSS: {
 				backgroundColor: '#f2f2f2',
