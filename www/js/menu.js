@@ -225,7 +225,10 @@
 	}
 	function exit() {
 		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Exit the app! command');
-		navigator.app.exitApp();
+		// navigator.app.exitApp();
+		window.localStorage.clear();
+		window.sessionStorage.clear();
+		window.location.href = "index.html";
 	}
 	function loadURL(url){
 		//url = $(this).attr("rel");   
