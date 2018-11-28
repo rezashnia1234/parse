@@ -39,7 +39,7 @@ function check_device() {
 					// console.log("we are logined");
 					$.ajax({ type: "get",
 							url: "http://apps.dparseh.com/webservice/", 
-							data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
+							data: {act : "check",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
 							async: false,
 							success : function(text)
 							{

@@ -225,10 +225,32 @@
 	}
 	function exit() {
 		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Exit the app! command');
-		// navigator.app.exitApp();
-		window.localStorage.clear();
-		window.sessionStorage.clear();
-		window.location.href = "index.html";
+		// window.localStorage.clear();
+		// window.sessionStorage.clear();
+		// window.location.href = "index.html";
+		
+		$.ajax({ type: "get",
+				url: "http://apps.dparseh.com/webservice/", 
+				data: {act : "logout",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
+				async: false,
+				success : function(text)
+				{
+					console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logout : ' + text);
+// alert(text);
+					text = JSON.parse(text);
+					// debugger;
+					// if(text.success == "true" && text.result.account_online_status == "0")
+					// {
+						// window.location.href = "logout3.html";
+					// }
+					// else if(text.success == "true")
+					if(text.success == "true")
+					{
+						window.sessionStorage.setItem('logined','false');
+						window.location.href = "logout3.html";
+					}
+				}
+		});
 	}
 	function loadURL(url){
 		//url = $(this).attr("rel");   
@@ -241,7 +263,7 @@
 	}
 	function blockui() {
 		$.blockUI({
-			message: '<img src="images/preloader.svg"/><br/>11111111111111111111111',
+			message: '<img src="images/preloader.svg"/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
 			css: {
 				// color: '#f2f2f2',
 				backgroundColor: '#f2f2f2',
