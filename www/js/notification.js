@@ -2,62 +2,36 @@
 function check_device() {
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
-	
+		// alert("No Intenet");
+		window.location.href = "need_internet.html";
 	}
 	else
 	{
 // alert(window.localStorage.getItem('username'));
 			if(window.localStorage.getItem('registered') != null && window.localStorage.getItem('username') != null )
 			{
-				if(window.sessionStorage.getItem('logined') == null)
-				{
-					// console.log("need logined");
-					$.ajax({ type: "get",
-							url: "http://apps.dparseh.com/webservice/", 
-							data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
-							async: false,
-							success : function(text)
+				// console.log("need logined");
+				$.ajax({ type: "get",
+						url: "http://apps.dparseh.com/webservice/", 
+						data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
+						async: false,
+						success : function(text)
+						{
+							console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logined : ' + text);
+alert(text);
+							text = JSON.parse(text);
+							// debugger;
+							if(text.success == "true" && text.result.account_online_status == "0")
 							{
-								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logined : ' + text);
-// alert(text);
-								text = JSON.parse(text);
-								// debugger;
-								if(text.success == "true" && text.result.account_online_status == "0")
-								{
-									window.location.href = "logout3.html";
-								}
-								else if(text.success == "true")
-								{
-									window.sessionStorage.setItem('logined','yes');
-									// window.sessionStorage.setItem('token',text.result.token);
-								}
+								window.location.href = "logout3.html";
 							}
-					});
-				}
-				else
-				{
-					// console.log("we are logined");
-					$.ajax({ type: "get",
-							url: "http://apps.dparseh.com/webservice/", 
-							data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
-							async: false,
-							success : function(text)
+							else if(text.success == "true")
 							{
-// alert(text);
-								console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device checked : ' + text);
-								text = JSON.parse(text);
-								if(text.success == "true" && text.result.account_online_status == "0")
-								{
-									window.location.href = "logout3.html";
-								}
-								else if(text.success == "true" && text.result.loged_in == "false")
-								{
-// alert("go to logout");
-									window.location.href = "logout.html";
-								}
+								window.sessionStorage.setItem('logined','yes');
+								// window.sessionStorage.setItem('token',text.result.token);
 							}
-					});
-				}
+						}
+				});
 			}
 		
 	}
