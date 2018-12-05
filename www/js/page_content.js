@@ -32,6 +32,7 @@ function getURL(URL,cache,iframe) {
 //alert("we have no internet - we have cache");
 			$('.container').html(article_json);
 			$('#preloader').remove();
+			$("body").removeClass("full");
 			FastClick.attach(document.getElementById('container'));
 			
 			$('.container a').on("click", function (e) {
@@ -104,6 +105,7 @@ function getURL(URL,cache,iframe) {
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("<div style='text-align: center; font-weight: bold; margin-top: 50px; width: 100%;'>براي مشاهده اين صفحه نياز به اينترنت داريد</div>");
 			$('#preloader').remove();
+			$("body").removeClass("full");
 			$('#favoriteBTN').css("display","none");
 			navigator.notification.alert(
 				'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
@@ -129,6 +131,7 @@ function getURL(URL,cache,iframe) {
 //alert("we have internet - we have recent cache");
 						$('.container').html(article_json);
 						$('#preloader').remove();
+						$("body").removeClass("full");
 						FastClick.attach(document.getElementById('container'));
 						
 						$('.container a').on("click", function (e) {
@@ -220,6 +223,7 @@ function getURL(URL,cache,iframe) {
 								
 								$('.container').html(target_text);
 								$('#preloader').remove();
+								$("body").removeClass("full");
 								FastClick.attach(document.getElementById('container'));
 
 								$('.container a').on("click", function (e) {
@@ -314,6 +318,7 @@ function getURL(URL,cache,iframe) {
 									$('.container').html('Uncaught Error.\n' + jqXHR.responseText);
 								}
 								$('#preloader').remove();
+								$("body").removeClass("full");
 							},
 							//error : function (request, status, error) {
 							//	alert(request.responseText);
@@ -353,6 +358,7 @@ function getURL(URL,cache,iframe) {
 			temp_html = temp_html + "</style>";
 			$('.container').html(temp_html);
 			// $('#preloader').remove();//it will run in show.html on "loadcompeleted()" event
+			// $("body").removeClass("full");
 		}
 		
 	}

@@ -145,6 +145,7 @@
 		function loadcompeleted() {
 			//$("#loading").html("");
 			$('#preloader').remove();
+			$("body").removeClass("full");
 			$("#controls").css("display","none");
 			
 			url= Base64.decode(getParameterByName("url"));
@@ -225,7 +226,7 @@
 	
 	</style>
 </head>
-<body onload="init();">
+<body onload="init();" class="full">
 <nav id="menu" class="mm-offcanvas mm-menu mm-horizontal mm-right"></nav>
 
 <style>
@@ -253,6 +254,13 @@ div#preloader img {
     bottom: 0;
     display: block;
     margin: auto;
+}
+body.full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 </style>
 <div style="" id="preloader" ><img src="images/preloader.svg"></div>
