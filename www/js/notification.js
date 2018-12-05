@@ -18,7 +18,7 @@ function check_device() {
 						success : function(text)
 						{
 							console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logined : ' + text);
-alert(text);
+// alert(text);
 							text = JSON.parse(text);
 							// debugger;
 							if(text.success == "true" && text.result.account_online_status == "0")

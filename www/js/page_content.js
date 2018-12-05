@@ -31,6 +31,7 @@ function getURL(URL,cache,iframe) {
 		{
 //alert("we have no internet - we have cache");
 			$('.container').html(article_json);
+			$('#preloader').remove();
 			FastClick.attach(document.getElementById('container'));
 			
 			$('.container a').on("click", function (e) {
@@ -102,6 +103,7 @@ function getURL(URL,cache,iframe) {
 //alert("we have no internet - no cache");
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / no internet AND no cache');
 			$('.container').html("<div style='text-align: center; font-weight: bold; margin-top: 50px; width: 100%;'>براي مشاهده اين صفحه نياز به اينترنت داريد</div>");
+			$('#preloader').remove();
 			$('#favoriteBTN').css("display","none");
 			navigator.notification.alert(
 				'شما برای مشاهده این صفحه نیاز به اینترنت دارید',  // message
@@ -126,6 +128,7 @@ function getURL(URL,cache,iframe) {
 					{
 //alert("we have internet - we have recent cache");
 						$('.container').html(article_json);
+						$('#preloader').remove();
 						FastClick.attach(document.getElementById('container'));
 						
 						$('.container a').on("click", function (e) {
@@ -216,6 +219,7 @@ function getURL(URL,cache,iframe) {
 								target_text = target_text.replace('src="/images/','src="http://apps.dparseh.com/images/');
 								
 								$('.container').html(target_text);
+								$('#preloader').remove();
 								FastClick.attach(document.getElementById('container'));
 
 								$('.container a').on("click", function (e) {
@@ -309,6 +313,7 @@ function getURL(URL,cache,iframe) {
 								} else {
 									$('.container').html('Uncaught Error.\n' + jqXHR.responseText);
 								}
+								$('#preloader').remove();
 							},
 							//error : function (request, status, error) {
 							//	alert(request.responseText);
@@ -323,8 +328,8 @@ function getURL(URL,cache,iframe) {
 			URL = updateURLParameter(URL, "uuidd", myuuid);
 			URL = updateURLParameter(URL, "registered", myregistered);
 			// var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img style="width:150px;" src="images/preloader.svg"></div></div>';
-			var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:visible;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%;background-color: #f0f0f0; text-align: center;border: medium none;overflow:visible;" class="blockUI blockMsg blockPage"><img src="images/preloader.svg"><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></div>';
-
+			// var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:visible;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%;background-color: #f0f0f0; text-align: center;border: medium none;overflow:visible;" class="blockUI blockMsg blockPage"><img src="images/preloader.svg"><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></div>';
+			var temp_html = "";
 			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' style='margin-bottom:45px;' onload='loadcompeleted();' scrolling='no'></iframe>";
 			temp_html = temp_html + "<script type='text/javascript'>";
 			if(window.localStorage.getItem('registered') == 0)
@@ -347,6 +352,7 @@ function getURL(URL,cache,iframe) {
 			}
 			temp_html = temp_html + "</style>";
 			$('.container').html(temp_html);
+			// $('#preloader').remove();//it will run in show.html on "loadcompeleted()" event
 		}
 		
 	}
