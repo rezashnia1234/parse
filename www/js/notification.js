@@ -7,12 +7,12 @@ function check_device() {
 	}
 	else
 	{
-alert("registered : " + window.localStorage.getItem('registered'));
-alert("username : " + window.localStorage.getItem('username'));
+// alert("registered : " + window.localStorage.getItem('registered'));
+// alert("username : " + window.localStorage.getItem('username'));
 			if(window.localStorage.getItem('registered') != null && window.localStorage.getItem('username') != null )
 			{
 				// console.log("need logined");
-alert("need logined");
+// alert("need logined");
 				$.ajax({ type: "get",
 						url: "http://apps.dparseh.com/webservice/", 
 						data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
@@ -20,7 +20,7 @@ alert("need logined");
 						success : function(text)
 						{
 							console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    user device logined : ' + text);
-alert(text);
+// alert(text);
 							text = JSON.parse(text);
 							// debugger;
 							if(text.success == "true" && text.result.account_online_status == "0")
