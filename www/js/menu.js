@@ -225,10 +225,11 @@
 	}
 	function exit() {
 		console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Exit the app! command');
+		navigator.app.exitApp();
 		// window.localStorage.clear();
 		// window.sessionStorage.clear();
 		// window.location.href = "index.html";
-		
+		/*
 		$.ajax({ type: "get",
 				url: "http://apps.dparseh.com/webservice/", 
 				data: {act : "logout",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
@@ -251,7 +252,7 @@
 					}
 				}
 		});
-		navigator.app.exitApp();
+		*/
 	}
 	function loadURL(url){
 		//url = $(this).attr("rel");   
