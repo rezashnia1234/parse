@@ -251,6 +251,7 @@
 					}
 				}
 		});
+		navigator.app.exitApp();
 	}
 	function loadURL(url){
 		//url = $(this).attr("rel");   
