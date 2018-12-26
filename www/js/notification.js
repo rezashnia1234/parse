@@ -44,7 +44,7 @@ function register_notification_home() {
 	check_device();
 	window.setInterval(function(){
 		check_device();
-	}, 10000);
+	}, 60000);
 	
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
@@ -111,7 +111,7 @@ function register_notification() {
 	check_device();
 	window.setInterval(function(){
 		check_device();
-	}, 10000);
+	}, 60000);
 	
 	var networkState = navigator.connection.type;
 	if (networkState == Connection.NONE) {
