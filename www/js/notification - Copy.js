@@ -13,7 +13,7 @@ function check_device() {
 				{
 					// console.log("need logined");
 					$.ajax({ type: "get",
-							url: "http://apps.dparseh.com/webservice/", 
+							url: "http://apps.dparseh.ir/webservice/", 
 							data: {act : "login",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
 							async: false,
 							success : function(text)
@@ -38,7 +38,7 @@ function check_device() {
 				{
 					// console.log("we are logined");
 					$.ajax({ type: "get",
-							url: "http://apps.dparseh.com/webservice/", 
+							url: "http://apps.dparseh.ir/webservice/", 
 							data: {act : "check",device_id:window.localStorage.getItem('uuid'),user:window.localStorage.getItem('username'),OS:device.platform},
 							async: false,
 							success : function(text)
@@ -93,7 +93,7 @@ function register_notification_home() {
 			// data.registrationId
 			// alert("registration event: " + data.registrationId);
 			$.ajax({ type: "POST",
-					url: "http://apps.dparseh.com/SMCMS_notification/RegisterDeviceIDtoDB.php", 
+					url: "http://apps.dparseh.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
 					data: {regID : data.registrationId,user:window.localStorage.getItem('uuid'),OS:device.platform},
 					async: false,
 					success : function(text)
